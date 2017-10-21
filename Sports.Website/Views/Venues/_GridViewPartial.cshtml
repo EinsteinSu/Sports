@@ -1,0 +1,62 @@
+@{
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "GridView";
+        settings.CallbackRouteValues = new { Controller = "Venues", Action = "GridViewPartial" };
+
+        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Venues", Action = "GridViewPartialAddNew" };
+        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Venues", Action = "GridViewPartialUpdate" };
+        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Venues", Action = "GridViewPartialDelete" };
+        settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
+        settings.SettingsBehavior.ConfirmDelete = true;
+
+        settings.CommandColumn.Visible = true;
+        settings.CommandColumn.ShowNewButton = true;
+        settings.CommandColumn.ShowDeleteButton = true;
+        settings.CommandColumn.ShowEditButton = true;
+
+        settings.KeyFieldName = "Id";
+
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = false;
+        settings.Settings.ShowFilterRow = true;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
+
+        settings.SettingsAdaptivity.AdaptivityMode = GridViewAdaptivityMode.Off;
+        settings.SettingsAdaptivity.AdaptiveColumnPosition = GridViewAdaptiveColumnPosition.Right;
+        settings.SettingsAdaptivity.AdaptiveDetailColumnCount = 1;
+        settings.SettingsAdaptivity.AllowOnlyOneAdaptiveDetailExpanded = false;
+        settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
+
+        settings.Columns.Add("Name");
+        settings.Columns.Add("IPAddress");
+        settings.Columns.Add("Port");
+        settings.Columns.Add("Location");
+        settings.Columns.Add(s =>
+        {
+            s.FieldName = "Image";
+            s.EditFormSettings.ColumnSpan = 2;
+            s.EditorProperties().BinaryImage(p =>
+            {
+                p.ImageHeight = p.ImageWidth = 128;
+                p.EnableServerResize = true;
+                p.ImageSizeMode = ImageSizeMode.FitProportional;
+                p.CallbackRouteValues = new {Action = "GridViewPartialUpdate", Controller = "Venues"};
+                p.EditingSettings.Enabled = true;
+                p.EditingSettings.UploadSettings.UploadValidationSettings.MaxFileSize = 4194304;
+                p.EditingSettings.UploadSettings.UploadMode = UploadControlUploadMode.Standard;
+            });
+        });
+        settings.Columns.Add(s =>
+        {
+            s.FieldName = "Description";
+            s.EditFormSettings.ColumnSpan = 2;
+            s.ColumnType = MVCxGridViewColumnType.Memo;
+        });
+    });
+    if (ViewData["EditError"] != null)
+    {
+        grid.SetEditErrorText((string)ViewData["EditError"]);
+    }
+}
+@grid.Bind(Model).GetHtml()

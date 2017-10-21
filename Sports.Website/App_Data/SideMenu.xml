@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu>
+  <group Text="Data Management">
+    <item Text="Flags" NavigateUrl="/flags"/>
+    <item Text="Teams" NavigateUrl="/teams"/>
+    <item Text="Players" NavigateUrl="/players"/>
+  </group>
+  <group Text="Venue and Hardware">
+    <item Text="Hardwares" NavigateUrl="/hardwares"/>
+    <item Text="Displays" NavigateUrl="/displays" />
+    <item Text="Venues" NavigateUrl="/venues"  />
+  </group>
+  <group Text="Configurations">
+    <item Text="Parameters" />
+    <item Text="Configurations" />
+  </group>
+  <group Text="Schedules">
+    <item Text="Schedule" />
+  </group>
+  <group Text="Results and Reports">
+    <item Text="Results" />
+    <item Text="Reprots" />
+  </group>
+</menu>

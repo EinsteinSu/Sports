@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="Sports_Website.MvcApplication" Language="C#" %>

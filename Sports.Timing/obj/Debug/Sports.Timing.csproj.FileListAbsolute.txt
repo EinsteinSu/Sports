@@ -1,0 +1,5 @@
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Timing\bin\Debug\Sports.Timing.dll
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Timing\bin\Debug\Sports.Timing.pdb
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Timing\obj\Debug\Sports.Timing.csprojResolveAssemblyReference.cache
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Timing\obj\Debug\Sports.Timing.dll
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Timing\obj\Debug\Sports.Timing.pdb

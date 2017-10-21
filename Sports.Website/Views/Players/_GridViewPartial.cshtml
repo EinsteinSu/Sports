@@ -1,0 +1,80 @@
+@using Sports.DataAccess.Models
+@using Sports.Website.Commons
+@{
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "GridView";
+        settings.CallbackRouteValues = new {Controller = "Players", Action = "GridViewPartial"};
+
+        settings.SettingsEditing.AddNewRowRouteValues = new {Controller = "Players", Action = "GridViewPartialAddNew"};
+        settings.SettingsEditing.UpdateRowRouteValues = new {Controller = "Players", Action = "GridViewPartialUpdate"};
+        settings.SettingsEditing.DeleteRowRouteValues = new {Controller = "Players", Action = "GridViewPartialDelete"};
+        settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
+        settings.SettingsBehavior.ConfirmDelete = true;
+
+        settings.CommandColumn.Visible = true;
+        settings.CommandColumn.ShowNewButton = true;
+        settings.CommandColumn.ShowDeleteButton = true;
+        settings.CommandColumn.ShowEditButton = true;
+
+        settings.KeyFieldName = "Id";
+
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = true;
+        settings.Settings.ShowFilterRow = true;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
+
+        settings.SettingsAdaptivity.AdaptivityMode = GridViewAdaptivityMode.Off;
+        settings.SettingsAdaptivity.AdaptiveColumnPosition = GridViewAdaptiveColumnPosition.Right;
+        settings.SettingsAdaptivity.AdaptiveDetailColumnCount = 1;
+        settings.SettingsAdaptivity.AllowOnlyOneAdaptiveDetailExpanded = false;
+        settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
+
+        settings.Columns.Add("Name");
+        settings.Columns.Add("DisplayName");
+        settings.Columns.Add(s =>
+        {
+            s.FieldName = "TeamId";
+            s.Caption = "Team";
+            s.EditorProperties().ComboBox(c =>
+            {
+                c.TextField = "Name";
+                c.ValueField = "Id";
+                c.DataSource = DataProvider.GetTeams();
+            });
+        });
+        settings.Columns.Add("RegistNumber");
+        settings.Columns.Add("BibNumber");
+        settings.Columns.Add(s =>
+        {
+            s.FieldName = "Gender";
+            s.EditorProperties().ComboBox(c =>
+            {
+                c.ValueType = typeof(Gender);
+                c.DataSource = Enum.GetValues(typeof(Gender));
+            });
+        });
+        settings.Columns.Add("Weight");
+        settings.Columns.Add("Hight");
+        settings.Columns.Add("BirthDate");
+        settings.Columns.Add("BoneDate");
+        settings.Columns.Add("SelfTakenScore");
+        settings.Columns.Add(s =>
+        {
+            s.FieldName = "IdentityType";
+            s.EditorProperties().ComboBox(c =>
+            {
+                c.ValueType = typeof(IdentityType);
+                c.DataSource = Enum.GetValues(typeof(IdentityType));
+            });
+        });
+        settings.Columns.Add("IdentityNumber");
+        settings.Columns.Add("Level");
+        settings.Columns.Add("Description");
+    });
+    if (ViewData["EditError"] != null)
+    {
+        grid.SetEditErrorText((string) ViewData["EditError"]);
+    }
+}
+@grid.Bind(Model).GetHtml()

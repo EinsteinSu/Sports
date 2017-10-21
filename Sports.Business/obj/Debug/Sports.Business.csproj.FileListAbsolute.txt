@@ -1,0 +1,12 @@
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\bin\Debug\Sports.Business.dll.config
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\bin\Debug\Sports.Business.dll
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\bin\Debug\Sports.Business.pdb
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\bin\Debug\EntityFramework.dll
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\bin\Debug\Sports.DataAccess.dll
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\bin\Debug\Sports.DataAccess.pdb
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\bin\Debug\EntityFramework.xml
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\obj\Debug\Sports.Business.csprojResolveAssemblyReference.cache
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\obj\Debug\Sports.Business.dll
+C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\obj\Debug\Sports.Business.pdb
