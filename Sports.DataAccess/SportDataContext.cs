@@ -22,5 +22,15 @@ namespace Sports.DataAccess
         public DbSet<Display> Displays { get; set; }
 
         public DbSet<Hardware> Hardwares { get; set; }
+
+        public DbSet<SecurityGroup> SecurityGroups { get; set; }
+
+        public DbSet<Security> Securities { get; set; }
+
+        public DbSet<Login> Logins { get; set; }
+
+        public DbSet<Role> Roles { get; set; }
+
+        public DbSet<Schedule> Schedules { get; set; }
     }
 }

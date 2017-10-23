@@ -39,13 +39,12 @@
                 p.ImageWidth = 128;
                 p.EnableServerResize = true;
                 p.ImageSizeMode = ImageSizeMode.FitProportional;
-                p.CallbackRouteValues = new { Action = "GridViewPartialUpdate", Controller = "Flags" };
+                p.CallbackRouteValues = new { Action = "BinaryImageColumnPhotoUpdate", Controller = "Flags" };
                 p.EditingSettings.Enabled = true;
                 p.EditingSettings.UploadSettings.UploadValidationSettings.MaxFileSize = 4194304;
             });
         });
         settings.Columns.Add("Description");
-
     });
     if (ViewData["EditError"] != null)
     {

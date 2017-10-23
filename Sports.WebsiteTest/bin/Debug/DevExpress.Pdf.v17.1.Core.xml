@@ -8431,6 +8431,14 @@
 
 
         </member>
+        <member name="F:DevExpress.Pdf.Localization.PdfCoreStringId.MsgStreamIsInUse">
+            <summary>
+                <para><b> "The stream is already used for a document. Please use another stream."</b>
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.Pdf.Localization.PdfCoreStringId.MsgUnavailableOperation">
             <summary>
                 <para>"<b>This operation is not available while no document is being loaded.</b>"

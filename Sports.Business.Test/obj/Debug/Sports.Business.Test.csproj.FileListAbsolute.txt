@@ -13,3 +13,23 @@ C:\Users\Sue\documents\visual studio 2015\Projects\Sports\Sports.Business.Test\o
 C:\Users\Sue\documents\visual studio 2015\Projects\Sports\Sports.Business.Test\obj\Debug\Sports.Business.Test.pdb
 C:\Users\Sue\documents\visual studio 2015\Projects\Sports\Sports.Business.Test\bin\Debug\Sports.Business.dll
 C:\Users\Sue\documents\visual studio 2015\Projects\Sports\Sports.Business.Test\bin\Debug\Sports.Business.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Business.Test.dll.config
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Business.Test.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Business.Test.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\EntityFramework.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Business.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.DataAccess.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Business.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Business.dll.config
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.DataAccess.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.DataAccess.dll.config
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\EntityFramework.xml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\obj\Debug\Sports.Business.Test.csprojResolveAssemblyReference.cache
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\obj\Debug\Sports.Business.Test.csproj.CoreCompileInputs.cache
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\obj\Debug\Sports.Business.Test.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\obj\Debug\Sports.Business.Test.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Common.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Common.pdb

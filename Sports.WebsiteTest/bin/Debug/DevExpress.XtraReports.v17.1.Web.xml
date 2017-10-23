@@ -980,6 +980,70 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerClientSideModelGenerator.GetJsonModelScript(System.String,System.Collections.Generic.IDictionary`2,System.String,System.String,System.String)">
+            <summary>
+                <para>Generates a client-side Report Designer model based on the specified data and serializes this model to Json.
+</para>
+            </summary>
+            <param name="reportUrl">
+		An URL of report to open in the Report Designer on application start. 
+
+            </param>
+            <param name="dataSources">
+		A dictionary containing data sources that will be available in the Report Designer for adding to reports.
+
+            </param>
+            <param name="controllerUri">
+		URI of the controller action that processes requests from the Report Designer. 
+
+            </param>
+            <param name="previewControllerUri">
+		URI of the controller action that processes requests from the Web Document Viewer. 
+
+            </param>
+            <param name="queryBuilderControllerUri">
+		URI of the controller action that processes requests from the Query Builder. 
+
+            </param>
+            <returns>A string containing a Report Designer model.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerClientSideModelGenerator.GetJsonModelScript(System.String,System.Collections.Generic.IDictionary`2,System.String,System.String,System.String,DevExpress.XtraReports.Web.ClientControls.ClientSideModelSettings)">
+            <summary>
+                <para>Generates a client-side Report Designer model based on the specified data and serializes this model to Json.
+</para>
+            </summary>
+            <param name="reportUrl">
+		An URL of report to open in the Report Designer on application start. 
+
+            </param>
+            <param name="dataSources">
+		A dictionary containing data sources that will be available in the Report Designer for adding to reports.
+
+            </param>
+            <param name="controllerUri">
+		URI of the controller action that processes requests from the Report Designer. 
+
+            </param>
+            <param name="previewControllerUri">
+		URI of the controller action that processes requests from the Web Document Viewer. 
+
+            </param>
+            <param name="queryBuilderControllerUri">
+		URI of the controller action that processes requests from the Query Builder. 
+
+            </param>
+            <param name="settings">
+		Settings of the client-side Report Designer model.
+
+            </param>
+            <returns>A string containing a Report Designer model.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerClientSideModelGenerator">
 
             <summary>
@@ -1033,6 +1097,46 @@
             </summary>
             <param name="report">
 		A report to open in the Web Document Viewer on application start. 
+
+            </param>
+            <param name="controllerUri">
+		URI of the controller action that processes requests from the Web Document Viewer. 
+
+            </param>
+            <param name="settings">
+		Settings of the client-side Document Viewer model.
+
+            </param>
+            <returns>A string containing a Web Document Viewer model.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerClientSideModelGenerator.GetJsonModelScript(System.String,System.String)">
+            <summary>
+                <para>Generates a client-side Document Viewer model based on the specified data and serializes this model to Json.
+</para>
+            </summary>
+            <param name="reportUrl">
+		An URL of report to open in the Web Document Viewer on application start. 
+
+            </param>
+            <param name="controllerUri">
+		URI of the controller action that processes requests from the Web Document Viewer. 
+
+            </param>
+            <returns>A string containing a Web Document Viewer model.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerClientSideModelGenerator.GetJsonModelScript(System.String,System.String,DevExpress.XtraReports.Web.ClientControls.ClientSideModelSettings)">
+            <summary>
+                <para>Generates a client-side Document Viewer model based on the specified data and serializes this model to Json.
+</para>
+            </summary>
+            <param name="reportUrl">
+		An URL of report to open in the Web Document Viewer on application start. 
 
             </param>
             <param name="controllerUri">
@@ -1237,96 +1341,6 @@
             </summary>
             <value>A dictionary that stores a value pair specifying a category name and a corresponding <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.FormatStringDataItem"/>.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.IExportedDocumentStorage">
-
-            <summary>
-                <para> </para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.IExportedDocumentStorage.AddOrUpdate(System.String,DevExpress.XtraReports.Web.WebDocumentViewer.Native.ExportedDocumentInfo)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="id">
-		 
-            </param>
-            <param name="exportedDocumentInfo">
-		 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.IExportedDocumentStorage.BlankExists(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="id">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.IExportedDocumentStorage.Clear(System.TimeSpan)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="timeToLive">
-		 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.IExportedDocumentStorage.Release(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="id">
-		 
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.IExportedDocumentStorage.TryGet(System.String,DevExpress.XtraReports.Web.WebDocumentViewer.Native.ExportedDocumentInfo@)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="id">
-		 
-            </param>
-            <param name="exportedDocumentInfo">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.IExportedDocumentStorage.TryTake(System.String,DevExpress.XtraReports.Web.WebDocumentViewer.Native.ExportedDocumentInfo@)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="id">
-		 
-            </param>
-            <param name="exportedDocumentInfo">
-		 
-            </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.IExportedDocumentStorage.UpdateTimeStamp(System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="id">
-		 
-            </param>
-            <returns> </returns>
 
 
         </member>
@@ -3082,36 +3096,29 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.ASPxReportDesigner.#ctor(System.IServiceProvider)">
             <summary>
-                <para>Initializes a new instance of the ASPxReportDesigner class with the specified service provider.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="serviceProvider">
-		An object implementing the <see cref="T:System.IServiceProvider"/> interface.
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.ASPxReportDesigner.#ctor(DevExpress.XtraReports.Web.ReportDesigner.Native.Services.IReportDesignerModelGenerator,DevExpress.XtraReports.Web.ReportDesigner.Native.Services.IReportDesignerHtmlContentGenerator,DevExpress.XtraReports.Web.Native.ClientControls.Services.IJSContentGenerator`1,System.Func`1)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="reportDesignerModelGenerator">
 		 
-
             </param>
             <param name="reportDesignerHtmlContentGenerator">
 		 
-
             </param>
             <param name="jsContentGenerator">
 		 
-
             </param>
             <param name="cleanerFactory">
 		 
-
             </param>
 
 
@@ -3434,9 +3441,7 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.ReportDesigner.DefaultReportDesignerContainer.RegisterDataSourceWizardDBSchemaProviderFactory``1">
             <summary>
-                <para>For internal use. Use the <see cref="M:DevExpress.XtraReports.Web.ReportDesigner.DefaultReportDesignerContainer.RegisterDataSourceWizardDBSchemaProviderExFactory[T]"/> method instead.
-
-</para>
+                <para>For internal use.</para>
             </summary>
 
 
@@ -3565,61 +3570,79 @@
         <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.StorageCleanerSettings">
 
             <summary>
-                <para> </para>
+                <para>Provides time settings to clean a storage for storing documents and reports.
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.StorageCleanerSettings.#ctor(System.TimeSpan,System.TimeSpan,System.TimeSpan,System.TimeSpan,System.TimeSpan)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the StorageCleanerSettings class with the specified settings.
+</para>
             </summary>
             <param name="dueTime">
-		 
+		A <see cref="T:System.TimeSpan"/> structure, specifying the time interval after which to run the storage cleaner.
+
             </param>
             <param name="period">
-		 
+		A <see cref="T:System.TimeSpan"/> structure, specifying the period of time between each cleaning of a storage.
+
             </param>
             <param name="reportTimeToLive">
-		 
+		A <see cref="T:System.TimeSpan"/> structure, specifying the lifetime of a report in a storage.
+
             </param>
             <param name="documentTimeToLive">
-		 
+		A <see cref="T:System.TimeSpan"/> structure, specifying the lifetime of a report document in a storage.
+
             </param>
             <param name="exportedDocumentTimeToLive">
-		 
+		A <see cref="T:System.TimeSpan"/> structure, specifying the lifetime of an exported report document in a storage.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.StorageCleanerSettings.CreateDefault">
             <summary>
-                <para> </para>
+                <para>Creates a new instance of the StorageCleanerSettings class with the default settings.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A StorageCleanerSettings object.
+</returns>
 
 
         </member>
         <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.StorageCleanerSettings.DocumentTimeToLive">
             <summary>
-                <para> </para>
+                <para>Indicates the lifetime of a report document in a storage.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.TimeSpan"/> structure.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.StorageCleanerSettings.ExportedDocumentTimeToLive">
             <summary>
-                <para> </para>
+                <para>Indicates the lifetime of an exported report document in a storage.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.TimeSpan"/> structure.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.StorageCleanerSettings.ReportTimeToLive">
             <summary>
-                <para> </para>
+                <para>Indicates the lifetime of a report in a storage.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.TimeSpan"/> structure.
+</value>
 
 
         </member>
@@ -4567,7 +4590,8 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerOperationLogger.CacheCleaned">
             <summary>
-                <para> </para>
+                <para>Called after a cache has been cleaned.
+</para>
             </summary>
 
 
@@ -4599,27 +4623,35 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerOperationLogger.ExportDocumentStarting(System.String,System.String,System.String,DevExpress.XtraPrinting.ExportOptions,DevExpress.XtraPrinting.PrintingSystemBase,System.Func`1)">
             <summary>
-                <para> </para>
+                <para>Called before starting to asynchronously export a report document.
+</para>
             </summary>
             <param name="documentId">
-		 
+		A <see cref="T:System.String"/> value, identifying the document.
+
             </param>
             <param name="asyncExportOperationId">
-		 
+		A <see cref="T:System.String"/> value, identifying the export operation.
+
             </param>
             <param name="format">
-		 
+		A <see cref="T:System.String"/> value, specifying the export format.
+
             </param>
             <param name="options">
-		 
+		An <see cref="T:DevExpress.XtraPrinting.ExportOptions"/> object.
+
             </param>
             <param name="printingSystem">
-		 
+		A <see cref="T:DevExpress.XtraPrinting.PrintingSystemBase"/> object.
+
             </param>
             <param name="doExportSynchronously">
-		 
+		A <b>System.Func</b> delegate.
+
             </param>
-            <returns> </returns>
+            <returns>An exported document.
+</returns>
 
 
         </member>
@@ -4923,24 +4955,20 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.QueryBuilder.Native.QueryBuilderBootstrapper.AppendRegistration(System.Action`1)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="action">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.QueryBuilder.Native.QueryBuilderBootstrapper.RegisterStandardServices(DevExpress.XtraReports.Web.Native.ClientControls.Services.IServiceContainerRegistrator)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="registrator">
 		 
-
             </param>
 
 
@@ -4964,24 +4992,20 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.Native.WebDocumentViewerBootstrapper.AppendRegistration(System.Action`1)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="action">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.Native.WebDocumentViewerBootstrapper.RegisterStandardServices(DevExpress.XtraReports.Web.Native.ClientControls.Services.IServiceContainerRegistrator)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="registrator">
 		 
-
             </param>
 
 
@@ -5005,12 +5029,10 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.ReportDesigner.Native.ReportDesignerBootstrapper.AppendRegistration(System.Action`1)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="action">
 		 
-
             </param>
 
 
@@ -5021,26 +5043,20 @@
             </summary>
             <param name="reportManagementServiceFactory">
 		 
-
             </param>
             <param name="storageCleanerFactory">
 		 
-
             </param>
             <param name="connectionProviderFactoryFactory">
 		 
-
             </param>
             <param name="sqlDataSourceWizardServiceFactory">
 		 
-
             </param>
             <param name="sqlDataSourceConnectionParametersPatcherFactory">
 		 
-
             </param>
-            <returns> 
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -5050,27 +5066,21 @@
             </summary>
             <param name="registrator">
 		 
-
             </param>
             <param name="reportManagementServiceFactory">
 		 
-
             </param>
             <param name="storageCleanerFactory">
 		 
-
             </param>
             <param name="connectionProviderFactoryFactory">
 		 
-
             </param>
             <param name="sqlDataSourceWizardServiceFactory">
 		 
-
             </param>
             <param name="sqlDataSourceConnectionParametersPatcherFactory">
 		 
-
             </param>
 
 
@@ -6758,12 +6768,10 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.ASPxWebDocumentViewer.#ctor(System.IServiceProvider)">
             <summary>
-                <para>Initializes a new instance of the ASPxWebDocumentViewer class with the specified service provider.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="serviceProvider">
-		An object implementing the <see cref="T:System.IServiceProvider"/> interface.
-
+		 
             </param>
 
 
@@ -8677,32 +8685,26 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.#ctor(DevExpress.XtraReports.Web.QueryBuilder.Native.Services.IQueryBuilderModelGenerator,DevExpress.XtraReports.Web.QueryBuilder.Native.Services.IQueryBuilderHtmlContentGenerator,DevExpress.XtraReports.Web.Native.ClientControls.Services.IJSContentGenerator`1)">
             <summary>
-                <para>For internal use. Initializes a new instance of the ASPxQueryBuilder class with the specified settings.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="webDocumentViewerModelGenerator">
 		 
-
             </param>
             <param name="queryBuilderHtmlContentGenerator">
 		 
-
             </param>
             <param name="jsContentGenerator">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.#ctor(System.IServiceProvider)">
             <summary>
-                <para>Initializes a new instance of the ASPxQueryBuilder class with the specified service provider.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="serviceProvider">
-		An object implementing the <see cref="T:System.IServiceProvider"/> interface.
-
+		 
             </param>
 
 
@@ -8900,8 +8902,7 @@
             <summary>
                 <para>For internal use.</para>
             </summary>
-            <value> 
-</value>
+            <value> </value>
 
 
         </member>
@@ -9051,7 +9052,7 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.DefaultWebDocumentViewerContainer.UseFileDocumentStorage(System.String,DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode)">
             <summary>
-                <para> </para>
+                <para>For internal use.</para>
             </summary>
             <param name="workingDirectory">
 		 
@@ -9064,7 +9065,7 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.DefaultWebDocumentViewerContainer.UseFileExportedDocumentStorage(System.String)">
             <summary>
-                <para> </para>
+                <para>For internal use.</para>
             </summary>
             <param name="workingDirectory">
 		 
@@ -9074,7 +9075,7 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.DefaultWebDocumentViewerContainer.UseFileExportedDocumentStorage(System.String,DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode)">
             <summary>
-                <para> </para>
+                <para>For internal use.</para>
             </summary>
             <param name="workingDirectory">
 		 
@@ -9087,7 +9088,7 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.DefaultWebDocumentViewerContainer.UseFileReportStorage(System.String)">
             <summary>
-                <para> </para>
+                <para>For internal use.</para>
             </summary>
             <param name="workingDirectory">
 		 
@@ -9097,7 +9098,7 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.DefaultWebDocumentViewerContainer.UseFileReportStorage(System.String,DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode)">
             <summary>
-                <para> </para>
+                <para>For internal use.</para>
             </summary>
             <param name="workingDirectory">
 		 
@@ -9128,182 +9129,100 @@
         <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.IExportingAuthorizationService">
 
             <summary>
-                <para> </para>
+                <para>If implemented, enables you to provide a custom authorization mechanism for exported documents in your web reporting application.
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.IExportingAuthorizationService.CanReadExportedDocument(System.String)">
             <summary>
-                <para> </para>
+                <para>Specifies whether or not obtaining the specified exported document is permitted.
+</para>
             </summary>
             <param name="id">
-		 
+		A <see cref="T:System.String"/> value identifying the report document.
+
             </param>
-            <returns> </returns>
+            <returns><b>true</b>, if reading the exported document is permitted; otherwise, <b>false</b>.
+</returns>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.IExportingAuthorizationService.CanReleaseExportedDocument(System.String)">
             <summary>
-                <para> </para>
+                <para>Specifies whether or not disposing the specified document is permitted.
+</para>
             </summary>
             <param name="id">
-		 
+		A <see cref="T:System.String"/> value identifying the report document.
+
             </param>
-            <returns> </returns>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.WebPreviewReadableDocument">
-
-            <summary>
-                <para> </para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.WebPreviewReadableDocument.#ctor(DevExpress.XtraPrinting.Document,DevExpress.XtraReports.Web.WebDocumentViewer.GeneratedDocumentDetails,System.String)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="document">
-		 
-            </param>
-            <param name="documentDetails">
-		 
-            </param>
-            <param name="faulMessage">
-		 
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.WebPreviewReadableDocument.Document">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.WebPreviewReadableDocument.FaultMessage">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.WebPreviewReadableDocument.Hash">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.WebPreviewReadableDocument.LoadedPageIndex">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.GeneratedDocumentDetails">
-
-            <summary>
-                <para> </para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.GeneratedDocumentDetails.#ctor">
-            <summary>
-                <para> </para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.GeneratedDocumentDetails.#ctor(DevExpress.XtraReports.Web.WebDocumentViewer.GeneratedDocumentDetails)">
-            <summary>
-                <para> </para>
-            </summary>
-            <param name="source">
-		 
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.GeneratedDocumentDetails.CanRecreatePages">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.GeneratedDocumentDetails.DrillDownKeys">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.GeneratedDocumentDetails.SortingState">
-            <summary>
-                <para> </para>
-            </summary>
-            <value> </value>
+            <returns><b>true</b>, if releasing the document is permitted; otherwise, <b>false</b>.
+</returns>
 
 
         </member>
         <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.CacheCleanerSettings">
 
             <summary>
-                <para> </para>
+                <para>Provides time settings to clean a cache for storing documents and reports.
+</para>
             </summary>
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.CacheCleanerSettings.#ctor(System.TimeSpan,System.TimeSpan,System.TimeSpan,System.TimeSpan)">
             <summary>
-                <para> </para>
+                <para>Initializes a new instance of the CacheCleanerSettings class with the specified settings.
+</para>
             </summary>
             <param name="dueTime">
-		 
+		A <see cref="T:System.TimeSpan"/> structure, specifying the time interval after which to run the cache cleaner.
+
             </param>
             <param name="period">
-		 
+		A <see cref="T:System.TimeSpan"/> structure, specifying the period of time between each cleaning of the cache.
+
             </param>
             <param name="reportTimeToLive">
-		 
+		A <see cref="T:System.TimeSpan"/> structure, specifying the lifetime of a report in the cache.
+
             </param>
             <param name="documentTimeToLive">
-		 
+		A <see cref="T:System.TimeSpan"/> structure, specifying the lifetime of a report document in the cache.
+
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.CacheCleanerSettings.CreateDefault">
             <summary>
-                <para> </para>
+                <para>Creates a new instance of the CacheCleanerSettings class with the default settings.
+</para>
             </summary>
-            <returns> </returns>
+            <returns>A CacheCleanerSettings object.
+</returns>
 
 
         </member>
         <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.CacheCleanerSettings.DocumentTimeToLive">
             <summary>
-                <para> </para>
+                <para>Indicates the lifetime of a report document in the cache.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.TimeSpan"/> structure.
+</value>
 
 
         </member>
         <member name="P:DevExpress.XtraReports.Web.WebDocumentViewer.CacheCleanerSettings.ReportTimeToLive">
             <summary>
-                <para> </para>
+                <para>Indicates the lifetime of a report in the cache.
+
+</para>
             </summary>
-            <value> </value>
+            <value>A <see cref="T:System.TimeSpan"/> structure.
+</value>
 
 
         </member>
@@ -9335,20 +9254,23 @@
         <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode">
 
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
 
         </member>
         <member name="F:DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode.InterProcess">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode.InterThread">
             <summary>
-                <para> </para>
+                <para>For internal use.
+</para>
             </summary>
 
 
@@ -9880,6 +9802,43 @@
 
 
         </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.FilterEditor_Operand_CreateNewParameter">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.FilterEditor_Operand_Type_Parameter">
+            <summary>
+                <para><para>The caption available in the Filter Editor.</para>
+
+<para><b>Default value</b>: "Parameter"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.FilterEditor_Operand_Type_Property">
+            <summary>
+                <para><para>The caption available in the Filter Editor.</para>
+
+<para><b>Default value</b>: "Property"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.FilterEditor_Operand_Type_Value">
+            <summary>
+                <para><para>The caption available in the Filter Editor.</para>
+
+<para><b>Default value</b>: "Value"</para>
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ParametersPanel_DateTimeValueValidationError">
             <summary>
                 <para><para>The text of an error.</para>
@@ -10050,6 +10009,16 @@
 
 
         </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FieldListActions_EditMasterDetailRelations">
+            <summary>
+                <para><para>The caption of an action available in the Field List.</para>
+
+<para><b>Default value</b>: "Edit Master-Detail Relations"</para>
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FieldListActions_RemoveCalculatedField">
             <summary>
                 <para><para>The caption of an action available in the Field List.</para>
@@ -10060,11 +10029,98 @@
 
 
         </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FieldListActions_RemoveDataSource">
+            <summary>
+                <para><para>The caption of an action available in the Field List.</para>
+
+<para><b>Default value</b>: "Remove Data Source"</para>
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FieldListActions_RemoveParameter">
             <summary>
                 <para><para>The caption of an action available in the Field List.</para>
 
 <para><b>Default value</b>: "Remove parameter"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FontOptions_Unit_Document">
+            <summary>
+                <para><para>The value for the font's <b>Unit</b> option available in the Properties Panel.</para>
+
+<para><b>Default value</b>: "Document"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FontOptions_Unit_Pixel">
+            <summary>
+                <para><para>The value for the font's <b>Unit</b> option available in the Properties Panel.</para>
+
+<para><b>Default value</b>: "Pixel"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FontOptions_Unit_Point">
+            <summary>
+                <para><para>The value for the font's <b>Unit</b> option available in the Properties Panel.</para>
+
+<para><b>Default value</b>: "Point"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FontOptions_Unit_World">
+            <summary>
+                <para><para>The value for the font's <b>Unit</b> option available in the Properties Panel.</para>
+
+<para><b>Default value</b>: "World"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FormatStringEditor_PreviewNotAvailable_Text">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FormatStringEditor_Suffix">
+            <summary>
+                <para><para>The caption available in the Format String Editor.</para>
+
+<para><b>Default value</b>: "Suffix"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FormatStringEditor_Title">
+            <summary>
+                <para><para>The title of the Format String Editor.</para>
+
+<para><b>Default value</b>: "Format String Editor"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FormatStringEditor_Types">
+            <summary>
+                <para><para>The caption available in the Format String Editor.</para>
+
+<para><b>Default value</b>: "Types"</para>
 </para>
             </summary>
 
@@ -10135,6 +10191,16 @@
                 <para><para>The caption of the Web Report Designer menu button.</para>
 
 <para><b>Default value</b>: "<b>Add SQL Data Source...</b>"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_NameValidationError">
+            <summary>
+                <para><para>The text of an error.</para>
+
+<para><b>Default value</b>: "Invalid name"</para>
 </para>
             </summary>
 
@@ -10250,6 +10316,26 @@
 
 
         </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_PropertyGrid_Editor_EmptyText">
+            <summary>
+                <para><para>The text displayed in the Properties Panel's editor. </para>
+
+<para><b>Default value</b>: "Select..."</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_PropertyGrid_PopupMenu_Reset">
+            <summary>
+                <para><para>The text displayed in the Properties Panel's popup menu. </para>
+
+<para><b>Default value</b>: "Reset"</para>
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_QueryBuilder_AvailableTables">
             <summary>
                 <para><para>The caption available in the Query Builder.</para>
@@ -10279,10 +10365,30 @@
 
 
         </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_QueryBuilder_LeftOperand">
+            <summary>
+                <para><para>The caption available in the Query Builder.</para>
+
+<para><b>Default value</b>: "Left Operand"</para>
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_QueryBuilder_Operator">
             <summary>
                 <para><para>The caption available in the Query Builder.</para>
 <para><b>Default value</b>: "Operator"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_QueryBuilder_PreviewSelectStatement_Tooltip">
+            <summary>
+                <para><para>The tooltip available in the Query Builder.</para>
+
+<para><b>Default value</b>: "Preview Select Statement..."</para>
 </para>
             </summary>
 
@@ -10302,6 +10408,16 @@
                 <para><para>The caption available in the Query Builder.</para>
 
 <para><b>Default value</b>: "Relation Properties"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_QueryBuilder_RightOperand">
+            <summary>
+                <para><para>The caption available in the Query Builder.</para>
+
+<para><b>Default value</b>: "Right Operand"</para>
 </para>
             </summary>
 
@@ -10329,6 +10445,16 @@
             <summary>
                 <para><para>The caption available in the Query Builder.</para>
 <para><b>Default value</b>: "Selection Properties"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_QueryBuilder_SelectStatementPreview_Title">
+            <summary>
+                <para><para>The caption available in the Query Builder.</para>
+
+<para><b>Default value</b>: "Select Statement Preview"</para>
 </para>
             </summary>
 
@@ -10457,6 +10583,26 @@
                 <para><para>The caption available in the action list of a report.</para>
 
 <para><b>Default value</b>: "Insert Top Margin Band"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_ScriptEditor_Toolbar_SelectControl">
+            <summary>
+                <para><para>The caption available in the Script Editor's toolbar. </para>
+
+<para><b>Default value</b>: "Select control..."</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_ScriptEditor_Toolbar_SelectEvent">
+            <summary>
+                <para><para>The caption available in the Script Editor's toolbar. </para>
+
+<para><b>Default value</b>: "Select event..."</para>
 </para>
             </summary>
 
@@ -11693,6 +11839,13 @@
 
 
         </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.WebDocumentViewer_DataRetrievalException_Message">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.WebDocumentViewer_DocumentBuilding">
             <summary>
                 <para><para>The text displayed in the <see cref="T:DevExpress.XtraReports.Web.ASPxDocumentViewer"/>'s document building progress indicator.</para>
@@ -11797,8 +11950,7 @@
         </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.WebDocumentViewer_NoParameters">
             <summary>
-                <para><para>Obsolete. <b>Default value:</b> "The report does not contain any parameters."</para>
-</para>
+                <para>For internal use.</para>
             </summary>
 
 

@@ -3,3 +3,9 @@ C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Timing\bin\Debu
 C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Timing\obj\Debug\Sports.Timing.csprojResolveAssemblyReference.cache
 C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Timing\obj\Debug\Sports.Timing.dll
 C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Timing\obj\Debug\Sports.Timing.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Timing\bin\Debug\Sports.Timing.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Timing\bin\Debug\Sports.Timing.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Timing\obj\Debug\Sports.Timing.csprojResolveAssemblyReference.cache
+C:\Users\einst\Documents\GitHub\Sports\Sports.Timing\obj\Debug\Sports.Timing.csproj.CoreCompileInputs.cache
+C:\Users\einst\Documents\GitHub\Sports\Sports.Timing\obj\Debug\Sports.Timing.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Timing\obj\Debug\Sports.Timing.pdb

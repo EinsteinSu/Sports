@@ -13,5 +13,20 @@ namespace Sports.Website.Commons
         {
             return new TeamMgr().GetItems();
         }
+
+        public static IEnumerable<SecurityGroup> GetSecurityGroups()
+        {
+            return new SecurityGroupMgr().GetItems();
+        }
+
+        public static IEnumerable<Security> GetSecurities()
+        {
+            return new SecurityMgr().GetItems();
+        }
+
+        public static IEnumerable<Role> GetRoles()
+        {
+            return new RoleMgr().GetItems();
+        }
     }
 }

@@ -235,134 +235,164 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEAlignmentLeftRibbonCommand">
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase">
 
             <summary>
-                <para>A Ribbon item that allows a paragraph whose content is selected within the design view area to be left aligned.
+                <para>The base class for toolbar items.
+
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEAlignmentLeftRibbonCommand.#ctor">
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.#ctor(System.String,System.String)">
             <summary>
-                <para>Initializes a new instance of the HEAlignmentLeftRibbonCommand class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEAlignmentLeftRibbonCommand.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the HEAlignmentLeftRibbonCommand class with the specified item text.
+                <para>Initializes a new instance of the ToolbarItemBase class with the specified settings.
 </para>
             </summary>
             <param name="text">
-		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+		A <see cref="T:System.String"/> value that specifies the created toolbar item's display text. This value is assigned to the <see cref="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.Text"/> property.
+
+            </param>
+            <param name="toolTip">
+		A <see cref="T:System.String"/> value that specifies the created toolbar item's tooltip text. This value is assigned to the <see cref="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.ToolTip"/> property.
 
             </param>
 
 
         </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEAlignmentLeftRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.#ctor(System.String)">
             <summary>
-                <para>Initializes a new instance of the HEAlignmentLeftRibbonCommand class with the specified item size.
-</para>
-            </summary>
-            <param name="size">
-		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEAlignmentLeftRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
-            <summary>
-                <para>Initializes a new instance of the HEAlignmentLeftRibbonCommand class with the specified settings.
+                <para>Initializes a new instance of the ToolbarItemBase class with the specified text.
 </para>
             </summary>
             <param name="text">
-		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
-
-            </param>
-            <param name="size">
-		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
+		A <see cref="T:System.String"/> value that specifies the created toolbar item's display text. This value is assigned to the <see cref="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.Text"/> property.
 
             </param>
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton">
-
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.#ctor">
             <summary>
-                <para>Represents a default toolbar button that allows insertion of a new row below in the table within the design view area.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ToolbarInsertTableRowBelowButton class with default settings.
+                <para>Initializes a new instance of the ToolbarItemBase class with the default settings.
 </para>
             </summary>
 
 
         </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton.#ctor(System.Boolean,System.Boolean)">
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.Assign(DevExpress.Web.CollectionItem)">
             <summary>
-                <para>Initializes a new instance of the ToolbarInsertTableRowBelowButton class with the specified settings.
+                <para>Copies the settings from the specified item to the current object.
 </para>
             </summary>
-            <param name="beginGroup">
-		<b>true</b> if the current toolbar item starts a group; otherwise, <b>false</b>.
-
-            </param>
-            <param name="visible">
-		<b>true</b> to display the current toolbar item; otherwise, <b>false</b>.
+            <param name="source">
+		A <see cref="T:DevExpress.Web.CollectionItem"/> object whose settings are assigned to the current object.
 
             </param>
 
 
         </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton.#ctor(System.Boolean)">
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.Image">
             <summary>
-                <para>Initializes a new instance of the ToolbarInsertTableRowBelowButton class with the specified setting.
+                <para>Gets the settings of an image displayed by the item. 
 </para>
             </summary>
-            <param name="beginGroup">
-		<b>true</b> if the current toolbar item starts a group; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton.Text">
-            <summary>
-                <para>Gets or sets the button's display text.
-</para>
-            </summary>
-            <value>A string value that specifies the toolbar button's display text.
+            <value>A <see cref="ToolbarItemImageProperties"/> object that contains image settings. 
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton.ToolTip">
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.Text">
             <summary>
-                <para>Gets or sets the button's tooltip text.
+                <para>Gets or sets the text content of a toolbar item. 
 </para>
             </summary>
-            <value>A string value that specifies the text content of the button's tooltip.
+            <value>A <see cref="String"/> value that specifies the item's text content.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton.ViewStyle">
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.ToolTip">
             <summary>
-                <para>Gets or sets a value that specifies how a toolbar button of the <see cref="T:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton"/> type is represented within a toolbar. 
+                <para>Gets or sets the item's tooltip text.
 </para>
             </summary>
-            <value>One of the <see cref="T:DevExpress.Web.ASPxHtmlEditor.ViewStyle"/> enumeration values.
+            <value>A <see cref="String"/> value that specifies the text content of the item's tooltip. 
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarItemCollectionBase`1">
+
+            <summary>
+                <para>The base class for collections of toolbar items.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemCollectionBase`1.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ToolbarItemCollectionBase&lt;T&gt; class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemCollectionBase`1.#ctor(DevExpress.Web.Internal.IWebControlObject)">
+            <summary>
+                <para>Initializes a new instance of the ToolbarItemCollectionBase&lt;T&gt; class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <b>IWebControlObject</b> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemCollectionBase`1.FindByText(System.String)">
+            <summary>
+                <para>Returns an item object with the specified <b>Text</b> property value.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value, which is the <b>Text</b> property value of the required item.
+
+
+            </param>
+            <returns>A T object with a specific value of the <b>Text</b> property.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemCollectionBase`1.Toolbar">
+            <summary>
+                <para>Gets the <see cref="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorToolbar"/> control that owns the collection. 
+</para>
+            </summary>
+            <value>An <see cref="HtmlEditorToolbar"/> object that owns the collection. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFileManagerPermissionsSettings">
+
+            <summary>
+                <para>Contains settings that relate to the Image Selector's and Document Selector's permissions.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFileManagerPermissionsSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorFileManagerPermissionsSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
 
 
         </member>
@@ -1065,6 +1095,26 @@
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFileManagerEditingSettings">
+
+            <summary>
+                <para>Contains settings that relate to the built-in ImageSelector's editing functionality.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFileManagerEditingSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorFileManagerEditingSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFileManagerCommonSettings">
 
             <summary>
@@ -1683,56 +1733,6 @@
 </para>
             </summary>
             <value><b>true</b> if a header is displayed; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderItem">
-
-            <summary>
-                <para>An individual placeholder within the HtmlEditor. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderItem.#ctor">
-            <summary>
-                <para>Initializes a new instance of the HtmlEditorPlaceholderItem class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderItem.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the HtmlEditorPlaceholderItem class with the specified value.
-</para>
-            </summary>
-            <param name="value">
-		A <see cref="T:System.String"/> that specifies the item display value. This value is assigned to the <see cref="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderItem.Value"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderItem.Assign(DevExpress.Web.CollectionItem)">
-            <summary>
-                <para>Copies the settings of the specified <see cref="T:DevExpress.Web.CollectionItem"/> object to the current object.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.CollectionItem"/> object that is the source of the operation. 
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderItem.Value">
-            <summary>
-                <para>Specifies the placeholder value.
-</para>
-            </summary>
-            <value>An <see cref="String"/> that specifies the item value.
 </value>
 
 
@@ -4158,6 +4158,32 @@
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarItemPickerImagePosition">
+
+            <summary>
+                <para>Lists values that specify the image position within item picker items.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxHtmlEditor.ToolbarItemPickerImagePosition.Left">
+            <summary>
+                <para>An image is displayed at the element's left, to the left of the text. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxHtmlEditor.ToolbarItemPickerImagePosition.Top">
+            <summary>
+                <para> An image is displayed on the element's right, to the right of the text.
+
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorToolbarMode">
 
             <summary>
@@ -4266,70 +4292,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarSelectAllButton">
-
-            <summary>
-                <para>A default toolbar button that selects all editor content.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarSelectAllButton.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ToolbarSelectAllButton class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarSelectAllButton.#ctor(System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the ToolbarSelectAllButton class with the specified setting.
-</para>
-            </summary>
-            <param name="beginGroup">
-		<b>true</b>, if the current toolbar item starts a group; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarSelectAllButton.#ctor(System.Boolean,System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the ToolbarSelectAllButton class with the specified settings.
-</para>
-            </summary>
-            <param name="beginGroup">
-		<b>true</b>, if the current toolbar item starts a group; otherwise, <b>false</b>. 
-
-            </param>
-            <param name="visible">
-		<b>true</b>, to display the current toolbar item; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarSelectAllButton.Text">
-            <summary>
-                <para>Gets or sets the button's display text.
-</para>
-            </summary>
-            <value>A string value that specifies the toolbar button's display text.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarSelectAllButton.ToolTip">
-            <summary>
-                <para>Gets or sets the button's tooltip text. 
-</para>
-            </summary>
-            <value>A string value that specifies the text content of the button's tooltip.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HEInsertPlaceholderDialogRibbonCommand">
 
             <summary>
@@ -4416,6 +4378,97 @@
 
         </member>
         <member name="P:DevExpress.Web.ASPxHtmlEditor.HEMergeTableRibbonGroup.Text">
+            <summary>
+                <para>Gets or sets the ribbon group's display text.
+</para>
+            </summary>
+            <value>A string value that specifies the ribbon group's display text.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholdersSettings">
+
+            <summary>
+                <para>Contains settings that relate to placeholders in <b>ASPxHtmlEditor</b>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholdersSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorPlaceholdersSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholdersSettings.Assign(DevExpress.Web.PropertiesBase)">
+            <summary>
+                <para>Copies the settings of the specified object to the current one.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholdersSettings.EndMark">
+            <summary>
+                <para>Gets or sets the character(s) displayed at the end of the placeholders.
+</para>
+            </summary>
+            <value>A string value that specifies the character(s) displayed at the end of the placeholders. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholdersSettings.StartMark">
+            <summary>
+                <para>Gets or sets the character(s) displayed at the beginning of the placeholders.
+</para>
+            </summary>
+            <value>A string value that specifies the starting character(s) of the placeholders. 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HELinksRibbonGroup">
+
+            <summary>
+                <para>A default ribbon group containing items related to working with links.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HELinksRibbonGroup.#ctor">
+            <summary>
+                <para>Initializes a new instance of the HELinksRibbonGroup class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HELinksRibbonGroup.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the HELinksRibbonGroup class with the specified text.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the group's display text. This value is assigned to the <see cref="P:DevExpress.Web.RibbonGroup.Text"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HELinksRibbonGroup.Text">
             <summary>
                 <para>Gets or sets the ribbon group's display text.
 </para>
@@ -4836,6 +4889,71 @@
 </para>
             </summary>
             <value>A string value that specifies the tab category name.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarSubscriptButton">
+
+            <summary>
+                <para>A default toolbar button that allows the subscript text formatting to be applied to the text selected in the design view area.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarSubscriptButton.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ToolbarSubscriptButton class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarSubscriptButton.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the ToolbarSubscriptButton class with the specified settings.
+</para>
+            </summary>
+            <param name="beginGroup">
+		<b>true</b> if the current toolbar item starts a group; otherwise, <b>false</b>.
+
+            </param>
+            <param name="visible">
+		<b>true</b> to display the current toolbar item; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarSubscriptButton.#ctor(System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the ToolbarSubscriptButton class with the specified setting.
+</para>
+            </summary>
+            <param name="beginGroup">
+		<b>true</b> if the current toolbar item starts a group; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarSubscriptButton.Text">
+            <summary>
+                <para>Gets or sets the button's display text.
+</para>
+            </summary>
+            <value>A string value that specifies the toolbar button's display text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarSubscriptButton.ToolTip">
+            <summary>
+                <para>Gets or sets the button's tooltip text. 
+</para>
+            </summary>
+            <value>A string value that specifies the text content of the button's tooltip.
 </value>
 
 
@@ -6046,6 +6164,132 @@
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem">
+
+            <summary>
+                <para>Denotes an individual context menu item within the <see cref="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditor"/> control.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorContextMenuItem class with the specified text.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the created context menu item's display text. Initializes the item's <see cref="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.Text"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.#ctor">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorContextMenuItem class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.#ctor(System.String,System.String)">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorContextMenuItem class with the specified settings.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the created context menu item's display text. Initializes the item's <see cref="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.Text"/> property.
+
+            </param>
+            <param name="commandName">
+		A <see cref="T:System.String"/> value that identifies the executed command. This value is assigned to the <see cref="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.CommandName"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.Assign(DevExpress.Web.CollectionItem)">
+            <summary>
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.CollectionItem"/> object to the current object.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.CollectionItem"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.BeginGroup">
+            <summary>
+                <para>Gets or sets a value that specifies whether the current context menu item starts a group.
+</para>
+            </summary>
+            <value><b>true</b> if the current item starts a group; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.CommandName">
+            <summary>
+                <para>Gets or sets the command name associated with the context menu item.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the command name associated with the item.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.Image">
+            <summary>
+                <para>Gets the settings of an image displayed by the context menu item.
+</para>
+            </summary>
+            <value>A <see cref="MenuItemImageProperties"/> object that contains image settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.Text">
+            <summary>
+                <para>Gets or sets the text content of the current context menu item.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the text content of the HtmlEditorContextMenuItem.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.ToString">
+            <summary>
+                <para>Returns the string that denotes the current context menu item.
+</para>
+            </summary>
+            <returns>A <see cref="T:System.String"/> that denotes the current HtmlEditorContextMenuItem object.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.Visible">
+            <summary>
+                <para>Gets or sets a value specifying the visibility of the current context menu item.
+</para>
+            </summary>
+            <value><b>true</b> if the item is visible; otherwise <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.VisibleIndex">
+            <summary>
+                <para>Gets or sets a value specifying the position of the current item amongst the visible items in a context menu.
+</para>
+            </summary>
+            <value>An integer value specifying the zero-based index of the HtmlEditorContextMenuItem amongst a context menu's visible items. <b>-1</b> if the item is invisible.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorVideoSelectorUploadSettings">
 
             <summary>
@@ -6097,26 +6341,6 @@
         <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFlashSelectorUploadSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
             <summary>
                 <para>Initializes a new instance of the HtmlEditorFlashSelectorUploadSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFlashSelectorCommonSettings">
-
-            <summary>
-                <para>Contains common settings of the ASPxHtmlEditor's built-in Flash Selector.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFlashSelectorCommonSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the HtmlEditorFlashSelectorCommonSettings class with the specified owner.
 </para>
             </summary>
             <param name="owner">
@@ -6537,88 +6761,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertVideoDialogSettings">
-
-            <summary>
-                <para>Contains customization settings for the Insert Video dialog's form elements. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertVideoDialogSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the HtmlEditorInsertVideoDialogSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertVideoDialogSettings.SettingsVideoSelector">
-            <summary>
-                <para>Provides access to settings related to the Video Selector. 
-</para>
-            </summary>
-            <value>An <see cref="HtmlEditorVideoSelectorSettings"/> object that contains the selector's settings. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertVideoDialogSettings.SettingsVideoUpload">
-            <summary>
-                <para>Provides access to settings related to uploading video files.
-</para>
-            </summary>
-            <value>An <see cref="ASPxHtmlEditorVideoUploadSettings"/> object that contains upload settings.
-
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertFlashDialogSettings">
-
-            <summary>
-                <para>Contains customization settings for the Insert Flash dialog's form elements. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertFlashDialogSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the HtmlEditorInsertFlashDialogSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertFlashDialogSettings.SettingsFlashSelector">
-            <summary>
-                <para>Provides access to settings related to the Flash Selector. 
-</para>
-            </summary>
-            <value>An <see cref="HtmlEditorFlashSelectorSettings"/> object that contains the selector's settings. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertFlashDialogSettings.SettingsFlashUpload">
-            <summary>
-                <para>Provides access to settings related to uploading flash files.
-</para>
-            </summary>
-            <value>An <see cref="ASPxHtmlEditorFlashUploadSettings"/> object that contains upload settings.
-
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertMediaDialogSettingsBase">
 
             <summary>
@@ -6951,6 +7093,81 @@
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton">
+
+            <summary>
+                <para>Represents a default toolbar button that allows insertion of a new row below in the table within the design view area.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ToolbarInsertTableRowBelowButton class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the ToolbarInsertTableRowBelowButton class with the specified settings.
+</para>
+            </summary>
+            <param name="beginGroup">
+		<b>true</b> if the current toolbar item starts a group; otherwise, <b>false</b>.
+
+            </param>
+            <param name="visible">
+		<b>true</b> to display the current toolbar item; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton.#ctor(System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the ToolbarInsertTableRowBelowButton class with the specified setting.
+</para>
+            </summary>
+            <param name="beginGroup">
+		<b>true</b> if the current toolbar item starts a group; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton.Text">
+            <summary>
+                <para>Gets or sets the button's display text.
+</para>
+            </summary>
+            <value>A string value that specifies the toolbar button's display text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton.ToolTip">
+            <summary>
+                <para>Gets or sets the button's tooltip text.
+</para>
+            </summary>
+            <value>A string value that specifies the text content of the button's tooltip.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton.ViewStyle">
+            <summary>
+                <para>Gets or sets a value that specifies how a toolbar button of the <see cref="T:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowBelowButton"/> type is represented within a toolbar. 
+</para>
+            </summary>
+            <value>One of the <see cref="T:DevExpress.Web.ASPxHtmlEditor.ViewStyle"/> enumeration values.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarInsertTableRowAboveButton">
 
             <summary>
@@ -7247,6 +7464,139 @@
 </para>
             </summary>
             <value>One of the <see cref="T:DevExpress.Web.ASPxHtmlEditor.ViewStyle"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase">
+
+            <summary>
+                <para>Serves as a base for classes that contain settings related to a control's media files uploading functionality. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the ASPxHtmlEditorUploadSettingsBase class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.AdvancedUploadModePacketSize">
+            <summary>
+                <para>Gets or sets the size of file packets.
+</para>
+            </summary>
+            <value>An <see cref="Int32"/> value specifying the size of the packets in bytes.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.AdvancedUploadModeTemporaryFolder">
+            <summary>
+                <para>Gets or sets the server folder where files, which are currently being uploaded, are maintained.
+</para>
+            </summary>
+            <value>A <see cref="String"/> value specifying the path to the folder.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.AmazonSettings">
+            <summary>
+                <para>Gets settings allowing ASPxHtmlEditor to access a file system storage in an Amazon Simple Storage Service (Amazon S3).
+
+</para>
+            </summary>
+            <value>An <see cref="UploadControlAmazonSettings"/> object containing the settings.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.Assign(DevExpress.Web.PropertiesBase)">
+            <summary>
+                <para>Copies the settings of the specified object to the current one.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.AzureSettings">
+            <summary>
+                <para>Gets settings allowing ASPxHtmlEditor to access a file system storage in the Azure Service. 
+</para>
+            </summary>
+            <value>An <see cref="UploadControlAzureSettings"/> object containing the settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.DropboxSettings">
+            <summary>
+                <para>Gets settings allowing ASPxHtmlEditor to access a file system storage in the DropBox Service. 
+</para>
+            </summary>
+            <value>A <see cref="UploadControlDropboxSettings"/> object that is the Dropbox account settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.FileSystemSettings">
+            <summary>
+                <para>Gets settings allowing the ASPxHtmlEditor control to operate with files in the server's physical file system. 
+</para>
+            </summary>
+            <value>A <see cref="HtmlEditorUploadControlFileSystemSettings"/> object containing file system settings. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.UploadFolder">
+            <summary>
+                <para>Gets or sets the path to the folder that contains uploaded files used by the editor.
+</para>
+            </summary>
+            <value>A string value specifying the root path of uploaded files.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.UploadFolderUrlPath">
+            <summary>
+                <para>Gets or sets a value that specifies the relative URL path to an upload folder whose physical path is defined using the <see cref="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.UploadFolder"/> property.
+</para>
+            </summary>
+            <value>A string value that defines the relative URL path to the specified upload folder. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.UploadStorage">
+            <summary>
+                <para>Specifies the type of storage used by the ASPxHtmlEditor control.
+</para>
+            </summary>
+            <value>One of the <see cref="UploadFileStorageType"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.UseAdvancedUploadMode">
+            <summary>
+                <para>Gets or sets a value specifying whether the advanced upload mode is used.
+</para>
+            </summary>
+            <value><b>true</b> if the advanced upload mode is used; <b>false</b> if the standard upload mode is used.
 </value>
 
 
@@ -7566,109 +7916,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase">
-
-            <summary>
-                <para>Serves as a base for classes that contain settings related to validation of media files, uploaded using the ASPxHtmlEditor control.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase.#ctor(DevExpress.Web.IPropertiesOwner,DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase)">
-            <summary>
-                <para>Initializes a new object of the ASPxHtmlEditorUploadValidationSettingsBase type with the specified settings.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-            <param name="parentSettings">
-		An <see cref="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase"/> object providing access to settings related to uploading files.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase.AllowedFileExtensions">
-            <summary>
-                <para>Gets or sets the file extensions allowed for upload in the File Manager used within built-in dialogs. 
-</para>
-            </summary>
-            <value>An array of string values that contains the file extensions allowed. 
-
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase.Assign(DevExpress.Web.PropertiesBase)">
-            <summary>
-                <para>Copies the settings of the specified object to the current one.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase.InvalidUrlErrorText">
-            <summary>
-                <para>Gets or sets the error text to be displayed in built-in dialogs, if the specified URL is wrong.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value specifying the error text.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase.MaxFileSize">
-            <summary>
-                <para>Gets or sets the maximum size of an uploaded file. 
-</para>
-            </summary>
-            <value>An <see cref="Int64"/> value that specifies the maximum file size, in bytes.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase.ShowErrors">
-            <summary>
-                <para>Gets or sets the value specifying whether the error message is displayed if the uploaded file does not pass validation.
-</para>
-            </summary>
-            <value><b>true</b>, to show the error message; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorFlashUploadValidationSettings">
-
-            <summary>
-                <para>Contains settings that relate to the validation of flash files, uploaded using the ASPxHtmlEditor control. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorFlashUploadValidationSettings.#ctor(DevExpress.Web.IPropertiesOwner,DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorFlashUploadSettings)">
-            <summary>
-                <para>Initializes a new object of the ASPxHtmlEditorFlashUploadValidationSettings type with the specified settings.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-            <param name="parentSettings">
-		An <see cref="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorFlashUploadSettings"/> object providing access to settings related to uploading flash files.
-
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorVideoUploadValidationSettings">
 
             <summary>
@@ -7957,29 +8204,31 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarItemPickerImagePosition">
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.InsertMediaCssClassItems">
 
             <summary>
-                <para>Lists values that specify the image position within item picker items.
-
+                <para>A collection of custom CSS classes defining media player style settings.
 </para>
             </summary>
 
         </member>
-        <member name="F:DevExpress.Web.ASPxHtmlEditor.ToolbarItemPickerImagePosition.Left">
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.InsertMediaCssClassItems.#ctor">
             <summary>
-                <para>An image is displayed at the element's left, to the left of the text. 
+                <para>Initializes a new instance of the InsertMediaCssClassItems class with default settings.
 </para>
             </summary>
 
 
         </member>
-        <member name="F:DevExpress.Web.ASPxHtmlEditor.ToolbarItemPickerImagePosition.Top">
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.InsertMediaCssClassItems.#ctor(DevExpress.Web.Internal.IWebControlObject)">
             <summary>
-                <para> An image is displayed on the element's right, to the right of the text.
-
+                <para>Initializes a new instance of the InsertMediaCssClassItems class with the specified owner.
 </para>
             </summary>
+            <param name="owner">
+		An object that implements the <b>IWebControlObject</b> interface.
+
+            </param>
 
 
         </member>
@@ -10735,71 +10984,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarSubscriptButton">
-
-            <summary>
-                <para>A default toolbar button that allows the subscript text formatting to be applied to the text selected in the design view area.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarSubscriptButton.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ToolbarSubscriptButton class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarSubscriptButton.#ctor(System.Boolean,System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the ToolbarSubscriptButton class with the specified settings.
-</para>
-            </summary>
-            <param name="beginGroup">
-		<b>true</b> if the current toolbar item starts a group; otherwise, <b>false</b>.
-
-            </param>
-            <param name="visible">
-		<b>true</b> to display the current toolbar item; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarSubscriptButton.#ctor(System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the ToolbarSubscriptButton class with the specified setting.
-</para>
-            </summary>
-            <param name="beginGroup">
-		<b>true</b> if the current toolbar item starts a group; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarSubscriptButton.Text">
-            <summary>
-                <para>Gets or sets the button's display text.
-</para>
-            </summary>
-            <value>A string value that specifies the toolbar button's display text.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarSubscriptButton.ToolTip">
-            <summary>
-                <para>Gets or sets the button's tooltip text. 
-</para>
-            </summary>
-            <value>A string value that specifies the text content of the button's tooltip.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarRemoveFormatButton">
 
             <summary>
@@ -11446,6 +11630,234 @@
 </para>
             </summary>
             <value>A string value that specifies the text content of the button's tooltip.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarStrikethroughButton">
+
+            <summary>
+                <para>A default toolbar button that allows the strike through text formatting to be applied to the text selected in the design view area.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarStrikethroughButton.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ToolbarStrikethroughButton class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarStrikethroughButton.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the ToolbarStrikethroughButton class with the specified settings.
+</para>
+            </summary>
+            <param name="beginGroup">
+		<b>true</b> if the current toolbar item starts a group; otherwise, <b>false</b>.
+
+            </param>
+            <param name="visible">
+		<b>true</b> to display the current toolbar item; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarStrikethroughButton.#ctor(System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the ToolbarStrikethroughButton class with the specified setting.
+</para>
+            </summary>
+            <param name="beginGroup">
+		<b>true</b> if the current toolbar item starts a group; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarStrikethroughButton.Text">
+            <summary>
+                <para>Gets or sets the button's display text.
+</para>
+            </summary>
+            <value>A string value that specifies the toolbar button's display text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarStrikethroughButton.ToolTip">
+            <summary>
+                <para>Gets or sets the button's tooltip text. 
+</para>
+            </summary>
+            <value>A string value that specifies the text content of the button's tooltip.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles">
+
+            <summary>
+                <para>Contains settings that allow the appearance of specific elements within the <b>ASPxHtmlEditor</b>'s toolbars to be defined. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
+            <summary>
+                <para>Initializes a new instance of the ToolbarsStyles class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <b>ISkinOwner</b> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.BarDockControl">
+            <summary>
+                <para>Gets the style settings that define the appearance of the <b>ASPxHtmlEditor</b>'s bar dock control.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxHtmlEditor.BarDockStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.BarDockStyleName">
+            <summary>
+                <para>For internal use only. Reserved for future use.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.CopyFrom(DevExpress.Web.StylesBase)">
+            <summary>
+                <para>Duplicates the properties of the specified object into the current instance of the ToolbarsStyles class.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.StylesBase"/> object that represents the object from which the settings will be copied.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.CssFilePath">
+            <summary>
+                <para>This property is not in effect for the ToolbarsStyles class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.CssPostfix">
+            <summary>
+                <para>This property is not in effect for the ToolbarsStyles class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.Reset">
+            <summary>
+                <para>Returns the ToolbarsStyles object to its original state. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.Ribbon">
+            <summary>
+                <para>Gets the style settings that define the appearance of the ASPxHtmlEditor's ribbon toolbar elements.
+</para>
+            </summary>
+            <value>A <see cref="HtmlEditorRibbonStyles"/> object that contains style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.Toolbar">
+            <summary>
+                <para>Gets the style settings that define the appearance of toolbars within the <b>ASPxHtmlEditor</b> control.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxHtmlEditor.ToolbarStyle"/> object that contains style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.ToolbarItem">
+            <summary>
+                <para>Gets the style settings that define the appearance of toolbar items within the <b>ASPxHtmlEditor</b> control.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxHtmlEditor.ToolbarItemStyle"/> object that contains style settings.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.ToolbarItemStyleName">
+            <summary>
+                <para>For internal use only. Reserved for future use.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.ToolbarStyleName">
+            <summary>
+                <para>For internal use only. Reserved for future use.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarStyle">
+
+            <summary>
+                <para>Defines style settings for toolbars.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarStyle.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ToolbarStyle class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarStyle.GutterBackgroundImage">
+            <summary>
+                <para>This property is not in effect for the ToolbarStyle class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarStyle.GutterWidth">
+            <summary>
+                <para>This property is not in effect for the ToolbarStyle class.
+</para>
+            </summary>
+            <value> 
 </value>
 
 
@@ -13521,6 +13933,16 @@
 </para>
             </summary>
             <value>One of the <see cref="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorEnterMode"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorHtmlEditingSettings.PasteFiltering">
+            <summary>
+                <para>Provides access to settings that relate to content element filtering.
+</para>
+            </summary>
+            <value>An <see cref="HtmlEditorContentElementFiltering"/> object that contains content element filtering settings.
 </value>
 
 
@@ -15885,6 +16307,14 @@
 
 
         </member>
+        <member name="E:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditor.RtfContentPastingProcessed">
+            <summary>
+                <para>Raised when the copied/cut RTF content is processed on the server. 
+</para>
+            </summary>
+
+
+        </member>
         <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditor.SaveStateToCookies">
             <summary>
                 <para>Gets or sets a value that specifies whether cookies are used to persist the information about the control.
@@ -16393,57 +16823,28 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarItemCollectionBase`1">
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorFlashUploadValidationSettings">
 
             <summary>
-                <para>The base class for collections of toolbar items.
-
+                <para>Contains settings that relate to the validation of flash files, uploaded using the ASPxHtmlEditor control. 
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemCollectionBase`1.#ctor">
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorFlashUploadValidationSettings.#ctor(DevExpress.Web.IPropertiesOwner,DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorFlashUploadSettings)">
             <summary>
-                <para>Initializes a new instance of the ToolbarItemCollectionBase&lt;T&gt; class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemCollectionBase`1.#ctor(DevExpress.Web.Internal.IWebControlObject)">
-            <summary>
-                <para>Initializes a new instance of the ToolbarItemCollectionBase&lt;T&gt; class with the specified owner.
+                <para>Initializes a new object of the ASPxHtmlEditorFlashUploadValidationSettings type with the specified settings.
 </para>
             </summary>
             <param name="owner">
-		An object that implements the <b>IWebControlObject</b> interface.
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
 
             </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemCollectionBase`1.FindByText(System.String)">
-            <summary>
-                <para>Returns an item object with the specified <b>Text</b> property value.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value, which is the <b>Text</b> property value of the required item.
+            <param name="parentSettings">
+		An <see cref="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorFlashUploadSettings"/> object providing access to settings related to uploading flash files.
 
 
             </param>
-            <returns>A T object with a specific value of the <b>Text</b> property.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemCollectionBase`1.Toolbar">
-            <summary>
-                <para>Gets the <see cref="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorToolbar"/> control that owns the collection. 
-</para>
-            </summary>
-            <value>An <see cref="HtmlEditorToolbar"/> object that owns the collection. 
-</value>
 
 
         </member>
@@ -16660,45 +17061,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HELinksRibbonGroup">
-
-            <summary>
-                <para>A default ribbon group containing items related to working with links.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HELinksRibbonGroup.#ctor">
-            <summary>
-                <para>Initializes a new instance of the HELinksRibbonGroup class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HELinksRibbonGroup.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the HELinksRibbonGroup class with the specified text.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the group's display text. This value is assigned to the <see cref="P:DevExpress.Web.RibbonGroup.Text"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HELinksRibbonGroup.Text">
-            <summary>
-                <para>Gets or sets the ribbon group's display text.
-</para>
-            </summary>
-            <value>A string value that specifies the ribbon group's display text.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HEImagesRibbonGroup">
 
             <summary>
@@ -16811,26 +17173,6 @@
             </summary>
             <value>A string value that specifies the ribbon group's display text.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFileManagerPermissionsSettings">
-
-            <summary>
-                <para>Contains settings that relate to the Image Selector's and Document Selector's permissions.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFileManagerPermissionsSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the HtmlEditorFileManagerPermissionsSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
 
 
         </member>
@@ -18232,6 +18574,62 @@
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEAlignmentLeftRibbonCommand">
+
+            <summary>
+                <para>A Ribbon item that allows a paragraph whose content is selected within the design view area to be left aligned.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEAlignmentLeftRibbonCommand.#ctor">
+            <summary>
+                <para>Initializes a new instance of the HEAlignmentLeftRibbonCommand class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEAlignmentLeftRibbonCommand.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the HEAlignmentLeftRibbonCommand class with the specified item text.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEAlignmentLeftRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
+            <summary>
+                <para>Initializes a new instance of the HEAlignmentLeftRibbonCommand class with the specified item size.
+</para>
+            </summary>
+            <param name="size">
+		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEAlignmentLeftRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
+            <summary>
+                <para>Initializes a new instance of the HEAlignmentLeftRibbonCommand class with the specified settings.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+
+            </param>
+            <param name="size">
+		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HEAlignmentJustifyRibbonCommand">
 
             <summary>
@@ -18453,62 +18851,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEFontColorRibbonCommand">
-
-            <summary>
-                <para>A Ribbon item that allows the required color to be applied to the text selected within the design view area.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEFontColorRibbonCommand.#ctor">
-            <summary>
-                <para>Initializes a new instance of the HEFontColorRibbonCommand class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEFontColorRibbonCommand.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the HEFontColorRibbonCommand class with the specified item text.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEFontColorRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
-            <summary>
-                <para>Initializes a new instance of the HEFontColorRibbonCommand class with the specified item size.
-</para>
-            </summary>
-            <param name="size">
-		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEFontColorRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
-            <summary>
-                <para>Initializes a new instance of the HEFontColorRibbonCommand class with the specified settings.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
-
-            </param>
-            <param name="size">
-		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HERibbonCustomCssListBoxProperties">
 
             <summary>
@@ -18526,42 +18868,6 @@
 		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
 
             </param>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarStyle">
-
-            <summary>
-                <para>Defines style settings for toolbars.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarStyle.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ToolbarStyle class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarStyle.GutterBackgroundImage">
-            <summary>
-                <para>This property is not in effect for the ToolbarStyle class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarStyle.GutterWidth">
-            <summary>
-                <para>This property is not in effect for the ToolbarStyle class.
-</para>
-            </summary>
-            <value> 
-</value>
 
 
         </member>
@@ -18651,117 +18957,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarStrikethroughButton">
-
-            <summary>
-                <para>A default toolbar button that allows the strike through text formatting to be applied to the text selected in the design view area.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarStrikethroughButton.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ToolbarStrikethroughButton class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarStrikethroughButton.#ctor(System.Boolean,System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the ToolbarStrikethroughButton class with the specified settings.
-</para>
-            </summary>
-            <param name="beginGroup">
-		<b>true</b> if the current toolbar item starts a group; otherwise, <b>false</b>.
-
-            </param>
-            <param name="visible">
-		<b>true</b> to display the current toolbar item; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarStrikethroughButton.#ctor(System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the ToolbarStrikethroughButton class with the specified setting.
-</para>
-            </summary>
-            <param name="beginGroup">
-		<b>true</b> if the current toolbar item starts a group; otherwise, <b>false</b>.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarStrikethroughButton.Text">
-            <summary>
-                <para>Gets or sets the button's display text.
-</para>
-            </summary>
-            <value>A string value that specifies the toolbar button's display text.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarStrikethroughButton.ToolTip">
-            <summary>
-                <para>Gets or sets the button's tooltip text. 
-</para>
-            </summary>
-            <value>A string value that specifies the text content of the button's tooltip.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFileManagerEditingSettings">
-
-            <summary>
-                <para>Contains settings that relate to the built-in ImageSelector's editing functionality.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFileManagerEditingSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the HtmlEditorFileManagerEditingSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorTagInspectorSelectedTagContainerStyles">
-
-            <summary>
-                <para>Contains the style settings that define the appearance of a selected tag container in the tag inspector.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorTagInspectorSelectedTagContainerStyles.#ctor">
-            <summary>
-                <para>Initializes a new instance of the HtmlEditorTagInspectorSelectedTagContainerStyles class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorTagInspectorSelectedTagContainerStyles.Paddings">
-            <summary>
-                <para>Gets the padding settings of the tag inspector's selected tag.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.Paddings"/> object that contains padding settings.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HERemoveFormatRibbonCommand">
 
             <summary>
@@ -18813,161 +19008,6 @@
             </param>
             <param name="size">
 		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles">
-
-            <summary>
-                <para>Contains settings that allow the appearance of specific elements within the <b>ASPxHtmlEditor</b>'s toolbars to be defined. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
-            <summary>
-                <para>Initializes a new instance of the ToolbarsStyles class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <b>ISkinOwner</b> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.BarDockControl">
-            <summary>
-                <para>Gets the style settings that define the appearance of the <b>ASPxHtmlEditor</b>'s bar dock control.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.ASPxHtmlEditor.BarDockStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.BarDockStyleName">
-            <summary>
-                <para>For internal use only. Reserved for future use.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.CopyFrom(DevExpress.Web.StylesBase)">
-            <summary>
-                <para>Duplicates the properties of the specified object into the current instance of the ToolbarsStyles class.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.StylesBase"/> object that represents the object from which the settings will be copied.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.CssFilePath">
-            <summary>
-                <para>This property is not in effect for the ToolbarsStyles class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.CssPostfix">
-            <summary>
-                <para>This property is not in effect for the ToolbarsStyles class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.Reset">
-            <summary>
-                <para>Returns the ToolbarsStyles object to its original state. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.Ribbon">
-            <summary>
-                <para>Gets the style settings that define the appearance of the ASPxHtmlEditor's ribbon toolbar elements.
-</para>
-            </summary>
-            <value>A <see cref="HtmlEditorRibbonStyles"/> object that contains style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.Toolbar">
-            <summary>
-                <para>Gets the style settings that define the appearance of toolbars within the <b>ASPxHtmlEditor</b> control.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.ASPxHtmlEditor.ToolbarStyle"/> object that contains style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.ToolbarItem">
-            <summary>
-                <para>Gets the style settings that define the appearance of toolbar items within the <b>ASPxHtmlEditor</b> control.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.ASPxHtmlEditor.ToolbarItemStyle"/> object that contains style settings.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.ToolbarItemStyleName">
-            <summary>
-                <para>For internal use only. Reserved for future use.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxHtmlEditor.ToolbarsStyles.ToolbarStyleName">
-            <summary>
-                <para>For internal use only. Reserved for future use.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.InsertMediaCssClassItems">
-
-            <summary>
-                <para>A collection of custom CSS classes defining media player style settings.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.InsertMediaCssClassItems.#ctor">
-            <summary>
-                <para>Initializes a new instance of the InsertMediaCssClassItems class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.InsertMediaCssClassItems.#ctor(DevExpress.Web.Internal.IWebControlObject)">
-            <summary>
-                <para>Initializes a new instance of the InsertMediaCssClassItems class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <b>IWebControlObject</b> interface.
 
             </param>
 
@@ -19118,62 +19158,6 @@
             </summary>
             <returns> 
 </returns>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEPrintRibbonCommand">
-
-            <summary>
-                <para>A ribbon item that invokes a standard 'Print' dialog, allowing the editor's content to be printed.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPrintRibbonCommand.#ctor">
-            <summary>
-                <para>Initializes a new instance of the HEPrintRibbonCommand class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPrintRibbonCommand.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the HEPrintRibbonCommand class with the specified item text.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPrintRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
-            <summary>
-                <para>Initializes a new instance of the HEPrintRibbonCommand class with the specified item size.
-</para>
-            </summary>
-            <param name="size">
-		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPrintRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
-            <summary>
-                <para>Initializes a new instance of the HEPrintRibbonCommand class with the specified settings.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
-
-            </param>
-            <param name="size">
-		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
-
-            </param>
 
 
         </member>
@@ -19897,62 +19881,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEPasteFromWordRibbonCommand">
-
-            <summary>
-                <para>A Ribbon item that invokes the "Paste from Word" dialog allowing the copied Word text to be inserted into the design view area.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPasteFromWordRibbonCommand.#ctor">
-            <summary>
-                <para>Initializes a new instance of the HEPasteFromWordRibbonCommand class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPasteFromWordRibbonCommand.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the HEPasteFromWordRibbonCommand class with the specified item text.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPasteFromWordRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
-            <summary>
-                <para>Initializes a new instance of the HEPasteFromWordRibbonCommand class with the specified item size.
-</para>
-            </summary>
-            <param name="size">
-		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPasteFromWordRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
-            <summary>
-                <para>Initializes a new instance of the HEPasteFromWordRibbonCommand class with the specified settings.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
-
-            </param>
-            <param name="size">
-		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.InsertImageCssClassItem">
 
             <summary>
@@ -20046,6 +19974,103 @@
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEOutdentRibbonCommand">
+
+            <summary>
+                <para>A Ribbon item that allows the outdent formatting to be applied to a paragraph whose content is selected within the design view area.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEOutdentRibbonCommand.#ctor">
+            <summary>
+                <para>Initializes a new instance of the HEOutdentRibbonCommand class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEOutdentRibbonCommand.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the HEOutdentRibbonCommand class with the specified item text.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEOutdentRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
+            <summary>
+                <para>Initializes a new instance of the HEOutdentRibbonCommand class with the specified item size.
+</para>
+            </summary>
+            <param name="size">
+		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEOutdentRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
+            <summary>
+                <para>Initializes a new instance of the HEOutdentRibbonCommand class with the specified settings.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+
+            </param>
+            <param name="size">
+		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertVideoDialogSettings">
+
+            <summary>
+                <para>Contains customization settings for the Insert Video dialog's form elements. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertVideoDialogSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorInsertVideoDialogSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertVideoDialogSettings.SettingsVideoSelector">
+            <summary>
+                <para>Provides access to settings related to the Video Selector. 
+</para>
+            </summary>
+            <value>An <see cref="HtmlEditorVideoSelectorSettings"/> object that contains the selector's settings. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertVideoDialogSettings.SettingsVideoUpload">
+            <summary>
+                <para>Provides access to settings related to uploading video files.
+</para>
+            </summary>
+            <value>An <see cref="ASPxHtmlEditorVideoUploadSettings"/> object that contains upload settings.
+
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HEMergeTableCellRightRibbonCommand">
 
             <summary>
@@ -20100,6 +20125,47 @@
 		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
 
             </param>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertFlashDialogSettings">
+
+            <summary>
+                <para>Contains customization settings for the Insert Flash dialog's form elements. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertFlashDialogSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorInsertFlashDialogSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertFlashDialogSettings.SettingsFlashSelector">
+            <summary>
+                <para>Provides access to settings related to the Flash Selector. 
+</para>
+            </summary>
+            <value>An <see cref="HtmlEditorFlashSelectorSettings"/> object that contains the selector's settings. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorInsertFlashDialogSettings.SettingsFlashUpload">
+            <summary>
+                <para>Provides access to settings related to uploading flash files.
+</para>
+            </summary>
+            <value>An <see cref="ASPxHtmlEditorFlashUploadSettings"/> object that contains upload settings.
+
+</value>
 
 
         </member>
@@ -20201,6 +20267,182 @@
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarSelectAllButton">
+
+            <summary>
+                <para>A default toolbar button that selects all editor content.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarSelectAllButton.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ToolbarSelectAllButton class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarSelectAllButton.#ctor(System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the ToolbarSelectAllButton class with the specified setting.
+</para>
+            </summary>
+            <param name="beginGroup">
+		<b>true</b>, if the current toolbar item starts a group; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarSelectAllButton.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the ToolbarSelectAllButton class with the specified settings.
+</para>
+            </summary>
+            <param name="beginGroup">
+		<b>true</b>, if the current toolbar item starts a group; otherwise, <b>false</b>. 
+
+            </param>
+            <param name="visible">
+		<b>true</b>, to display the current toolbar item; otherwise, <b>false</b>.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarSelectAllButton.Text">
+            <summary>
+                <para>Gets or sets the button's display text.
+</para>
+            </summary>
+            <value>A string value that specifies the toolbar button's display text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarSelectAllButton.ToolTip">
+            <summary>
+                <para>Gets or sets the button's tooltip text. 
+</para>
+            </summary>
+            <value>A string value that specifies the text content of the button's tooltip.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEPrintRibbonCommand">
+
+            <summary>
+                <para>A ribbon item that invokes a standard 'Print' dialog, allowing the editor's content to be printed.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPrintRibbonCommand.#ctor">
+            <summary>
+                <para>Initializes a new instance of the HEPrintRibbonCommand class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPrintRibbonCommand.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the HEPrintRibbonCommand class with the specified item text.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPrintRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
+            <summary>
+                <para>Initializes a new instance of the HEPrintRibbonCommand class with the specified item size.
+</para>
+            </summary>
+            <param name="size">
+		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPrintRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
+            <summary>
+                <para>Initializes a new instance of the HEPrintRibbonCommand class with the specified settings.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+
+            </param>
+            <param name="size">
+		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEItalicRibbonCommand">
+
+            <summary>
+                <para>A Ribbon item that allows italic formatting to be applied to the text selected within the design view area.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEItalicRibbonCommand.#ctor">
+            <summary>
+                <para>Initializes a new instance of the HEItalicRibbonCommand class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEItalicRibbonCommand.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the HEItalicRibbonCommand class with the specified item text.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEItalicRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
+            <summary>
+                <para>Initializes a new instance of the HEItalicRibbonCommand class with the specified item size.
+</para>
+            </summary>
+            <param name="size">
+		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEItalicRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
+            <summary>
+                <para>Initializes a new instance of the HEItalicRibbonCommand class with the specified settings.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+
+            </param>
+            <param name="size">
+		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HEViewsRibbonGroup">
 
             <summary>
@@ -20236,6 +20478,141 @@
 </para>
             </summary>
             <value>A string value that specifies the ribbon group's display text.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEInsertUnorderedListRibbonCommand">
+
+            <summary>
+                <para>A Ribbon item that allows unordered list formatting to be applied to a paragraph whose content is selected within the design view area.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEInsertUnorderedListRibbonCommand.#ctor">
+            <summary>
+                <para>Initializes a new instance of the HEInsertUnorderedListRibbonCommand class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEInsertUnorderedListRibbonCommand.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the HEInsertUnorderedListRibbonCommand class with the specified item text.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEInsertUnorderedListRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
+            <summary>
+                <para>Initializes a new instance of the HEInsertUnorderedListRibbonCommand class with the specified item size.
+</para>
+            </summary>
+            <param name="size">
+		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEInsertUnorderedListRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
+            <summary>
+                <para>Initializes a new instance of the HEInsertUnorderedListRibbonCommand class with the specified settings.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+
+            </param>
+            <param name="size">
+		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase">
+
+            <summary>
+                <para>Serves as a base for classes that contain settings related to validation of media files, uploaded using the ASPxHtmlEditor control.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase.#ctor(DevExpress.Web.IPropertiesOwner,DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase)">
+            <summary>
+                <para>Initializes a new object of the ASPxHtmlEditorUploadValidationSettingsBase type with the specified settings.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+            <param name="parentSettings">
+		An <see cref="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase"/> object providing access to settings related to uploading files.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase.AllowedFileExtensions">
+            <summary>
+                <para>Gets or sets the file extensions allowed for upload in the File Manager used within built-in dialogs. 
+</para>
+            </summary>
+            <value>An array of string values that contains the file extensions allowed. 
+
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase.Assign(DevExpress.Web.PropertiesBase)">
+            <summary>
+                <para>Copies the settings of the specified object to the current one.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase.InvalidUrlErrorText">
+            <summary>
+                <para>Gets or sets the error text to be displayed in built-in dialogs, if the specified URL is wrong.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value specifying the error text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase.MaxFileSize">
+            <summary>
+                <para>Gets or sets the maximum size of an uploaded file. 
+</para>
+            </summary>
+            <value>An <see cref="Int64"/> value that specifies the maximum file size, in bytes.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadValidationSettingsBase.ShowErrors">
+            <summary>
+                <para>Gets or sets the value specifying whether the error message is displayed if the uploaded file does not pass validation.
+</para>
+            </summary>
+            <value><b>true</b>, to show the error message; otherwise, <b>false</b>.
 </value>
 
 
@@ -20497,6 +20874,62 @@
             </summary>
             <value>A string value that specifies the ribbon group's display text.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEPasteFromWordRibbonCommand">
+
+            <summary>
+                <para>A Ribbon item that invokes the "Paste from Word" dialog allowing the copied Word text to be inserted into the design view area.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPasteFromWordRibbonCommand.#ctor">
+            <summary>
+                <para>Initializes a new instance of the HEPasteFromWordRibbonCommand class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPasteFromWordRibbonCommand.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the HEPasteFromWordRibbonCommand class with the specified item text.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPasteFromWordRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
+            <summary>
+                <para>Initializes a new instance of the HEPasteFromWordRibbonCommand class with the specified item size.
+</para>
+            </summary>
+            <param name="size">
+		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEPasteFromWordRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
+            <summary>
+                <para>Initializes a new instance of the HEPasteFromWordRibbonCommand class with the specified settings.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
+
+            </param>
+            <param name="size">
+		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
+
+            </param>
 
 
         </member>
@@ -20819,62 +21252,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEOutdentRibbonCommand">
-
-            <summary>
-                <para>A Ribbon item that allows the outdent formatting to be applied to a paragraph whose content is selected within the design view area.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEOutdentRibbonCommand.#ctor">
-            <summary>
-                <para>Initializes a new instance of the HEOutdentRibbonCommand class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEOutdentRibbonCommand.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the HEOutdentRibbonCommand class with the specified item text.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEOutdentRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
-            <summary>
-                <para>Initializes a new instance of the HEOutdentRibbonCommand class with the specified item size.
-</para>
-            </summary>
-            <param name="size">
-		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEOutdentRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
-            <summary>
-                <para>Initializes a new instance of the HEOutdentRibbonCommand class with the specified settings.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
-
-            </param>
-            <param name="size">
-		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HEInsertLinkDialogRibbonCommand">
 
             <summary>
@@ -20928,6 +21305,82 @@
 		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
 
             </param>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderItem">
+
+            <summary>
+                <para>An individual placeholder within the HtmlEditor. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderItem.#ctor">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorPlaceholderItem class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderItem.#ctor(System.String)">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorPlaceholderItem class with the specified value.
+</para>
+            </summary>
+            <param name="value">
+		A <see cref="T:System.String"/> that specifies the item display value. This value is assigned to the <see cref="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderItem.Value"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderItem.Assign(DevExpress.Web.CollectionItem)">
+            <summary>
+                <para>Copies the settings of the specified <see cref="T:DevExpress.Web.CollectionItem"/> object to the current object.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.CollectionItem"/> object that is the source of the operation. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderItem.Value">
+            <summary>
+                <para>Specifies the placeholder value.
+</para>
+            </summary>
+            <value>An <see cref="String"/> that specifies the item value.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorTagInspectorSelectedTagContainerStyles">
+
+            <summary>
+                <para>Contains the style settings that define the appearance of a selected tag container in the tag inspector.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorTagInspectorSelectedTagContainerStyles.#ctor">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorTagInspectorSelectedTagContainerStyles class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorTagInspectorSelectedTagContainerStyles.Paddings">
+            <summary>
+                <para>Gets the padding settings of the tag inspector's selected tag.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.Paddings"/> object that contains padding settings.
+</value>
 
 
         </member>
@@ -21077,32 +21530,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorUploadControlFileSystemSettings">
-
-            <summary>
-                <para>Provides settings allowing you to specify a folder where uploaded files will be automatically saved.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorUploadControlFileSystemSettings.#ctor">
-            <summary>
-                <para>Initializes a new instance of the HtmlEditorUploadControlFileSystemSettings class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorUploadControlFileSystemSettings.UploadFolder">
-            <summary>
-                <para>Specifies the server folder where files will be uploaded.
-</para>
-            </summary>
-            <value>A <see cref="String"/> value specifying the folder path.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholderCollection">
 
             <summary>
@@ -21236,77 +21663,25 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholdersSettings">
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEFontColorRibbonCommand">
 
             <summary>
-                <para>Contains settings that relate to placeholders in <b>ASPxHtmlEditor</b>.
+                <para>A Ribbon item that allows the required color to be applied to the text selected within the design view area.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholdersSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEFontColorRibbonCommand.#ctor">
             <summary>
-                <para>Initializes a new instance of the HtmlEditorPlaceholdersSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholdersSettings.Assign(DevExpress.Web.PropertiesBase)">
-            <summary>
-                <para>Copies the settings of the specified object to the current one.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholdersSettings.EndMark">
-            <summary>
-                <para>Gets or sets the character(s) displayed at the end of the placeholders.
-</para>
-            </summary>
-            <value>A string value that specifies the character(s) displayed at the end of the placeholders. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorPlaceholdersSettings.StartMark">
-            <summary>
-                <para>Gets or sets the character(s) displayed at the beginning of the placeholders.
-</para>
-            </summary>
-            <value>A string value that specifies the starting character(s) of the placeholders. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEItalicRibbonCommand">
-
-            <summary>
-                <para>A Ribbon item that allows italic formatting to be applied to the text selected within the design view area.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEItalicRibbonCommand.#ctor">
-            <summary>
-                <para>Initializes a new instance of the HEItalicRibbonCommand class with default settings.
+                <para>Initializes a new instance of the HEFontColorRibbonCommand class with default settings.
 </para>
             </summary>
 
 
         </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEItalicRibbonCommand.#ctor(System.String)">
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEFontColorRibbonCommand.#ctor(System.String)">
             <summary>
-                <para>Initializes a new instance of the HEItalicRibbonCommand class with the specified item text.
+                <para>Initializes a new instance of the HEFontColorRibbonCommand class with the specified item text.
 </para>
             </summary>
             <param name="text">
@@ -21316,9 +21691,9 @@
 
 
         </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEItalicRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEFontColorRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
             <summary>
-                <para>Initializes a new instance of the HEItalicRibbonCommand class with the specified item size.
+                <para>Initializes a new instance of the HEFontColorRibbonCommand class with the specified item size.
 </para>
             </summary>
             <param name="size">
@@ -21328,9 +21703,9 @@
 
 
         </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEItalicRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEFontColorRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
             <summary>
-                <para>Initializes a new instance of the HEItalicRibbonCommand class with the specified settings.
+                <para>Initializes a new instance of the HEFontColorRibbonCommand class with the specified settings.
 </para>
             </summary>
             <param name="text">
@@ -21433,63 +21808,6 @@
             </param>
             <param name="items">
 		An array that contains zero or more <see cref="T:DevExpress.Web.RibbonDropDownButtonItem"/> objects to populate the <see cref="P:DevExpress.Web.RibbonDropDownButtonItem.Items"/> collection.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HEInsertUnorderedListRibbonCommand">
-
-            <summary>
-                <para>A Ribbon item that allows unordered list formatting to be applied to a paragraph whose content is selected within the design view area.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEInsertUnorderedListRibbonCommand.#ctor">
-            <summary>
-                <para>Initializes a new instance of the HEInsertUnorderedListRibbonCommand class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEInsertUnorderedListRibbonCommand.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the HEInsertUnorderedListRibbonCommand class with the specified item text.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEInsertUnorderedListRibbonCommand.#ctor(DevExpress.Web.RibbonItemSize)">
-            <summary>
-                <para>Initializes a new instance of the HEInsertUnorderedListRibbonCommand class with the specified item size.
-</para>
-            </summary>
-            <param name="size">
-		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HEInsertUnorderedListRibbonCommand.#ctor(System.String,DevExpress.Web.RibbonItemSize)">
-            <summary>
-                <para>Initializes a new instance of the HEInsertUnorderedListRibbonCommand class with the specified settings.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the text of the ribbon item.
-
-            </param>
-            <param name="size">
-		One of the <see cref="T:DevExpress.Web.RibbonItemSize"/> enumeration values that specifies the ribbon item size.
 
             </param>
 
@@ -26508,93 +26826,6 @@ None - The browser does not load the video when the page loads"
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase">
-
-            <summary>
-                <para>The base class for toolbar items.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.#ctor(System.String,System.String)">
-            <summary>
-                <para>Initializes a new instance of the ToolbarItemBase class with the specified settings.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the created toolbar item's display text. This value is assigned to the <see cref="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.Text"/> property.
-
-            </param>
-            <param name="toolTip">
-		A <see cref="T:System.String"/> value that specifies the created toolbar item's tooltip text. This value is assigned to the <see cref="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.ToolTip"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the ToolbarItemBase class with the specified text.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the created toolbar item's display text. This value is assigned to the <see cref="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.Text"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ToolbarItemBase class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.Assign(DevExpress.Web.CollectionItem)">
-            <summary>
-                <para>Copies the settings from the specified item to the current object.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.CollectionItem"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.Image">
-            <summary>
-                <para>Gets the settings of an image displayed by the item. 
-</para>
-            </summary>
-            <value>A <see cref="ToolbarItemImageProperties"/> object that contains image settings. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.Text">
-            <summary>
-                <para>Gets or sets the text content of a toolbar item. 
-</para>
-            </summary>
-            <value>A <see cref="String"/> value that specifies the item's text content.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ToolbarItemBase.ToolTip">
-            <summary>
-                <para>Gets or sets the item's tooltip text.
-</para>
-            </summary>
-            <value>A <see cref="String"/> value that specifies the text content of the item's tooltip. 
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxHtmlEditor.HEExportToDocxDropDownRibbonCommand">
 
             <summary>
@@ -26782,132 +27013,6 @@ None - The browser does not load the video when the page loads"
 </para>
             </summary>
             <value>An <see cref="ASPxHtmlEditor"/> object that is the owner of the current collection.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem">
-
-            <summary>
-                <para>Denotes an individual context menu item within the <see cref="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditor"/> control.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.#ctor(System.String)">
-            <summary>
-                <para>Initializes a new instance of the HtmlEditorContextMenuItem class with the specified text.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the created context menu item's display text. Initializes the item's <see cref="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.Text"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.#ctor">
-            <summary>
-                <para>Initializes a new instance of the HtmlEditorContextMenuItem class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.#ctor(System.String,System.String)">
-            <summary>
-                <para>Initializes a new instance of the HtmlEditorContextMenuItem class with the specified settings.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the created context menu item's display text. Initializes the item's <see cref="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.Text"/> property.
-
-            </param>
-            <param name="commandName">
-		A <see cref="T:System.String"/> value that identifies the executed command. This value is assigned to the <see cref="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.CommandName"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.Assign(DevExpress.Web.CollectionItem)">
-            <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.CollectionItem"/> object to the current object.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.CollectionItem"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.BeginGroup">
-            <summary>
-                <para>Gets or sets a value that specifies whether the current context menu item starts a group.
-</para>
-            </summary>
-            <value><b>true</b> if the current item starts a group; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.CommandName">
-            <summary>
-                <para>Gets or sets the command name associated with the context menu item.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value that specifies the command name associated with the item.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.Image">
-            <summary>
-                <para>Gets the settings of an image displayed by the context menu item.
-</para>
-            </summary>
-            <value>A <see cref="MenuItemImageProperties"/> object that contains image settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.Text">
-            <summary>
-                <para>Gets or sets the text content of the current context menu item.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value that specifies the text content of the HtmlEditorContextMenuItem.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.ToString">
-            <summary>
-                <para>Returns the string that denotes the current context menu item.
-</para>
-            </summary>
-            <returns>A <see cref="T:System.String"/> that denotes the current HtmlEditorContextMenuItem object.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.Visible">
-            <summary>
-                <para>Gets or sets a value specifying the visibility of the current context menu item.
-</para>
-            </summary>
-            <value><b>true</b> if the item is visible; otherwise <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorContextMenuItem.VisibleIndex">
-            <summary>
-                <para>Gets or sets a value specifying the position of the current item amongst the visible items in a context menu.
-</para>
-            </summary>
-            <value>An integer value specifying the zero-based index of the HtmlEditorContextMenuItem amongst a context menu's visible items. <b>-1</b> if the item is invisible.
 </value>
 
 
@@ -27221,139 +27326,6 @@ None - The browser does not load the video when the page loads"
 </para>
             </summary>
             <value>An array of <see cref="T:System.String"/> values that contains the file extensions allowed.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase">
-
-            <summary>
-                <para>Serves as a base for classes that contain settings related to a control's media files uploading functionality. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the ASPxHtmlEditorUploadSettingsBase class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.AdvancedUploadModePacketSize">
-            <summary>
-                <para>Gets or sets the size of file packets.
-</para>
-            </summary>
-            <value>An <see cref="Int32"/> value specifying the size of the packets in bytes.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.AdvancedUploadModeTemporaryFolder">
-            <summary>
-                <para>Gets or sets the server folder where files, which are currently being uploaded, are maintained.
-</para>
-            </summary>
-            <value>A <see cref="String"/> value specifying the path to the folder.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.AmazonSettings">
-            <summary>
-                <para>Gets settings allowing ASPxHtmlEditor to access a file system storage in an Amazon Simple Storage Service (Amazon S3).
-
-</para>
-            </summary>
-            <value>An <see cref="UploadControlAmazonSettings"/> object containing the settings.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.Assign(DevExpress.Web.PropertiesBase)">
-            <summary>
-                <para>Copies the settings of the specified object to the current one.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.AzureSettings">
-            <summary>
-                <para>Gets settings allowing ASPxHtmlEditor to access a file system storage in the Azure Service. 
-</para>
-            </summary>
-            <value>An <see cref="UploadControlAzureSettings"/> object containing the settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.DropboxSettings">
-            <summary>
-                <para>Gets settings allowing ASPxHtmlEditor to access a file system storage in the DropBox Service. 
-</para>
-            </summary>
-            <value>A <see cref="UploadControlDropboxSettings"/> object that is the Dropbox account settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.FileSystemSettings">
-            <summary>
-                <para>Gets settings allowing the ASPxHtmlEditor control to operate with files in the server's physical file system. 
-</para>
-            </summary>
-            <value>A <see cref="HtmlEditorUploadControlFileSystemSettings"/> object containing file system settings. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.UploadFolder">
-            <summary>
-                <para>Gets or sets the path to the folder that contains uploaded files used by the editor.
-</para>
-            </summary>
-            <value>A string value specifying the root path of uploaded files.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.UploadFolderUrlPath">
-            <summary>
-                <para>Gets or sets a value that specifies the relative URL path to an upload folder whose physical path is defined using the <see cref="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.UploadFolder"/> property.
-</para>
-            </summary>
-            <value>A string value that defines the relative URL path to the specified upload folder. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.UploadStorage">
-            <summary>
-                <para>Specifies the type of storage used by the ASPxHtmlEditor control.
-</para>
-            </summary>
-            <value>One of the <see cref="UploadFileStorageType"/> enumeration values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxHtmlEditor.ASPxHtmlEditorUploadSettingsBase.UseAdvancedUploadMode">
-            <summary>
-                <para>Gets or sets a value specifying whether the advanced upload mode is used.
-</para>
-            </summary>
-            <value><b>true</b> if the advanced upload mode is used; <b>false</b> if the standard upload mode is used.
 </value>
 
 
@@ -27736,6 +27708,52 @@ None - The browser does not load the video when the page loads"
                 <para>Identifies plain text format (.txt).
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorUploadControlFileSystemSettings">
+
+            <summary>
+                <para>Provides settings allowing you to specify a folder where uploaded files will be automatically saved.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorUploadControlFileSystemSettings.#ctor">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorUploadControlFileSystemSettings class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxHtmlEditor.HtmlEditorUploadControlFileSystemSettings.UploadFolder">
+            <summary>
+                <para>Specifies the server folder where files will be uploaded.
+</para>
+            </summary>
+            <value>A <see cref="String"/> value specifying the folder path.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFlashSelectorCommonSettings">
+
+            <summary>
+                <para>Contains common settings of the ASPxHtmlEditor's built-in Flash Selector.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxHtmlEditor.HtmlEditorFlashSelectorCommonSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the HtmlEditorFlashSelectorCommonSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
 
 
         </member>

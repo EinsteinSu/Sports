@@ -53,12 +53,20 @@
     <Compile Include="DisplayMgr.cs" />
     <Compile Include="FlagMgr.cs" />
     <Compile Include="HardwareMgr.cs" />
+    <Compile Include="LoginMgr.cs" />
     <Compile Include="PlayerMgr.cs" />
+    <Compile Include="RoleMgr.cs" />
+    <Compile Include="SecurityGroupMgr.cs" />
+    <Compile Include="SecurityMgr.cs" />
     <Compile Include="TeamMgr.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VenueMgr.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Sports.Common\Sports.Common.csproj">
+      <Project>{f437219b-0600-462f-9b72-3846b7cb769b}</Project>
+      <Name>Sports.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sports.DataAccess\Sports.DataAccess.csproj">
       <Project>{36891bfa-8ab4-4ec1-b66d-418941fc0162}</Project>
       <Name>Sports.DataAccess</Name>

@@ -1,0 +1,5 @@
+C:\Users\einst\Documents\GitHub\Sports\Sports.Common\bin\Debug\Sports.Common.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Common\bin\Debug\Sports.Common.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Common\obj\Debug\Sports.Common.csproj.CoreCompileInputs.cache
+C:\Users\einst\Documents\GitHub\Sports\Sports.Common\obj\Debug\Sports.Common.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Common\obj\Debug\Sports.Common.pdb

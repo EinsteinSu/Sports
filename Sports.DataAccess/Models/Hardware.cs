@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sports.DataAccess.Models
 {
@@ -11,6 +12,11 @@ namespace Sports.DataAccess.Models
 
         [MaxLength(50)]
         public string Usage { get; set; }
+
+        public virtual Venue Venue { get; set; }
+
+        [ForeignKey("Venue")]
+        public int VenueId { get; set; }
 
         public string Description { get; set; }
     }

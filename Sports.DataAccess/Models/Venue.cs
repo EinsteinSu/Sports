@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Sports.DataAccess.Models
 {
@@ -23,5 +24,9 @@ namespace Sports.DataAccess.Models
 
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
+
+        //public virtual ICollection<Hardware> Hardwares { get; set; }
+
+        //public virtual ICollection<Display> Displays { get; set; }
     }
 }

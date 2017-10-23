@@ -411,6 +411,16 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraScheduler.AgendaViewAppointmentDisplayOptions.SubjectBold">
+            <summary>
+                <para> Gets or sets whether the bold font is used for the appointment subject in the Agenda view. 
+</para>
+            </summary>
+            <value><b>True</b> to display subject with bold font; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraScheduler.AgendaViewAppointmentDisplayOptions.TimeDisplayType">
             <summary>
                 <para>This property has no effect for the Agenda View.
@@ -16880,7 +16890,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_AllResources">
             <summary>
-                <para>Text of the <b>Resources kind</b> combo box item. The combo box editor is located on the Resources tab of the Page Setup dialog.
+                <para>Text of the <b>Resources kind</b> combo box item. The combo box editor is located on the Resources tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
  
 <para><b>Default Value:</b> "All resources"
 </para>
@@ -16952,7 +16962,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_CalendarDetailsPrintStyle">
             <summary>
-                <para>The text of the <b>Style name</b> combo box item. The combo box editor is located on the Format tab of the Page Setup dialog.
+                <para>The text of the <b>Style name</b> combo box item. The combo box editor is located on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para>
 <b>Default Value:</b> "Calendar Details Style"
@@ -16975,7 +16985,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_ColorConverterBlackAndWhite">
             <summary>
-                <para>The text of the <b>Shading</b> combo box item. The combo box editor is located on the Format tab of the Page Setup dialog.
+                <para>The text of the <b>Shading</b> combo box item. The combo box editor is located on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para><b>Default Value:</b> "Black And White"
 </para>
@@ -16986,7 +16996,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_ColorConverterFullColor">
             <summary>
-                <para>The text of the <b>Shading</b> combo box item. The combo box editor is located on the Format tab of the Page Setup dialog.
+                <para>The text of the <b>Shading</b> combo box item. The combo box editor is located on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para><b>Default Value:</b> "Full Color"
 </para>
@@ -16997,7 +17007,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_ColorConverterGrayScale">
             <summary>
-                <para>The text of the <b>Shading</b> combo box item. The combo box editor is located on the Format tab of the Page Setup dialog.
+                <para>The text of the <b>Shading</b> combo box item. The combo box editor is located on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para><b>Default Value:</b> "Gray Scale"
 </para>
@@ -17008,7 +17018,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_DailyPrintStyle">
             <summary>
-                <para>The text of the <b>Style name</b> combo box item. The combo box editor is located on the Format tab of the Page Setup dialog.
+                <para>The text of the <b>Style name</b> combo box item. The combo box editor is located on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <b>Default Value:</b> "Daily Style"
 </para>
@@ -17105,7 +17115,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_GroupByDate">
             <summary>
-                <para>Text of the <b>Group by</b> combo box item. The combo box editor is located on the Resources tab of the Page Setup dialog.
+                <para>Text of the <b>Group by</b> combo box item. The combo box editor is located on the Resources tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para><b>Default Value:</b> "Date"
 </para>
@@ -17127,7 +17137,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_GroupByNone">
             <summary>
-                <para>Text of the <b>Group by</b> combo box item. The combo box editor is located on the Resources tab of the Page Setup dialog.
+                <para>Text of the <b>Group by</b> combo box item. The combo box editor is located on the Resources tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <b>Default Value:</b> "None"
 </para>
@@ -17159,7 +17169,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_GroupByResources">
             <summary>
-                <para>Text of the <b>Group by</b> combo box item. The combo box editor is located on the Resources tab of the Page Setup dialog.
+                <para>Text of the <b>Group by</b> combo box item. The combo box editor is located on the Resources tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <b>Default Value:</b> "Resources"
 </para>
@@ -17213,7 +17223,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_MemoPrintStyle">
             <summary>
-                <para>The text of the <b>Style name</b> combo box item. The combo box editor is located on the Format tab of the Page Setup dialog.
+                <para>The text of the <b>Style name</b> combo box item. The combo box editor is located on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para>
 <b>Default Value:</b> "Memo Style"
@@ -17291,7 +17301,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_MonthlyPrintStyle">
             <summary>
-                <para>The text of the <b>Style name</b> combo box item. The combo box editor is located on the Format tab of the Page Setup dialog.
+                <para>The text of the <b>Style name</b> combo box item. The combo box editor is located on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <b>Default Value:</b> "Monthly Style"
 </para>
@@ -17376,7 +17386,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_OnScreenResources">
             <summary>
-                <para>Text of the <b>Resources kind</b> combo box item. The combo box editor is located on the Resources tab of the Page Setup dialog.
+                <para>Text of the <b>Resources kind</b> combo box item. The combo box editor is located on the Resources tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para><b>Default Value:</b> "OnScreen resources"</para>
 </para>
@@ -17729,7 +17739,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_TrifoldPrintStyle">
             <summary>
-                <para>The text of the <b>Style name</b> combo box item. The combo box editor is located on the Format tab of the Page Setup dialog.
+                <para>The text of the <b>Style name</b> combo box item. The combo box editor is located on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <b>Default Value:</b> "Tri-fold Style"
 </para>
@@ -17750,7 +17760,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_VisibleResources">
             <summary>
-                <para>Text of the <b>Resources kind</b> combo box item. The combo box editor is located on the Resources tab of the Page Setup dialog.
+                <para>Text of the <b>Resources kind</b> combo box item. The combo box editor is located on the Resources tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para><b>Default Value:</b> "Visible resources"</para>
 </para>
@@ -17793,7 +17803,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Caption_WeeklyPrintStyle">
             <summary>
-                <para>The text of the <b>Style name</b> combo box item. The combo box editor is located on the Format tab of the Page Setup dialog.
+                <para>The text of the <b>Style name</b> combo box item. The combo box editor is located on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <b>Default Value:</b>"Weekly Style"
 </para>
@@ -18284,9 +18294,49 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
 
 
         </member>
+        <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.FlyoutCaption_End">
+            <summary>
+                <para>The caption displayed in the Appointment Flyout before the <see cref="P:DevExpress.XtraScheduler.Appointment.End"/> property value.
+
+<para><b>Default value:</b> "End"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.FlyoutCaption_Location">
+            <summary>
+                <para>The caption displayed in the Appointment Flyout before the <see cref="P:DevExpress.XtraScheduler.Appointment.Location"/> property value.
+
+<para><b>Default value:</b> "Location"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.FlyoutCaption_Reminder">
+            <summary>
+                <para>The caption displayed in the Appointment Flyout before the <see cref="P:DevExpress.XtraScheduler.Appointment.Reminder"/> property value.
+
+<para><b>Default value:</b> "Reminder"</para>
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.FlyoutCaption_Start">
+            <summary>
+                <para>The caption displayed in the Appointment Flyout before the <see cref="P:DevExpress.XtraScheduler.Appointment.Start"/> property value.
+
+<para><b>Default value:</b> "Start"</para>
+</para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Format_CopyNOf">
             <summary>
-                <para>Format string used to display a new style name in the <b>Define Print Style</b> dialog invoked by clicking the Define Styles... button on the Format tab of the Page Setup dialog.
+                <para>Format string used to display a new style name in the <b>Define Print Style</b> dialog invoked by clicking the Define Styles... button on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para>
 <b>Default Value:</b> "Copy ({0}) of {1}"
@@ -18298,7 +18348,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.Format_CopyOf">
             <summary>
-                <para>Format string used to display a new style name in the <b>Define Print Style</b> dialog invoked by clicking the Define Styles... button on the Format tab of the Page Setup dialog.
+                <para>Format string used to display a new style name in the <b>Define Print Style</b> dialog invoked by clicking the Define Styles... button on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para>
 <b>Default Value:</b> "Copy of {0}"
@@ -20005,7 +20055,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.PrintPageSetupFormatTabControlCustomizeShading">
             <summary>
-                <para>The text of the <b>Shading</b> combo box item. The combo box editor is located on the Format tab of the Page Setup dialog.
+                <para>The text of the <b>Shading</b> combo box item. The combo box editor is located on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para>
 <b>Default Value:</b> "&lt;Customize...&gt;"
@@ -20017,7 +20067,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.PrintPageSetupFormatTabControlSizeAndFontName">
             <summary>
-                <para>The format string used to display items in the <b>Fonts</b> combo boxes on the <b>Format</b> tab of the Page Setup dialog.
+                <para>The format string used to display items in the <b>Fonts</b> combo boxes on the <b>Format</b> tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para><b>Default Value:</b>"{0} pt. {1}"
 </para>
@@ -20040,7 +20090,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.PrintRangeControlInvalidDate">
             <summary>
-                <para>The text of the warning message displayed when an incorrect <b>Start date</b> and <b>End date</b> are set on the Format tab of the Page Setup dialog.
+                <para>The text of the warning message displayed when an incorrect <b>Start date</b> and <b>End date</b> are set on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para>
 <b>Default Value:</b>"End date must be greater or equal to the start date"
@@ -20053,7 +20103,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.PrintTimeIntervalControlInvalidDuration">
             <summary>
-                <para>The text of the tooltip displayed when the <b>TimeOfDayIntervalEditControl</b> combo box fails validation because an incorrect value is entered. The control, labeled <b>Duration</b>,  is located on the Format tab of the Page Setup dialog.
+                <para>The text of the tooltip displayed when the <b>TimeOfDayIntervalEditControl</b> combo box fails validation because an incorrect value is entered. The control, labeled <b>Duration</b>,  is located on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para><b>Default Value:</b>"Duration must be not greater than a day and greater than 0"
 </para>
@@ -20074,7 +20124,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.PrintTriFoldOptControlDailyCalendar">
             <summary>
-                <para>The text of an item in a combo box that specifies a calendar style for the section of the trifold-style calendar.  The option is available if the <b>Tri-fold Style</b> is selected on the Format tab of the Page Setup dialog.
+                <para>The text of an item in a combo box that specifies a calendar style for the section of the trifold-style calendar.  The option is available if the <b>Tri-fold Style</b> is selected on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para><b>Default Value:</b>"Daily Calendar"
 </para>
@@ -20085,7 +20135,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.PrintTriFoldOptControlMonthlyCalendar">
             <summary>
-                <para>The text of an item in a combo box that specifies a calendar style for the section of the trifold-style calendar.  The option is available if the <b>Tri-fold Style</b> is selected on the Format tab of the Page Setup dialog.
+                <para>The text of an item in a combo box that specifies a calendar style for the section of the trifold-style calendar.  The option is available if the <b>Tri-fold Style</b> is selected on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para><b>Default Value:</b>"Monthly Calendar"
 </para>
@@ -20096,7 +20146,7 @@ A <see cref="T:System.DateTime"/> object specifying the appointment start - the 
         </member>
         <member name="F:DevExpress.XtraScheduler.Localization.SchedulerStringId.PrintTriFoldOptControlWeeklyCalendar">
             <summary>
-                <para>The text of an item in a combo box that specifies a calendar style for the section of the trifold-style calendar.  The option is available if the <b>Tri-fold Style</b> is selected on the Format tab of the Page Setup dialog.
+                <para>The text of an item in a combo box that specifies a calendar style for the section of the trifold-style calendar.  The option is available if the <b>Tri-fold Style</b> is selected on the Format tab of the <a href="https://devexpress.github.io/dotnet-eud/interface-elements-for-desktop/articles/scheduler/printing.html">Page Setup</a> dialog.
 
 <para><b>Default Value:</b>"Weekly Calendar"
 </para>
@@ -25820,6 +25870,20 @@ See the How to: Split Appointments and Series article for more information.
 		A <see cref="T:System.String"/> value that specifies the XML encoding to use to reconstruct the persistent object. 
 
             </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraScheduler.PersistentObject.GetSourceObject(DevExpress.XtraScheduler.ISchedulerStorageBase)">
+            <summary>
+                <para>Returns the data object that is bound to the current persistent object. 
+</para>
+            </summary>
+            <param name="storage">
+		An <see cref="T:DevExpress.XtraScheduler.ISchedulerStorageBase"/> object that represents the storage control which owns the persistent object.
+
+            </param>
+            <returns>A <see cref="T:System.Object"/> that is the data source object which is bound to the persistent object. 
+</returns>
 
 
         </member>

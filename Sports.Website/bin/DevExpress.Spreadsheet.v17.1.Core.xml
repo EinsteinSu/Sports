@@ -421,6 +421,16 @@
 
 
         </member>
+        <member name="P:DevExpress.XtraSpreadsheet.Import.OpenXmlDocumentImporterOptions.SuppressSolidFillWithEmptyColor">
+            <summary>
+                <para>Gets or sets whether to correct the transparent background color rendering in documents created in SpreadsheetControl prior to version <b>16.1.5</b>. 
+</para>
+            </summary>
+            <value><b>true</b>, to correct the document; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraSpreadsheet.Export.XltDocumentExporterOptions">
 
             <summary>
@@ -5979,7 +5989,7 @@ The default value is <b>false</b>.
                 <para>Gets or sets the caption for a virtual field named <i>Data</i> (<i>Values</i> in the UI) which appears in a pivot table containing two or more data fields.
 </para>
             </summary>
-            <value>A <see cref="T:System.String"/> value that specifies the <i>Data</i> field caption.
+            <value>A <see cref="T:System.String"/> value that specifies the <i>Data</i> field caption. The value cannot be <i>null</i> or <i>String.Empty</i>.
 </value>
 
 
@@ -6074,6 +6084,17 @@ The default value is <b>true</b>.
             </summary>
             <value><b>true</b>, to display "(Multiple Items)" instead of "(All)" for a page field with multiple selected items; otherwise, <b>false</b>.
 The default value is <b>true</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Spreadsheet.PivotViewOptions.ShowValuesRow">
+            <summary>
+                <para>Gets or sets a value indicating whether to display the <i>Values</i> row that may appear when there are multiple fields in the PivotTable data area.
+</para>
+            </summary>
+            <value><b>true</b>, to display the <i>Values</i> row; otherwise, <b>false</b>.
+The default is <b>true</b>.
 </value>
 
 
@@ -26914,6 +26935,32 @@ A ConstantExpression class instance, representing the source object for copying.
 
 
         </member>
+        <member name="T:DevExpress.XtraSpreadsheet.SpreadsheetFillHandleBehaviorOptions">
+
+            <summary>
+                <para>Contains an option which turns the <b>Fill Handle</b> feature on or off. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraSpreadsheet.SpreadsheetFillHandleBehaviorOptions.#ctor">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetFillHandleBehaviorOptions class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraSpreadsheet.SpreadsheetFillHandleBehaviorOptions.Enabled">
+            <summary>
+                <para>Gets or sets whether the fill handle is enabled.
+</para>
+            </summary>
+            <value><b>True</b>, if the fill handle is enabled; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Spreadsheet.HeaderFooterSection">
 
             <summary>
@@ -27427,7 +27474,8 @@ A ConstantExpression class instance, representing the source object for copying.
         <member name="T:DevExpress.XtraSpreadsheet.SpreadsheetDataValidationBehaviorOptions">
 
             <summary>
-                <para> </para>
+                <para>Provides options to restrict an end-user's capability to manage data validation rules in a document loaded into <see cref="T:DevExpress.XtraSpreadsheet.SpreadsheetControl"/>.
+</para>
             </summary>
 
         </member>
@@ -33456,7 +33504,7 @@ A ConstantExpression class instance, representing the source object for copying.
         <member name="T:DevExpress.XtraSpreadsheet.SpreadsheetBehaviorOptions">
 
             <summary>
-                <para>Provides options to restrict an end-user's ability to manage a document within the <see cref="T:DevExpress.XtraSpreadsheet.SpreadsheetControl"/>.
+                <para>Provides options to restrict an end-user's ability to manage a document within the SpreadsheetControl.
 
 </para>
             </summary>
@@ -33728,6 +33776,27 @@ A ConstantExpression class instance, representing the source object for copying.
 </para>
             </summary>
             <value>A <see cref="T:System.Single"/> value specifying the minimum zoom factor.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraSpreadsheet.SpreadsheetBehaviorOptions.MoveRange">
+            <summary>
+                <para>Gets or sets whether the end-user operation, which includes dragging the selected range and moving it, is permitted.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraSpreadsheet.DocumentCapability"/> enumeration value specifying the document's capability to perform an operation.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraSpreadsheet.SpreadsheetBehaviorOptions.MoveRangeAllowed">
+            <summary>
+                <para>Gets whether an end-user is allowed to drag and move the selected range.
+</para>
+            </summary>
+            <value><b>true</b>, if the operation is allowed; otherwise, <b>false</b>.
+
 </value>
 
 
@@ -34933,9 +35002,11 @@ A ConstantExpression class instance, representing the source object for copying.
         </member>
         <member name="P:DevExpress.Spreadsheet.DocumentOptions.Clipboard">
             <summary>
-                <para> </para>
+                <para>Provides access to options for clipboard operations.
+</para>
             </summary>
-            <value> </value>
+            <value>A <b>SpreadsheetClipboardOptions</b> object containing clipboard options.
+</value>
 
 
         </member>
@@ -46145,6 +46216,14 @@ The <b>CenterContinuous</b> property has no effect on the visual appearance of a
         <member name="E:DevExpress.Spreadsheet.ISpreadsheetComponent.CustomAssemblyLoading">
             <summary>
                 <para>Occurs before a custom assembly is loaded for use as the Entity Framework data source during mail merge and allows cancelling loading.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="E:DevExpress.Spreadsheet.ISpreadsheetComponent.DefinedNameConflictResolving">
+            <summary>
+                <para>Occurs when you move or copy a formula or sheet containing the defined name, which already exists on the destination worksheet or workbook.
 </para>
             </summary>
 

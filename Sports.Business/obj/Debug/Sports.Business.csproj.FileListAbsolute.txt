@@ -10,3 +10,19 @@ C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\bin\De
 C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\obj\Debug\Sports.Business.csprojResolveAssemblyReference.cache
 C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\obj\Debug\Sports.Business.dll
 C:\Users\Sue\Documents\Visual Studio 2015\Projects\Sports\Sports.Business\obj\Debug\Sports.Business.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\bin\Debug\Sports.Business.dll.config
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\bin\Debug\Sports.Business.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\bin\Debug\Sports.Business.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\bin\Debug\EntityFramework.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\bin\Debug\Sports.DataAccess.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\bin\Debug\Sports.DataAccess.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\bin\Debug\Sports.DataAccess.dll.config
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\bin\Debug\EntityFramework.xml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\obj\Debug\Sports.Business.csprojResolveAssemblyReference.cache
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\obj\Debug\Sports.Business.csproj.CoreCompileInputs.cache
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\obj\Debug\Sports.Business.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\obj\Debug\Sports.Business.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\bin\Debug\Sports.Common.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business\bin\Debug\Sports.Common.pdb

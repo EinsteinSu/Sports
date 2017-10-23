@@ -4,88 +4,6 @@
         <name>DevExpress.Web.ASPxTreeList.v17.1</name>
     </assembly>
     <members>
-        <member name="T:DevExpress.Web.ASPxTreeList.TreeListDropDownEditColumn">
-
-            <summary>
-                <para>Represents a data column with an editor containing a customizable dropdown window.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListDropDownEditColumn.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TreeListDropDownEditColumn class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListDropDownEditColumn.PropertiesDropDownEdit">
-            <summary>
-                <para>Gets the column editor's settings.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.DropDownEditProperties"/> object that contains settings specific to a dropdown editor.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn">
-
-            <summary>
-                <para>Represents a data column that displays images from a binary stream.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TreeListBinaryImageColumn class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.AllowSort">
-            <summary>
-                <para>Gets or sets whether end-users can sort data by the column's values.
-</para>
-            </summary>
-            <value>One of the <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.PropertiesBinaryImage">
-            <summary>
-                <para>Gets the column editor's settings.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.BinaryImageEditProperties"/> object that contains settings specific to a binary image editor.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.SortIndex">
-            <summary>
-                <para>Gets or sets the column's position among sorted columns.
-</para>
-            </summary>
-            <value>An integer value that specifies the zero-based column's index among sorted columns. <b>-1</b> if data is not sorted by this column.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.SortOrder">
-            <summary>
-                <para>Gets or sets the column's sort order. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Data.ColumnSortOrder"/> enumeration value that specifies the column's sort order.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxTreeList.TreeListExportSystemStyles">
 
             <summary>
@@ -545,6 +463,88 @@
 
         </member>
         <member name="P:DevExpress.Web.ASPxTreeList.TreeListImageColumn.SortOrder">
+            <summary>
+                <para>Gets or sets the column's sort order. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Data.ColumnSortOrder"/> enumeration value that specifies the column's sort order.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxTreeList.TreeListDropDownEditColumn">
+
+            <summary>
+                <para>Represents a data column with an editor containing a customizable dropdown window.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListDropDownEditColumn.#ctor">
+            <summary>
+                <para>Initializes a new instance of the TreeListDropDownEditColumn class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListDropDownEditColumn.PropertiesDropDownEdit">
+            <summary>
+                <para>Gets the column editor's settings.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.DropDownEditProperties"/> object that contains settings specific to a dropdown editor.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn">
+
+            <summary>
+                <para>Represents a data column that displays images from a binary stream.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.#ctor">
+            <summary>
+                <para>Initializes a new instance of the TreeListBinaryImageColumn class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.AllowSort">
+            <summary>
+                <para>Gets or sets whether end-users can sort data by the column's values.
+</para>
+            </summary>
+            <value>One of the <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.PropertiesBinaryImage">
+            <summary>
+                <para>Gets the column editor's settings.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.BinaryImageEditProperties"/> object that contains settings specific to a binary image editor.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.SortIndex">
+            <summary>
+                <para>Gets or sets the column's position among sorted columns.
+</para>
+            </summary>
+            <value>An integer value that specifies the zero-based column's index among sorted columns. <b>-1</b> if data is not sorted by this column.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListBinaryImageColumn.SortOrder">
             <summary>
                 <para>Gets or sets the column's sort order. 
 </para>
@@ -2792,6 +2792,50 @@
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxTreeList.TreeListCustomErrorTextEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxTreeList.ASPxTreeList.CustomErrorText"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListCustomErrorTextEventArgs.#ctor(System.Exception,System.String)">
+            <summary>
+                <para>Initializes a new instance of the TreeListCustomErrorTextEventArgs class.
+</para>
+            </summary>
+            <param name="exception">
+		A <see cref="T:System.Exception"/> object that represents the exception. This value is assigned to the <see cref="P:DevExpress.Web.ASPxTreeList.TreeListCustomErrorTextEventArgs.Exception"/> property.
+
+            </param>
+            <param name="errorText">
+		A <see cref="T:System.String"/> value that specifies the error text. This value is assigned to the <see cref="P:DevExpress.Web.ASPxTreeList.TreeListCustomErrorTextEventArgs.ErrorText"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCustomErrorTextEventArgs.ErrorText">
+            <summary>
+                <para>Gets or sets the error text.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value that specifies the error text.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCustomErrorTextEventArgs.Exception">
+            <summary>
+                <para>Gets the exception.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Exception"/> object that represents the exception.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxTreeList.TreeListCommandColumnCustomButtonCollection">
 
             <summary>
@@ -3851,6 +3895,78 @@
                 <para>A node is expanded/collapsed if it has been double-clicked by an end-user or its expand button has been clicked.
 </para>
             </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection">
+
+            <summary>
+                <para>Represents a collection of an ASPxTreeList's toolbar items.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection.#ctor">
+            <summary>
+                <para>Initializes a new instance of the TreeListToolbarItemCollection class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection.#ctor(DevExpress.Web.MenuItem)">
+            <summary>
+                <para>Initializes a new instance of the TreeListToolbarItemCollection class with specified settings.
+</para>
+            </summary>
+            <param name="menuItem">
+		A <see cref="T:DevExpress.Web.MenuItem"/> object that is the Tree List toolbar item.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection.FindByName(System.String)">
+            <summary>
+                <para>Returns an item object with the specified <see cref="P:DevExpress.Web.MenuItem.Name"/> property value.
+
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> value representing the <see cref="P:DevExpress.Web.MenuItem.Name"/> property value of the required toolbar item.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Web.ASPxTreeList.TreeListToolbarItem"/> object that is the <b>ASPxTreeList</b> toolbar item.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection.FindByText(System.String)">
+            <summary>
+                <para>Returns a toolbar item with the specified text.
+</para>
+            </summary>
+            <param name="text">
+		A <see cref="T:System.String"/> value that is the <see cref="P:DevExpress.Web.MenuItem.Text"/> property value of the required toolbar item.
+
+            </param>
+            <returns>A <see cref="TreeListToolbarItem"/> object with a specific value of the <b>Text</b> property.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection.Item(System.Int32)">
+            <summary>
+                <para>Provides indexed access to individual items in the collection.
+</para>
+            </summary>
+            <param name="index">
+		A zero-based integer that identifies the item within the collection.
+
+            </param>
+            <value>A <see cref="T:DevExpress.Web.ASPxTreeList.TreeListToolbarItem"/> object that represents the item at the specified position.
+</value>
 
 
         </member>
@@ -9607,78 +9723,6 @@ the number of visible nodes divided by the number of visible columns is less tha
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection">
-
-            <summary>
-                <para>Represents a collection of an ASPxTreeList's toolbar items.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TreeListToolbarItemCollection class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection.#ctor(DevExpress.Web.MenuItem)">
-            <summary>
-                <para>Initializes a new instance of the TreeListToolbarItemCollection class with specified settings.
-</para>
-            </summary>
-            <param name="menuItem">
-		A <see cref="T:DevExpress.Web.MenuItem"/> object that is the Tree List toolbar item.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection.FindByName(System.String)">
-            <summary>
-                <para>Returns an item object with the specified <see cref="P:DevExpress.Web.MenuItem.Name"/> property value.
-
-</para>
-            </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> value representing the <see cref="P:DevExpress.Web.MenuItem.Name"/> property value of the required toolbar item.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.Web.ASPxTreeList.TreeListToolbarItem"/> object that is the <b>ASPxTreeList</b> toolbar item.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection.FindByText(System.String)">
-            <summary>
-                <para>Returns a toolbar item with the specified text.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that is the <see cref="P:DevExpress.Web.MenuItem.Text"/> property value of the required toolbar item.
-
-            </param>
-            <returns>A <see cref="TreeListToolbarItem"/> object with a specific value of the <b>Text</b> property.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection.Item(System.Int32)">
-            <summary>
-                <para>Provides indexed access to individual items in the collection.
-</para>
-            </summary>
-            <param name="index">
-		A zero-based integer that identifies the item within the collection.
-
-            </param>
-            <value>A <see cref="T:DevExpress.Web.ASPxTreeList.TreeListToolbarItem"/> object that represents the item at the specified position.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxTreeList.TreeListToolbarItemClickEventHandler">
 
             <summary>
@@ -9850,50 +9894,6 @@ the number of visible nodes divided by the number of visible columns is less tha
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.Web.ASPxTreeList.TreeListToolbarItemCollection"/> object representing the collection of the toolbar's items.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxTreeList.TreeListCustomErrorTextEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxTreeList.ASPxTreeList.CustomErrorText"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListCustomErrorTextEventArgs.#ctor(System.Exception,System.String)">
-            <summary>
-                <para>Initializes a new instance of the TreeListCustomErrorTextEventArgs class.
-</para>
-            </summary>
-            <param name="exception">
-		A <see cref="T:System.Exception"/> object that represents the exception. This value is assigned to the <see cref="P:DevExpress.Web.ASPxTreeList.TreeListCustomErrorTextEventArgs.Exception"/> property.
-
-            </param>
-            <param name="errorText">
-		A <see cref="T:System.String"/> value that specifies the error text. This value is assigned to the <see cref="P:DevExpress.Web.ASPxTreeList.TreeListCustomErrorTextEventArgs.ErrorText"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCustomErrorTextEventArgs.ErrorText">
-            <summary>
-                <para>Gets or sets the error text.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value that specifies the error text.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCustomErrorTextEventArgs.Exception">
-            <summary>
-                <para>Gets the exception.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Exception"/> object that represents the exception.
 </value>
 
 

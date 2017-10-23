@@ -41,10 +41,11 @@
                 p.ImageHeight = p.ImageWidth = 128;
                 p.EnableServerResize = true;
                 p.ImageSizeMode = ImageSizeMode.FitProportional;
-                p.CallbackRouteValues = new {Action = "GridViewPartialUpdate", Controller = "Venues"};
+                p.CallbackRouteValues = new {Action = "BinaryImageColumnPhotoUpdate", Controller = "Venues"};
                 p.EditingSettings.Enabled = true;
                 p.EditingSettings.UploadSettings.UploadValidationSettings.MaxFileSize = 4194304;
-                p.EditingSettings.UploadSettings.UploadMode = UploadControlUploadMode.Standard;
+                p.EditingSettings.UploadSettings.UploadMode = UploadControlUploadMode.Advanced;
+                p.EditingSettings.UploadSettings.UploadValidationSettings.ShowErrors = true;
             });
         });
         settings.Columns.Add(s =>

@@ -10,6 +10,12 @@
     <item Text="Displays" NavigateUrl="/displays" />
     <item Text="Venues" NavigateUrl="/venues"  />
   </group>
+  <group Text="Security and Login">
+    <item Text="Security Groups" NavigateUrl="/securitygroups"/>
+    <item Text="Securities" NavigateUrl="/securities" />
+    <item Text="Roles" NavigateUrl="/roles"  />
+    <item Text="Logins" NavigateUrl="/logins"  />
+  </group>
   <group Text="Configurations">
     <item Text="Parameters" />
     <item Text="Configurations" />

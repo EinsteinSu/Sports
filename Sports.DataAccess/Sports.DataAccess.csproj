@@ -49,31 +49,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201708241329284_InitialCreate.cs" />
-    <Compile Include="Migrations\201708241329284_InitialCreate.Designer.cs">
-      <DependentUpon>201708241329284_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708251300229_limited.cs" />
-    <Compile Include="Migrations\201708251300229_limited.Designer.cs">
-      <DependentUpon>201708251300229_limited.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708260836218_player1.cs" />
-    <Compile Include="Migrations\201708260836218_player1.Designer.cs">
-      <DependentUpon>201708260836218_player1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708260838039_player-selftakenscore.cs" />
-    <Compile Include="Migrations\201708260838039_player-selftakenscore.Designer.cs">
-      <DependentUpon>201708260838039_player-selftakenscore.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201708262354513_flag-changename.cs" />
-    <Compile Include="Migrations\201708262354513_flag-changename.Designer.cs">
-      <DependentUpon>201708262354513_flag-changename.cs</DependentUpon>
+    <Compile Include="Migrations\201710231500235_schedule.cs" />
+    <Compile Include="Migrations\201710231500235_schedule.Designer.cs">
+      <DependentUpon>201710231500235_schedule.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Display.cs" />
     <Compile Include="Models\Flag.cs" />
     <Compile Include="Models\Hardware.cs" />
+    <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Schedule.cs" />
+    <Compile Include="Models\ScheduleTeam.cs" />
+    <Compile Include="Models\Security.cs" />
+    <Compile Include="Models\SecurityGroup.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\Venue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,20 +74,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201708241329284_InitialCreate.resx">
-      <DependentUpon>201708241329284_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708251300229_limited.resx">
-      <DependentUpon>201708251300229_limited.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708260836218_player1.resx">
-      <DependentUpon>201708260836218_player1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708260838039_player-selftakenscore.resx">
-      <DependentUpon>201708260838039_player-selftakenscore.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201708262354513_flag-changename.resx">
-      <DependentUpon>201708262354513_flag-changename.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201710231500235_schedule.resx">
+      <DependentUpon>201710231500235_schedule.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

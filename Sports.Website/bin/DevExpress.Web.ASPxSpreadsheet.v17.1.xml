@@ -125,312 +125,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.Office.SpreadsheetDocumentInfo">
-
-            <summary>
-                <para>Contains settings of a Spreadsheet document opened on the server and provides the means to operate the document (close or save a copy).
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.Office.SpreadsheetDocumentInfo.#ctor(DevExpress.Web.ASPxSpreadsheet.Internal.SpreadsheetWorkSession)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetDocumentInfo class.
-</para>
-            </summary>
-            <param name="workSession">
-		A RichEditWorkSession object representing the session to which the created object belongs.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.Office.SpreadsheetDocumentInfo.DocumentFormat">
-            <summary>
-                <para>Gets the document format.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Spreadsheet.DocumentFormat"/> object specifying the document format. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.Office.SpreadsheetDocumentInfo.LastModifyTime">
-            <summary>
-                <para>Gets the last modify time for the document.
-</para>
-            </summary>
-            <value>A nullable <see cref="T:System.DateTime"/> value that is the last modify time.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.Office.SpreadsheetDocumentInfo.Modified">
-            <summary>
-                <para>Gets a value indicating whether the current document was modified after it was opened.
-
-</para>
-            </summary>
-            <value><b>true</b>, if the document was modified; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.Office.SpreadsheetDocumentInfo.SaveCopy(System.String)">
-            <summary>
-                <para>Saves a document copy using the specified settings.
-</para>
-            </summary>
-            <param name="filePath">
-		A string value specifying the document path to save to. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.Office.SpreadsheetDocumentInfo.SaveCopy">
-            <summary>
-                <para>Saves a document copy using the specified settings.
-</para>
-            </summary>
-            <returns>An array of bytes where the document is saved to.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.Office.SpreadsheetDocumentInfo.SaveCopy(DevExpress.Spreadsheet.DocumentFormat)">
-            <summary>
-                <para>Saves a document copy using the specified settings.
-</para>
-            </summary>
-            <param name="documentFormat">
-		A DocumentFormat object specifying the document format.
-
-            </param>
-            <returns>An array of bytes where the document is saved to.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.Office.SpreadsheetDocumentInfo.SaveCopy(System.IO.Stream)">
-            <summary>
-                <para>Saves a document copy using the specified settings. 
-</para>
-            </summary>
-            <param name="stream">
-		A stream object where to save the document. 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.Office.SpreadsheetDocumentInfo.SaveCopy(System.IO.Stream,DevExpress.Spreadsheet.DocumentFormat)">
-            <summary>
-                <para>Saves a document copy using the specified settings. 
-</para>
-            </summary>
-            <param name="stream">
-		A stream object where to save the document. 
-
-            </param>
-            <param name="documentFormat">
-		A <see cref="T:DevExpress.Spreadsheet.DocumentFormat"/> object specifying the document format. 
-
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetRibbonTabCollection">
-
-            <summary>
-                <para>A collection of Ribbon tabs related to the <see cref="T:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetRibbonTabCollection.#ctor(DevExpress.Web.Internal.IWebControlObject)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetRibbonTabCollection class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <b>IWebControlObject</b> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetRibbonTabCollection.Add(System.String)">
-            <summary>
-                <para>Adds a new tab with the specified text to the collection.
-</para>
-            </summary>
-            <param name="text">
-		A <see cref="T:System.String"/> value that specifies the created tab's display text. Initializes the tab's <see cref="P:DevExpress.Web.RibbonTab.Text"/> property.
-
-            </param>
-            <returns>An <see cref="RibbonTab"/> object that is the newly created tab.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetRibbonTabCollection.Ribbon">
-            <summary>
-                <para>Gets a ribbon to which the tab collection belongs.
-</para>
-            </summary>
-            <value>A <see cref="ASPxRibbon"/> object representing the ribbon owning the tab collection.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetRibbonTabCollection.Spreadsheet">
-            <summary>
-                <para>Gets the <see cref="T:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet"/> object that owns the collection.
-</para>
-            </summary>
-            <value>An <see cref="ASPxSpreadsheet"/> object that owns the collection.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetDialogFormSettings">
-
-            <summary>
-                <para>Contains settings concerning customization of dialog form elements.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetDialogFormSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetDialogFormSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetDialogFormSettings.InsertLinkDialog">
-            <summary>
-                <para>Provides access to customization settings for the Insert Link dialog's form elements.
-</para>
-            </summary>
-            <value>An <see cref="SpreadsheetInsertLinkDialogSettings"/> object that contains customization settings for form elements. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetDialogFormSettings.InsertPictureDialog">
-            <summary>
-                <para>Provides access to customization settings for the Insert Picture dialog's form elements.
-</para>
-            </summary>
-            <value>An <see cref="SpreadsheetInsertPictureDialogSettings"/> object that contains customization settings for form elements. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetDialogFormSettings.SaveFileDialog">
-            <summary>
-                <para>Provides access to customization settings for the Save File dialog's form elements.
-</para>
-            </summary>
-            <value>An <see cref="SpreadsheetSaveFileDialogSettings"/> object that contains customization settings for form elements. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents">
-
-            <summary>
-                <para>Contains a list of the client-side events available for the ASPxSpreadsheet.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.#ctor">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetClientSideEvents class. For internal use only.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.BeginSynchronization">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the client <see cref="E:DevExpress.Web.ASPxSpreadsheet.Scripts.ASPxClientSpreadsheet.BeginSynchronization"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.CustomCommandExecuted">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the client <see cref="E:DevExpress.Web.ASPxSpreadsheet.Scripts.ASPxClientSpreadsheet.CustomCommandExecuted"/> event.
-</para>
-            </summary>
-            <value>A string that is either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.DocumentChanged">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the client <see cref="E:DevExpress.Web.ASPxSpreadsheet.Scripts.ASPxClientSpreadsheet.DocumentChanged"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.EndSynchronization">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the client <see cref="E:DevExpress.Web.ASPxSpreadsheet.Scripts.ASPxClientSpreadsheet.EndSynchronization"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.HyperlinkClick">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a web control's client <see cref="E:DevExpress.Web.ASPxSpreadsheet.Scripts.ASPxClientSpreadsheet.HyperlinkClick"/> event. 
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.PopupMenuShowing">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the client <see cref="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.PopupMenuShowing"/> event. 
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.SelectionChanged">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the client <see cref="E:DevExpress.Web.ASPxSpreadsheet.Scripts.ASPxClientSpreadsheet.SelectionChanged"/> event.
-</para>
-            </summary>
-            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetRibbonContextTabCategoryCollection">
 
             <summary>
@@ -471,6 +165,36 @@
 </para>
             </summary>
             <value>The <see cref="ASPxSpreadsheet"/> control that owns the collection.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerFoldersSettings">
+
+            <summary>
+                <para>Contains settings that relate to the folder functionality of the embedded FileManager used within certain built-in dialogs.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerFoldersSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetFileManagerFoldersSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerFoldersSettings.ShowLockedFolderIcons">
+            <summary>
+                <para>Gets or sets a value specifying whether the FileManager embedded into some built-in dialogs displays a special icon for folders that are locked for upload.
+</para>
+            </summary>
+            <value><b>true</b> if a special icon is displayed; <b>false</b> if a default folder icon is displayed. 
 </value>
 
 
@@ -620,49 +344,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertLinkDialogSettings">
-
-            <summary>
-                <para>Contains customization settings for the Insert Link dialog's form elements.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertLinkDialogSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetInsertLinkDialogSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertLinkDialogSettings.Assign(DevExpress.Web.PropertiesBase)">
-            <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.PropertiesBase"/> object to the current object.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertLinkDialogSettings.ShowEmailAddressSection">
-            <summary>
-                <para>Gets or sets a value that specifies whether a section that allows an e-mail address to be entered is displayed within the Insert Link dialog form.
-</para>
-            </summary>
-            <value><b>true</b>, to display the form element, otherwise, <b>false</b>.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetSaveFileDialogSettings">
 
             <summary>
@@ -702,6 +383,58 @@
 </para>
             </summary>
             <value>One of the <see cref="SaveFileDialogDisplaySectionMode"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings">
+
+            <summary>
+                <para>Contains the base settings of the embedded FileManager used within certain built-in dialogs. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetFileManagerCommonSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.AllowedFileExtensions">
+            <summary>
+                <para>Gets or sets the file extensions allowed for display in the FileManager used within certain built-in dialogs.
+</para>
+            </summary>
+            <value>An array of <see cref="T:System.String"/> values that contains the file extensions allowed.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.EnableMultiSelect">
+            <summary>
+                <para>Gets or sets a value specifying whether multiple file selection is enabled in the FileManager used within certain built-in dialogs. 
+</para>
+            </summary>
+            <value><b>true</b>, if multiple file selection is enabled; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.RootFolder">
+            <summary>
+                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
+
+
+</para>
+            </summary>
+            <value> 
 </value>
 
 
@@ -2950,6 +2683,99 @@ This member is not in effect.
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertLinkDialogSettings">
+
+            <summary>
+                <para>Contains customization settings for the Insert Link dialog's form elements.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertLinkDialogSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetInsertLinkDialogSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertLinkDialogSettings.Assign(DevExpress.Web.PropertiesBase)">
+            <summary>
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.PropertiesBase"/> object to the current object.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertLinkDialogSettings.ShowEmailAddressSection">
+            <summary>
+                <para>Gets or sets a value that specifies whether a section that allows an e-mail address to be entered is displayed within the Insert Link dialog form.
+</para>
+            </summary>
+            <value><b>true</b>, to display the form element, otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetDialogFormSettings">
+
+            <summary>
+                <para>Contains settings concerning customization of dialog form elements.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetDialogFormSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetDialogFormSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetDialogFormSettings.InsertLinkDialog">
+            <summary>
+                <para>Provides access to customization settings for the Insert Link dialog's form elements.
+</para>
+            </summary>
+            <value>An <see cref="SpreadsheetInsertLinkDialogSettings"/> object that contains customization settings for form elements. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetDialogFormSettings.InsertPictureDialog">
+            <summary>
+                <para>Provides access to customization settings for the Insert Picture dialog's form elements.
+</para>
+            </summary>
+            <value>An <see cref="SpreadsheetInsertPictureDialogSettings"/> object that contains customization settings for form elements. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetDialogFormSettings.SaveFileDialog">
+            <summary>
+                <para>Provides access to customization settings for the Save File dialog's form elements.
+</para>
+            </summary>
+            <value>An <see cref="SpreadsheetSaveFileDialogSettings"/> object that contains customization settings for form elements. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheetLoadingPanelSettings">
 
             <summary>
@@ -3208,374 +3034,142 @@ This member is not in effect.
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.InitializeDocumentEventHandler">
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetRibbonTabCollection">
 
             <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet.InitializeDocument"/> event.
+                <para>A collection of Ribbon tabs related to the <see cref="T:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet"/>.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.InitializeDocumentEventHandler.Invoke(System.Object,DevExpress.Web.ASPxSpreadsheet.SpreadsheetInitializeDocumentEventArgs)">
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetRibbonTabCollection.#ctor(DevExpress.Web.Internal.IWebControlObject)">
             <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet.InitializeDocument"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The event source. Identifies the ASPxSpreadsheet control that raised the event.
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInitializeDocumentEventArgs"/> object that contains event data.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles">
-
-            <summary>
-                <para>Contains settings that defined the appearance of elements, used within the Spreadsheet's Formula Bar.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetFormulaBarStyles class with the specified owner.
+                <para>Initializes a new instance of the SpreadsheetRibbonTabCollection class with the specified owner.
 </para>
             </summary>
             <param name="owner">
-		An object that implements the <b>ISkinOwner</b> interface.
+		An object that implements the <b>IWebControlObject</b> interface.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.ButtonSection">
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetRibbonTabCollection.Add(System.String)">
             <summary>
-                <para>Gets the style settings that define the appearance of the formula bar's section that contains buttons.
+                <para>Adds a new tab with the specified text to the collection.
 </para>
             </summary>
-            <value>A <see cref="SpreadsheetFormulaBarButtonSectionStyles"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.CancelButton">
-            <summary>
-                <para>Gets the style settings that define the appearance of the <b>Cancel</b> button in the formula bar's section that contains buttons.
-</para>
-            </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.CopyFrom(DevExpress.Web.StylesBase)">
-            <summary>
-                <para>Duplicates the properties of the specified object into the current instance of the SpreadsheetFormulaBarStyles class. 
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.StylesBase"/> object that represents the object from which the settings will be copied.
+            <param name="text">
+		A <see cref="T:System.String"/> value that specifies the created tab's display text. Initializes the tab's <see cref="P:DevExpress.Web.RibbonTab.Text"/> property.
 
             </param>
+            <returns>An <see cref="RibbonTab"/> object that is the newly created tab.
+</returns>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.EnterButton">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetRibbonTabCollection.Ribbon">
             <summary>
-                <para>Gets the style settings that define the appearance of the <b>Enter</b> button in the formula bar's section that contains buttons.
+                <para>Gets a ribbon to which the tab collection belongs.
 </para>
             </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
+            <value>A <see cref="ASPxRibbon"/> object representing the ribbon owning the tab collection.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.MainElement">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetRibbonTabCollection.Spreadsheet">
             <summary>
-                <para>Gets the style settings that define the appearance of the main area of the formula bar.
+                <para>Gets the <see cref="T:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet"/> object that owns the collection.
 </para>
             </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
+            <value>An <see cref="ASPxSpreadsheet"/> object that owns the collection.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.TextBox">
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents">
+
             <summary>
-                <para>Gets the style settings that define the appearance of the text box in the formula bar.
+                <para>Contains a list of the client-side events available for the ASPxSpreadsheet.
 </para>
             </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.#ctor">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetClientSideEvents class. For internal use only.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.BeginSynchronization">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the client <see cref="E:DevExpress.Web.ASPxSpreadsheet.Scripts.ASPxClientSpreadsheet.BeginSynchronization"/> event.
+</para>
+            </summary>
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
 </value>
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles">
-
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.CustomCommandExecuted">
             <summary>
-                <para>Contains settings that defined the appearance of elements, used within the Formula Bar' button section.
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the client <see cref="E:DevExpress.Web.ASPxSpreadsheet.Scripts.ASPxClientSpreadsheet.CustomCommandExecuted"/> event.
 </para>
             </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetFormulaBarButtonSectionStyles class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <b>ISkinOwner</b> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Button">
-            <summary>
-                <para>Gets the style settings that define the appearance of formula bar's buttons.
-</para>
-            </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
+            <value>A string that is either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
 </value>
 
 
         </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.CopyFrom(DevExpress.Web.StylesBase)">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.DocumentChanged">
             <summary>
-                <para>Duplicates the properties of the specified object into the current instance of the SpreadsheetFormulaBarButtonSectionStyles class. 
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the client <see cref="E:DevExpress.Web.ASPxSpreadsheet.Scripts.ASPxClientSpreadsheet.DocumentChanged"/> event.
 </para>
             </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.StylesBase"/> object that represents an object which the settings will be copied from.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Item">
-            <summary>
-                <para>Gets the style settings that define the appearance of formula bar's item.
-</para>
-            </summary>
-            <value>A <see cref="MenuItemStyle"/> object that contains the style settings.
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Link">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.EndSynchronization">
             <summary>
-                <para>Gets the style settings that define the appearance of links.
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the client <see cref="E:DevExpress.Web.ASPxSpreadsheet.Scripts.ASPxClientSpreadsheet.EndSynchronization"/> event.
 </para>
             </summary>
-            <value>A <see cref="LinkStyle"/> object that contains the style settings. 
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.MainElement">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.HyperlinkClick">
             <summary>
-                <para>Gets the style settings that define the appearance of the formula bar's main element.
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle a web control's client <see cref="E:DevExpress.Web.ASPxSpreadsheet.Scripts.ASPxClientSpreadsheet.HyperlinkClick"/> event. 
 </para>
             </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings. 
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event. 
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.ScrollButton">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.PopupMenuShowing">
             <summary>
-                <para>Gets the style settings that define the scroll button appearance.
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the client <see cref="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.PopupMenuShowing"/> event. 
 </para>
             </summary>
-            <value>A <see cref="MenuScrollButtonStyle"/> object that contains the style settings. 
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Style">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetClientSideEvents.SelectionChanged">
             <summary>
-                <para>Gets the style settings defining the formula bar appearance.
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the client <see cref="E:DevExpress.Web.ASPxSpreadsheet.Scripts.ASPxClientSpreadsheet.SelectionChanged"/> event.
 </para>
             </summary>
-            <value>A <see cref="MenuStyle"/> object containing the style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.SubMenu">
-            <summary>
-                <para>Gets the style settings that define the submenu appearance within a menu.
-</para>
-            </summary>
-            <value>A <see cref="MenuStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.SubMenuItem">
-            <summary>
-                <para>Gets the style settings for all submenu items within the current menu.
-</para>
-            </summary>
-            <value>A <see cref="MenuItemStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties">
-
-            <summary>
-                <para>Contains settings that define a Formula Bar button's image. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.#ctor">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetFormulaBarButtonImageProperties class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetFormulaBarButtonImageProperties class with the specified owner. 
-</para>
-            </summary>
-            <param name="owner">
-		An <see cref="T:DevExpress.Web.IPropertiesOwner"/>-implemented object that owns the created object. 
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.SpriteProperties">
-            <summary>
-                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
-
-
-</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.UrlChecked">
-            <summary>
-                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
-
-
-</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.UrlSelected">
-            <summary>
-                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
-
-
-</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles">
-
-            <summary>
-                <para>Contains settings that defined the appearance of elements, used by the Spreadsheet's Formula AutoComplete feature.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetFormulaAutoCompeteStyles class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <b>ISkinOwner</b> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles.FunctionArgumentInfo">
-            <summary>
-                <para>Gets the style settings that define the appearance of the area that provides information about a function's arguments.
-</para>
-            </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles.FunctionInfo">
-            <summary>
-                <para>Gets the style settings that define the appearance of the area that provides information about a function.
-</para>
-            </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles.ListBox">
-            <summary>
-                <para>Gets the style settings that define the appearance of the list box that provides a list of functions. 
-</para>
-            </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles.ListBoxItem">
-            <summary>
-                <para>Gets the style settings that define the appearance of items in the list box that provides a list of functions.
-</para>
-            </summary>
-            <value>A <see cref="ListBoxItemStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInitializeDocumentEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet.InitializeDocument"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInitializeDocumentEventArgs.#ctor(DevExpress.Spreadsheet.IWorkbook)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetInitializeDocumentEventArgs class with the specified settings. 
-</para>
-            </summary>
-            <param name="document">
-		A <see cref="T:DevExpress.Spreadsheet.IWorkbook"/> interface specifying a document loaded into a Spreadsheet.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInitializeDocumentEventArgs.Document">
-            <summary>
-                <para>Provides access to a workbook loaded into a Spreadsheet.
-
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Spreadsheet.IWorkbook"/> interface specifying a document being loaded into a Spreadsheet.
-
+            <value>A string that represents either the name of a JavaScript function or the entire JavaScript function code used to handle an event.
 </value>
 
 
@@ -4416,85 +4010,491 @@ This member is not in effect.
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerFoldersSettings">
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.InitializeDocumentEventHandler">
 
             <summary>
-                <para>Contains settings that relate to the folder functionality of the embedded FileManager used within certain built-in dialogs.
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet.InitializeDocument"/> event.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerFoldersSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.InitializeDocumentEventHandler.Invoke(System.Object,DevExpress.Web.ASPxSpreadsheet.SpreadsheetInitializeDocumentEventArgs)">
             <summary>
-                <para>Initializes a new instance of the SpreadsheetFileManagerFoldersSettings class with the specified owner.
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet.InitializeDocument"/> event.
 </para>
             </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+            <param name="sender">
+		The event source. Identifies the ASPxSpreadsheet control that raised the event.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInitializeDocumentEventArgs"/> object that contains event data.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerFoldersSettings.ShowLockedFolderIcons">
-            <summary>
-                <para>Gets or sets a value specifying whether the FileManager embedded into some built-in dialogs displays a special icon for folders that are locked for upload.
-</para>
-            </summary>
-            <value><b>true</b> if a special icon is displayed; <b>false</b> if a default folder icon is displayed. 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings">
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles">
 
             <summary>
-                <para>Contains the base settings of the embedded FileManager used within certain built-in dialogs. 
+                <para>Contains settings that defined the appearance of elements, used within the Spreadsheet's Formula Bar.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
             <summary>
-                <para>Initializes a new instance of the SpreadsheetFileManagerCommonSettings class with the specified owner.
+                <para>Initializes a new instance of the SpreadsheetFormulaBarStyles class with the specified owner.
 </para>
             </summary>
             <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+		An object that implements the <b>ISkinOwner</b> interface.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.AllowedFileExtensions">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.ButtonSection">
             <summary>
-                <para>Gets or sets the file extensions allowed for display in the FileManager used within certain built-in dialogs.
+                <para>Gets the style settings that define the appearance of the formula bar's section that contains buttons.
 </para>
             </summary>
-            <value>An array of <see cref="T:System.String"/> values that contains the file extensions allowed.
+            <value>A <see cref="SpreadsheetFormulaBarButtonSectionStyles"/> object that contains the style settings.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.EnableMultiSelect">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.CancelButton">
             <summary>
-                <para>Gets or sets a value specifying whether multiple file selection is enabled in the FileManager used within certain built-in dialogs. 
+                <para>Gets the style settings that define the appearance of the <b>Cancel</b> button in the formula bar's section that contains buttons.
 </para>
             </summary>
-            <value><b>true</b>, if multiple file selection is enabled; otherwise, <b>false</b>.
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.RootFolder">
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.CopyFrom(DevExpress.Web.StylesBase)">
+            <summary>
+                <para>Duplicates the properties of the specified object into the current instance of the SpreadsheetFormulaBarStyles class. 
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.StylesBase"/> object that represents the object from which the settings will be copied.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.EnterButton">
+            <summary>
+                <para>Gets the style settings that define the appearance of the <b>Enter</b> button in the formula bar's section that contains buttons.
+</para>
+            </summary>
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.MainElement">
+            <summary>
+                <para>Gets the style settings that define the appearance of the main area of the formula bar.
+</para>
+            </summary>
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.TextBox">
+            <summary>
+                <para>Gets the style settings that define the appearance of the text box in the formula bar.
+</para>
+            </summary>
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles">
+
+            <summary>
+                <para>Contains settings that defined the appearance of elements, used within the Formula Bar' button section.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetFormulaBarButtonSectionStyles class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <b>ISkinOwner</b> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Button">
+            <summary>
+                <para>Gets the style settings that define the appearance of formula bar's buttons.
+</para>
+            </summary>
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.CopyFrom(DevExpress.Web.StylesBase)">
+            <summary>
+                <para>Duplicates the properties of the specified object into the current instance of the SpreadsheetFormulaBarButtonSectionStyles class. 
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.StylesBase"/> object that represents an object which the settings will be copied from.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Item">
+            <summary>
+                <para>Gets the style settings that define the appearance of formula bar's item.
+</para>
+            </summary>
+            <value>A <see cref="MenuItemStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Link">
+            <summary>
+                <para>Gets the style settings that define the appearance of links.
+</para>
+            </summary>
+            <value>A <see cref="LinkStyle"/> object that contains the style settings. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.MainElement">
+            <summary>
+                <para>Gets the style settings that define the appearance of the formula bar's main element.
+</para>
+            </summary>
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.ScrollButton">
+            <summary>
+                <para>Gets the style settings that define the scroll button appearance.
+</para>
+            </summary>
+            <value>A <see cref="MenuScrollButtonStyle"/> object that contains the style settings. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Style">
+            <summary>
+                <para>Gets the style settings defining the formula bar appearance.
+</para>
+            </summary>
+            <value>A <see cref="MenuStyle"/> object containing the style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.SubMenu">
+            <summary>
+                <para>Gets the style settings that define the submenu appearance within a menu.
+</para>
+            </summary>
+            <value>A <see cref="MenuStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.SubMenuItem">
+            <summary>
+                <para>Gets the style settings for all submenu items within the current menu.
+</para>
+            </summary>
+            <value>A <see cref="MenuItemStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties">
+
+            <summary>
+                <para>Contains settings that define a Formula Bar button's image. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.#ctor">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetFormulaBarButtonImageProperties class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetFormulaBarButtonImageProperties class with the specified owner. 
+</para>
+            </summary>
+            <param name="owner">
+		An <see cref="T:DevExpress.Web.IPropertiesOwner"/>-implemented object that owns the created object. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.SpriteProperties">
             <summary>
                 <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
 
 
 </para>
             </summary>
-            <value> 
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.UrlChecked">
+            <summary>
+                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
+
+
+</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.UrlSelected">
+            <summary>
+                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
+
+
+</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles">
+
+            <summary>
+                <para>Contains settings that defined the appearance of elements, used by the Spreadsheet's Formula AutoComplete feature.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetFormulaAutoCompeteStyles class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <b>ISkinOwner</b> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles.FunctionArgumentInfo">
+            <summary>
+                <para>Gets the style settings that define the appearance of the area that provides information about a function's arguments.
+</para>
+            </summary>
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles.FunctionInfo">
+            <summary>
+                <para>Gets the style settings that define the appearance of the area that provides information about a function.
+</para>
+            </summary>
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles.ListBox">
+            <summary>
+                <para>Gets the style settings that define the appearance of the list box that provides a list of functions. 
+</para>
+            </summary>
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles.ListBoxItem">
+            <summary>
+                <para>Gets the style settings that define the appearance of items in the list box that provides a list of functions.
+</para>
+            </summary>
+            <value>A <see cref="ListBoxItemStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInitializeDocumentEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet.InitializeDocument"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInitializeDocumentEventArgs.#ctor(DevExpress.Spreadsheet.IWorkbook)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetInitializeDocumentEventArgs class with the specified settings. 
+</para>
+            </summary>
+            <param name="document">
+		A <see cref="T:DevExpress.Spreadsheet.IWorkbook"/> interface specifying a document loaded into a Spreadsheet.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInitializeDocumentEventArgs.Document">
+            <summary>
+                <para>Provides access to a workbook loaded into a Spreadsheet.
+
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Spreadsheet.IWorkbook"/> interface specifying a document being loaded into a Spreadsheet.
+
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.Office.SpreadsheetDocumentInfo">
+
+            <summary>
+                <para>Contains settings of a Spreadsheet document opened on the server and provides the means to operate the document (close or save a copy).
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.Office.SpreadsheetDocumentInfo.#ctor(DevExpress.Web.ASPxSpreadsheet.Internal.SpreadsheetWorkSession)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetDocumentInfo class.
+</para>
+            </summary>
+            <param name="workSession">
+		A RichEditWorkSession object representing the session to which the created object belongs.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.Office.SpreadsheetDocumentInfo.DocumentFormat">
+            <summary>
+                <para>Gets the document format.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Spreadsheet.DocumentFormat"/> object specifying the document format. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.Office.SpreadsheetDocumentInfo.LastModifyTime">
+            <summary>
+                <para>Gets the last modify time for the document.
+</para>
+            </summary>
+            <value>A nullable <see cref="T:System.DateTime"/> value that is the last modify time.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.Office.SpreadsheetDocumentInfo.Modified">
+            <summary>
+                <para>Gets a value indicating whether the current document was modified after it was opened.
+
+</para>
+            </summary>
+            <value><b>true</b>, if the document was modified; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.Office.SpreadsheetDocumentInfo.SaveCopy(System.String)">
+            <summary>
+                <para>Saves a document copy using the specified settings.
+</para>
+            </summary>
+            <param name="filePath">
+		A string value specifying the document path to save to. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.Office.SpreadsheetDocumentInfo.SaveCopy">
+            <summary>
+                <para>Saves a document copy using the specified settings.
+</para>
+            </summary>
+            <returns>An array of bytes where the document is saved to.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.Office.SpreadsheetDocumentInfo.SaveCopy(DevExpress.Spreadsheet.DocumentFormat)">
+            <summary>
+                <para>Saves a document copy using the specified settings.
+</para>
+            </summary>
+            <param name="documentFormat">
+		A DocumentFormat object specifying the document format.
+
+            </param>
+            <returns>An array of bytes where the document is saved to.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.Office.SpreadsheetDocumentInfo.SaveCopy(System.IO.Stream)">
+            <summary>
+                <para>Saves a document copy using the specified settings. 
+</para>
+            </summary>
+            <param name="stream">
+		A stream object where to save the document. 
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.Office.SpreadsheetDocumentInfo.SaveCopy(System.IO.Stream,DevExpress.Spreadsheet.DocumentFormat)">
+            <summary>
+                <para>Saves a document copy using the specified settings. 
+</para>
+            </summary>
+            <param name="stream">
+		A stream object where to save the document. 
+
+            </param>
+            <param name="documentFormat">
+		A <see cref="T:DevExpress.Spreadsheet.DocumentFormat"/> object specifying the document format. 
+
+
+            </param>
 
 
         </member>

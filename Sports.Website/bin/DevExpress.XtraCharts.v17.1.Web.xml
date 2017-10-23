@@ -131,31 +131,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraCharts.Web.CustomCallbackEventHandler">
-
-            <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomCallback"/> event.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraCharts.Web.CustomCallbackEventHandler.Invoke(System.Object,DevExpress.XtraCharts.Web.CustomCallbackEventArgs)">
-            <summary>
-                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomCallback"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The event source. This parameter identifies the <see cref="T:DevExpress.XtraCharts.Web.WebChartControl"/> which raised the event.
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.XtraCharts.Web.CustomCallbackEventArgs"/> object which contains event data.
-
-            </param>
-
-
-        </member>
         <member name="T:DevExpress.XtraCharts.Web.CallbackStateLoadEventHandler">
 
             <summary>
@@ -273,6 +248,31 @@
             </summary>
             <value>A <see cref="T:DevExpress.XtraCharts.Web.WebChartControl"/> object which represents the chart for which the event was raised.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraCharts.Web.CustomCallbackEventHandler">
+
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomCallback"/> event.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraCharts.Web.CustomCallbackEventHandler.Invoke(System.Object,DevExpress.XtraCharts.Web.CustomCallbackEventArgs)">
+            <summary>
+                <para>Represents a method that will handle the <see cref="E:DevExpress.XtraCharts.Web.WebChartControl.CustomCallback"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event source. This parameter identifies the <see cref="T:DevExpress.XtraCharts.Web.WebChartControl"/> which raised the event.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.XtraCharts.Web.CustomCallbackEventArgs"/> object which contains event data.
+
+            </param>
 
 
         </member>

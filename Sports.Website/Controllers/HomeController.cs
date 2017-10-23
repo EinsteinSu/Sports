@@ -1,11 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Sports_Website.Models;
 
-namespace Sports_Website.Controllers
+namespace Sports.Website.Controllers
 {
     public class HomeController : Controller
     {
@@ -13,7 +9,7 @@ namespace Sports_Website.Controllers
         {
             // DXCOMMENT: Pass a data model for GridView
             
-            return View(NorthwindDataProvider.GetCustomers());
+            return View();
         }
         
         public ActionResult GridViewPartialView() 

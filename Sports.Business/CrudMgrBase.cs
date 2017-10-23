@@ -74,7 +74,7 @@ namespace Sports.Business
             }
             catch (Exception exception)
             {
-                throw new Exception(string.Format("add {0} failed, {1}", EntityName, exception.Message));
+                throw new Exception(string.Format("add {0} failed, {1}", EntityName, exception.InnerException.Message));
             }
         }
 

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sports.DataAccess", "Sports.DataAccess\Sports.DataAccess.csproj", "{36891BFA-8AB4-4EC1-B66D-418941FC0162}"
 EndProject
@@ -14,6 +14,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sports.Business.Test", "Sports.Business.Test\Sports.Business.Test.csproj", "{9051B06F-0AB6-4D53-AB6D-B77124255328}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sports.Timing", "Sports.Timing\Sports.Timing.csproj", "{4EA3CED2-18DD-45A0-8D24-6B5496AE7675}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data Management(Website)", "Data Management(Website)", "{D35EC572-4AC1-4CD6-B69F-986ADB71FDB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Consoles", "Consoles", "{0C18B8E2-FEE8-4205-8E5F-493B1C56878E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sports.Race.Console", "Sports.Race.Console\Sports.Race.Console.csproj", "{3C2FE7E5-875C-4697-881C-1AE7CFBF5DB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sports.Wpf.Common", "Sports.Wpf.Common\Sports.Wpf.Common.csproj", "{E3B1B6DB-EC2B-4B78-920C-1BD23061F402}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sports.Common", "Sports.Common\Sports.Common.csproj", "{F437219B-0600-462F-9B72-3846B7CB769B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,8 +55,29 @@ Global
 		{4EA3CED2-18DD-45A0-8D24-6B5496AE7675}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EA3CED2-18DD-45A0-8D24-6B5496AE7675}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EA3CED2-18DD-45A0-8D24-6B5496AE7675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C2FE7E5-875C-4697-881C-1AE7CFBF5DB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C2FE7E5-875C-4697-881C-1AE7CFBF5DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C2FE7E5-875C-4697-881C-1AE7CFBF5DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C2FE7E5-875C-4697-881C-1AE7CFBF5DB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3B1B6DB-EC2B-4B78-920C-1BD23061F402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3B1B6DB-EC2B-4B78-920C-1BD23061F402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3B1B6DB-EC2B-4B78-920C-1BD23061F402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3B1B6DB-EC2B-4B78-920C-1BD23061F402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F437219B-0600-462F-9B72-3846B7CB769B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F437219B-0600-462F-9B72-3846B7CB769B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F437219B-0600-462F-9B72-3846B7CB769B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F437219B-0600-462F-9B72-3846B7CB769B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{22FC8C7F-C3B3-46E0-B47D-1CB3950D80CE} = {D35EC572-4AC1-4CD6-B69F-986ADB71FDB0}
+		{57CEB8E3-C63F-4741-9696-0B56983FADA1} = {D35EC572-4AC1-4CD6-B69F-986ADB71FDB0}
+		{3C2FE7E5-875C-4697-881C-1AE7CFBF5DB1} = {0C18B8E2-FEE8-4205-8E5F-493B1C56878E}
+		{E3B1B6DB-EC2B-4B78-920C-1BD23061F402} = {0C18B8E2-FEE8-4205-8E5F-493B1C56878E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CABC599-4628-49DE-ACC6-BC031BABB44D}
 	EndGlobalSection
 EndGlobal

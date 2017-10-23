@@ -1,4 +1,5 @@
 ﻿using System.Web.Mvc;
+using DevExpress.Web.Mvc;
 using Sports.Business;
 using Sports.DataAccess.Models;
 using Sports.Website.Commons;
@@ -38,6 +39,11 @@ namespace Sports.Website.Controllers
         public ActionResult GridViewPartialDelete(int id)
         {
             return Delete(id);
+        }
+
+        public ActionResult BinaryImageColumnPhotoUpdate()
+        {
+            return BinaryImageEditExtension.GetCallbackResult();
         }
 
         protected override void InitializeInterfaces()

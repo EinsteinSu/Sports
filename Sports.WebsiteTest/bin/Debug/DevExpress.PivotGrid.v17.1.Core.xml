@@ -2108,38 +2108,6 @@
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraPivotGrid.PivotOLAPKPIMeasures.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
-            <summary>
-                <para>Initializes a new instance of the PivotOLAPKPIMeasures class.
-</para>
-            </summary>
-            <param name="kpiName">
-		A <see cref="T:System.String"/> specifying the name of the KPI. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotOLAPKPIMeasures.KPIName"/> property.
-
-            </param>
-            <param name="value">
-		A <see cref="T:System.String"/> specifying the name of the measure that stores the KPI's actually achieved value. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotOLAPKPIMeasures.ValueMeasure"/> property.
-
-            </param>
-            <param name="goal">
-		A <see cref="T:System.String"/> specifying the name of the measure that stores the KPI's goal value. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotOLAPKPIMeasures.GoalMeasure"/> property.
-
-            </param>
-            <param name="status">
-		A <see cref="T:System.String"/> specifying the name of the measure that stores the KPI's status value. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotOLAPKPIMeasures.StatusMeasure"/> property.
-
-            </param>
-            <param name="trend">
-		A <see cref="T:System.String"/> specifying the name of the measure that stores the KPI's trend value. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotOLAPKPIMeasures.TrendMeasure"/> property.
-
-            </param>
-            <param name="weight">
-		A <see cref="T:System.String"/> specifying the name of the measure that stores the KPI's weight value. This value is assigned to the <see cref="P:DevExpress.XtraPivotGrid.PivotOLAPKPIMeasures.WeightMeasure"/> property.
-
-            </param>
-
-
-        </member>
         <member name="M:DevExpress.XtraPivotGrid.PivotOLAPKPIMeasures.#ctor(DevExpress.Data.IO.TypedBinaryReader)">
             <summary>
                 <para>Initializes a new instance of the PivotOLAPKPIMeasures class.
@@ -2152,6 +2120,34 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraPivotGrid.PivotOLAPKPIMeasures.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="kpiName">
+		 
+            </param>
+            <param name="caption">
+		 
+            </param>
+            <param name="value">
+		 
+            </param>
+            <param name="goal">
+		 
+            </param>
+            <param name="status">
+		 
+            </param>
+            <param name="trend">
+		 
+            </param>
+            <param name="weight">
+		 
+            </param>
+
+
+        </member>
         <member name="P:DevExpress.XtraPivotGrid.PivotOLAPKPIMeasures.GoalMeasure">
             <summary>
                 <para>Gets the name of the measure that stores the KPI's goal values.
@@ -2159,6 +2155,14 @@
             </summary>
             <value>A <see cref="T:System.String"/> that specifies the name of the measure that stores the KPI's goal values.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPivotGrid.PivotOLAPKPIMeasures.KPICaption">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -8360,7 +8364,7 @@
         </member>
         <member name="P:DevExpress.XtraPivotGrid.PrefilterBase.Enabled">
             <summary>
-                <para>Gets or sets whether the filter criteria, specified by the <see cref="P:DevExpress.XtraPivotGrid.PrefilterBase.Criteria"/> or <see cref="P:DevExpress.XtraPivotGrid.PrefilterBase.CriteriaString"/> property, are enabled.
+                <para>Gets or sets whether the filter criteria are enabled.
 </para>
             </summary>
             <value><b>true</b> if the filter criteria are enabled; otherwise, <b>false</b>.
@@ -9933,6 +9937,14 @@ Running Totals
 
 
         </member>
+        <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsPrint.PrintColumnFieldValues">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsPrint.PrintColumnHeaders">
             <summary>
                 <para>Gets or sets whether column field headers are printed.
@@ -9980,6 +9992,14 @@ Running Totals
             </summary>
             <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration value which specifies whether horizontal grid lines are printed.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsPrint.PrintRowFieldValues">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -10131,7 +10151,7 @@ Running Totals
         </member>
         <member name="P:DevExpress.XtraPivotGrid.PivotGridOptionsData.DrillDownMaxRowCount">
             <summary>
-                <para>Gets or sets the maximum number of rows returned when calling the <b>CreateDrillDownDataSource</b> method.
+                <para>Gets or sets the maximum number of rows returned when obtaining underlying data.
 </para>
             </summary>
             <value>An integer value that specifies the maximum number of rows returned when calling the <b>CreateDrillDownDataSource</b> method.
@@ -14995,7 +15015,7 @@ Not supported in OLAP and server mode.
         </member>
         <member name="P:DevExpress.XtraPivotGrid.PivotGridFieldBase.TopValueShowOthers">
             <summary>
-                <para>Gets or sets whether the "Others" item is displayed within PivotGridControl when the Top X Value feature is enabled.
+                <para>Gets or sets whether the "Others" item is displayed within the Pivot Grid when the Top X Value feature is enabled.
 </para>
             </summary>
             <value><b>true</b> if the "Others" item is displayed when the Top X Value feature is enabled; otherwise, <b>false</b>.

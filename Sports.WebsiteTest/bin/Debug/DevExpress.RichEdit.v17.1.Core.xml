@@ -1060,8 +1060,7 @@
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.TabLeaderType.Hypens">
             <summary>
-                <para>The hyphen is used as a tab leader character.
-</para>
+                <para>For internal use.</para>
             </summary>
 
 
@@ -1833,12 +1832,9 @@
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.ReadOnlyTableCellBorderProperties.PrefferedWidth">
             <summary>
-                <para>Gets the numerical value of the preferred width of a cell related to the current table cell border.
-
-</para>
+                <para>For internal use.</para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value indicating the table width or <b>null</b> if it's not set.
-</value>
+            <value> </value>
 
 
         </member>
@@ -13070,10 +13066,10 @@ context.
         </member>
         <member name="P:DevExpress.XtraRichEdit.Import.DocDocumentImporterOptions.KeepPermissionsForRemovedRanges">
             <summary>
-                <para>Gets or sets whether to keep the permissions applied to the deleted ranges.
+                <para>Gets or sets whether to keep the permissions applied to the ranges marked as deleted under revision.
 </para>
             </summary>
-            <value><b>true</b>, to leave the permissions ; otherwise, <b>false</b>.
+            <value><b>true</b>, to retain the permissions; otherwise, <b>false</b>.
 </value>
 
 
@@ -21663,6 +21659,16 @@ context.
 
 
         </member>
+        <member name="P:DevExpress.XtraRichEdit.FieldOptions.UpdateHyperlinksOnLoad">
+            <summary>
+                <para>Specifies whether to update document hyperlinks after loading the document.
+</para>
+            </summary>
+            <value><b>True</b> to update hyperlinks on document load; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="P:DevExpress.XtraRichEdit.FieldOptions.UpdateLockedFields">
             <summary>
                 <para>Gets or sets whether locked fields can be updated with the Rich Text Editor.
@@ -22668,6 +22674,16 @@ context.
             </summary>
             <value><b>True</b>, to retain the former behavior and not remove the last paragraph when the last range is deleted; otherwise, <b>false</b>.
 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.RichEditControlCompatibility.LoadHyperlinkAsField">
+            <summary>
+                <para>Gets or sets whether to keep importing document hyperlinks when importing document fields is forbidden. 
+</para>
+            </summary>
+            <value><b>true</b>, to import hyperlinks; otherwise, <b>false</b>.
 </value>
 
 
@@ -26166,6 +26182,16 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
             </summary>
             <value>A <b>XtraRichEditStringId</b> enumeration value, identifying the resource string.
 </value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraRichEdit.Commands.DeleteCommand.UpdateUIState(DevExpress.Utils.Commands.ICommandUIState)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="state">
+		 
+            </param>
 
 
         </member>
@@ -34749,7 +34775,7 @@ A <see cref="T:System.DateTime"/> object that is the comment creation date.
         </member>
         <member name="P:DevExpress.XtraRichEdit.RichEditView.AllowDisplayLineNumbers">
             <summary>
-                <para>Gets or sets whether line numbers, when enabled, are displayed in the view.
+                <para>Gets or sets whether line numbers can be displayed in the view.
 </para>
             </summary>
             <value><b>true</b> to show line numbers if they are enabled; otherwise, <b>false</b>.
@@ -51380,8 +51406,7 @@ Currently not supported.
         </member>
         <member name="F:DevExpress.XtraRichEdit.API.Native.NumberingFormat.DecimalEnclosedParenthses">
             <summary>
-                <para>Specifies that the sequence shall consist of decimal numbering enclosed in parentheses.
-</para>
+                <para>For internal use.</para>
             </summary>
 
 
@@ -53785,7 +53810,7 @@ Currently not supported.
                 <para>Gets or sets the amount of space below the contents of a single cell in a table.
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value that is the distance in points.
+            <value>A <see cref="T:System.Single"/> value that is the distance in units of measurements that are currently in effect for the document (specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property).
 </value>
 
 
@@ -53854,7 +53879,7 @@ Currently not supported.
                 <para>Gets or sets the amount of space to the left of the contents of a single cell in a table.
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value that is the distance in points.
+            <value>A <see cref="T:System.Single"/> value that is the distance in units of measurements that are currently in effect for the document (specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property).
 </value>
 
 
@@ -53924,7 +53949,8 @@ Currently not supported.
                 <para>Gets or sets the amount of space to the right of the contents of a single cell in a table.
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value that is the distance in points.
+            <value>A <see cref="T:System.Single"/> value that is the distance in units of measurements that are currently in effect for the document (specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property).
+
 </value>
 
 
@@ -53957,10 +53983,11 @@ Currently not supported.
         </member>
         <member name="P:DevExpress.XtraRichEdit.API.Native.TableCell.Style">
             <summary>
-                <para>For internal use.
+                <para>Gets or sets the style applied to a cell in a table of a Snap application.
+
 </para>
             </summary>
-            <value>  
+            <value>A <see cref="T:DevExpress.XtraRichEdit.API.Native.TableCellStyle"/> interface which defines a style of table cells in a Snap application.
 </value>
 
 
@@ -53980,7 +54007,7 @@ Currently not supported.
                 <para>Gets or sets the amount of space above the contents of a single cell in a table.
 </para>
             </summary>
-            <value>A <see cref="T:System.Single"/> value that is the distance in points.
+            <value>A <see cref="T:System.Single"/> value that is the distance in units of measurements that are currently in effect for the document (specified by the <see cref="P:DevExpress.XtraRichEdit.API.Native.Document.Unit"/> property).
 </value>
 
 
@@ -56707,6 +56734,16 @@ Currently not supported.
 
             </param>
             <value>An object associated with the document variable or calculated in the corresponding event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraRichEdit.DocumentVariableCollection.Names">
+            <summary>
+                <para>Gets the collection of the document variable names.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Collections.Generic.IEnumerable`1[[System.String]]"/> collection of variable names.
 </value>
 
 

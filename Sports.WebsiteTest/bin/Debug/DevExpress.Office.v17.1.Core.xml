@@ -911,6 +911,14 @@
 
 
         </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.SizedImage">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="P:DevExpress.Office.Utils.OfficeImage.SizeInDocuments">
             <summary>
                 <para>Gets the size of an image in <see cref="F:DevExpress.Office.DocumentUnit.Document"/> units.
@@ -958,6 +966,14 @@
             </summary>
             <value>A <see cref="T:System.Drawing.Size"/> structure specifying the image size measured in twips.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.Office.Utils.OfficeImage.SupportsSizing">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>

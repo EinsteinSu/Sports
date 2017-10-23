@@ -13,3 +13,16 @@ C:\Users\Sue\documents\visual studio 2015\Projects\Sports\Sports.DataAccess\obj\
 C:\Users\Sue\documents\visual studio 2015\Projects\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.player1.resources
 C:\Users\Sue\documents\visual studio 2015\Projects\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.playerselftakenscore.resources
 C:\Users\Sue\documents\visual studio 2015\Projects\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.flagchangename.resources
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\Sports.DataAccess.dll.config
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\Sports.DataAccess.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\Sports.DataAccess.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.schedule.resources
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.csproj.GenerateResource.Cache

@@ -7283,6 +7283,14 @@
 
 
         </member>
+        <member name="F:DevExpress.Xpo.XPQueryBase.SuppressNonPersistentPropertiesCheck">
+            <summary>
+                <para> </para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
         <member name="T:DevExpress.Xpo.IdentityMapBehavior">
 
             <summary>
@@ -8147,7 +8155,7 @@
         </member>
         <member name="F:DevExpress.Xpo.OptimisticLockingReadMergeBehavior.Default">
             <summary>
-                <para>The changed objects are automatically reloaded. The default behavior can be changed by setting the <see cref="F:DevExpress.Xpo.XpoDefault.DefaultOptimisticLockingReadBehavior"/> field.
+                <para>The changed objects are automatically reloaded. The default behavior can be changed by setting the <see cref="P:DevExpress.Xpo.XpoDefault.OptimisticLockingReadBehavior"/> property.
 </para>
             </summary>
 
@@ -9922,6 +9930,14 @@
             </summary>
             <value>An object that implements the <b>IEnumerable</b> interface.
 </value>
+
+
+        </member>
+        <member name="P:DevExpress.Xpo.XPBaseCollection.IsAsyncLoading">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -15487,7 +15503,7 @@
         </member>
         <member name="F:DevExpress.Xpo.XpoDefault.DefaultOptimisticLockingReadBehavior">
             <summary>
-                <para>Specifies the value which is assigned to the <see cref="P:DevExpress.Xpo.XpoDefault.OptimisticLockingReadBehavior"/> property when it is set to the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Default"/> value. By default, this field returns the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.ReloadObject"/> value.
+                <para>Specifies the value which is assigned to the <see cref="P:DevExpress.Xpo.XpoDefault.OptimisticLockingReadBehavior"/> property when it is set to the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Default"/> value. By default, this field returns the <see cref="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Mixed"/> value.
 </para>
             </summary>
             <returns> </returns>
@@ -24074,7 +24090,7 @@ In units of work, <b>true</b> if a list of tracked changes is not empty; otherwi
         </member>
         <member name="F:DevExpress.Xpo.OptimisticLockingReadBehavior.Default">
             <summary>
-                <para>The default behavior can be changed by setting the <see cref="F:DevExpress.Xpo.XpoDefault.DefaultOptimisticLockingReadBehavior"/> field.
+                <para>The default behavior can be changed by setting the <see cref="P:DevExpress.Xpo.XpoDefault.OptimisticLockingReadBehavior"/> property.
 </para>
             </summary>
 

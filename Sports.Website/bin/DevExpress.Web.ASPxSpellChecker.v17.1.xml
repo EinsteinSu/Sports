@@ -4,6 +4,58 @@
         <name>DevExpress.Web.ASPxSpellChecker.v17.1</name>
     </assembly>
     <members>
+        <member name="T:DevExpress.Web.ASPxSpellChecker.SpellCheckerFormsSettings">
+
+            <summary>
+                <para>Contains dialog form settings.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpellChecker.SpellCheckerFormsSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpellCheckerFormsSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpellChecker.SpellCheckerFormsSettings.Assign(DevExpress.Web.PropertiesBase)">
+            <summary>
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.PropertiesBase"/> object to the current object.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> object, whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpellChecker.SpellCheckerFormsSettings.SpellCheckFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is the customized version of the built-in Check Spelling dialog form.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customized Check Spelling dialog form.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpellChecker.SpellCheckerFormsSettings.SpellCheckOptionsFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is the customized version of the built-in Spelling Options dialog form.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customized Spelling Options dialog form.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxSpellChecker.CustomDictionaryLoadingEventArgs">
 
             <summary>
@@ -56,58 +108,6 @@
 		A <see cref="T:DevExpress.Web.ASPxSpellChecker.CustomDictionaryLoadingEventArgs"/> object which contains event data.
 
             </param>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxSpellChecker.SpellCheckerFormsSettings">
-
-            <summary>
-                <para>Contains dialog form settings.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpellChecker.SpellCheckerFormsSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpellCheckerFormsSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpellChecker.SpellCheckerFormsSettings.Assign(DevExpress.Web.PropertiesBase)">
-            <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.PropertiesBase"/> object to the current object.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> object, whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpellChecker.SpellCheckerFormsSettings.SpellCheckFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is the customized version of the built-in Check Spelling dialog form.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customized Check Spelling dialog form.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpellChecker.SpellCheckerFormsSettings.SpellCheckOptionsFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is the customized version of the built-in Spelling Options dialog form.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customized Spelling Options dialog form.
-</value>
 
 
         </member>
