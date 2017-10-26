@@ -21,7 +21,7 @@ namespace Sports.DataAccess.Models
         public Venue Venue { get; set; }
 
         [ForeignKey("Venue")]
-        public int VenueId { get; set; }
+        public int? VenueId { get; set; }
 
         public virtual ICollection<ScheduleTeam> Teams { get; set; }
     }

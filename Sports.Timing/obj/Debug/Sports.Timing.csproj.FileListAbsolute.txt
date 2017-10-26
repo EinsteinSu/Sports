@@ -9,3 +9,8 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.Timing\obj\Debug\Sports.Timing.csp
 C:\Users\einst\Documents\GitHub\Sports\Sports.Timing\obj\Debug\Sports.Timing.csproj.CoreCompileInputs.cache
 C:\Users\einst\Documents\GitHub\Sports\Sports.Timing\obj\Debug\Sports.Timing.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.Timing\obj\Debug\Sports.Timing.pdb
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Timing\bin\Debug\Sports.Timing.dll
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Timing\bin\Debug\Sports.Timing.pdb
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Timing\obj\Debug\Sports.Timing.csprojResolveAssemblyReference.cache
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Timing\obj\Debug\Sports.Timing.dll
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Timing\obj\Debug\Sports.Timing.pdb

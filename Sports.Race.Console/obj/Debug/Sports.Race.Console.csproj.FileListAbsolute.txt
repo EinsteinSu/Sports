@@ -64,3 +64,7 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.Race.Console\bin\Debug\DevExpress.
 C:\Users\einst\Documents\GitHub\Sports\Sports.Race.Console\obj\Debug\LoginWindow.baml
 C:\Users\einst\Documents\GitHub\Sports\Sports.Race.Console\obj\Debug\LoginWindow.g.cs
 C:\Users\einst\Documents\GitHub\Sports\Sports.Race.Console\obj\Debug\Sports.Race.Console.exe.licenses
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Race.Console\obj\Debug\Sports.Race.Console.csprojResolveAssemblyReference.cache
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Race.Console\obj\Debug\App.g.cs
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Race.Console\obj\Debug\Sports.Race.Console_MarkupCompile.cache
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Race.Console\obj\Debug\Sports.Race.Console.pdb

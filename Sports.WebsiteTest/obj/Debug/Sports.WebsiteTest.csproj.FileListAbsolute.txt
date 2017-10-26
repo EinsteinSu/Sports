@@ -394,3 +394,5 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\ja\DevExpres
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\ru\DevExpress.Web.Resources.v17.1.resources.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\Sports.Common.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\Sports.Common.pdb
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.WebsiteTest\obj\Debug\Sports.WebsiteTest.csprojResolveAssemblyReference.cache
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.WebsiteTest\obj\Debug\Sports.WebsiteTest.pdb

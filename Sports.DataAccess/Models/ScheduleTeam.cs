@@ -6,11 +6,18 @@ namespace Sports.DataAccess.Models
     {
         public int Id { get; set; }
 
+        public TeamType TeamType { get; set; }
+
         public virtual Team Team { get; set; }
 
         [ForeignKey("Team")]
-        public int TeamId { get; set; }
+        public int? TeamId { get; set; }
 
         public int Score { get; set; }
+    }
+
+    public enum TeamType
+    {
+        Host, Guest
     }
 }

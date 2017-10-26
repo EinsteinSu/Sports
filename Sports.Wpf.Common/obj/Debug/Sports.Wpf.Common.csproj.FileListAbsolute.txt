@@ -41,3 +41,9 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\ja\DevExpress
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\ru\DevExpress.Pdf.v17.1.Core.resources.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common.pdb
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common.csprojResolveAssemblyReference.cache
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\DXSplashScreen\SplashWindow.baml
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\DXSplashScreen\SplashWindow.g.cs
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common_MarkupCompile.cache
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common.g.resources
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common.pdb
