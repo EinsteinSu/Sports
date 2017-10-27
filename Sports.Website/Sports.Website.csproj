@@ -295,6 +295,8 @@
     <Content Include="Views\Logins\_GridViewPartial.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\_GridViewPartial.cshtml" />
+    <Content Include="Views\Schedules\Index.cshtml" />
+    <Content Include="Views\Schedules\_GridViewPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -310,6 +312,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Commons\CrudControllerBase.cs" />
     <Compile Include="Commons\DataProvider.cs" />
+    <Compile Include="Commons\GridViewEditingDemosHelper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DisplaysController.cs" />
     <Compile Include="Controllers\FlagsController.cs" />
@@ -319,6 +322,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PlayersController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\SchedulesController.cs" />
     <Compile Include="Controllers\SecuritiesController.cs" />
     <Compile Include="Controllers\SecurityGroupsController.cs" />
     <Compile Include="Controllers\TeamsController.cs" />

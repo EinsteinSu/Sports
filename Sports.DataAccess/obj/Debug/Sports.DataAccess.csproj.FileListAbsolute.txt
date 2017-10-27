@@ -35,3 +35,7 @@ C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\EntityFramewor
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.pdb
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.schedule3.resources
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.csproj.GenerateResource.Cache
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.schedule4.resources

@@ -14,6 +14,11 @@ namespace Sports.DataAccess.Models
         public int? TeamId { get; set; }
 
         public int Score { get; set; }
+
+        public virtual Schedule Schedule { get; set; }
+
+        [ForeignKey("Schedule")]
+        public int ScheduleId { get; set; }
     }
 
     public enum TeamType

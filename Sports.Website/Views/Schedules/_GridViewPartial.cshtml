@@ -1,0 +1,78 @@
+@using Sports.Website.Commons
+@{
+    Html.EnableClientValidation();
+    Html.EnableUnobtrusiveJavaScript();
+
+    var grid = Html.DevExpress().GridView(settings =>
+    {
+        settings.Name = "GridView";
+        settings.CallbackRouteValues = new { Controller = "Schedules", Action = "GridViewPartial" };
+        settings.CustomActionRouteValues = new { Controller = "Schedules", Action = "ChangeEditModePartial" };
+        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Schedules", Action = "GridViewPartialAddNew" };
+        settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Schedules", Action = "GridViewPartialUpdate" };
+        settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Schedules", Action = "GridViewPartialDelete" };
+        settings.SettingsEditing.Mode = GridViewEditingDemosHelper.EditMode;
+        settings.SettingsBehavior.ConfirmDelete = true;
+
+        settings.CommandColumn.Visible = true;
+        settings.CommandColumn.ShowNewButton = true;
+        settings.CommandColumn.ShowDeleteButton = true;
+        settings.CommandColumn.ShowEditButton = true;
+
+        settings.KeyFieldName = "Id";
+
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = true;
+        settings.Settings.ShowFilterRow = true;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
+
+        settings.SettingsAdaptivity.AdaptivityMode = GridViewAdaptivityMode.Off;
+        settings.SettingsAdaptivity.AdaptiveColumnPosition = GridViewAdaptiveColumnPosition.Right;
+        settings.SettingsAdaptivity.AdaptiveDetailColumnCount = 1;
+        settings.SettingsAdaptivity.AllowOnlyOneAdaptiveDetailExpanded = false;
+        settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
+
+        settings.Columns.Add("Title");
+        settings.Columns.Add("StartTime");
+        settings.Columns.Add(s =>
+        {
+            s.FieldName = "TeamA";
+            s.Caption = "TeamA";
+            s.EditorProperties().ComboBox(c =>
+            {
+                c.TextField = "Name";
+                c.ValueType = typeof(int);
+                c.ValueField = "Id";
+                c.DataSource = DataProvider.GetTeams();
+            });
+        });
+        settings.Columns.Add(s =>
+        {
+            s.FieldName = "TeamB";
+            s.Caption = "TeamB";
+            s.EditorProperties().ComboBox(c =>
+            {
+                
+                c.TextField = "Name";
+                c.ValueType = typeof(int);
+                c.ValueField = "Id";
+                c.DataSource = DataProvider.GetTeams();
+            });
+        });
+        settings.Columns.Add(s =>
+        {
+            s.FieldName = "VenueId";
+            s.EditorProperties().ComboBox(c =>
+            {
+                c.DataSource = DataProvider.GetVenues();
+                c.TextField = "Name";
+                c.ValueField = "Id";
+            });
+        });
+    });
+    if (ViewData["EditError"] != null)
+    {
+        grid.SetEditErrorText((string)ViewData["EditError"]);
+    }
+}
+@grid.Bind(Model).GetHtml()

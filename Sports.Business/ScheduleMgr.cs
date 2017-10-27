@@ -18,7 +18,7 @@ namespace Sports.Business
         public IEnumerable<ScheduleViewModel> GetItems()
         {
             var list = new List<ScheduleViewModel>();
-            foreach (var s in Context.Schedules)
+            foreach (var s in Context.Schedules.Include(i => i.Teams))
             {
                 list.Add(new ScheduleViewModel(s));
             }
@@ -27,17 +27,47 @@ namespace Sports.Business
 
         public ScheduleViewModel GetItem(int id)
         {
-            var schedule = Context.Schedules.FirstOrDefault(f => f.Id == id);
+            var schedule = Context.Schedules.Include(i => i.Teams).FirstOrDefault(f => f.Id == id);
             if (schedule != null)
                 return new ScheduleViewModel(schedule);
             return null;
+        }
+
+        private void Reprocess(ScheduleViewModel viewModel, Schedule data)
+        {
+            if (data.Teams == null)
+            {
+                data.Teams = new List<ScheduleTeam>();
+            }
+            var canAdd = Context.ScheduleTeams.Count(c => c.ScheduleId == data.Id) < 2;
+            ReprocessTeam(viewModel.TeamA, TeamType.Host, data, canAdd);
+            ReprocessTeam(viewModel.TeamB, TeamType.Guest, data, canAdd);
+        }
+
+        private void ReprocessTeam(int teamId, TeamType type, Schedule data, bool canAdd)
+        {
+            var team = Context.ScheduleTeams.FirstOrDefault(f => f.Id == teamId);
+
+            if (team == null && canAdd)
+            {
+                data.Teams.Add(new ScheduleTeam { TeamId = teamId, TeamType = type });
+            }
+            else
+            {
+                if (team != null)
+                {
+                    team.Score = team.Score;
+                    team.TeamId = team.TeamId;
+                    team.ScheduleId = data.Id;
+                }
+            }
         }
 
         public void Add(ScheduleViewModel item)
         {
             try
             {
-                var schedule = item.ToSchedule();
+                var schedule = item.ToSchedule(Reprocess);
                 Context.Schedules.Add(schedule);
                 Context.SaveChanges();
                 item.Id = schedule.Id;
@@ -52,7 +82,7 @@ namespace Sports.Business
         {
             try
             {
-                var schedule = item.ToSchedule();
+                var schedule = item.ToSchedule(Reprocess);
                 Context.Entry(schedule).State = EntityState.Modified;
                 Context.SaveChanges();
             }
@@ -64,7 +94,20 @@ namespace Sports.Business
 
         public void Delete(int id)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                var item = Context.Schedules.FirstOrDefault(f => f.Id == id);
+                if (item == null)
+                {
+                    throw new KeyNotFoundException(string.Format("Could not found id {0} in {1}", id, "Schedule"));
+                }
+                Context.Schedules.Remove(item);
+                Context.SaveChanges();
+            }
+            catch (Exception exception)
+            {
+                throw new Exception(string.Format("delete {0} failed, {1}", "Schedule", exception.Message));
+            }
         }
 
         public void Dispose()

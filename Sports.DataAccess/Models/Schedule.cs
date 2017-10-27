@@ -17,7 +17,6 @@ namespace Sports.DataAccess.Models
 
         public DateTime? EndTime { get; set; }
 
-
         public Venue Venue { get; set; }
 
         [ForeignKey("Venue")]

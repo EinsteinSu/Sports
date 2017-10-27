@@ -21,7 +21,7 @@
     <item Text="Configurations" />
   </group>
   <group Text="Schedules">
-    <item Text="Schedule" />
+    <item Text="Schedule" NavigateUrl="/schedules" />
   </group>
   <group Text="Results and Reports">
     <item Text="Results" />

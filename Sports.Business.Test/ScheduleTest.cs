@@ -36,6 +36,23 @@ namespace Sports.Business.Test
             CleanSchedule(schedule.Id);
         }
 
+        [TestMethod]
+        public void Update_TeamA()
+        {
+            var schedule = Insert();
+            //change teama to teamb
+            var teamC = new Team();
+            teamC.Name = "c";
+            schedule.TeamA = teamC.Id;
+            var mgr = new ScheduleMgr();
+            mgr.Update(schedule);
+            var result =
+                new SportDataContext().ScheduleTeams.FirstOrDefault(
+                    w => w.ScheduleId == schedule.Id && w.TeamId == teamC.Id);
+            Assert.IsNotNull(result);
+            CleanSchedule(schedule.Id);
+        }
+
         protected ScheduleViewModel Insert()
         {
             var teamA = new Team();
@@ -63,12 +80,11 @@ namespace Sports.Business.Test
         {
             var item = Context.Schedules.Include(i => i.Teams).FirstOrDefault(f => f.Id == id);
             Assert.IsNotNull(item);
+            //foreach (var team in item.Teams.ToList())
+            //{
+            //    Context.ScheduleTeams.Remove(team);
+            //}
             Context.Schedules.Remove(item);
-            foreach (var team in item.Teams.ToList())
-            {
-                Context.ScheduleTeams.Remove(team);
-            }
-            
             Context.SaveChanges();
         }
     }

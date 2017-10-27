@@ -14,6 +14,11 @@ namespace Sports.Website.Commons
             return new TeamMgr().GetItems();
         }
 
+        public static IEnumerable<Venue> GetVenues()
+        {
+            return new VenueMgr().GetItems();
+        }
+
         public static IEnumerable<SecurityGroup> GetSecurityGroups()
         {
             return new SecurityGroupMgr().GetItems();

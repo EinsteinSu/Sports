@@ -49,6 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201710270915503_schedule-3.cs" />
+    <Compile Include="Migrations\201710270915503_schedule-3.Designer.cs">
+      <DependentUpon>201710270915503_schedule-3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710270921053_schedule-4.cs" />
+    <Compile Include="Migrations\201710270921053_schedule-4.Designer.cs">
+      <DependentUpon>201710270921053_schedule-4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Player.cs" />
@@ -68,6 +76,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710270915503_schedule-3.resx">
+      <DependentUpon>201710270915503_schedule-3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710270921053_schedule-4.resx">
+      <DependentUpon>201710270921053_schedule-4.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

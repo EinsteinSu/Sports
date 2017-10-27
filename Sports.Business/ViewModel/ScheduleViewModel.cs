@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Sports.DataAccess.Models;
 
@@ -6,12 +7,9 @@ namespace Sports.Business.ViewModel
 {
     public class ScheduleViewModel : Schedule
     {
-        private int _teamA;
-        private int _teamAScore;
-        private int _teamB;
-        private int _teamBScore;
-
-        public ScheduleViewModel() { }
+        public ScheduleViewModel()
+        {
+        }
 
         public ScheduleViewModel(Schedule schedule)
         {
@@ -20,48 +18,29 @@ namespace Sports.Business.ViewModel
             StartTime = schedule.StartTime;
             EndTime = schedule.EndTime;
             Teams = schedule.Teams;
+            TeamA = GetTeam(TeamType.Host);
+            TeamB = GetTeam(TeamType.Guest);
+            TeamAScore = GetTeamScore(TeamType.Host);
+            TeamBScore = GetTeamScore(TeamType.Guest);
             Venue = schedule.Venue;
             VenueId = schedule.VenueId;
         }
 
-        public int TeamA
-        {
-            get => _teamA;
-            set
-            {
-                _teamA = value;
-                SetTeam(value, TeamType.Host);
-            }
-        }
+        public int TeamA { get; set; }
 
-        public int TeamAScore
-        {
-            get => _teamAScore;
-            set
-            {
-                _teamAScore = value;
-                SetTeamScore(TeamA, value);
-            }
-        }
 
-        public int TeamB
-        {
-            get => _teamB;
-            set
-            {
-                _teamB = value;
-                SetTeam(value, TeamType.Guest);
-            }
-        }
+        public int TeamAScore { get; set; }
 
-        public int TeamBScore
+        public int TeamB { get; set; }
+
+        public int TeamBScore { get; set; }
+
+        public int GetTeam(TeamType type)
         {
-            get => _teamBScore;
-            set
-            {
-                _teamBScore = value;
-                SetTeamScore(TeamB, value);
-            }
+            var team = Teams?.FirstOrDefault(f => f.TeamType == type);
+            if (team != null)
+                return team.Id;
+            return 0;
         }
 
         protected void SetTeam(int teamId, TeamType type)
@@ -77,6 +56,14 @@ namespace Sports.Business.ViewModel
             return Teams.All(f => f.Id != teamId) && Teams.Count < 2;
         }
 
+        public int GetTeamScore(TeamType type)
+        {
+            var team = Teams?.FirstOrDefault(f => f.TeamType == type);
+            if (team != null)
+                return team.Score;
+            return 0;
+        }
+
         public void SetTeamScore(int teamId, int score)
         {
             var team = Teams.FirstOrDefault(f => f.Id == teamId);
@@ -84,16 +71,17 @@ namespace Sports.Business.ViewModel
                 team.Score = score;
         }
 
-        public Schedule ToSchedule()
+        public Schedule ToSchedule(Action<ScheduleViewModel, Schedule> reProcess = null)
         {
-            var schedule = new Schedule();
-            schedule.Id = Id;
-            schedule.Title = Title;
-            schedule.StartTime = StartTime;
-            schedule.EndTime = EndTime;
-            schedule.Venue = Venue;
-            schedule.Teams = Teams;
-            schedule.VenueId = VenueId;
+            var schedule = new Schedule
+            {
+                Id = Id,
+                Title = Title,
+                StartTime = StartTime,
+                EndTime = EndTime,
+                VenueId = VenueId,
+            };
+            reProcess?.Invoke(this, schedule);
             return schedule;
         }
     }
