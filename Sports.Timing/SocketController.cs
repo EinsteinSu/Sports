@@ -18,6 +18,11 @@ namespace Sports.Timing
             _compacity = compacity;
         }
 
+        ~SocketController()
+        {
+            StopListening();
+        }
+
         public void StartListening(IRequestProcess process, int port)
         {
             _server = new Server();
@@ -95,6 +100,10 @@ namespace Sports.Timing
                 Console.WriteLine(responseData);
                 stream.Close();
                 client.Close();
+            }
+            catch (System.Net.Sockets.SocketException ex)
+            {
+                Console.WriteLine(ex.Message);
             }
             catch (Exception e)
             {

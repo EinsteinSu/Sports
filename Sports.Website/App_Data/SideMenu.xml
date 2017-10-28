@@ -9,6 +9,7 @@
     <item Text="Hardwares" NavigateUrl="/hardwares"/>
     <item Text="Displays" NavigateUrl="/displays" />
     <item Text="Venues" NavigateUrl="/venues"  />
+    <item Text="Centrals" NavigateUrl="/centrals"  />
   </group>
   <group Text="Security and Login">
     <item Text="Security Groups" NavigateUrl="/securitygroups"/>

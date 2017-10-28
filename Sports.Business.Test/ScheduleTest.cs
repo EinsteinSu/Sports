@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Sports.Business.ViewModel;
 using Sports.DataAccess;
@@ -14,17 +11,28 @@ namespace Sports.Business.Test
     [TestClass]
     public class ScheduleTest : TestBase
     {
+        private int _scheduleid;
+
+        [TestCleanup]
+        public void CleanUp()
+        {
+            if (_scheduleid > 0)
+                CleanSchedule(_scheduleid);
+            Context.Database.ExecuteSqlCommand("Delete from teams");
+        }
+
         [TestMethod]
         public void Add()
         {
             var schedule = Insert();
-            CleanSchedule(schedule.Id);
+            _scheduleid = schedule.Id;
         }
 
         [TestMethod]
         public void Update()
         {
             var schedule = Insert();
+            _scheduleid = schedule.Id;
             schedule.Title = "bbb";
             using (var mgr = new ScheduleMgr())
             {
@@ -33,16 +41,17 @@ namespace Sports.Business.Test
             var result = new SportDataContext().Schedules.FirstOrDefault(f => f.Id == schedule.Id);
             Assert.IsNotNull(result);
             Assert.AreEqual(result.Title, schedule.Title);
-            CleanSchedule(schedule.Id);
         }
 
         [TestMethod]
         public void Update_TeamA()
         {
             var schedule = Insert();
+            _scheduleid = schedule.Id;
             //change teama to teamb
             var teamC = new Team();
             teamC.Name = "c";
+            new TeamMgr().Add(teamC);
             schedule.TeamA = teamC.Id;
             var mgr = new ScheduleMgr();
             mgr.Update(schedule);
@@ -50,7 +59,19 @@ namespace Sports.Business.Test
                 new SportDataContext().ScheduleTeams.FirstOrDefault(
                     w => w.ScheduleId == schedule.Id && w.TeamId == teamC.Id);
             Assert.IsNotNull(result);
-            CleanSchedule(schedule.Id);
+        }
+
+        [TestMethod]
+        public void Delete()
+        {
+            var schedule = Insert();
+            _scheduleid = schedule.Id;
+            var mgr = new ScheduleMgr();
+            mgr.Delete(schedule.Id);
+            var result = new SportDataContext().Schedules.Where(w => w.Id == schedule.Id);
+            Assert.IsFalse(result.Any());
+            var result1 = new SportDataContext().ScheduleTeams.Where(w => w.ScheduleId == schedule.Id);
+            Assert.IsFalse(result1.Any());
         }
 
         protected ScheduleViewModel Insert()
@@ -79,13 +100,11 @@ namespace Sports.Business.Test
         public void CleanSchedule(int id)
         {
             var item = Context.Schedules.Include(i => i.Teams).FirstOrDefault(f => f.Id == id);
-            Assert.IsNotNull(item);
-            //foreach (var team in item.Teams.ToList())
-            //{
-            //    Context.ScheduleTeams.Remove(team);
-            //}
-            Context.Schedules.Remove(item);
-            Context.SaveChanges();
+            if (item != null)
+            {
+                Context.Schedules.Remove(item);
+                Context.SaveChanges();
+            }
         }
     }
 }

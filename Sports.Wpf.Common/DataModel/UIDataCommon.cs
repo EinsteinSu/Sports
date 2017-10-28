@@ -20,17 +20,22 @@ namespace Sports.Wpf.Common.DataModel
         private string _imagePath;
         private string _subtitle;
         private string _title;
+        private int _uniqueId;
 
-        public UIDataCommon(string title, string subtitle, string imagePath, string description)
+        public UIDataCommon(int uniqueId, string title, string subtitle, string imagePath, string description)
         {
-            UniqueId = GetUniqueId();
+            _uniqueId = uniqueId;
             _title = title;
             _subtitle = subtitle;
             _description = description;
             _imagePath = imagePath;
         }
 
-        public string UniqueId { get; } = string.Empty;
+        public int UniqueId
+        {
+            get => _uniqueId;
+            set => SetProperty(ref _uniqueId, value, "UniqueId");
+        }
 
         public string Title
         {
@@ -72,11 +77,6 @@ namespace Sports.Wpf.Common.DataModel
 #else
             return new BitmapImage(new Uri(BaseUri, path));
 #endif
-        }
-
-        private static string GetUniqueId()
-        {
-            return "Item" + _count++;
         }
 
         public override string ToString()

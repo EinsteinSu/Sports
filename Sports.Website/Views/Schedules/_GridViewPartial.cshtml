@@ -1,13 +1,13 @@
 @using Sports.Website.Commons
 @{
-    Html.EnableClientValidation();
-    Html.EnableUnobtrusiveJavaScript();
+    //Html.EnableClientValidation();
+    //Html.EnableUnobtrusiveJavaScript();
 
     var grid = Html.DevExpress().GridView(settings =>
     {
         settings.Name = "GridView";
         settings.CallbackRouteValues = new { Controller = "Schedules", Action = "GridViewPartial" };
-        settings.CustomActionRouteValues = new { Controller = "Schedules", Action = "ChangeEditModePartial" };
+        //settings.CustomActionRouteValues = new { Controller = "Schedules", Action = "ChangeEditModePartial" };
         settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Schedules", Action = "GridViewPartialAddNew" };
         settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Schedules", Action = "GridViewPartialUpdate" };
         settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Schedules", Action = "GridViewPartialDelete" };
@@ -33,7 +33,14 @@
         settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
 
         settings.Columns.Add("Title");
-        settings.Columns.Add("StartTime");
+        settings.Columns.Add(s=>
+        {
+            s.FieldName = "StartTime";
+            s.EditorProperties().DateEdit(a =>
+            {
+
+            });
+        });
         settings.Columns.Add(s =>
         {
             s.FieldName = "TeamA";
@@ -52,7 +59,7 @@
             s.Caption = "TeamB";
             s.EditorProperties().ComboBox(c =>
             {
-                
+
                 c.TextField = "Name";
                 c.ValueType = typeof(int);
                 c.ValueField = "Id";
@@ -62,6 +69,7 @@
         settings.Columns.Add(s =>
         {
             s.FieldName = "VenueId";
+            s.Caption = "Venue";
             s.EditorProperties().ComboBox(c =>
             {
                 c.DataSource = DataProvider.GetVenues();

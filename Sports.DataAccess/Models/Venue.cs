@@ -20,13 +20,25 @@ namespace Sports.DataAccess.Models
         [MaxLength(20)]
         public string Location { get; set; }
 
+        public VenueState State { get; set; }
+
         public byte[] Image { get; set; }
 
         [DataType(DataType.MultilineText)]
         public string Description { get; set; }
 
+        public override string ToString()
+        {
+            return $"{IPAddress}({Port})";
+        }
+
         //public virtual ICollection<Hardware> Hardwares { get; set; }
 
         //public virtual ICollection<Display> Displays { get; set; }
+    }
+
+    public enum VenueState
+    {
+        NotStart, Racing, Finished
     }
 }

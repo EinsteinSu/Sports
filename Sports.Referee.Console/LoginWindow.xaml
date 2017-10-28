@@ -1,0 +1,33 @@
+﻿<dx:DXWindow
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm" xmlns:ViewModel="clr-namespace:Sports.Referee.Console.ViewModel"
+    x:Class="Sports.Referee.Console.LoginWindow"
+    Title="Login" Height="350" Width="525"
+    DataContext="{dxmvvm:ViewModelSource Type={x:Type ViewModel:LoginViewModel}}"
+    >
+
+    <Grid>
+        <dxlc:LayoutControl Orientation="Vertical">
+            <dxlc:LayoutGroup>
+                <dxlc:LayoutGroup Orientation="Vertical">
+                    <dxlc:LayoutGroup x:Name="layoutGroup" Orientation="Vertical" VerticalAlignment="Top">
+                        <dxlc:LayoutItem IsRequired="True" Label="User Name:" LabelPosition="Top">
+                            <dxe:ComboBoxEdit ItemsSource="{Binding Venues}" SelectedItem="{Binding SelectedVenue}" MinWidth="200"/>
+                        </dxlc:LayoutItem>
+                    </dxlc:LayoutGroup>
+                    <dxlc:LayoutItem>
+                        <dxe:ButtonsControl>
+                            <Button Content="Login" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding LoginCommand}" CommandParameter="True"/>
+                            <Button Content="Cancel" VerticalAlignment="Center" HorizontalAlignment="Center" Command="{Binding LoginCommand}" CommandParameter="False"/>
+                        </dxe:ButtonsControl>
+                    </dxlc:LayoutItem>
+                </dxlc:LayoutGroup>
+                <dxlc:LayoutItem HorizontalAlignment="Right" Height="{Binding ActualHeight, ElementName=layoutGroup}" Label=" " LabelPosition="Top"/>
+            </dxlc:LayoutGroup>
+        </dxlc:LayoutControl>
+    </Grid>
+</dx:DXWindow>

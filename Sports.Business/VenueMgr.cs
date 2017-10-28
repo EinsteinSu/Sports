@@ -6,6 +6,7 @@ namespace Sports.Business
 {
     public interface IVenueMgr : ICrudMgr<Venue>
     {
+        bool IsStarted(int id);
     }
 
     public class VenueMgr : CrudMgrBase<Venue>, IVenueMgr
@@ -30,6 +31,12 @@ namespace Sports.Business
         protected override void DeleteItem(Venue item)
         {
             Context.Venues.Remove(item);
+        }
+
+        public bool IsStarted(int id)
+        {
+            var item = GetItem(id);
+            return item.State == VenueState.Racing;
         }
     }
 }

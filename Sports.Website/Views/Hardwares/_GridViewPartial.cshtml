@@ -1,37 +1,51 @@
+@using Sports.Website.Commons
 @{
-	var grid = Html.DevExpress().GridView(settings => {
+    var grid = Html.DevExpress().GridView(settings =>
+    {
         settings.Name = "GridView";
         settings.CallbackRouteValues = new { Controller = "Hardwares", Action = "GridViewPartial" };
 
-				settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Hardwares", Action = "GridViewPartialAddNew" };
+        settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Hardwares", Action = "GridViewPartialAddNew" };
         settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Hardwares", Action = "GridViewPartialUpdate" };
         settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Hardwares", Action = "GridViewPartialDelete" };
         settings.SettingsEditing.Mode = GridViewEditingMode.EditFormAndDisplayRow;
         settings.SettingsBehavior.ConfirmDelete = true;
 
-		settings.CommandColumn.Visible = true;
+        settings.CommandColumn.Visible = true;
         settings.CommandColumn.ShowNewButton = true;
         settings.CommandColumn.ShowDeleteButton = true;
         settings.CommandColumn.ShowEditButton = true;
 
-		settings.KeyFieldName = "Id";
+        settings.KeyFieldName = "Id";
 
-		settings.SettingsPager.Visible = true;
-		settings.Settings.ShowGroupPanel = false;
-		settings.Settings.ShowFilterRow = false;
-		settings.SettingsBehavior.AllowSelectByRowClick = true;
+        settings.SettingsPager.Visible = true;
+        settings.Settings.ShowGroupPanel = false;
+        settings.Settings.ShowFilterRow = false;
+        settings.SettingsBehavior.AllowSelectByRowClick = true;
 
-		settings.SettingsAdaptivity.AdaptivityMode = GridViewAdaptivityMode.Off;
-		settings.SettingsAdaptivity.AdaptiveColumnPosition = GridViewAdaptiveColumnPosition.Right;
-		settings.SettingsAdaptivity.AdaptiveDetailColumnCount = 1;
-		settings.SettingsAdaptivity.AllowOnlyOneAdaptiveDetailExpanded = false;
-		settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
+        settings.SettingsAdaptivity.AdaptivityMode = GridViewAdaptivityMode.Off;
+        settings.SettingsAdaptivity.AdaptiveColumnPosition = GridViewAdaptiveColumnPosition.Right;
+        settings.SettingsAdaptivity.AdaptiveDetailColumnCount = 1;
+        settings.SettingsAdaptivity.AllowOnlyOneAdaptiveDetailExpanded = false;
+        settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
 
-				settings.Columns.Add("Port");
-				settings.Columns.Add("Usage");
-				settings.Columns.Add("Description");
-			});
-		if (ViewData["EditError"] != null){
+        settings.Columns.Add("Port");
+        settings.Columns.Add("Usage");
+        settings.Columns.Add(s =>
+        {
+            s.FieldName = "VenueId";
+            s.Caption = "Venue";
+            s.EditorProperties().ComboBox(c =>
+            {
+                c.TextField = "Name";
+                c.ValueField = "Id";
+                c.DataSource = DataProvider.GetVenues();
+            });
+        });
+        settings.Columns.Add("Description");
+    });
+    if (ViewData["EditError"] != null)
+    {
         grid.SetEditErrorText((string)ViewData["EditError"]);
     }
 }

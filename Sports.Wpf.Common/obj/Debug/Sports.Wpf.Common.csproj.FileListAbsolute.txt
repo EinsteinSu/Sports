@@ -47,3 +47,6 @@ C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\DXSplashS
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common_MarkupCompile.cache
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common.g.resources
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\WaterPolo\Display.g.cs
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common_MarkupCompile.lref
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\WaterPolo\Display.baml

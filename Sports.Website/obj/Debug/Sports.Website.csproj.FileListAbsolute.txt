@@ -647,3 +647,5 @@ C:\Users\ssu2\Documents\GitHub\Sports\Sports.Website\bin\es\DevExpress.Xpo.v17.1
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Website\bin\ja\DevExpress.Xpo.v17.1.resources.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Website\bin\ru\DevExpress.Xpo.v17.1.resources.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Website\obj\Debug\Sports.Website.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Website\bin\DevExpress.Mvvm.v17.1.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Website\bin\DevExpress.Mvvm.v17.1.xml

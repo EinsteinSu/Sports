@@ -38,17 +38,9 @@ namespace Sports.Business.ViewModel
         public int GetTeam(TeamType type)
         {
             var team = Teams?.FirstOrDefault(f => f.TeamType == type);
-            if (team != null)
-                return team.Id;
+            if (team?.TeamId != null)
+                return team.TeamId.Value;
             return 0;
-        }
-
-        protected void SetTeam(int teamId, TeamType type)
-        {
-            if (Teams == null)
-                Teams = new List<ScheduleTeam>();
-            if (TeamCanBeCreate(teamId))
-                Teams.Add(new ScheduleTeam { TeamId = teamId, TeamType = type });
         }
 
         private bool TeamCanBeCreate(int teamId)

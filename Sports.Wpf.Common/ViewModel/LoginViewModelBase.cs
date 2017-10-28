@@ -8,12 +8,12 @@ using Sports.Wpf.Common.ViewModel.Interfaces;
 
 namespace Sports.Wpf.Common.ViewModel
 {
-    public abstract class LoginViewModelBase
+    public abstract class LoginViewModelBase : ViewModelBase
     {
         public virtual string Title => "Login";
 
-        public virtual ICurrentWindowService CurrentWindowService { get { return null; } }
-        public virtual IMainWindowService MainWindowService { get { return null; } }
+        public abstract ICurrentWindowService CurrentWindowService { get; }
+        public abstract IMainWindowService MainWindowService { get; }
 
         protected abstract bool ValidateCredential();
 

@@ -46,7 +46,7 @@ namespace Sports.Business
 
         private void ReprocessTeam(int teamId, TeamType type, Schedule data, bool canAdd)
         {
-            var team = Context.ScheduleTeams.FirstOrDefault(f => f.Id == teamId);
+            var team = Context.ScheduleTeams.FirstOrDefault(f => f.TeamType == type && f.ScheduleId == data.Id);
 
             if (team == null && canAdd)
             {
@@ -57,8 +57,9 @@ namespace Sports.Business
                 if (team != null)
                 {
                     team.Score = team.Score;
-                    team.TeamId = team.TeamId;
+                    team.TeamId = teamId;
                     team.ScheduleId = data.Id;
+                    Context.Entry(team).State = EntityState.Modified;
                 }
             }
         }

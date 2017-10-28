@@ -43,5 +43,7 @@ namespace Sports.DataAccess
         public DbSet<Schedule> Schedules { get; set; }
 
         public DbSet<ScheduleTeam> ScheduleTeams { get; set; }
+
+        public DbSet<Central> Centrals { get; set; }
     }
 }

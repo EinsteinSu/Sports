@@ -219,7 +219,6 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\System.Web.H
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\DevExpress.Web.v17.1.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\System.Net.Http.Formatting.dll
-C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\Newtonsoft.Json.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\DevExpress.XtraCharts.v17.1.Web.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\DevExpress.XtraCharts.v17.1.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\DevExpress.Data.v17.1.dll
@@ -271,7 +270,6 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\System.Web.H
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\DevExpress.Web.v17.1.xml
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\System.Net.Http.Formatting.xml
-C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\Newtonsoft.Json.xml
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\DevExpress.XtraCharts.v17.1.Web.xml
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\DevExpress.XtraCharts.v17.1.xml
 C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\DevExpress.Data.v17.1.xml
@@ -596,3 +594,7 @@ C:\Users\ssu2\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\es\DevExpress
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\ja\DevExpress.Xpo.v17.1.resources.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\ru\DevExpress.Xpo.v17.1.resources.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.WebsiteTest\obj\Debug\Sports.WebsiteTest.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\Newtonsoft.Json.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\Newtonsoft.Json.xml
+C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\DevExpress.Mvvm.v17.1.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.WebsiteTest\bin\Debug\DevExpress.Mvvm.v17.1.xml

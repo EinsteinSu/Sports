@@ -1,0 +1,9 @@
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\obj\Debug\Sports.Listener.csprojResolveAssemblyReference.cache
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\obj\Debug\Sports.Listener.csproj.CoreCompileInputs.cache
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\Sports.Listener.exe.config
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\Sports.Listener.exe
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\Sports.Listener.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\Sports.Timing.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\Sports.Timing.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\obj\Debug\Sports.Listener.exe
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\obj\Debug\Sports.Listener.pdb

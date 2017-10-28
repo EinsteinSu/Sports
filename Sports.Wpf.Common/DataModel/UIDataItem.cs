@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace Sports.Wpf.Common.DataModel
 {
@@ -8,25 +9,25 @@ namespace Sports.Wpf.Common.DataModel
     /// </summary>
     public class UIDataItem : UIDataCommon
     {
-        private FrameworkContentElement _content;
+        private FrameworkElement _content;
         private string _groupHeader;
         private bool _isFlowBreak;
 
-        public UIDataItem(string title, string subtitle, string imagePath, string description, FrameworkContentElement content)
-            : this(title, subtitle, imagePath, description, content, false, string.Empty)
+        public UIDataItem(int id,string title, string subtitle, string imagePath, string description, FrameworkElement content)
+            : this(id,title, subtitle, imagePath, description, content, false, string.Empty)
         {
         }
 
-        public UIDataItem(string title, string subtitle, string imagePath, string description, FrameworkContentElement content,
+        public UIDataItem(int id,string title, string subtitle, string imagePath, string description, FrameworkElement content,
             bool isFlowBreak, string groupHeader)
-            : base(title, subtitle, imagePath, description)
+            : base(id,title, subtitle, imagePath, description)
         {
             _content = content;
             IsFlowBreak = isFlowBreak;
             GroupHeader = groupHeader;
         }
 
-        public FrameworkContentElement Content
+        public FrameworkElement Content
         {
             get => _content;
             set => SetProperty(ref _content, value, "Content");

@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.Entity;
 using Sports.DataAccess;
+using License = Sports.Common.License;
 
 namespace Sports.Business
 {
@@ -21,6 +23,21 @@ namespace Sports.Business
     public abstract class CrudMgrBase<T> : ICrudMgr<T>, IDisposable where T : class
     {
         protected readonly SportDataContext Context = new SportDataContext();
+
+        public CrudMgrBase()
+        {
+#if DEBUG
+
+#else
+       var licence = new License("ssu.lic");
+            if (!licence.Validate())
+            {
+                //todo: read the documentation of how to use the license exception.
+                throw new LicenseException(typeof(int), this, "You have no license to visit this application.");
+            }     
+#endif
+        }
+
         public void Dispose()
         {
             Context?.Dispose();

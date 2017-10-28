@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CentralMgr.cs" />
     <Compile Include="CrudMgrBase.cs" />
     <Compile Include="DisplayMgr.cs" />
     <Compile Include="FlagMgr.cs" />
