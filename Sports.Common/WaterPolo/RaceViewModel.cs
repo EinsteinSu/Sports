@@ -7,8 +7,8 @@ namespace Sports.Common.WaterPolo
     {
         private int _court;
         private bool _isTimeout;
-        private string _teamA;
-        private string _teamB;
+        private TeamData _teamA;
+        private TeamData _teamB;
         private string _totalTime;
 
         public string TotalTime
@@ -29,13 +29,13 @@ namespace Sports.Common.WaterPolo
             set => SetProperty(ref _isTimeout, value, "IsTimeout");
         }
 
-        public string TeamA
+        public TeamData TeamA
         {
             get => _teamA;
             set => SetProperty(ref _teamA, value, "TeamA");
         }
 
-        public string TeamB
+        public TeamData TeamB
         {
             get => _teamB;
             set => SetProperty(ref _teamB, value, "TeamB");

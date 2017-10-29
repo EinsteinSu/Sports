@@ -12,6 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DevExpress.Xpf.Core;
+using Sports.Referee.Console.ViewModel;
 
 namespace Sports.Referee.Console
 {
@@ -23,6 +24,8 @@ namespace Sports.Referee.Console
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new MainWindowViewModel();
         }
     }
 }

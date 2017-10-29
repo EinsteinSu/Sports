@@ -9,14 +9,14 @@ using Sports.Wpf.Common.ViewModel.Interfaces;
 
 namespace Sports.Referee.Console.ViewModel
 {
-    public class LoginViewModel : LoginViewModelBase
+    public class LoginViewModel : ViewModelBase
     {
         private Venue _selectedVenue;
         private IEnumerable<Venue> _venues;
 
         public LoginViewModel()
         {
-            Venues = new VenueMgr().GetItems();
+            //Venues = new VenueMgr().GetItems();
         }
 
         public IEnumerable<Venue> Venues
@@ -31,13 +31,36 @@ namespace Sports.Referee.Console.ViewModel
             set => SetProperty(ref _selectedVenue, value, "SelectedVenue");
         }
 
-        public override ICurrentWindowService CurrentWindowService =>new CurrentWindowService();
+        public virtual string Title => "Login";
 
-        public override IMainWindowService MainWindowService => new MainWindowService();
-
-        protected override bool ValidateCredential()
+        public ICurrentWindowService CurrentWindowService
         {
-            return SelectedVenue != null;
+            get
+            {
+                return new CurrentWindowService();
+            }
+        }
+
+        public IMainWindowService MainWindowService
+        {
+            get
+            {
+                return new MainWindowService();
+            }
+        }
+
+        protected bool ValidateCredential()
+        {
+            return true;
+        }
+
+        public virtual void Login(bool isCorrect)
+        {
+            if (isCorrect && ValidateCredential())
+            {
+                MainWindowService.ShowMainWindow();
+            }
+            CurrentWindowService.Close();
         }
     }
 

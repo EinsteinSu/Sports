@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="Command.cs" />
     <Compile Include="License.cs" />
+    <Compile Include="RefereeConfiguration.cs" />
     <Compile Include="StringSecurity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WaterPolo\RaceViewModel.cs" />
