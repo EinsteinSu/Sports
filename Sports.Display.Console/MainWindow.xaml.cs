@@ -1,18 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using log4net;
+using log4net.Config;
 using Newtonsoft.Json;
 using Sports.Common.WaterPolo;
 using Sports.Timing;
@@ -22,21 +12,37 @@ using Sports.Wpf.Common.ViewModel.WaterPolo;
 namespace Sports.Display.Console
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    ///     Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow
     {
+        private static readonly ILog Log = LogManager.GetLogger("MainWindow");
+
         public MainWindow()
         {
+            XmlConfigurator.Configure();
+            var displayConsole = new DisplayConsole
+            {
+                Settings = DisplayConsoleSetting.Load(),
+                Race = GetTestData() //new RaceDisplayViewModel()
+            };
+
             InitializeComponent();
-            var displayConsole = new DisplayConsole();
-            //todo: load settings from json file
+
+            Top = displayConsole.Settings.Top;
+            Left = displayConsole.Settings.Left;
+            Height = displayConsole.Settings.Height;
+            Width = displayConsole.Settings.Width;
 
             var controller = new SocketController(512);
-            controller.StartListening(new WaterPoloRequestProcess((r) =>
-            {
-                //todo: set the race model from request
-            }), 1234);
+            controller.StartListening(new WaterPoloRequestProcess(r => { displayConsole.Race = r; }),
+                displayConsole.Settings.ListeningPort);
+
+            DataContext = displayConsole;
+        }
+
+        private RaceDisplayViewModel GetTestData()
+        {
             var display = new RaceDisplayViewModel
             {
                 TotalTime = "08:00",
@@ -58,21 +64,20 @@ namespace Sports.Display.Console
                     Players = new PlayerData[13]
                 }
             };
-            for (int i = 0; i < 13; i++)
-            {
+            for (var i = 0; i < 13; i++)
                 if (i == 3)
                 {
-                    display.TeamA.Players[i] = new PlayerDisplayViewModel { Name = $"Team A {i + 1}", Fouls = 2, FoulTime = 15 };
-                    display.TeamB.Players[i] = new PlayerDisplayViewModel { Name = $"Team B {i + 1}", Fouls = 3, FoulTime = 20 };
+                    display.TeamA.Players[i] =
+                        new PlayerDisplayViewModel {Name = $"Team A {i + 1}", Fouls = 2, FoulTime = 15};
+                    display.TeamB.Players[i] =
+                        new PlayerDisplayViewModel {Name = $"Team B {i + 1}", Fouls = 3, FoulTime = 20};
                 }
                 else
                 {
-                    display.TeamA.Players[i] = new PlayerDisplayViewModel { Name = $"Team A {i + 1}" };
-                    display.TeamB.Players[i] = new PlayerDisplayViewModel { Name = $"Team B {i + 1}" };
+                    display.TeamA.Players[i] = new PlayerDisplayViewModel {Name = $"Team A {i + 1}"};
+                    display.TeamB.Players[i] = new PlayerDisplayViewModel {Name = $"Team B {i + 1}"};
                 }
-
-            }
-            DataContext = new RaceDisplayViewModel();
+            return display;
         }
 
         internal class WaterPoloRequestProcess : IRequestProcess
@@ -83,21 +88,24 @@ namespace Sports.Display.Console
             {
                 _race = race;
             }
+
             public void Process(TcpClient client, NetworkStream stream, byte[] bytesReceived)
             {
+                var response = "I've got it";
                 try
                 {
                     var message = Encoding.Unicode.GetString(bytesReceived, 0, bytesReceived.Length);
+                    Log.Debug($"Got message {message}");
                     var data = JsonConvert.DeserializeObject<RaceDisplayViewModel>(message);
                     _race?.Invoke(data);
                 }
                 catch (Exception e)
                 {
-                    //todo: replay to error
-                    System.Console.WriteLine("error");
+                    response = "Could not get it";
+                    Log.Error($"Could not process message , cause {e.Message}");
                 }
 
-                var bytesSent = Encoding.Unicode.GetBytes("I'v got it");
+                var bytesSent = Encoding.Unicode.GetBytes(response);
                 stream.Write(bytesSent, 0, bytesSent.Length);
             }
         }

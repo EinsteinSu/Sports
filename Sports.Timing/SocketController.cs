@@ -4,6 +4,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using log4net;
 using Sports.Timing.Interfaces;
 
 namespace Sports.Timing
@@ -12,10 +13,11 @@ namespace Sports.Timing
     {
         private readonly int _compacity;
         private Server _server;
-
+        private static readonly ILog Log = LogManager.GetLogger("SocketController");
         public SocketController(int compacity)
         {
             _compacity = compacity;
+            Log.Info($"Campacity is {compacity}");
         }
 
         ~SocketController()
@@ -49,13 +51,14 @@ namespace Sports.Timing
             /// <param name="campacity">how big can be processed in per times.</param>
             public void CreateListener(int port, IRequestProcess requestProcess, int campacity)
             {
+
                 TcpListener tcpListener;
                 var ipAddress = Dns.GetHostEntry("localhost").AddressList[0];
                 try
                 {
                     tcpListener = new TcpListener(ipAddress, port);
                     tcpListener.Start();
-                    Console.WriteLine("Listening ...");
+                    Log.InfoFormat($"Listening {ipAddress}({port})");
                 }
                 catch (Exception e)
                 {

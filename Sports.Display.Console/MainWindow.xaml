@@ -14,6 +14,6 @@
                 <GradientStop Color="#FF1D53B2" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <waterPolo:Display DataContext="{Binding}"/>
+        <waterPolo:Display DataContext="{Binding Race}"/>
     </Grid>
 </Window>

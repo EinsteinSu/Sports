@@ -54,3 +54,5 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.Display.Console\obj\Debug\Sports.D
 C:\Users\einst\Documents\GitHub\Sports\Sports.Display.Console\obj\Debug\Sports.Display.Console.pdb
 C:\Users\einst\Documents\GitHub\Sports\Sports.Display.Console\bin\Debug\Sports.Timing.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.Display.Console\bin\Debug\Sports.Timing.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Display.Console\bin\Debug\log4net.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Display.Console\bin\Debug\log4net.xml

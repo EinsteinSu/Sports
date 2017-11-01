@@ -1,0 +1,8 @@
+2017-11-01 08:45:40,755 [1] INFO  SocketController - Campacity is 512
+2017-11-01 08:45:40,776 [3] INFO  SocketController - Listening ::1(5678)
+2017-11-01 08:46:02,071 [1] INFO  SocketController - Campacity is 512
+2017-11-01 08:46:02,090 [3] INFO  SocketController - Listening ::1(5678)
+2017-11-01 08:46:23,265 [1] INFO  SocketController - Campacity is 512
+2017-11-01 08:46:23,285 [3] INFO  SocketController - Listening ::1(5678)
+2017-11-01 08:47:33,261 [1] INFO  SocketController - Campacity is 512
+2017-11-01 08:47:33,281 [3] INFO  SocketController - Listening ::1(5678)
