@@ -40,3 +40,4 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAc
 C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.firstversion.resources
 C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.csproj.GenerateResource.Cache
 C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.venue1.resources
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.scheduleteamplayer.resources

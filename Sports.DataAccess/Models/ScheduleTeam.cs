@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Sports.DataAccess.Models
 {
@@ -19,6 +20,8 @@ namespace Sports.DataAccess.Models
 
         [ForeignKey("Schedule")]
         public int ScheduleId { get; set; }
+
+        public ICollection<ScheduleTeamPlayer> Players { get; set; }
     }
 
     public enum TeamType

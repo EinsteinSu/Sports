@@ -52,7 +52,9 @@
     <Compile Include="RefereeConfiguration.cs" />
     <Compile Include="StringSecurity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WaterPolo\PlayerData.cs" />
     <Compile Include="WaterPolo\RaceViewModel.cs" />
+    <Compile Include="WaterPolo\TeamData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

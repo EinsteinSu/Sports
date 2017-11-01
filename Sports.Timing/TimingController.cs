@@ -60,6 +60,8 @@ namespace Sports.Timing
             Time = TimeSpan.FromSeconds(InitializeSeconds);
         }
 
+        protected virtual int TimeInterval => 100;
+
         private void Timing()
         {
             while (true)
@@ -69,8 +71,8 @@ namespace Sports.Timing
                 Console.WriteLine(TimingTask.Status);
                 _resetEvent.WaitOne();
                 Time = Type == TimingType.Increase
-                    ? Time.Add(TimeSpan.FromMilliseconds(100))
-                    : Time.Add(-TimeSpan.FromMilliseconds(100));
+                    ? Time.Add(TimeSpan.FromMilliseconds(TimeInterval))
+                    : Time.Add(-TimeSpan.FromMilliseconds(TimeInterval));
                 if (TokenSource.Token.IsCancellationRequested)
                 {
                     Console.WriteLine("Cancelled");
@@ -82,7 +84,7 @@ namespace Sports.Timing
                     break;
                 }
                 DisplayAction?.Invoke(DisplayTime);
-                Thread.Sleep(100);
+                Thread.Sleep(TimeInterval);
             }
         }
     }

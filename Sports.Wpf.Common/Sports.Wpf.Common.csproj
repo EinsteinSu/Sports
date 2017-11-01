@@ -49,6 +49,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ImageTypeConvert.cs" />
     <Compile Include="DataModel\UIDataCommon.cs" />
     <Compile Include="DataModel\UIDataItem.cs" />
     <Compile Include="DataModel\UIDataSource.cs" />
@@ -58,11 +59,18 @@
     <Compile Include="ViewModel\ItemDetailViewModelBase.cs" />
     <Compile Include="ViewModel\LoginViewModelBase.cs" />
     <Compile Include="ViewModel\MainWindowServiceBase.cs" />
+    <Compile Include="ViewModel\WaterPolo\PlayerDisplayViewModel.cs" />
+    <Compile Include="ViewModel\WaterPolo\RaceControllViewModel.cs" />
+    <Compile Include="ViewModel\WaterPolo\RaceDisplayViewModel.cs" />
+    <Compile Include="ViewModel\WaterPolo\TeamDisplayViewModel.cs" />
     <Compile Include="View\DXSplashScreen\SplashWindow.xaml.cs">
       <DependentUpon>SplashWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\WaterPolo\Display.xaml.cs">
       <DependentUpon>Display.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WaterPolo\Player.xaml.cs">
+      <DependentUpon>Player.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -74,10 +82,20 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\WaterPolo\Player.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Content Include="View\DXSplashScreen\Image.png" />
     <Content Include="View\DXSplashScreen\Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sports.Common\Sports.Common.csproj">
+      <Project>{f437219b-0600-462f-9b72-3846b7cb769b}</Project>
+      <Name>Sports.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

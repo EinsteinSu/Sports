@@ -60,6 +60,10 @@
     <Compile Include="Migrations\201710280439346_venue-1.Designer.cs">
       <DependentUpon>201710280439346_venue-1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710312125061_scheduleteamplayer.cs" />
+    <Compile Include="Migrations\201710312125061_scheduleteamplayer.Designer.cs">
+      <DependentUpon>201710312125061_scheduleteamplayer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Central.cs" />
     <Compile Include="Models\Login.cs" />
@@ -70,6 +74,7 @@
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\Schedule.cs" />
     <Compile Include="Models\ScheduleTeam.cs" />
+    <Compile Include="Models\ScheduleTeamPlayer.cs" />
     <Compile Include="Models\Security.cs" />
     <Compile Include="Models\SecurityGroup.cs" />
     <Compile Include="Models\Team.cs" />
@@ -87,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710280439346_venue-1.resx">
       <DependentUpon>201710280439346_venue-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710312125061_scheduleteamplayer.resx">
+      <DependentUpon>201710312125061_scheduleteamplayer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

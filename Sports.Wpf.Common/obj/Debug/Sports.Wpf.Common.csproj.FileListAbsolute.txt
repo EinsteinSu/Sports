@@ -50,3 +50,10 @@ C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Com
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\WaterPolo\Display.g.cs
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common_MarkupCompile.lref
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\WaterPolo\Display.baml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\Sports.Common.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\Newtonsoft.Json.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\Sports.Common.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\Newtonsoft.Json.xml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\WaterPolo\Player.g.cs
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\WaterPolo\Player.baml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\GeneratedInternalTypeHelper.g.cs
