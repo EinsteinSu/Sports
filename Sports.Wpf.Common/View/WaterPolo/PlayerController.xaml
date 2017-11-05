@@ -19,9 +19,9 @@
         </Grid.ColumnDefinitions>
         <TextBlock Text="{Binding Number}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"></TextBlock>
         <TextBlock Text="{Binding Name}" Grid.Column="1" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"></TextBlock>
-        <TextBlock Text="{Binding Foul1}" HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Center"></TextBlock>
-        <TextBlock Text="{Binding Foul2}" HorizontalAlignment="Center" Grid.Column="3" VerticalAlignment="Center"></TextBlock>
-        <TextBlock Text="{Binding Foul3}" HorizontalAlignment="Center"  Grid.Column="4" Foreground="Red" VerticalAlignment="Center"></TextBlock>
+        <TextBlock Text="{Binding Foul1}" HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"></TextBlock>
+        <TextBlock Text="{Binding Foul2}" HorizontalAlignment="Center" Grid.Column="3" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"></TextBlock>
+        <TextBlock Text="{Binding Foul3}" HorizontalAlignment="Center"  Grid.Column="4" Foreground="Red" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"></TextBlock>
         <controls:IntTypeEditableButton Grid.Column="5"  Content="{Binding Fouls,Mode=TwoWay}" FontSize="20" FontWeight="Bold"></controls:IntTypeEditableButton>
         <controls:TwentySecondsEditableButton Grid.Column="6" Content="{Binding FoulTime,Mode=TwoWay}" FontSize="20" FontWeight="Bold"></controls:TwentySecondsEditableButton>
     </Grid>

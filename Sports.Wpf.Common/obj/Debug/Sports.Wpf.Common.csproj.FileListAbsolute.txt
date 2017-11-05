@@ -106,3 +106,9 @@ C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\DisplayDa
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\DisplayDataView.baml
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\DevExpress.Xpf.Core.v17.1.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\DevExpress.Mvvm.v17.1.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\DisplayDataView.g.cs
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\WaterPolo\DisplayController.g.cs
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\WaterPolo\PlayerController.g.cs
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\DisplayDataView.baml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\WaterPolo\DisplayController.baml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\View\WaterPolo\PlayerController.baml

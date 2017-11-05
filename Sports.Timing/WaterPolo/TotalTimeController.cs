@@ -24,14 +24,7 @@ namespace Sports.Timing.WaterPolo
                 ScoreB = ints[4],
                 Court = ints[5]
             };
-            string item = string.Empty;
-            foreach (var i in ints)
-            {
-                item += $"{i},";
-            }
-            //Console.WriteLine(item);
             DisplayData?.Invoke(data);
-            //Console.WriteLine(data);
         }
     }
 

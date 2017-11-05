@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using Sports.Common;
 
 namespace Sports.Timing.WaterPolo
@@ -25,7 +24,6 @@ namespace Sports.Timing.WaterPolo
             data = data.Substring(1, 1) + data.Substring(0, 1);
             thrity.Seconds = data.ToInt();
             thrity.IsStopped = ints[2] == 0xFB;
-            //todo: debug
             DisplayData?.Invoke(thrity);
         }
     }

@@ -25,6 +25,8 @@ namespace Sports.Wpf.Common.ViewModel.WaterPolo
                     return;
                 if (value < 0)
                     return;
+                if (value == 0)
+                    FoulTime = 0;
                 SetProperty(ref _fouls, value, "Fouls");
                 RaisePropertyChanged("Foul1");
                 RaisePropertyChanged("Foul2");

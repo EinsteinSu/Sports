@@ -45,3 +45,6 @@ C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\log4net.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\log4net.xml
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.test.resources
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\log4net.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\log4net.xml
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.test.resources

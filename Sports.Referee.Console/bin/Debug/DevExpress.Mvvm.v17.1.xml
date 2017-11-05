@@ -1111,7 +1111,7 @@
 </para>
             </summary>
             <param name="e">
-		<para>Provides data for the event handler that can be used to prevent specific operations on a document.</para>
+		Provides data for the event handler that can be used to prevent specific operations on a document.
 
 
             </param>
@@ -5904,6 +5904,24 @@ When sending a message, a token can be assigned to the message via the current <
                 <para>Initializes a new instance of the HiddenAttribute class with default settings.
 </para>
             </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Mvvm.DataAnnotations.HiddenAttribute.#ctor(System.Boolean)">
+            <summary>
+                <para> </para>
+            </summary>
+            <param name="hidden">
+		 
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Mvvm.DataAnnotations.HiddenAttribute.Hidden">
+            <summary>
+                <para> </para>
+            </summary>
+            <value> </value>
 
 
         </member>

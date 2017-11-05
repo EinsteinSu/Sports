@@ -151,3 +151,5 @@ C:\Users\ssu2\Documents\GitHub\Sports\Sports.Referee.Console\obj\Debug\Sports.Re
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Referee.Console\obj\Debug\Sports.Referee.Console.csproj.GenerateResource.Cache
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Referee.Console\obj\Debug\Sports.Referee.Console.exe
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Referee.Console\bin\Debug\DevExpress.Xpf.LayoutControl.v17.1.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Referee.Console\bin\Debug\log4net.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Referee.Console\bin\Debug\log4net.xml
