@@ -8,7 +8,13 @@ namespace Sports.Common.WaterPolo
         private bool _isTimeout;
         private TeamData _teamA;
         private TeamData _teamB;
+        private int _thirtySeconds;
         private string _totalTime;
+
+        public RaceViewModel()
+        {
+            _thirtySeconds = 30;
+        }
 
         public virtual string TotalTime
         {
@@ -16,7 +22,7 @@ namespace Sports.Common.WaterPolo
             set => SetProperty(ref _totalTime, value, "TotalTime");
         }
 
-        public int Court
+        public virtual int Court
         {
             get => _court;
             set => SetProperty(ref _court, value, "Court");
@@ -26,6 +32,12 @@ namespace Sports.Common.WaterPolo
         {
             get => _isTimeout;
             set => SetProperty(ref _isTimeout, value, "IsTimeout");
+        }
+
+        public int ThirtySeconds
+        {
+            get => _thirtySeconds;
+            set => SetProperty(ref _thirtySeconds, value, "ThirtySeconds");
         }
 
         public TeamData TeamA

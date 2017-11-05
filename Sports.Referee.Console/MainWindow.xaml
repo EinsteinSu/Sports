@@ -6,6 +6,6 @@
         xmlns:waterPolo="clr-namespace:Sports.Wpf.Common.View.WaterPolo;assembly=Sports.Wpf.Common"
         Title="MainWindow" WindowState="Maximized" Height="850" Width="825">
     <Grid>
-        <waterPolo:Display DataContext="{Binding Race,Mode=TwoWay}"></waterPolo:Display>
+        <waterPolo:DisplayController DataContext="{Binding Race,Mode=TwoWay}"></waterPolo:DisplayController>
     </Grid>
 </dx:DXWindow>

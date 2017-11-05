@@ -33,21 +33,9 @@ namespace Sports.Referee.Console.ViewModel
 
         public virtual string Title => "Login";
 
-        public ICurrentWindowService CurrentWindowService
-        {
-            get
-            {
-                return new CurrentWindowService();
-            }
-        }
+        public ICurrentWindowService CurrentWindowService => new CurrentWindowService();
 
-        public IMainWindowService MainWindowService
-        {
-            get
-            {
-                return new MainWindowService();
-            }
-        }
+        public IMainWindowService MainWindowService => new MainWindowService();
 
         protected bool ValidateCredential()
         {
@@ -66,35 +54,35 @@ namespace Sports.Referee.Console.ViewModel
 
     public class CurrentWindowService : ICurrentWindowService
     {
-        private LoginWindow window;
+        private readonly LoginWindow _window;
         public CurrentWindowService()
         {
-            window = new LoginWindow();
+            _window = new LoginWindow();
         }
 
         public void Close()
         {
-            window.Close();
+            _window.Close();
         }
 
         public void SetWindowState(WindowState state)
         {
-            window.WindowState = state;
+            _window.WindowState = state;
         }
 
         public void Activate()
         {
-            window.Activate();
+            _window.Activate();
         }
 
         public void Hide()
         {
-            window.Hide();
+            _window.Hide();
         }
 
         public void Show()
         {
-            window.Show();
+            _window.Show();
         }
     }
 

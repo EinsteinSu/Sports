@@ -2,6 +2,7 @@
 using Sports.Business;
 using Sports.Common;
 using Sports.Timing;
+using Sports.Wpf.Common.ViewModel.WaterPolo;
 
 namespace Sports.Race.Console.ViewModel
 {
@@ -10,6 +11,7 @@ namespace Sports.Race.Console.ViewModel
         private readonly IVenueMgr _mgr;
         private readonly int _venueId;
         private DelegateCommand _loadRaceCommand;
+        private RaceControllViewModel _race;
 
         public RaceMgmtViewModel(IVenueMgr mgr, int venueId)
         {
@@ -23,6 +25,8 @@ namespace Sports.Race.Console.ViewModel
             get => _loadRaceCommand;
             set => SetProperty(ref _loadRaceCommand, value, "LoadRaceCommand");
         }
+
+    
 
 
         public void LoadRace()

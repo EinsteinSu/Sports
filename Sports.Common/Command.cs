@@ -29,6 +29,11 @@ namespace Sports.Common
 
     public enum CommandType
     {
-        LoadRace
+        LoadRace, Response
+    }
+
+    public enum ResponseType
+    {
+        Success, Faild
     }
 }

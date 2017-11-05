@@ -4,17 +4,17 @@
 library
 C#
 .cs
-C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\
 Sports.Wpf.Common
 none
 false
 DEBUG;TRACE
 
-3-553955761
+6-900071168
 22085896987
-211999717413
-19-1352507411
-View\DXSplashScreen\SplashWindow.xaml;View\WaterPolo\Display.xaml;View\WaterPolo\Player.xaml;
+30-1496366904
+19-1746742226
+View\DisplayDataView.xaml;View\DXSplashScreen\SplashWindow.xaml;View\WaterPolo\Display.xaml;View\WaterPolo\DisplayController.xaml;View\WaterPolo\Player.xaml;View\WaterPolo\PlayerController.xaml;
 
-False
+True
 

@@ -25,13 +25,13 @@ namespace Sports.Common.WaterPolo
             set => SetProperty(ref _name, value, "Name");
         }
 
-        public int Fouls
+        public virtual int Fouls
         {
             get => _fouls;
             set => SetProperty(ref _fouls, value, "Fouls");
         }
 
-        public int FoulTime
+        public virtual int FoulTime
         {
             get => _foulTime;
             set => SetProperty(ref _foulTime, value, "FoulTime");

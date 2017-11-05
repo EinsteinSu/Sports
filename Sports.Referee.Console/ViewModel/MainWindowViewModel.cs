@@ -11,13 +11,16 @@ using Sports.Common.WaterPolo;
 using Sports.DataAccess.Models;
 using Sports.Timing;
 using Sports.Timing.Interfaces;
+using Sports.Timing.WaterPolo;
+using Sports.Wpf.Common.ViewModel.WaterPolo;
 
 namespace Sports.Referee.Console.ViewModel
 {
     public class MainWindowViewModel : ViewModelBase
     {
         private RaceViewModel _race;
-
+        private TotalTimeController _totalTimeController;
+        private ThirtySecondsTimeController _thirtySecondsTimeController;
         public MainWindowViewModel()
         {
             var configFileName =
@@ -31,9 +34,70 @@ namespace Sports.Referee.Console.ViewModel
             Title = $"{Venue.Name} \n {Venue}";
 
             var controller = new SocketController(512);
-            controller.StartListening(new RefereeRequestProcess((r) => Race = r), Venue.Port);
-            Race = new RaceViewModel();
-            //todo: listen and process hardware stuffs
+            controller.StartListening(new RefereeRequestProcess(r => Race = r), Venue.Port);
+
+            Race = new RaceControllViewModel
+            {
+                TotalTime = "8:00",
+                Court = 1,
+                TeamA = new TeamControlViewModel { Score = 1 },
+                TeamB = new TeamControlViewModel { TimeoutCount = 1 }
+            };
+            Race.TeamA.TeamName = "CHN";
+            Race.TeamB.TeamName = "RUS";
+            Race.TeamA.Players = new PlayerData[13];
+            Race.TeamB.Players = new PlayerData[13];
+            for (int i = 0; i < 13; i++)
+            {
+                Race.TeamA.Players[i] = new PlayerControlViewModel { Number = i + 1, Name = $"Team A {i}" };
+                Race.TeamB.Players[i] = new PlayerControlViewModel { Number = i + 1, Name = $"Team A {i}" };
+            }
+            InitializeSerialDevices();
+        }
+
+        private void InitializeSerialDevices()
+        {
+            var hardwares = new HardwareMgr().GetVenueHardwares(Venue.Id);
+            foreach (var hardware in hardwares)
+            {
+                if (hardware.Usage.Contains("Total"))
+                {
+                    _totalTimeController = new TotalTimeController(hardware.Port);
+                    try
+                    {
+                        _totalTimeController.StartListening();
+                    }
+                    catch (Exception e)
+                    {
+                        //todo: logging
+                    }
+                    _totalTimeController.DisplayData = data =>
+                    {
+                        Race.TotalTime = data.Time;
+                        //todo: check settings whether get this data
+                        Race.TeamA.Score = data.ScoreA;
+                        Race.TeamB.Score = data.ScoreB;
+                        Race.Court = data.Court;
+                        Race.IsTimeout = data.Stopped;
+                    };
+
+                }
+                if (hardware.Usage.Contains("30"))
+                {
+                    _thirtySecondsTimeController = new ThirtySecondsTimeController(hardware.Port);
+                    try
+                    {
+                        _thirtySecondsTimeController.StartListening();
+                    }
+                    catch (Exception e)
+                    {
+                    }
+                    _thirtySecondsTimeController.DisplayData = data =>
+                    {
+
+                    };
+                }
+            }
         }
 
         public string Title { get; set; }

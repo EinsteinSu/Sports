@@ -67,8 +67,13 @@
     <Compile Include="Migrations\201710312125061_scheduleteamplayer.Designer.cs">
       <DependentUpon>201710312125061_scheduleteamplayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711040618540_test.cs" />
+    <Compile Include="Migrations\201711040618540_test.Designer.cs">
+      <DependentUpon>201711040618540_test.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Central.cs" />
+    <Compile Include="Models\Feature.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Display.cs" />
@@ -98,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710312125061_scheduleteamplayer.resx">
       <DependentUpon>201710312125061_scheduleteamplayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711040618540_test.resx">
+      <DependentUpon>201711040618540_test.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -45,5 +45,7 @@ namespace Sports.DataAccess
         public DbSet<ScheduleTeam> ScheduleTeams { get; set; }
 
         public DbSet<Central> Centrals { get; set; }
+
+        public DbSet<Feature> Features { get; set; }
     }
 }

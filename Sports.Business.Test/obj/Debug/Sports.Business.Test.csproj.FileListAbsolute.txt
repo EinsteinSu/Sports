@@ -33,6 +33,10 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\obj\Debug\Sports.Bus
 C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\obj\Debug\Sports.Business.Test.pdb
 C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Common.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Common.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Newtonsoft.Json.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Newtonsoft.Json.xml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\DevExpress.Mvvm.v17.1.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\DevExpress.Mvvm.v17.1.xml
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\obj\Debug\Sports.Business.Test.csprojResolveAssemblyReference.cache
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Business.Test.dll.config
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Business.Test.dll
@@ -43,6 +47,8 @@ C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Microsoft.V
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Business.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.DataAccess.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Common.dll
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\DevExpress.Mvvm.v17.1.dll
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Newtonsoft.Json.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Business.pdb
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Business.dll.config
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.DataAccess.pdb
@@ -50,9 +56,7 @@ C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Data
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\EntityFramework.xml
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Sports.Common.pdb
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\DevExpress.Mvvm.v17.1.xml
+C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\obj\Debug\Sports.Business.Test.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Business.Test\obj\Debug\Sports.Business.Test.pdb
-C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Newtonsoft.Json.dll
-C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\Newtonsoft.Json.xml
-C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\DevExpress.Mvvm.v17.1.dll
-C:\Users\einst\Documents\GitHub\Sports\Sports.Business.Test\bin\Debug\DevExpress.Mvvm.v17.1.xml

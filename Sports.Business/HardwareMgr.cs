@@ -9,12 +9,13 @@ namespace Sports.Business
 {
     public interface IHardwareMgr : ICrudMgr<Hardware>
     {
-
+        IEnumerable<Hardware> GetVenueHardwares(int venueId);
     }
 
     public class HardwareMgr : CrudMgrBase<Hardware>, IHardwareMgr
     {
-        protected override string EntityName { get { return "Hardware"; } }
+        protected override string EntityName => "Hardware";
+
         protected override IEnumerable<Hardware> GetEntries()
         {
             return Context.Hardwares.ToList();
@@ -33,6 +34,11 @@ namespace Sports.Business
         protected override void DeleteItem(Hardware item)
         {
             Context.Hardwares.Remove(item);
+        }
+
+        public IEnumerable<Hardware> GetVenueHardwares(int venueId)
+        {
+            return Context.Hardwares.Where(w => w.VenueId == venueId).ToList();
         }
     }
 }

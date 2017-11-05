@@ -24,13 +24,13 @@ namespace Sports.Common.WaterPolo
         //todo reference as darshboard
         public string FlagUrl { get; set; }
 
-        public int TimeoutCount
+        public virtual int TimeoutCount
         {
             get => _timeoutCount;
             set => SetProperty(ref _timeoutCount, value, "TimeoutCount");
         }
 
-        public int Score
+        public virtual int Score
         {
             get => _score;
             set => SetProperty(ref _score, value, "Score");
@@ -48,7 +48,7 @@ namespace Sports.Common.WaterPolo
             set => SetProperty(ref _players, value, "Players");
         }
 
-        public string PauseTime
+        public virtual string PauseTime
         {
             get => _pauseTime;
             set => SetProperty(ref _pauseTime, value, "PauseTime");

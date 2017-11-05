@@ -46,11 +46,20 @@
     <Compile Include="Interfaces\ISocketController.cs" />
     <Compile Include="Interfaces\ITimingController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SerialPortController.cs" />
     <Compile Include="SocketController.cs" />
     <Compile Include="TimingController.cs" />
+    <Compile Include="WaterPolo\ThirtySecondsTimeController.cs" />
+    <Compile Include="WaterPolo\TotalTimeController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sports.Common\Sports.Common.csproj">
+      <Project>{F437219B-0600-462F-9B72-3846B7CB769B}</Project>
+      <Name>Sports.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

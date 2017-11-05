@@ -4,6 +4,7 @@ namespace Sports.Wpf.Common.ViewModel.WaterPolo
 {
     public class RaceControllViewModel : RaceViewModel
     {
+        private int _court;
         private string _totalTime;
 
         public override string TotalTime
@@ -11,10 +12,25 @@ namespace Sports.Wpf.Common.ViewModel.WaterPolo
             get => _totalTime;
             set
             {
+                if (!value.Equals(_totalTime))
+                {
+                    if (TeamA != null)
+                        DecreasePlayerFoulTime(TeamA);
+                    if (TeamB != null)
+                        DecreasePlayerFoulTime(TeamB);
+                }
                 SetProperty(ref _totalTime, value, "TotalTime");
-                //todo check wheter the value equals previous value, refer to Inotification 
-                DecreasePlayerFoulTime(TeamA);
-                DecreasePlayerFoulTime(TeamB);
+            }
+        }
+
+        public override int Court
+        {
+            get => _court;
+            set
+            {
+                if (value < 1)
+                    return;
+                SetProperty(ref _court, value, "Court");
             }
         }
 
@@ -22,9 +38,11 @@ namespace Sports.Wpf.Common.ViewModel.WaterPolo
         {
             foreach (var player in team.Players)
             {
-                player.FoulTime--;
+                if (player.FoulTime > 0)
+                {
+                    player.FoulTime--;
+                }
             }
-
         }
     }
 }

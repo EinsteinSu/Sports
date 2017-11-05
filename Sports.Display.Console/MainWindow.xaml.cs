@@ -4,6 +4,7 @@ using System.Text;
 using log4net;
 using log4net.Config;
 using Newtonsoft.Json;
+using Sports.Common;
 using Sports.Common.WaterPolo;
 using Sports.Timing;
 using Sports.Timing.Interfaces;
@@ -68,14 +69,14 @@ namespace Sports.Display.Console
                 if (i == 3)
                 {
                     display.TeamA.Players[i] =
-                        new PlayerDisplayViewModel {Name = $"Team A {i + 1}", Fouls = 2, FoulTime = 15};
+                        new PlayerDisplayViewModel { Name = $"Team A {i + 1}", Fouls = 2, FoulTime = 15 };
                     display.TeamB.Players[i] =
-                        new PlayerDisplayViewModel {Name = $"Team B {i + 1}", Fouls = 3, FoulTime = 20};
+                        new PlayerDisplayViewModel { Name = $"Team B {i + 1}", Fouls = 3, FoulTime = 20 };
                 }
                 else
                 {
-                    display.TeamA.Players[i] = new PlayerDisplayViewModel {Name = $"Team A {i + 1}"};
-                    display.TeamB.Players[i] = new PlayerDisplayViewModel {Name = $"Team B {i + 1}"};
+                    display.TeamA.Players[i] = new PlayerDisplayViewModel { Name = $"Team A {i + 1}" };
+                    display.TeamB.Players[i] = new PlayerDisplayViewModel { Name = $"Team B {i + 1}" };
                 }
             return display;
         }
@@ -91,21 +92,22 @@ namespace Sports.Display.Console
 
             public void Process(TcpClient client, NetworkStream stream, byte[] bytesReceived)
             {
-                var response = "I've got it";
+                var command = new Command { Type = CommandType.Response, ValueType = typeof(ResponseType) };
                 try
                 {
                     var message = Encoding.Unicode.GetString(bytesReceived, 0, bytesReceived.Length);
                     Log.Debug($"Got message {message}");
                     var data = JsonConvert.DeserializeObject<RaceDisplayViewModel>(message);
                     _race?.Invoke(data);
+                    command.Value = ResponseType.Success.ToString();
                 }
                 catch (Exception e)
                 {
-                    response = "Could not get it";
+                    command.Value = ResponseType.Faild.ToString();
                     Log.Error($"Could not process message , cause {e.Message}");
                 }
 
-                var bytesSent = Encoding.Unicode.GetBytes(response);
+                var bytesSent = Encoding.Unicode.GetBytes(JsonConvert.SerializeObject(command));
                 stream.Write(bytesSent, 0, bytesSent.Length);
             }
         }
