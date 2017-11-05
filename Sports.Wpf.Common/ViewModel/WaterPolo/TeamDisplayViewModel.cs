@@ -27,11 +27,7 @@ namespace Sports.Wpf.Common.ViewModel.WaterPolo
 
         private static BitmapImage GetImage(string path)
         {
-#if SILVERLIGHT
-            return new BitmapImage(new Uri("../"  + path, UriKind.RelativeOrAbsolute));
-#else
             return new BitmapImage(new Uri(BaseUri, path));
-#endif
         }
     }
 }
