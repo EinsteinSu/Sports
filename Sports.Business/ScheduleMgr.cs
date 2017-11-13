@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using Newtonsoft.Json;
 using Sports.Business.ViewModel;
 using Sports.DataAccess;
 using Sports.DataAccess.Models;
@@ -10,6 +11,9 @@ namespace Sports.Business
 {
     public interface IScheduleMgr : ICrudMgr<ScheduleViewModel>, IDisposable
     {
+        SchedulePlayerEditViewModel GetPlayer(int scheduleId);
+
+        void SaveScheduleTeamPlayer(int scheduleId, TeamType type,int[] players);
     }
 
     public class ScheduleMgr : IScheduleMgr
@@ -114,6 +118,60 @@ namespace Sports.Business
         public void Dispose()
         {
             Context?.Dispose();
+        }
+
+        public SchedulePlayerEditViewModel GetPlayer(int scheduleId)
+        {
+            var schedulePlayer = new SchedulePlayerEditViewModel();
+            var schedule = GetItem(scheduleId);
+            schedulePlayer.ScheduleId = scheduleId;
+            schedulePlayer.Title = schedule.Title;
+            ProcessSchedulePlayer(TeamType.Host, scheduleId, schedulePlayer);
+            ProcessSchedulePlayer(TeamType.Guest, scheduleId, schedulePlayer);
+            return schedulePlayer;
+        }
+
+        public void SaveScheduleTeamPlayer(int scheduleId, TeamType type, int[] players)
+        {
+            var team = Context.ScheduleTeams.FirstOrDefault(f => f.TeamType == type && f.ScheduleId == scheduleId);
+            if (team != null && players != null)
+            {
+                team.Players = JsonConvert.SerializeObject(players);
+                Context.Entry(team).Property(p => p.Players).IsModified = true;
+                Context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Could not found any teams!");
+            }
+        }
+
+        private void ProcessSchedulePlayer(TeamType type, int scheduleId, SchedulePlayerEditViewModel schedulePlayer)
+        {
+            var team = Context.ScheduleTeams.Include(i => i.Team).FirstOrDefault(f => f.TeamType == type && f.ScheduleId == scheduleId);
+            if (team?.TeamId != null)
+            {
+                var list = new List<ScheduleTeamPlayerViewModel>();
+                int[] selectedPlayers = !string.IsNullOrEmpty(team.Players) ? JsonConvert.DeserializeObject<int[]>(team.Players) : new int[0];
+                foreach (var player in Context.Players.Where(w => w.TeamId == team.TeamId.Value))
+                {
+                    var playerViewModel = new ScheduleTeamPlayerViewModel { Name = player.Name, PlayerId = player.Id };
+                    list.Add(playerViewModel);
+                    playerViewModel.Selected = selectedPlayers.Any(f => f == player.Id);
+                }
+                if (type == TeamType.Host)
+                {
+                    schedulePlayer.TeamAId = team.TeamId.Value;
+                    schedulePlayer.TeamAName = team.Team.Name;
+                    schedulePlayer.TeamAPlayers = list;
+                }
+                else
+                {
+                    schedulePlayer.TeamBId = team.TeamId.Value;
+                    schedulePlayer.TeamBName = team.Team.Name;
+                    schedulePlayer.TeamBPlayers = list;
+                }
+            }
         }
     }
 }

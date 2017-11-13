@@ -11,3 +11,16 @@ C:\Users\ssu2\Documents\GitHub\Sports\Sports.CodeGenerator\bin\Debug\Sports.Code
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.CodeGenerator\obj\Debug\Sports.CodeGenerator.csprojResolveAssemblyReference.cache
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.CodeGenerator\obj\Debug\Sports.CodeGenerator.exe
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.CodeGenerator\obj\Debug\Sports.CodeGenerator.pdb
+C:\Users\esu\Documents\GitHub\Sports\Sports.CodeGenerator\obj\Debug\Sports.CodeGenerator.csprojResolveAssemblyReference.cache
+C:\Users\esu\Documents\GitHub\Sports\Sports.CodeGenerator\obj\Debug\Sports.CodeGenerator.pdb
+C:\Users\esu\Documents\GitHub\Sports\Sports.CodeGenerator\bin\Debug\Sports.CodeGenerator.exe.config
+C:\Users\esu\Documents\GitHub\Sports\Sports.CodeGenerator\bin\Debug\Sports.CodeGenerator.exe
+C:\Users\esu\Documents\GitHub\Sports\Sports.CodeGenerator\bin\Debug\Sports.CodeGenerator.pdb
+C:\Users\esu\Documents\GitHub\Sports\Sports.CodeGenerator\obj\Debug\Sports.CodeGenerator.exe
+D:\Sports\Sports\Sports.CodeGenerator\bin\Debug\Sports.CodeGenerator.exe.config
+D:\Sports\Sports\Sports.CodeGenerator\bin\Debug\Sports.CodeGenerator.exe
+D:\Sports\Sports\Sports.CodeGenerator\bin\Debug\Sports.CodeGenerator.pdb
+D:\Sports\Sports\Sports.CodeGenerator\obj\Debug\Sports.CodeGenerator.csprojResolveAssemblyReference.cache
+D:\Sports\Sports\Sports.CodeGenerator\obj\Debug\Sports.CodeGenerator.csproj.CoreCompileInputs.cache
+D:\Sports\Sports\Sports.CodeGenerator\obj\Debug\Sports.CodeGenerator.exe
+D:\Sports\Sports\Sports.CodeGenerator\obj\Debug\Sports.CodeGenerator.pdb

@@ -21,7 +21,7 @@ namespace Sports.DataAccess.Models
         [ForeignKey("Schedule")]
         public int ScheduleId { get; set; }
 
-        public ICollection<ScheduleTeamPlayer> Players { get; set; }
+        public string Players { get; set; }
     }
 
     public enum TeamType

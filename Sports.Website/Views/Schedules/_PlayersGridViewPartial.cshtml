@@ -1,0 +1,73 @@
+﻿@model Sports.Business.ViewModel.SchedulePlayerEditViewModel
+
+@Html.DevExpress().FormLayout(settings =>
+{
+    settings.Name = "flTeam";
+    settings.Items.AddGroupItem(groupSettings =>
+    {
+        groupSettings.Caption = string.Format("{0} Players", Model.TeamAName);
+        groupSettings.Items.Add(g =>
+        {
+            g.Width = Unit.Percentage(60);
+            g.NestedExtensionType = FormLayoutNestedExtensionItemType.CheckBoxList;
+            g.Caption = "";
+            g.NestedExtension().CheckBoxList(s =>
+            {
+                s.Name = "TeamAPlayers";
+                s.Properties.ValueField = "PlayerId";
+                s.Properties.TextField = "Name";
+                s.Properties.ValueType = typeof(int);
+                s.Properties.DataSource = Model.TeamAPlayers;
+                s.Properties.RepeatColumns = 8;
+                s.ReadOnly = true;
+                s.PreRender = (sender, e) =>
+                {
+                    var cbl = (ASPxCheckBoxList)sender;
+                    foreach (ListEditItem item in cbl.Items)
+                    {
+                        var value = int.Parse(item.Value.ToString());
+                        var player = Model.TeamAPlayers.FirstOrDefault(f => f.PlayerId == value);
+                        if (player != null)
+                        {
+                            item.Selected = player.Selected;
+                        }
+                    }
+                };
+            });
+        });
+
+    });
+    settings.Items.AddGroupItem(groupSettings =>
+    {
+        groupSettings.Caption = string.Format("{0} Players", Model.TeamBName);
+        groupSettings.Items.Add(g =>
+        {
+            g.Width = Unit.Percentage(60);
+            g.NestedExtensionType = FormLayoutNestedExtensionItemType.CheckBoxList;
+            g.Caption = "";
+            g.NestedExtension().CheckBoxList(s =>
+            {
+                s.Name = "TeamBPlayers";
+                s.Properties.ValueField = "PlayerId";
+                s.Properties.TextField = "Name";
+                s.Properties.ValueType = typeof(int);
+                s.Properties.DataSource = Model.TeamBPlayers;
+                s.Properties.RepeatColumns = 8;
+                s.ReadOnly = true;
+                s.PreRender = (sender, e) =>
+                {
+                    var cbl = (ASPxCheckBoxList)sender;
+                    foreach (ListEditItem item in cbl.Items)
+                    {
+                        var value = int.Parse(item.Value.ToString());
+                        var player = Model.TeamBPlayers.FirstOrDefault(f => f.PlayerId == value);
+                        if (player != null)
+                        {
+                            item.Selected = player.Selected;
+                        }
+                    }
+                };
+            });
+        });
+    });
+}).GetHtml()

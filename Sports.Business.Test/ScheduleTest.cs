@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Newtonsoft.Json;
 using Sports.Business.ViewModel;
 using Sports.DataAccess;
 using Sports.DataAccess.Models;
@@ -18,6 +20,7 @@ namespace Sports.Business.Test
         {
             if (_scheduleid > 0)
                 CleanSchedule(_scheduleid);
+            Context.Database.ExecuteSqlCommand("Delete from players");
             Context.Database.ExecuteSqlCommand("Delete from teams");
         }
 
@@ -72,6 +75,33 @@ namespace Sports.Business.Test
             Assert.IsFalse(result.Any());
             var result1 = new SportDataContext().ScheduleTeams.Where(w => w.ScheduleId == schedule.Id);
             Assert.IsFalse(result1.Any());
+        }
+
+        [TestMethod]
+        public void GetPlayer()
+        {
+            var schedule = Insert();
+            _scheduleid = schedule.Id;
+            var playerMgr = new PlayerMgr();
+            var player = new Player { Name = "Player A", TeamId = schedule.TeamA };
+            playerMgr.Add(player);
+            player = new Player { Name = "Player B", TeamId = schedule.TeamB };
+            playerMgr.Add(player);
+            player = new Player { Name = "Player C", TeamId = schedule.TeamB };
+            playerMgr.Add(player);
+            var team = Context.ScheduleTeams.FirstOrDefault(f => f.TeamId == schedule.TeamB && f.ScheduleId == schedule.Id);
+            Assert.IsNotNull(team);
+            // make c to be selected
+            var ids = new int[1];
+            ids[0] = player.Id;
+            var mgr = new ScheduleMgr();
+            mgr.SaveScheduleTeamPlayer(_scheduleid, TeamType.Guest, ids);
+            var result = mgr.GetPlayer(schedule.Id);
+            Assert.AreEqual(1, result.TeamAPlayers.Count());
+            Assert.AreEqual(2, result.TeamBPlayers.Count());
+            var selectedPlayer = result.TeamBPlayers.FirstOrDefault(f => f.PlayerId == player.Id);
+            Assert.IsNotNull(selectedPlayer);
+            Assert.IsTrue(selectedPlayer.Selected);
         }
 
         protected ScheduleViewModel Insert()

@@ -10,7 +10,7 @@ namespace Sports.DataAccess.Models
         [Required]
         public int Port { get; set; }
 
-        [MaxLength(50)]
+        [MaxLength(200)]
         public string Usage { get; set; }
 
         public virtual Venue Venue { get; set; }

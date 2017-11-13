@@ -1,0 +1,66 @@
+﻿@model Sports.Business.ViewModel.RoleSecurityEditViewModel
+
+<h2>@Model.Name Security Edit</h2>
+@using (Html.BeginForm("RoleSecurityEdit", "Roles", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.RoleId)
+    @Html.HiddenFor(m => m.Name)
+    @Html.HiddenFor(m => m.SecurityGroups)
+    @Html.DevExpress().FormLayout(settings =>
+{
+    settings.Name = "flSecurityEdit";
+    foreach (var group in Model.SecurityGroups)
+    {
+        var group1 = group;
+        settings.Items.AddGroupItem(groupSettings =>
+        {
+            groupSettings.Caption = group1.GroupName;
+            groupSettings.Items.Add(g =>
+            {
+                g.Width = Unit.Percentage(60);
+                g.NestedExtensionType = FormLayoutNestedExtensionItemType.CheckBoxList;
+                g.Caption = "";
+                g.NestedExtension().CheckBoxList(s =>
+                {
+                    s.Name = group1.GroupName;
+                    s.Properties.ValueField = "SecurityId";
+                    s.Properties.TextField = "Name";
+                    s.Properties.ValueType = typeof(int);
+                    s.Properties.DataSource = group1.Securities;
+                    //s.Properties.RepeatColumns = 8;
+                    s.PreRender = (sender, e) =>
+                    {
+                        var cbl = (ASPxCheckBoxList)sender;
+                        foreach (ListEditItem item in cbl.Items)
+                        {
+                            var value = int.Parse(item.Value.ToString());
+                            var player = group1.Securities.FirstOrDefault(f => f.SecurityId == value);
+                            if (player != null)
+                            {
+                                item.Selected = player.Selected;
+                            }
+                        }
+                    };
+                });
+            });
+        });
+    }
+}).GetHtml()
+    <br />
+    @Html.DevExpress().Button(b =>
+    {
+        b.Name = "btConfirm";
+        b.Text = "OK";
+        b.Width = 100;
+        b.UseSubmitBehavior = true;
+    }).GetHtml()
+
+    @Html.DevExpress().Button(b =>
+    {
+        b.Name = "btBack";
+        b.Text = "Back";
+        b.Width = 100;
+        b.UseSubmitBehavior = false;
+        b.RouteValues = new { Controller = "Roles", Action = "Index" };
+    }).GetHtml()
+}

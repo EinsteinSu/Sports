@@ -4,6 +4,26 @@
         <name>DevExpress.XtraGauges.v17.1.Core</name>
     </assembly>
     <members>
+        <member name="T:DevExpress.XtraGauges.Core.Model.CustomTickmarkTextEventHandler">
+
+            <summary>
+                <para>Represents a method that handles the <see cref="E:DevExpress.XtraGauges.Core.Model.ArcScale.CustomTickmarkText"/> and <see cref="E:DevExpress.XtraGauges.Core.Model.LinearScale.CustomTickmarkText"/> events.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Model.CustomTickmarkTextEventHandler.Invoke(DevExpress.XtraGauges.Core.Model.CustomTickmarkTextEventArgs)">
+            <summary>
+                <para>Represents a method that handles the <see cref="E:DevExpress.XtraGauges.Core.Model.ArcScale.CustomTickmarkText"/> and <see cref="E:DevExpress.XtraGauges.Core.Model.LinearScale.CustomTickmarkText"/> events.
+</para>
+            </summary>
+            <param name="ea">
+		A <see cref="T:DevExpress.XtraGauges.Core.Model.CustomTickmarkTextEventArgs"/> object that provides data for the events.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.XtraGauges.Core.Model.CustomTickmarkTextEventArgs">
 
             <summary>
@@ -55,26 +75,6 @@
             </summary>
             <value>A Single value that specifies the current tickmark value.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraGauges.Core.Model.CustomTickmarkTextEventHandler">
-
-            <summary>
-                <para>Represents a method that handles the <see cref="E:DevExpress.XtraGauges.Core.Model.ArcScale.CustomTickmarkText"/> and <see cref="E:DevExpress.XtraGauges.Core.Model.LinearScale.CustomTickmarkText"/> events.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Model.CustomTickmarkTextEventHandler.Invoke(DevExpress.XtraGauges.Core.Model.CustomTickmarkTextEventArgs)">
-            <summary>
-                <para>Represents a method that handles the <see cref="E:DevExpress.XtraGauges.Core.Model.ArcScale.CustomTickmarkText"/> and <see cref="E:DevExpress.XtraGauges.Core.Model.LinearScale.CustomTickmarkText"/> events.
-</para>
-            </summary>
-            <param name="ea">
-		A <see cref="T:DevExpress.XtraGauges.Core.Model.CustomTickmarkTextEventArgs"/> object that provides data for the events.
-
-            </param>
 
 
         </member>
@@ -1175,6 +1175,81 @@
             </summary>
             <value> 
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.XtraGauges.Core.Base.ColorScheme">
+
+            <summary>
+                <para>An object that allows you to paint multiple gauge elements at once using the same color.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ColorScheme class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGauges.Core.Base.ColorScheme.Color">
+            <summary>
+                <para>Gets or sets the color that all target gauge elements should be painted.
+
+</para>
+            </summary>
+            <value>A <see cref="Color"/> object that all target gauge elements should be painted.
+
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraGauges.Core.Base.ColorScheme.PropertyChanged">
+            <summary>
+                <para>Occurs whenever any of these ColorScheme's properties changes its value.
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.Reset">
+            <summary>
+                <para>Restores default values for all ColorScheme properties.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.ShouldSerialize">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGauges.Core.Base.ColorScheme.TargetElements">
+            <summary>
+                <para>Gets or sets which gauge elements this ColorScheme affects.
+</para>
+            </summary>
+            <value>A <see cref="TargetElement"/> enumerator value that specifies which gauge elements this ColorScheme affects.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.ToString">
+            <summary>
+                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
+</para>
+            </summary>
+            <returns> 
+</returns>
 
 
         </member>
@@ -4235,6 +4310,124 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraGauges.Core.Model.LogarithmicBase">
+
+            <summary>
+                <para>Lists the values that specify the base for a logarithmic scale.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.XtraGauges.Core.Model.LogarithmicBase.Binary">
+            <summary>
+                <para>The base is equal to <b>2</b>.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraGauges.Core.Model.LogarithmicBase.Custom">
+            <summary>
+                <para>The base is specified by the <see cref="P:DevExpress.XtraGauges.Core.Model.ArcScale.CustomLogarithmicBase"/> (or <see cref="P:DevExpress.XtraGauges.Core.Model.LinearScale.CustomLogarithmicBase"/>) property.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraGauges.Core.Model.LogarithmicBase.Decimal">
+            <summary>
+                <para>The base is equal to <b>10</b>.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraGauges.Core.Model.LogarithmicBase.Exponential">
+            <summary>
+                <para>The base is equal to <i><a href="http://en.wikipedia.org/wiki/E_(mathematical_constant)">e</a></i> (approximately, <b>2.7182</b>).
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraGauges.Core.Localization.GaugesCoreResXLocalizer">
+
+            <summary>
+                <para>A default localizer to translate resources for ASP.NET Gauges and WinForms Gauges.
+
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Localization.GaugesCoreResXLocalizer.#ctor">
+            <summary>
+                <para>Initializes a new instance of the GaugesCoreResXLocalizer class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraGauges.Core.Localization.GaugesCoreLocalizer">
+
+            <summary>
+                <para>A base class that provides necessary functionality for custom localizers of ASP.NET Gauges and WinForms Gauges.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Localization.GaugesCoreLocalizer.#ctor">
+            <summary>
+                <para>Initializes a new instance of the GaugesCoreLocalizer class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraGauges.Core.Localization.GaugesCoreLocalizer.Active">
+            <summary>
+                <para>Gets or sets a localizer object providing localization of the user interface at runtime.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> descendant, used to localize the user interface at runtime. 
+
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Localization.GaugesCoreLocalizer.CreateDefaultLocalizer">
+            <summary>
+                <para>Returns a localizer object, which provides resources based on the thread's language and regional settings (culture).
+</para>
+            </summary>
+            <returns>An <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object representing resources based on the thread's culture.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Localization.GaugesCoreLocalizer.CreateResXLocalizer">
+            <summary>
+                <para>Returns a localizer object, which provides resources based on the thread's language and regional settings (culture).
+</para>
+            </summary>
+            <returns>A <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object, which provides resources based on the thread's culture.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Localization.GaugesCoreLocalizer.GetString(DevExpress.XtraGauges.Core.Localization.GaugesCoreStringId)">
+            <summary>
+                <para>Returns a localized string for the given string identifier.
+</para>
+            </summary>
+            <param name="id">
+		A <see cref="T:DevExpress.XtraGauges.Core.Localization.GaugesCoreStringId"/> enumeration value identifying the string to localize.
+
+            </param>
+            <returns>A <see cref="T:System.String"/> corresponding to the specified identifier.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraGauges.Core.Primitive.BaseLeafPrimitive">
 
             <summary>
@@ -4500,199 +4693,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraGauges.Core.Model.LogarithmicBase">
-
-            <summary>
-                <para>Lists the values that specify the base for a logarithmic scale.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraGauges.Core.Model.LogarithmicBase.Binary">
-            <summary>
-                <para>The base is equal to <b>2</b>.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraGauges.Core.Model.LogarithmicBase.Custom">
-            <summary>
-                <para>The base is specified by the <see cref="P:DevExpress.XtraGauges.Core.Model.ArcScale.CustomLogarithmicBase"/> (or <see cref="P:DevExpress.XtraGauges.Core.Model.LinearScale.CustomLogarithmicBase"/>) property.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraGauges.Core.Model.LogarithmicBase.Decimal">
-            <summary>
-                <para>The base is equal to <b>10</b>.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraGauges.Core.Model.LogarithmicBase.Exponential">
-            <summary>
-                <para>The base is equal to <i><a href="http://en.wikipedia.org/wiki/E_(mathematical_constant)">e</a></i> (approximately, <b>2.7182</b>).
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraGauges.Core.Localization.GaugesCoreResXLocalizer">
-
-            <summary>
-                <para>A default localizer to translate resources for ASP.NET Gauges and WinForms Gauges.
-
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Localization.GaugesCoreResXLocalizer.#ctor">
-            <summary>
-                <para>Initializes a new instance of the GaugesCoreResXLocalizer class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.XtraGauges.Core.Localization.GaugesCoreLocalizer">
-
-            <summary>
-                <para>A base class that provides necessary functionality for custom localizers of ASP.NET Gauges and WinForms Gauges.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Localization.GaugesCoreLocalizer.#ctor">
-            <summary>
-                <para>Initializes a new instance of the GaugesCoreLocalizer class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGauges.Core.Localization.GaugesCoreLocalizer.Active">
-            <summary>
-                <para>Gets or sets a localizer object providing localization of the user interface at runtime.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> descendant, used to localize the user interface at runtime. 
-
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Localization.GaugesCoreLocalizer.CreateDefaultLocalizer">
-            <summary>
-                <para>Returns a localizer object, which provides resources based on the thread's language and regional settings (culture).
-</para>
-            </summary>
-            <returns>An <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object representing resources based on the thread's culture.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Localization.GaugesCoreLocalizer.CreateResXLocalizer">
-            <summary>
-                <para>Returns a localizer object, which provides resources based on the thread's language and regional settings (culture).
-</para>
-            </summary>
-            <returns>A <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object, which provides resources based on the thread's culture.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Localization.GaugesCoreLocalizer.GetString(DevExpress.XtraGauges.Core.Localization.GaugesCoreStringId)">
-            <summary>
-                <para>Returns a localized string for the given string identifier.
-</para>
-            </summary>
-            <param name="id">
-		A <see cref="T:DevExpress.XtraGauges.Core.Localization.GaugesCoreStringId"/> enumeration value identifying the string to localize.
-
-            </param>
-            <returns>A <see cref="T:System.String"/> corresponding to the specified identifier.
-</returns>
-
-
-        </member>
-        <member name="T:DevExpress.XtraGauges.Core.Base.ColorScheme">
-
-            <summary>
-                <para>An object that allows you to paint multiple gauge elements at once using the same color.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ColorScheme class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGauges.Core.Base.ColorScheme.Color">
-            <summary>
-                <para>Gets or sets the color that all target gauge elements should be painted.
-
-</para>
-            </summary>
-            <value>A <see cref="Color"/> object that all target gauge elements should be painted.
-
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraGauges.Core.Base.ColorScheme.PropertyChanged">
-            <summary>
-                <para>Occurs whenever any of these ColorScheme's properties changes its value.
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.Reset">
-            <summary>
-                <para>Restores default values for all ColorScheme properties.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.ShouldSerialize">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.XtraGauges.Core.Base.ColorScheme.TargetElements">
-            <summary>
-                <para>Gets or sets which gauge elements this ColorScheme affects.
-</para>
-            </summary>
-            <value>A <see cref="TargetElement"/> enumerator value that specifies which gauge elements this ColorScheme affects.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Base.ColorScheme.ToString">
-            <summary>
-                <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.
-</para>
-            </summary>
-            <returns> 
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.XtraGauges.Base.GaugeCollection">
 
             <summary>
@@ -4712,6 +4712,50 @@
         <member name="M:DevExpress.XtraGauges.Base.GaugeCollection.ShallowClear">
             <summary>
                 <para>For internal use only.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.XtraGauges.Core.Model.BaseScaleDependentComponent`1">
+
+            <summary>
+                <para>The base class for all dependent scale components.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Model.BaseScaleDependentComponent`1.BeginUpdate">
+            <summary>
+                <para>Locks the BaseScaleDependentComponent&lt;TProvider&gt; object by disallowing visual updates until the <b>EndUpdate</b> or <b>CancelUpdate</b> method is called.
+
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Model.BaseScaleDependentComponent`1.CancelUpdate">
+            <summary>
+                <para>Unlocks the BaseScaleDependentComponent&lt;TProvider&gt; object after it has been locked by the <b>BeginUpdate</b> method, without causing an immediate visual update.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Model.BaseScaleDependentComponent`1.EndUpdate">
+            <summary>
+                <para>Unlocks the BaseScaleDependentComponent&lt;TProvider&gt; object after a call to the <b>BeginUpdate</b> method and causes an immediate visual update.
+
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraGauges.Core.Model.BaseScaleDependentComponent`1.Update">
+            <summary>
+                <para>Invalidates the region occupied by the component.
 </para>
             </summary>
 
@@ -4859,50 +4903,6 @@
             </summary>
             <value>A <see cref="T:System.Single"/> nullable value that specifies the position of a value indicator on the scale. 
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraGauges.Core.Model.BaseScaleDependentComponent`1">
-
-            <summary>
-                <para>The base class for all dependent scale components.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Model.BaseScaleDependentComponent`1.BeginUpdate">
-            <summary>
-                <para>Locks the BaseScaleDependentComponent&lt;TProvider&gt; object by disallowing visual updates until the <b>EndUpdate</b> or <b>CancelUpdate</b> method is called.
-
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Model.BaseScaleDependentComponent`1.CancelUpdate">
-            <summary>
-                <para>Unlocks the BaseScaleDependentComponent&lt;TProvider&gt; object after it has been locked by the <b>BeginUpdate</b> method, without causing an immediate visual update.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Model.BaseScaleDependentComponent`1.EndUpdate">
-            <summary>
-                <para>Unlocks the BaseScaleDependentComponent&lt;TProvider&gt; object after a call to the <b>BeginUpdate</b> method and causes an immediate visual update.
-
-
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.XtraGauges.Core.Model.BaseScaleDependentComponent`1.Update">
-            <summary>
-                <para>Invalidates the region occupied by the component.
-</para>
-            </summary>
 
 
         </member>

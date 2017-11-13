@@ -1,7 +1,9 @@
 ﻿using System.Web.Mvc;
 using DevExpress.Web;
+using DevExpress.Web.Mvc;
 using Sports.Business;
 using Sports.Business.ViewModel;
+using Sports.DataAccess.Models;
 using Sports.Website.Commons;
 
 namespace Sports.Website.Controllers
@@ -50,6 +52,33 @@ namespace Sports.Website.Controllers
         public ActionResult GridViewPartialDelete(int id)
         {
             return Delete(id);
+        }
+
+        public ActionResult SchedulePlayerEdit(int scheduleId)
+        {
+            ViewBag.ScheduleId = scheduleId;
+            return View(((IScheduleMgr)Mgr).GetPlayer(scheduleId));
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult SchedulePlayerEdit([ModelBinder(typeof(DevExpressEditorsBinder))] SchedulePlayerEditViewModel model)
+        {
+            var mgr = Mgr as IScheduleMgr;
+            var teamA = CheckBoxListExtension.GetSelectedValues<int>("TeamAPlayers");
+            var teamB = CheckBoxListExtension.GetSelectedValues<int>("TeamBPlayers");
+            if (mgr != null)
+            {
+                mgr.SaveScheduleTeamPlayer(model.ScheduleId, TeamType.Host, teamA);
+                mgr.SaveScheduleTeamPlayer(model.ScheduleId, TeamType.Guest, teamB);
+            }
+            return View("Index");
+        }
+
+        public ActionResult PlayersGridViewPartial(int scheduleId)
+        {
+            ViewBag.ScheduleId = scheduleId;
+            return PartialView("_PlayersGridViewPartial", ((IScheduleMgr) Mgr).GetPlayer(scheduleId));
         }
 
         protected override void InitializeInterfaces()

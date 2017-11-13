@@ -4,6 +4,57 @@
         <name>DevExpress.Web.ASPxRichEdit.v17.1</name>
     </assembly>
     <members>
+        <member name="T:DevExpress.Web.ASPxRichEdit.RichEditFileManagerCommonSettings">
+
+            <summary>
+                <para>Serves as a base for classes that contains common settings related to the RichEdit's built-in FileManager functionality. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditFileManagerCommonSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the RichEditFileManagerCommonSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxRichEdit.RichEditFileManagerCommonSettings.AllowedFileExtensions">
+            <summary>
+                <para>Gets or sets the file extensions allowed for display in the FileManager used within certain built-in dialogs.
+</para>
+            </summary>
+            <value>An array of <see cref="T:System.String"/> values that contains the file extensions allowed.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxRichEdit.RichEditFileManagerCommonSettings.EnableMultiSelect">
+            <summary>
+                <para>Gets or sets a value specifying whether multiple file selection is enabled in the FileManager used within certain built-in dialogs. 
+</para>
+            </summary>
+            <value><b>true</b>, if multiple file selection is enabled; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxRichEdit.RichEditFileManagerCommonSettings.RootFolder">
+            <summary>
+                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
+
+
+</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxRichEdit.ASPxRichEditSpellCheckerSettings">
 
             <summary>
@@ -182,6 +233,254 @@
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxRichEdit.RichEditInsertLinkDialogSettings">
+
+            <summary>
+                <para>Contains customization settings for the Insert Link dialog's form elements.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditInsertLinkDialogSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the RichEditInsertLinkDialogSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditInsertLinkDialogSettings.Assign(DevExpress.Web.PropertiesBase)">
+            <summary>
+                <para>Copies the settings from the specified object to the current one.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxRichEdit.RichEditInsertLinkDialogSettings.ShowEmailAddressSection">
+            <summary>
+                <para>Gets or sets a value that specifies whether a section that allows an e-mail address to be entered is displayed within the Insert Hyperlink built-in dialog form.
+</para>
+            </summary>
+            <value><b>true</b>, to display the form element, otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxRichEdit.RichEditRibbonContextTabCategoryCollection">
+
+            <summary>
+                <para>A collection of ribbon context tab categories in the ASPxRichEdit control. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditRibbonContextTabCategoryCollection.#ctor(DevExpress.Web.Internal.IWebControlObject)">
+            <summary>
+                <para>Initializes a new instance of the RichEditRibbonContextTabCategoryCollection class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.Internal.IWebControlObject"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditRibbonContextTabCategoryCollection.Add(System.String)">
+            <summary>
+                <para>Adds a new context tab category with the specified name to the end of the collection and returns the newly created object.
+</para>
+            </summary>
+            <param name="name">
+		A <see cref="T:System.String"/> value that specifies the created category's name. Initializes the <see cref="P:DevExpress.Web.RibbonContextTabCategory.Name"/> property.
+
+            </param>
+            <returns>A <see cref="RibbonContextTabCategory"/> object that is the newly created context tab category.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditRibbonContextTabCategoryCollection.CreateDefaultRibbonContextTabCategories">
+            <summary>
+                <para>Creates default context tab categories in the ASPxRichEdit's ribbon. 
+
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxRichEdit.RichEditRibbonContextTabCategoryCollection.RichEdit">
+            <summary>
+                <para>Gets the <see cref="T:DevExpress.Web.ASPxRichEdit.ASPxRichEdit"/> control to which the current RichEditRibbonContextTabCategoryCollection collection belongs.
+</para>
+            </summary>
+            <value>The <see cref="ASPxRichEdit"/> control that owns the collection.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings">
+
+            <summary>
+                <para>Provides settings defining the appearance of bookmarks in the document.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ASPxRichEditBookmarkSettings class.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies the settings from the specified object to the current one.
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.CaseSensitiveNames">
+            <summary>
+                <para>Gets or sets whether creation of bookmarks with the same name but a different case is allowed.
+</para>
+            </summary>
+            <value><b>true</b>, to allow creating bookmarks with the same name but a different case; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.Color">
+            <summary>
+                <para>Gets or sets the color used to indicate a bookmark in the document. 
+</para>
+            </summary>
+            <value>A <see cref="Color"/> structure specifying the color. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.ConflictNameResolution">
+            <summary>
+                <para>Gets or sets an action that will be performed after inserting a document range if that range contains a bookmark with the same name as one in the current document. 
+</para>
+            </summary>
+            <value>One of the <see cref="ConflictNameAction"/> values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.DisplayBookmarksInPdfNavigationPane">
+            <summary>
+                <para>Gets or sets a value specifying the mode for displaying bookmarks in the Bookmarks pane of PDF viewer when a document is exported to PDF. 
+
+</para>
+            </summary>
+            <value>One of the <see cref="PdfBookmarkDisplayMode"/> values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.Visibility">
+            <summary>
+                <para>Gets or sets whether bookmarks are displayed in the document. 
+
+</para>
+            </summary>
+            <value>One of the <see cref="RichEditBookmarkVisibility"/> values.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditResourcesLocalizer">
+
+            <summary>
+                <para>An object providing a means to localize the <see cref="T:DevExpress.Web.ASPxRichEdit.ASPxRichEdit"/>'s user interface elements at runtime.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditResourcesLocalizer.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ASPxRichEditResourcesLocalizer class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxRichEdit.SaveFileDialogDisplaySectionMode">
+
+            <summary>
+                <para>Lists values that specify the visibility of a section within the file dialogs.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxRichEdit.SaveFileDialogDisplaySectionMode.ShowAllSections">
+            <summary>
+                <para>All dialog sections should be displayed. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxRichEdit.SaveFileDialogDisplaySectionMode.ShowDownloadSection">
+            <summary>
+                <para>Only the 'Download a copy' section should be displayed in the dialog. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxRichEdit.SaveFileDialogDisplaySectionMode.ShowServerSection">
+            <summary>
+                <para>Only the 'Save file to the server' section should be displayed within the dialog. 
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxRichEdit.RichEditPopupMenuItemCollection">
+
+            <summary>
+                <para>An internal collection that maintains popup menu items in the RichEdit.
+For internal use only.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditPopupMenuItemCollection.CreateDefaultItems">
+            <summary>
+                <para>Populates the context menu with default items.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditPopupMenuItemCollection.CreateSpellingItems">
+            <summary>
+                <para>Creates menu items related to the built-in spell checking functionality.
+</para>
+            </summary>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxRichEdit.RichEditPopupMenuItem">
 
             <summary>
@@ -309,56 +608,43 @@ For internal use only.
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxRichEdit.RichEditRibbonContextTabCategoryCollection">
+        <member name="T:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditLocalizer">
 
             <summary>
-                <para>A collection of ribbon context tab categories in the ASPxRichEdit control. 
+                <para>An object providing a means to localize the <see cref="T:DevExpress.Web.ASPxRichEdit.ASPxRichEdit"/>'s user interface elements at runtime.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditRibbonContextTabCategoryCollection.#ctor(DevExpress.Web.Internal.IWebControlObject)">
+        <member name="M:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditLocalizer.#ctor">
             <summary>
-                <para>Initializes a new instance of the RichEditRibbonContextTabCategoryCollection class with the specified owner.
+                <para>Initializes a new instance of the ASPxRichEditLocalizer class.
 </para>
             </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.Internal.IWebControlObject"/> interface.
-
-            </param>
 
 
         </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditRibbonContextTabCategoryCollection.Add(System.String)">
+        <member name="M:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditLocalizer.CreateResXLocalizer">
             <summary>
-                <para>Adds a new context tab category with the specified name to the end of the collection and returns the newly created object.
+                <para>Returns an object comprising resources based on the thread's language and regional settings (culture).
 </para>
             </summary>
-            <param name="name">
-		A <see cref="T:System.String"/> value that specifies the created category's name. Initializes the <see cref="P:DevExpress.Web.RibbonContextTabCategory.Name"/> property.
-
-            </param>
-            <returns>A <see cref="RibbonContextTabCategory"/> object that is the newly created context tab category.
+            <returns>A <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object comprising resources based on the thread's culture.
 </returns>
 
 
         </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditRibbonContextTabCategoryCollection.CreateDefaultRibbonContextTabCategories">
+        <member name="M:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditLocalizer.GetString(DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditStringId)">
             <summary>
-                <para>Creates default context tab categories in the ASPxRichEdit's ribbon. 
-
+                <para>Returns a localized string for the specified string identifier.
 </para>
             </summary>
+            <param name="id">
+		A <see cref="T:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditStringId"/> enumeration value identifying the string to localize.
 
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxRichEdit.RichEditRibbonContextTabCategoryCollection.RichEdit">
-            <summary>
-                <para>Gets the <see cref="T:DevExpress.Web.ASPxRichEdit.ASPxRichEdit"/> control to which the current RichEditRibbonContextTabCategoryCollection collection belongs.
-</para>
-            </summary>
-            <value>The <see cref="ASPxRichEdit"/> control that owns the collection.
-</value>
+            </param>
+            <returns>A <see cref="String"/> corresponding to the specified identifier.
+</returns>
 
 
         </member>
@@ -4082,134 +4368,6 @@ For internal use only.
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings">
-
-            <summary>
-                <para>Provides settings defining the appearance of bookmarks in the document.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ASPxRichEditBookmarkSettings class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies the settings from the specified object to the current one.
-</para>
-            </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.CaseSensitiveNames">
-            <summary>
-                <para>Gets or sets whether creation of bookmarks with the same name but a different case is allowed.
-</para>
-            </summary>
-            <value><b>true</b>, to allow creating bookmarks with the same name but a different case; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.Color">
-            <summary>
-                <para>Gets or sets the color used to indicate a bookmark in the document. 
-</para>
-            </summary>
-            <value>A <see cref="Color"/> structure specifying the color. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.ConflictNameResolution">
-            <summary>
-                <para>Gets or sets an action that will be performed after inserting a document range if that range contains a bookmark with the same name as one in the current document. 
-</para>
-            </summary>
-            <value>One of the <see cref="ConflictNameAction"/> values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.DisplayBookmarksInPdfNavigationPane">
-            <summary>
-                <para>Gets or sets a value specifying the mode for displaying bookmarks in the Bookmarks pane of PDF viewer when a document is exported to PDF. 
-
-</para>
-            </summary>
-            <value>One of the <see cref="PdfBookmarkDisplayMode"/> values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxRichEdit.ASPxRichEditBookmarkSettings.Visibility">
-            <summary>
-                <para>Gets or sets whether bookmarks are displayed in the document. 
-
-</para>
-            </summary>
-            <value>One of the <see cref="RichEditBookmarkVisibility"/> values.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditResourcesLocalizer">
-
-            <summary>
-                <para>An object providing a means to localize the <see cref="T:DevExpress.Web.ASPxRichEdit.ASPxRichEdit"/>'s user interface elements at runtime.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditResourcesLocalizer.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ASPxRichEditResourcesLocalizer class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxRichEdit.SaveFileDialogDisplaySectionMode">
-
-            <summary>
-                <para>Lists values that specify the visibility of a section within the file dialogs.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxRichEdit.SaveFileDialogDisplaySectionMode.ShowAllSections">
-            <summary>
-                <para>All dialog sections should be displayed. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxRichEdit.SaveFileDialogDisplaySectionMode.ShowDownloadSection">
-            <summary>
-                <para>Only the 'Download a copy' section should be displayed in the dialog. 
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxRichEdit.SaveFileDialogDisplaySectionMode.ShowServerSection">
-            <summary>
-                <para>Only the 'Save file to the server' section should be displayed within the dialog. 
-</para>
-            </summary>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxRichEdit.RichEditRibbonTabCollection">
 
             <summary>
@@ -4774,17 +4932,17 @@ For internal use only.
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxRichEdit.RichEditFileManagerCommonSettings">
+        <member name="T:DevExpress.Web.ASPxRichEdit.RichEditFileManagerEditingSettings">
 
             <summary>
-                <para>Serves as a base for classes that contains common settings related to the RichEdit's built-in FileManager functionality. 
+                <para>Contains settings that relate to the editing functionality of the embedded FileManager which is used within certain built-in dialogs.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditFileManagerCommonSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditFileManagerEditingSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
             <summary>
-                <para>Initializes a new instance of the RichEditFileManagerCommonSettings class with the specified owner.
+                <para>Initializes a new instance of the RichEditFileManagerEditingSettings class with the specified owner.
 </para>
             </summary>
             <param name="owner">
@@ -4794,76 +4952,29 @@ For internal use only.
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxRichEdit.RichEditFileManagerCommonSettings.AllowedFileExtensions">
+        <member name="P:DevExpress.Web.ASPxRichEdit.RichEditFileManagerEditingSettings.AllowDownload">
             <summary>
-                <para>Gets or sets the file extensions allowed for display in the FileManager used within certain built-in dialogs.
+                <para>Gets or sets a value specifying whether file downloading is enabled in the FileManager used within certain built-in dialogs. 
 </para>
             </summary>
-            <value>An array of <see cref="T:System.String"/> values that contains the file extensions allowed.
+            <value><b>true</b>, if file downloading is enabled; otherwise, <b>false</b>.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxRichEdit.RichEditFileManagerCommonSettings.EnableMultiSelect">
-            <summary>
-                <para>Gets or sets a value specifying whether multiple file selection is enabled in the FileManager used within certain built-in dialogs. 
-</para>
-            </summary>
-            <value><b>true</b>, if multiple file selection is enabled; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxRichEdit.RichEditFileManagerCommonSettings.RootFolder">
-            <summary>
-                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
-
-
-</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxRichEdit.RichEditInsertLinkDialogSettings">
+        <member name="T:DevExpress.Web.ASPxRichEdit.RichEditFileManager">
 
             <summary>
-                <para>Contains customization settings for the Insert Link dialog's form elements.
+                <para>For internal use only.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditInsertLinkDialogSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditFileManager.#ctor">
             <summary>
-                <para>Initializes a new instance of the RichEditInsertLinkDialogSettings class with the specified owner.
+                <para>Initializes a new instance of the RichEditFileManager class.
 </para>
             </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditInsertLinkDialogSettings.Assign(DevExpress.Web.PropertiesBase)">
-            <summary>
-                <para>Copies the settings from the specified object to the current one.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxRichEdit.RichEditInsertLinkDialogSettings.ShowEmailAddressSection">
-            <summary>
-                <para>Gets or sets a value that specifies whether a section that allows an e-mail address to be entered is displayed within the Insert Hyperlink built-in dialog form.
-</para>
-            </summary>
-            <value><b>true</b>, to display the form element, otherwise, <b>false</b>.
-</value>
 
 
         </member>
@@ -6707,46 +6818,6 @@ For internal use only.
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditLocalizer">
-
-            <summary>
-                <para>An object providing a means to localize the <see cref="T:DevExpress.Web.ASPxRichEdit.ASPxRichEdit"/>'s user interface elements at runtime.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditLocalizer.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ASPxRichEditLocalizer class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditLocalizer.CreateResXLocalizer">
-            <summary>
-                <para>Returns an object comprising resources based on the thread's language and regional settings (culture).
-</para>
-            </summary>
-            <returns>A <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object comprising resources based on the thread's culture.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditLocalizer.GetString(DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditStringId)">
-            <summary>
-                <para>Returns a localized string for the specified string identifier.
-</para>
-            </summary>
-            <param name="id">
-		A <see cref="T:DevExpress.Web.ASPxRichEdit.Localization.ASPxRichEditStringId"/> enumeration value identifying the string to localize.
-
-            </param>
-            <returns>A <see cref="String"/> corresponding to the specified identifier.
-</returns>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxRichEdit.RichEditFileManagerFoldersSettings">
 
             <summary>
@@ -6774,68 +6845,6 @@ For internal use only.
             </summary>
             <value><b>true</b> if a special icon is displayed; <b>false</b> if a default folder icon is displayed. 
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxRichEdit.RichEditFileManagerEditingSettings">
-
-            <summary>
-                <para>Contains settings that relate to the editing functionality of the embedded FileManager which is used within certain built-in dialogs.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditFileManagerEditingSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the RichEditFileManagerEditingSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxRichEdit.RichEditFileManagerEditingSettings.AllowDownload">
-            <summary>
-                <para>Gets or sets a value specifying whether file downloading is enabled in the FileManager used within certain built-in dialogs. 
-</para>
-            </summary>
-            <value><b>true</b>, if file downloading is enabled; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxRichEdit.ASPxRichEditCharacterFormattingDetailedSettings">
-
-            <summary>
-                <para>Contains the <b>Character Formatting</b> dialog's settings.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.ASPxRichEditCharacterFormattingDetailedSettings.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ASPxRichEditCharacterFormattingDetailedSettings class.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxRichEdit.RichEditFileManager">
-
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditFileManager.#ctor">
-            <summary>
-                <para>Initializes a new instance of the RichEditFileManager class.
-</para>
-            </summary>
 
 
         </member>
@@ -6916,26 +6925,17 @@ For internal use only.
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxRichEdit.RichEditPopupMenuItemCollection">
+        <member name="T:DevExpress.Web.ASPxRichEdit.ASPxRichEditCharacterFormattingDetailedSettings">
 
             <summary>
-                <para>An internal collection that maintains popup menu items in the RichEdit.
-For internal use only.
+                <para>Contains the <b>Character Formatting</b> dialog's settings.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditPopupMenuItemCollection.CreateDefaultItems">
+        <member name="M:DevExpress.Web.ASPxRichEdit.ASPxRichEditCharacterFormattingDetailedSettings.#ctor">
             <summary>
-                <para>Populates the context menu with default items.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxRichEdit.RichEditPopupMenuItemCollection.CreateSpellingItems">
-            <summary>
-                <para>Creates menu items related to the built-in spell checking functionality.
+                <para>Initializes a new instance of the ASPxRichEditCharacterFormattingDetailedSettings class.
 </para>
             </summary>
 

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Sports.DataAccess.Models;
 
@@ -43,24 +42,12 @@ namespace Sports.Business.ViewModel
             return 0;
         }
 
-        private bool TeamCanBeCreate(int teamId)
-        {
-            return Teams.All(f => f.Id != teamId) && Teams.Count < 2;
-        }
-
         public int GetTeamScore(TeamType type)
         {
             var team = Teams?.FirstOrDefault(f => f.TeamType == type);
             if (team != null)
                 return team.Score;
             return 0;
-        }
-
-        public void SetTeamScore(int teamId, int score)
-        {
-            var team = Teams.FirstOrDefault(f => f.Id == teamId);
-            if (team != null)
-                team.Score = score;
         }
 
         public Schedule ToSchedule(Action<ScheduleViewModel, Schedule> reProcess = null)
@@ -71,7 +58,7 @@ namespace Sports.Business.ViewModel
                 Title = Title,
                 StartTime = StartTime,
                 EndTime = EndTime,
-                VenueId = VenueId,
+                VenueId = VenueId
             };
             reProcess?.Invoke(this, schedule);
             return schedule;

@@ -4,49 +4,6 @@
         <name>DevExpress.Web.ASPxSpreadsheet.v17.1</name>
     </assembly>
     <members>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertPictureDialogSettings">
-
-            <summary>
-                <para>Contains customization settings for the Insert Picture dialog's form elements.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertPictureDialogSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetInsertPictureDialogSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertPictureDialogSettings.Assign(DevExpress.Web.PropertiesBase)">
-            <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.PropertiesBase"/> object to the current object.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
-
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertPictureDialogSettings.ShowFileUploadSection">
-            <summary>
-                <para>Gets or sets a value that specifies whether a section that allows end-users to upload their local files is displayed within the Insert Picture dialog form.
-</para>
-            </summary>
-            <value><b>true</b>, to display the form section, otherwise, <b>false</b>.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxSpreadsheet.Localization.ASPxSpreadsheetResourcesLocalizer">
 
             <summary>
@@ -302,140 +259,258 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerUploadSettings">
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles">
 
             <summary>
-                <para>Contains settings that relate to the file upload functionality of the FileManager embedded into certain built-in dialogs.
+                <para>Contains settings that defined the appearance of elements, used within the Spreadsheet's Formula Bar.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerUploadSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
             <summary>
-                <para>Initializes a new instance of the SpreadsheetFileManagerUploadSettings class with the specified owner.
+                <para>Initializes a new instance of the SpreadsheetFormulaBarStyles class with the specified owner.
 </para>
             </summary>
             <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+		An object that implements the <b>ISkinOwner</b> interface.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerUploadSettings.Enabled">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.ButtonSection">
             <summary>
-                <para>Gets or sets a value that indicates whether upload is enabled for the FileManager used within some built-in dialogs. 
+                <para>Gets the style settings that define the appearance of the formula bar's section that contains buttons.
 </para>
             </summary>
-            <value><b>true</b>, if upload is enabled; otherwise, <b>false</b>.
+            <value>A <see cref="SpreadsheetFormulaBarButtonSectionStyles"/> object that contains the style settings.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerUploadSettings.ValidationSettings">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.CancelButton">
             <summary>
-                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
-
-
+                <para>Gets the style settings that define the appearance of the <b>Cancel</b> button in the formula bar's section that contains buttons.
 </para>
             </summary>
-            <value> 
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
 </value>
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetSaveFileDialogSettings">
-
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.CopyFrom(DevExpress.Web.StylesBase)">
             <summary>
-                <para>Contains customization settings for the Save File dialog's form elements.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetSaveFileDialogSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetSaveFileDialogSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetSaveFileDialogSettings.Assign(DevExpress.Web.PropertiesBase)">
-            <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.PropertiesBase"/> object to the current object.
+                <para>Duplicates the properties of the specified object into the current instance of the SpreadsheetFormulaBarStyles class. 
 </para>
             </summary>
             <param name="source">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
-
+		A <see cref="T:DevExpress.Web.StylesBase"/> object that represents the object from which the settings will be copied.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetSaveFileDialogSettings.DisplaySectionMode">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.EnterButton">
             <summary>
-                <para>Gets or sets a value that specifies which sections are displayed within the Save File dialog form.
+                <para>Gets the style settings that define the appearance of the <b>Enter</b> button in the formula bar's section that contains buttons.
 </para>
             </summary>
-            <value>One of the <see cref="SaveFileDialogDisplaySectionMode"/> enumeration values.
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
 </value>
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.MainElement">
+            <summary>
+                <para>Gets the style settings that define the appearance of the main area of the formula bar.
+</para>
+            </summary>
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.TextBox">
+            <summary>
+                <para>Gets the style settings that define the appearance of the text box in the formula bar.
+</para>
+            </summary>
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles">
 
             <summary>
-                <para>Contains the base settings of the embedded FileManager used within certain built-in dialogs. 
+                <para>Contains settings that defined the appearance of elements, used within the Formula Bar' button section.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
             <summary>
-                <para>Initializes a new instance of the SpreadsheetFileManagerCommonSettings class with the specified owner.
+                <para>Initializes a new instance of the SpreadsheetFormulaBarButtonSectionStyles class with the specified owner.
 </para>
             </summary>
             <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+		An object that implements the <b>ISkinOwner</b> interface.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.AllowedFileExtensions">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Button">
             <summary>
-                <para>Gets or sets the file extensions allowed for display in the FileManager used within certain built-in dialogs.
+                <para>Gets the style settings that define the appearance of formula bar's buttons.
 </para>
             </summary>
-            <value>An array of <see cref="T:System.String"/> values that contains the file extensions allowed.
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.EnableMultiSelect">
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.CopyFrom(DevExpress.Web.StylesBase)">
             <summary>
-                <para>Gets or sets a value specifying whether multiple file selection is enabled in the FileManager used within certain built-in dialogs. 
+                <para>Duplicates the properties of the specified object into the current instance of the SpreadsheetFormulaBarButtonSectionStyles class. 
 </para>
             </summary>
-            <value><b>true</b>, if multiple file selection is enabled; otherwise, <b>false</b>.
+            <param name="source">
+		A <see cref="T:DevExpress.Web.StylesBase"/> object that represents an object which the settings will be copied from.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Item">
+            <summary>
+                <para>Gets the style settings that define the appearance of formula bar's item.
+</para>
+            </summary>
+            <value>A <see cref="MenuItemStyle"/> object that contains the style settings.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.RootFolder">
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Link">
+            <summary>
+                <para>Gets the style settings that define the appearance of links.
+</para>
+            </summary>
+            <value>A <see cref="LinkStyle"/> object that contains the style settings. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.MainElement">
+            <summary>
+                <para>Gets the style settings that define the appearance of the formula bar's main element.
+</para>
+            </summary>
+            <value>A <see cref="AppearanceStyle"/> object that contains the style settings. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.ScrollButton">
+            <summary>
+                <para>Gets the style settings that define the scroll button appearance.
+</para>
+            </summary>
+            <value>A <see cref="MenuScrollButtonStyle"/> object that contains the style settings. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Style">
+            <summary>
+                <para>Gets the style settings defining the formula bar appearance.
+</para>
+            </summary>
+            <value>A <see cref="MenuStyle"/> object containing the style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.SubMenu">
+            <summary>
+                <para>Gets the style settings that define the submenu appearance within a menu.
+</para>
+            </summary>
+            <value>A <see cref="MenuStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.SubMenuItem">
+            <summary>
+                <para>Gets the style settings for all submenu items within the current menu.
+</para>
+            </summary>
+            <value>A <see cref="MenuItemStyle"/> object that contains the style settings.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties">
+
+            <summary>
+                <para>Contains settings that define a Formula Bar button's image. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.#ctor">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetFormulaBarButtonImageProperties class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetFormulaBarButtonImageProperties class with the specified owner. 
+</para>
+            </summary>
+            <param name="owner">
+		An <see cref="T:DevExpress.Web.IPropertiesOwner"/>-implemented object that owns the created object. 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.SpriteProperties">
             <summary>
                 <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
 
 
 </para>
             </summary>
-            <value> 
-</value>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.UrlChecked">
+            <summary>
+                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
+
+
+</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.UrlSelected">
+            <summary>
+                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
+
+
+</para>
+            </summary>
+            <value> </value>
 
 
         </member>
@@ -535,23 +610,193 @@ This member is not in effect.
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheetSettingsBase">
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings">
 
             <summary>
-                <para>Serves as a base for classes that define different settings of the <see cref="T:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet"/>.
+                <para>Contains settings that are specific to customizable versions of the <b>ASPxSpreadsheet</b>'s built-in dialogs.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheetSettingsBase.#ctor(DevExpress.Web.IPropertiesOwner)">
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
             <summary>
-                <para>Initializes a new instance of the ASPxSpreadsheetSettingsBase class with the specified owner.
+                <para>Initializes a new instance of the SpreadsheetFormsSettings class with the specified owner.
 </para>
             </summary>
             <param name="owner">
 		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
 
             </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ChangeChartTypeFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Change chart type dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ChartChangeHorizontalAxisTitleFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Change horizontal axis title dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ChartChangeTitleFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Change chart title dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ChartChangeVerticalAxisTitleFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Change vertical axis title dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ChartSelectDataFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Select data source dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ColumnWidthFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Column width dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.DefaultColumnWidthFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Standard column width dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.FindAndReplaceFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Find dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.InsertLinkFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Insert Link dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customizable Insert Link dialog.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.InsertPictureFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is the customizable version of the built-in Insert Picture dialog.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customizable Insert Picture dialog.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ModifyChartLayoutFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Chart layouts dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ModifyChartStyleFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Chart styles dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.OpenFileFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is the customizable version of the built-in Open File dialog.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customizable Open File dialog.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.RenameSheetFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is the customizable version of the built-in Rename Sheet dialog.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customizable Rename Sheet dialog.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.RowHeightFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Row height dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.SaveFileFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is the customizable version of the built-in Save File dialog.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customizable Save File dialog.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.UnhideSheetFormPath">
+            <summary>
+                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Unhide sheet dialog.
+</para>
+            </summary>
+            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
+</value>
 
 
         </member>
@@ -2683,6 +2928,48 @@ This member is not in effect.
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerUploadSettings">
+
+            <summary>
+                <para>Contains settings that relate to the file upload functionality of the FileManager embedded into certain built-in dialogs.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerUploadSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetFileManagerUploadSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerUploadSettings.Enabled">
+            <summary>
+                <para>Gets or sets a value that indicates whether upload is enabled for the FileManager used within some built-in dialogs. 
+</para>
+            </summary>
+            <value><b>true</b>, if upload is enabled; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerUploadSettings.ValidationSettings">
+            <summary>
+                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
+
+
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertLinkDialogSettings">
 
             <summary>
@@ -2722,6 +3009,92 @@ This member is not in effect.
 </para>
             </summary>
             <value><b>true</b>, to display the form element, otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertPictureDialogSettings">
+
+            <summary>
+                <para>Contains customization settings for the Insert Picture dialog's form elements.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertPictureDialogSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetInsertPictureDialogSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertPictureDialogSettings.Assign(DevExpress.Web.PropertiesBase)">
+            <summary>
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.PropertiesBase"/> object to the current object.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetInsertPictureDialogSettings.ShowFileUploadSection">
+            <summary>
+                <para>Gets or sets a value that specifies whether a section that allows end-users to upload their local files is displayed within the Insert Picture dialog form.
+</para>
+            </summary>
+            <value><b>true</b>, to display the form section, otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetSaveFileDialogSettings">
+
+            <summary>
+                <para>Contains customization settings for the Save File dialog's form elements.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetSaveFileDialogSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetSaveFileDialogSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetSaveFileDialogSettings.Assign(DevExpress.Web.PropertiesBase)">
+            <summary>
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.PropertiesBase"/> object to the current object.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
+
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetSaveFileDialogSettings.DisplaySectionMode">
+            <summary>
+                <para>Gets or sets a value that specifies which sections are displayed within the Save File dialog form.
+</para>
+            </summary>
+            <value>One of the <see cref="SaveFileDialogDisplaySectionMode"/> enumeration values.
 </value>
 
 
@@ -2841,196 +3214,6 @@ This member is not in effect.
                 <para>The toolbar for the Spreadsheet is rendered as a built-in ribbon. 
 </para>
             </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings">
-
-            <summary>
-                <para>Contains settings that are specific to customizable versions of the <b>ASPxSpreadsheet</b>'s built-in dialogs.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetFormsSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ChangeChartTypeFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Change chart type dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ChartChangeHorizontalAxisTitleFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Change horizontal axis title dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ChartChangeTitleFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Change chart title dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ChartChangeVerticalAxisTitleFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Change vertical axis title dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ChartSelectDataFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Select data source dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ColumnWidthFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Column width dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.DefaultColumnWidthFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Standard column width dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.FindAndReplaceFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Find dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.InsertLinkFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Insert Link dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customizable Insert Link dialog.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.InsertPictureFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is the customizable version of the built-in Insert Picture dialog.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customizable Insert Picture dialog.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ModifyChartLayoutFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Chart layouts dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.ModifyChartStyleFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Chart styles dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.OpenFileFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is the customizable version of the built-in Open File dialog.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customizable Open File dialog.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.RenameSheetFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is the customizable version of the built-in Rename Sheet dialog.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customizable Rename Sheet dialog.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.RowHeightFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Row height dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.SaveFileFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is the customizable version of the built-in Save File dialog.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file that is a customizable Save File dialog.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormsSettings.UnhideSheetFormPath">
-            <summary>
-                <para>Gets or sets the path to a UserControl (an <b>.ascx</b> file) that is a customizable version of the built-in Unhide sheet dialog.
-</para>
-            </summary>
-            <value> A <see cref="T:System.String"/> value specifying the file name and path to a UserControl file.
-</value>
 
 
         </member>
@@ -4034,261 +4217,6 @@ This member is not in effect.
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles">
-
-            <summary>
-                <para>Contains settings that defined the appearance of elements, used within the Spreadsheet's Formula Bar.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetFormulaBarStyles class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <b>ISkinOwner</b> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.ButtonSection">
-            <summary>
-                <para>Gets the style settings that define the appearance of the formula bar's section that contains buttons.
-</para>
-            </summary>
-            <value>A <see cref="SpreadsheetFormulaBarButtonSectionStyles"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.CancelButton">
-            <summary>
-                <para>Gets the style settings that define the appearance of the <b>Cancel</b> button in the formula bar's section that contains buttons.
-</para>
-            </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.CopyFrom(DevExpress.Web.StylesBase)">
-            <summary>
-                <para>Duplicates the properties of the specified object into the current instance of the SpreadsheetFormulaBarStyles class. 
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.StylesBase"/> object that represents the object from which the settings will be copied.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.EnterButton">
-            <summary>
-                <para>Gets the style settings that define the appearance of the <b>Enter</b> button in the formula bar's section that contains buttons.
-</para>
-            </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.MainElement">
-            <summary>
-                <para>Gets the style settings that define the appearance of the main area of the formula bar.
-</para>
-            </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarStyles.TextBox">
-            <summary>
-                <para>Gets the style settings that define the appearance of the text box in the formula bar.
-</para>
-            </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles">
-
-            <summary>
-                <para>Contains settings that defined the appearance of elements, used within the Formula Bar' button section.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetFormulaBarButtonSectionStyles class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object that implements the <b>ISkinOwner</b> interface.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Button">
-            <summary>
-                <para>Gets the style settings that define the appearance of formula bar's buttons.
-</para>
-            </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.CopyFrom(DevExpress.Web.StylesBase)">
-            <summary>
-                <para>Duplicates the properties of the specified object into the current instance of the SpreadsheetFormulaBarButtonSectionStyles class. 
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.StylesBase"/> object that represents an object which the settings will be copied from.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Item">
-            <summary>
-                <para>Gets the style settings that define the appearance of formula bar's item.
-</para>
-            </summary>
-            <value>A <see cref="MenuItemStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Link">
-            <summary>
-                <para>Gets the style settings that define the appearance of links.
-</para>
-            </summary>
-            <value>A <see cref="LinkStyle"/> object that contains the style settings. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.MainElement">
-            <summary>
-                <para>Gets the style settings that define the appearance of the formula bar's main element.
-</para>
-            </summary>
-            <value>A <see cref="AppearanceStyle"/> object that contains the style settings. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.ScrollButton">
-            <summary>
-                <para>Gets the style settings that define the scroll button appearance.
-</para>
-            </summary>
-            <value>A <see cref="MenuScrollButtonStyle"/> object that contains the style settings. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.Style">
-            <summary>
-                <para>Gets the style settings defining the formula bar appearance.
-</para>
-            </summary>
-            <value>A <see cref="MenuStyle"/> object containing the style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.SubMenu">
-            <summary>
-                <para>Gets the style settings that define the submenu appearance within a menu.
-</para>
-            </summary>
-            <value>A <see cref="MenuStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonSectionStyles.SubMenuItem">
-            <summary>
-                <para>Gets the style settings for all submenu items within the current menu.
-</para>
-            </summary>
-            <value>A <see cref="MenuItemStyle"/> object that contains the style settings.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties">
-
-            <summary>
-                <para>Contains settings that define a Formula Bar button's image. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.#ctor">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetFormulaBarButtonImageProperties class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the SpreadsheetFormulaBarButtonImageProperties class with the specified owner. 
-</para>
-            </summary>
-            <param name="owner">
-		An <see cref="T:DevExpress.Web.IPropertiesOwner"/>-implemented object that owns the created object. 
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.SpriteProperties">
-            <summary>
-                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
-
-
-</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.UrlChecked">
-            <summary>
-                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
-
-
-</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaBarButtonImageProperties.UrlSelected">
-            <summary>
-                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
-
-
-</para>
-            </summary>
-            <value> </value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFormulaAutoCompeteStyles">
 
             <summary>
@@ -4495,6 +4423,78 @@ This member is not in effect.
 
 
             </param>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheetSettingsBase">
+
+            <summary>
+                <para>Serves as a base for classes that define different settings of the <see cref="T:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheet"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.ASPxSpreadsheetSettingsBase.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the ASPxSpreadsheetSettingsBase class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings">
+
+            <summary>
+                <para>Contains the base settings of the embedded FileManager used within certain built-in dialogs. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the SpreadsheetFileManagerCommonSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object that implements the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.AllowedFileExtensions">
+            <summary>
+                <para>Gets or sets the file extensions allowed for display in the FileManager used within certain built-in dialogs.
+</para>
+            </summary>
+            <value>An array of <see cref="T:System.String"/> values that contains the file extensions allowed.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.EnableMultiSelect">
+            <summary>
+                <para>Gets or sets a value specifying whether multiple file selection is enabled in the FileManager used within certain built-in dialogs. 
+</para>
+            </summary>
+            <value><b>true</b>, if multiple file selection is enabled; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxSpreadsheet.SpreadsheetFileManagerCommonSettings.RootFolder">
+            <summary>
+                <para>This member is not in effect for this class. It is overridden only for the purpose of preventing it from appearing in Microsoft Visual Studio designer tools. 
+
+
+</para>
+            </summary>
+            <value> 
+</value>
 
 
         </member>

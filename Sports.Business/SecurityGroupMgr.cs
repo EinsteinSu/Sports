@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace Sports.Business
 
         protected override SecurityGroup GetEntry(int id)
         {
-            return Context.SecurityGroups.FirstOrDefault(f => f.Id == id);
+            return Context.SecurityGroups.Include(i => i.Securities).FirstOrDefault(f => f.Id == id);
         }
 
         protected override void AddItem(SecurityGroup item)

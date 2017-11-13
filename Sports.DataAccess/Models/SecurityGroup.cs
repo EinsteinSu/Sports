@@ -11,7 +11,9 @@ namespace Sports.DataAccess.Models
     {
         public int Id { get; set; }
 
-        [MaxLength(20),Required]
+        [MaxLength(50), Required]
         public string Name { get; set; }
+
+        public ICollection<Security> Securities { get; set; }
     }
 }

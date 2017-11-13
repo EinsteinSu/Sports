@@ -7,7 +7,6 @@
     {
         settings.Name = "GridView";
         settings.CallbackRouteValues = new { Controller = "Schedules", Action = "GridViewPartial" };
-        //settings.CustomActionRouteValues = new { Controller = "Schedules", Action = "ChangeEditModePartial" };
         settings.SettingsEditing.AddNewRowRouteValues = new { Controller = "Schedules", Action = "GridViewPartialAddNew" };
         settings.SettingsEditing.UpdateRowRouteValues = new { Controller = "Schedules", Action = "GridViewPartialUpdate" };
         settings.SettingsEditing.DeleteRowRouteValues = new { Controller = "Schedules", Action = "GridViewPartialDelete" };
@@ -32,8 +31,23 @@
         settings.SettingsAdaptivity.AllowOnlyOneAdaptiveDetailExpanded = false;
         settings.SettingsAdaptivity.HideDataCellsAtWindowInnerWidth = 0;
 
+        settings.Columns.Add(c =>
+        {
+            c.Caption = "#";
+            c.Width = 100;
+            c.SetDataItemTemplateContent(container =>
+            {
+                Html.DevExpress().HyperLink(hyperLink =>
+                {
+                    var keyValue = container.KeyValue;
+                    hyperLink.Properties.Text = "Edit Players";
+                    hyperLink.NavigateUrl = Url.Action("SchedulePlayerEdit", new { scheduleId = keyValue });
+                }).Render();
+            });
+            c.EditFormSettings.Visible = DefaultBoolean.False;
+        });
         settings.Columns.Add("Title");
-        settings.Columns.Add(s=>
+        settings.Columns.Add(s =>
         {
             s.FieldName = "StartTime";
             s.EditorProperties().DateEdit(a =>
@@ -77,6 +91,12 @@
                 c.ValueField = "Id";
             });
         });
+        settings.SetDetailRowTemplateContent(c =>
+        {
+            Html.RenderAction("PlayersGridViewPartial", new { scheduleId = DataBinder.Eval(c.DataItem, "Id") });
+        });
+        settings.SettingsDetail.ShowDetailRow = true;
+        settings.SettingsDetail.AllowOnlyOneMasterRowExpanded = true;
     });
     if (ViewData["EditError"] != null)
     {

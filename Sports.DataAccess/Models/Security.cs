@@ -6,11 +6,6 @@ namespace Sports.DataAccess.Models
 {
     public class Security
     {
-        public Security()
-        {
-            Roles = new HashSet<Role>();
-        }
-
         public int Id { get; set; }
 
         [MaxLength(20),Required]
@@ -20,7 +15,5 @@ namespace Sports.DataAccess.Models
         public int GroupId { get; set; }
 
         public virtual SecurityGroup Group { get; set; }
-
-        public ICollection<Role> Roles { get; set; }
     }
 }
