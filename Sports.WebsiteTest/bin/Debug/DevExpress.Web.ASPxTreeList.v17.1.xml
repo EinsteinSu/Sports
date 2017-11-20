@@ -74,150 +74,6 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxTreeList.TreeListTimeEditColumn">
-
-            <summary>
-                <para>Represents a data column used to display and edit time portions of DateTime values.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListTimeEditColumn.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TreeListTimeEditColumn class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListTimeEditColumn.PropertiesTimeEdit">
-            <summary>
-                <para>Gets the column editor's settings.
-</para>
-            </summary>
-            <value>The <see cref="T:DevExpress.Web.CheckBoxProperties"/> object that contains settings specific to a checkbox editor.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxTreeList.TreeListColorEditColumn">
-
-            <summary>
-                <para>Represents a data column used to display and edit color values.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListColorEditColumn.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TreeListColorEditColumn class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListColorEditColumn.PropertiesColorEdit">
-            <summary>
-                <para>Gets the column editor's settings.
-</para>
-            </summary>
-            <value>The <see cref="T:DevExpress.Web.ColorEditProperties"/> object that contains settings specific to a color editor.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventHandler">
-
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxTreeList.ASPxTreeList.CommandColumnButtonInitialize"/> event. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventHandler.Invoke(System.Object,DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxTreeList.ASPxTreeList.CommandColumnButtonInitialize"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The event sender.
-
-            </param>
-            <param name="e">
-		An <see cref="T:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs"/> object that contains event data.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxTreeList.ASPxTreeList.CommandColumnButtonInitialize"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs.ButtonType">
-            <summary>
-                <para>Gets the type of the command button currently being initialized.
-</para>
-            </summary>
-            <value>One of the <see cref="T:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonType"/> enumeration values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs.CommandColumn">
-            <summary>
-                <para>Gets a command column which owns the processed command button.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.ASPxTreeList.TreeListCommandColumn"/> object that represents the command column which owns the processed button.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs.CustomButtonIndex">
-            <summary>
-                <para>Gets the processed command button's index.
-</para>
-            </summary>
-            <value>An integer value that represents the zero-based index of the processed command button within the <see cref="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumn.CustomButtons"/> collection.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs.Enabled">
-            <summary>
-                <para>Gets or sets whether the processed command button is enabled.
-</para>
-            </summary>
-            <value>One of the <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs.NodeKey">
-            <summary>
-                <para>Gets the key of a node which contains the processed command button.
-</para>
-            </summary>
-            <value>A string that identifies the node. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs.Visible">
-            <summary>
-                <para>Gets or sets whether the command button is visible.
-</para>
-            </summary>
-            <value>One of the <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration values.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxTreeList.TreeListSettingsPopupEditForm">
 
             <summary>
@@ -386,6 +242,150 @@
 </para>
             </summary>
             <value>A <see cref="T:System.Web.UI.WebControls.Unit"/> structure that specifies the popup edit form's width.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxTreeList.TreeListTimeEditColumn">
+
+            <summary>
+                <para>Represents a data column used to display and edit time portions of DateTime values.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListTimeEditColumn.#ctor">
+            <summary>
+                <para>Initializes a new instance of the TreeListTimeEditColumn class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListTimeEditColumn.PropertiesTimeEdit">
+            <summary>
+                <para>Gets the column editor's settings.
+</para>
+            </summary>
+            <value>The <see cref="T:DevExpress.Web.CheckBoxProperties"/> object that contains settings specific to a checkbox editor.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxTreeList.TreeListColorEditColumn">
+
+            <summary>
+                <para>Represents a data column used to display and edit color values.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListColorEditColumn.#ctor">
+            <summary>
+                <para>Initializes a new instance of the TreeListColorEditColumn class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListColorEditColumn.PropertiesColorEdit">
+            <summary>
+                <para>Gets the column editor's settings.
+</para>
+            </summary>
+            <value>The <see cref="T:DevExpress.Web.ColorEditProperties"/> object that contains settings specific to a color editor.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventHandler">
+
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxTreeList.ASPxTreeList.CommandColumnButtonInitialize"/> event. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventHandler.Invoke(System.Object,DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs)">
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxTreeList.ASPxTreeList.CommandColumnButtonInitialize"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event sender.
+
+            </param>
+            <param name="e">
+		An <see cref="T:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs"/> object that contains event data.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxTreeList.ASPxTreeList.CommandColumnButtonInitialize"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs.ButtonType">
+            <summary>
+                <para>Gets the type of the command button currently being initialized.
+</para>
+            </summary>
+            <value>One of the <see cref="T:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonType"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs.CommandColumn">
+            <summary>
+                <para>Gets a command column which owns the processed command button.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxTreeList.TreeListCommandColumn"/> object that represents the command column which owns the processed button.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs.CustomButtonIndex">
+            <summary>
+                <para>Gets the processed command button's index.
+</para>
+            </summary>
+            <value>An integer value that represents the zero-based index of the processed command button within the <see cref="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumn.CustomButtons"/> collection.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs.Enabled">
+            <summary>
+                <para>Gets or sets whether the processed command button is enabled.
+</para>
+            </summary>
+            <value>One of the <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs.NodeKey">
+            <summary>
+                <para>Gets the key of a node which contains the processed command button.
+</para>
+            </summary>
+            <value>A string that identifies the node. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListCommandColumnButtonEventArgs.Visible">
+            <summary>
+                <para>Gets or sets whether the command button is visible.
+</para>
+            </summary>
+            <value>One of the <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration values.
 </value>
 
 
@@ -3966,32 +3966,6 @@
 
             </param>
             <value>A <see cref="T:DevExpress.Web.ASPxTreeList.TreeListToolbarItem"/> object that represents the item at the specified position.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxTreeList.TreeListTokenBoxColumn">
-
-            <summary>
-                <para>A data column that uses the <see cref="T:DevExpress.Web.ASPxTokenBox"/> to edit column values.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxTreeList.TreeListTokenBoxColumn.#ctor">
-            <summary>
-                <para>Initializes a new instance of the TreeListTokenBoxColumn class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxTreeList.TreeListTokenBoxColumn.PropertiesTokenBox">
-            <summary>
-                <para>Gets the column editor's settings.
-</para>
-            </summary>
-            <value>A <see cref="TokenBoxProperties"/> object that contains settings specific to a token box editor.
 </value>
 
 
@@ -9517,6 +9491,32 @@ the number of visible nodes divided by the number of visible columns is less tha
 </para>
             </summary>
             <value>The collection of visible columns.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxTreeList.TreeListTokenBoxColumn">
+
+            <summary>
+                <para>A data column that uses the <see cref="T:DevExpress.Web.ASPxTokenBox"/> to edit column values.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxTreeList.TreeListTokenBoxColumn.#ctor">
+            <summary>
+                <para>Initializes a new instance of the TreeListTokenBoxColumn class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxTreeList.TreeListTokenBoxColumn.PropertiesTokenBox">
+            <summary>
+                <para>Gets the column editor's settings.
+</para>
+            </summary>
+            <value>A <see cref="TokenBoxProperties"/> object that contains settings specific to a token box editor.
 </value>
 
 

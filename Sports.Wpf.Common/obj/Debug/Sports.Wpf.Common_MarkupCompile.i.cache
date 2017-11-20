@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\Sports\Sports\Sports.Wpf.Common\obj\Debug\
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\obj\Debug\
 Sports.Wpf.Common
 none
 false
@@ -12,8 +12,8 @@ DEBUG;TRACE
 
 6-900071168
 22085896987
-30-164961467
-191451435150
+30-1933783461
+19-1352507411
 View\DisplayDataView.xaml;View\DXSplashScreen\SplashWindow.xaml;View\WaterPolo\Display.xaml;View\WaterPolo\DisplayController.xaml;View\WaterPolo\Player.xaml;View\WaterPolo\PlayerController.xaml;
 
 True

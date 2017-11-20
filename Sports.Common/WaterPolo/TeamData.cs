@@ -53,5 +53,13 @@ namespace Sports.Common.WaterPolo
             get => _pauseTime;
             set => SetProperty(ref _pauseTime, value, "PauseTime");
         }
+
+        public void DecreaseFoulTimes()
+        {
+            foreach (var player in Players)
+            {
+                player.DecreaseFoulTime();
+            }
+        }
     }
 }

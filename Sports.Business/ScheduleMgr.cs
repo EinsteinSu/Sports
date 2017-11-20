@@ -13,7 +13,9 @@ namespace Sports.Business
     {
         SchedulePlayerEditViewModel GetPlayer(int scheduleId);
 
-        void SaveScheduleTeamPlayer(int scheduleId, TeamType type,int[] players);
+        void SaveScheduleTeamPlayer(int scheduleId, TeamType type, int[] players);
+
+        IEnumerable<Player> GetScheduledPlayers(int scheduleId, int teamId);
     }
 
     public class ScheduleMgr : IScheduleMgr
@@ -144,6 +146,18 @@ namespace Sports.Business
             {
                 throw new Exception("Could not found any teams!");
             }
+        }
+
+        public IEnumerable<Player> GetScheduledPlayers(int scheduleId, int teamId)
+        {
+            var team = Context.ScheduleTeams.FirstOrDefault(f => f.ScheduleId == scheduleId && f.TeamId == teamId);
+            if (team != null && !string.IsNullOrEmpty(team.Players))
+            {
+                var ints = JsonConvert.DeserializeObject<int[]>(team.Players);
+
+                return Context.Players.Where(w => ints.Contains(w.Id));
+            }
+            return new List<Player>();
         }
 
         private void ProcessSchedulePlayer(TeamType type, int scheduleId, SchedulePlayerEditViewModel schedulePlayer)

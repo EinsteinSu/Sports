@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.IO;
+using System.Linq;
 using System.Net.Sockets;
 using System.Text;
 using DevExpress.Mvvm;
@@ -36,22 +37,6 @@ namespace Sports.Referee.Console.ViewModel
             var controller = new SocketController(512);
             controller.StartListening(new RefereeRequestProcess(r => Race = r), Venue.Port);
 
-            Race = new RaceControllViewModel
-            {
-                TotalTime = "8:00",
-                Court = 1,
-                TeamA = new TeamControlViewModel { Score = 1 },
-                TeamB = new TeamControlViewModel { TimeoutCount = 1 }
-            };
-            Race.TeamA.TeamName = "CHN";
-            Race.TeamB.TeamName = "RUS";
-            Race.TeamA.Players = new PlayerData[13];
-            Race.TeamB.Players = new PlayerData[13];
-            for (int i = 0; i < 13; i++)
-            {
-                Race.TeamA.Players[i] = new PlayerControlViewModel { Number = i + 1, Name = $"Team A {i}" };
-                Race.TeamB.Players[i] = new PlayerControlViewModel { Number = i + 1, Name = $"Team A {i}" };
-            }
             InitializeSerialDevices();
         }
 
@@ -91,10 +76,16 @@ namespace Sports.Referee.Console.ViewModel
                     }
                     catch (Exception e)
                     {
+                        //todo: logging
                     }
                     _thirtySecondsTimeController.DisplayData = data =>
                     {
-
+                        Race.ThirtySeconds = data.Seconds;
+                        if (!data.IsStopped)
+                        {
+                            Race.TeamA.DecreaseFoulTimes();
+                            Race.TeamB.DecreaseFoulTimes();
+                        }
                     };
                 }
             }
@@ -119,24 +110,29 @@ namespace Sports.Referee.Console.ViewModel
                 _action = action;
             }
 
+            //todo should be test it
             public void Process(TcpClient client, NetworkStream stream, byte[] bytesReceived)
             {
                 try
                 {
                     var message = Encoding.Unicode.GetString(bytesReceived, 0, bytesReceived.Length);
                     var command = JsonConvert.DeserializeObject<Command>(message);
-                    if (command != null)
+                    if (command != null && command.Type == CommandType.LoadRace)
                     {
                         var id = int.Parse(command.Value);
                         var teamMgr = new TeamMgr();
-                        var s = new ScheduleMgr().GetItem(id);
+                        var mgr = new ScheduleMgr();
+                        var s = mgr.GetItem(id);
                         var teamA = teamMgr.GetItem(s.TeamA);
                         var teamB = teamMgr.GetItem(s.TeamB);
                         var race = new RaceViewModel
                         {
-                            TeamA = new TeamData { TeamName = teamA.ShortName },
-                            TeamB = new TeamData { TeamName = teamB.ShortName }
+                            TotalTime = "8:00",
+                            Court = 1,
+                            TeamA = new TeamControlViewModel { TeamName = teamA.ShortName, Players = GetScheduledPlayers(mgr, id, teamA.Id) },
+                            TeamB = new TeamControlViewModel { TeamName = teamB.ShortName, Players = GetScheduledPlayers(mgr, id, teamB.Id) }
                         };
+
                         _action?.Invoke(race);
                     }
                 }
@@ -146,6 +142,23 @@ namespace Sports.Referee.Console.ViewModel
                 }
                 var bytesSent = Encoding.Unicode.GetBytes("I've got it");
                 stream.Write(bytesSent, 0, bytesSent.Length);
+            }
+
+            private PlayerData[] GetScheduledPlayers(IScheduleMgr mgr, int scheduleId, int teamId)
+            {
+                var list = mgr.GetScheduledPlayers(scheduleId, teamId);
+                var players = new PlayerData[list.Count()];
+                int i = 0;
+                foreach (var player in list)
+                {
+                    players[i] = new PlayerControlViewModel
+                    {
+                        Number = player.BibNumber.ToInt(),
+                        Name = player.Name
+                    };
+                    i++;
+                }
+                return players;
             }
         }
     }

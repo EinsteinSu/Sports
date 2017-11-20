@@ -980,6 +980,70 @@
 
 
         </member>
+        <member name="M:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerClientSideModelGenerator.GetJsonModelScript(System.String,System.Collections.Generic.IDictionary`2,System.String,System.String,System.String)">
+            <summary>
+                <para>Generates a client-side Report Designer model based on the specified data and serializes this model to Json.
+</para>
+            </summary>
+            <param name="reportUrl">
+		An URL of report to open in the Report Designer on application start. 
+
+            </param>
+            <param name="dataSources">
+		A dictionary containing data sources that will be available in the Report Designer for adding to reports.
+
+            </param>
+            <param name="controllerUri">
+		URI of the controller action that processes requests from the Report Designer. 
+
+            </param>
+            <param name="previewControllerUri">
+		URI of the controller action that processes requests from the Web Document Viewer. 
+
+            </param>
+            <param name="queryBuilderControllerUri">
+		URI of the controller action that processes requests from the Query Builder. 
+
+            </param>
+            <returns>A string containing a Report Designer model.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ReportDesigner.ReportDesignerClientSideModelGenerator.GetJsonModelScript(System.String,System.Collections.Generic.IDictionary`2,System.String,System.String,System.String,DevExpress.XtraReports.Web.ClientControls.ClientSideModelSettings)">
+            <summary>
+                <para>Generates a client-side Report Designer model based on the specified data and serializes this model to Json.
+</para>
+            </summary>
+            <param name="reportUrl">
+		An URL of report to open in the Report Designer on application start. 
+
+            </param>
+            <param name="dataSources">
+		A dictionary containing data sources that will be available in the Report Designer for adding to reports.
+
+            </param>
+            <param name="controllerUri">
+		URI of the controller action that processes requests from the Report Designer. 
+
+            </param>
+            <param name="previewControllerUri">
+		URI of the controller action that processes requests from the Web Document Viewer. 
+
+            </param>
+            <param name="queryBuilderControllerUri">
+		URI of the controller action that processes requests from the Query Builder. 
+
+            </param>
+            <param name="settings">
+		Settings of the client-side Report Designer model.
+
+            </param>
+            <returns>A string containing a Report Designer model.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerClientSideModelGenerator">
 
             <summary>
@@ -1033,6 +1097,46 @@
             </summary>
             <param name="report">
 		A report to open in the Web Document Viewer on application start. 
+
+            </param>
+            <param name="controllerUri">
+		URI of the controller action that processes requests from the Web Document Viewer. 
+
+            </param>
+            <param name="settings">
+		Settings of the client-side Document Viewer model.
+
+            </param>
+            <returns>A string containing a Web Document Viewer model.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerClientSideModelGenerator.GetJsonModelScript(System.String,System.String)">
+            <summary>
+                <para>Generates a client-side Document Viewer model based on the specified data and serializes this model to Json.
+</para>
+            </summary>
+            <param name="reportUrl">
+		An URL of report to open in the Web Document Viewer on application start. 
+
+            </param>
+            <param name="controllerUri">
+		URI of the controller action that processes requests from the Web Document Viewer. 
+
+            </param>
+            <returns>A string containing a Web Document Viewer model.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.WebDocumentViewerClientSideModelGenerator.GetJsonModelScript(System.String,System.String,DevExpress.XtraReports.Web.ClientControls.ClientSideModelSettings)">
+            <summary>
+                <para>Generates a client-side Document Viewer model based on the specified data and serializes this model to Json.
+</para>
+            </summary>
+            <param name="reportUrl">
+		An URL of report to open in the Web Document Viewer on application start. 
 
             </param>
             <param name="controllerUri">
@@ -1236,81 +1340,6 @@
 </para>
             </summary>
             <value>A dictionary that stores a value pair specifying a category name and a corresponding <see cref="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.FormatStringDataItem"/>.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings">
-
-            <summary>
-                <para>Provides base settings for client-side models of the <see cref="T:DevExpress.XtraReports.Web.ASPxReportDesigner"/>, <see cref="T:DevExpress.XtraReports.Web.ASPxWebDocumentViewer"/> and <see cref="T:DevExpress.XtraReports.Web.ASPxQueryBuilder"/> controls.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
-            <summary>
-                <para>Initializes a new instance of the ClientControlClientSideModelSettings class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An object implementing the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings.Assign(DevExpress.Web.PropertiesBase)">
-            <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.PropertiesBase"/> object to the current object.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings.Changed(DevExpress.Web.PropertiesBase)">
-            <summary>
-                <para>Indicates the property that has changed its value.
-</para>
-            </summary>
-            <param name="properties">
-		A <see cref="T:DevExpress.Web.PropertiesBase"/> descendant.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings.IncludeCldrData">
-            <summary>
-                <para>Specifies whether or not to load <a href="https://github.com/globalizejs/globalize/blob/master/doc/cldr.md">CLDR</a> JSON data for the current locale to the client-side.
-</para>
-            </summary>
-            <value><b>true</b>, to include CLDR JSON data to a web page; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings.IncludeCldrSupplemental">
-            <summary>
-                <para>Specifies whether or not to load basic <a href="https://github.com/globalizejs/globalize/blob/master/doc/cldr.md">CLDR</a> supplemental data to the client-side.
-</para>
-            </summary>
-            <value><b>true</b>, to include CLDR supplemental data to a web page; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings.IncludeLocalization">
-            <summary>
-                <para>Specifies whether or not to load a localization script to the client-side.
-
-</para>
-            </summary>
-            <value><b>true</b>, to include a localization script to a web page; otherwise, <b>false</b>.
 </value>
 
 
@@ -2237,254 +2266,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.Web.ASPxQueryBuilder">
-
-            <summary>
-                <para>The Query Builder control.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.#ctor(DevExpress.XtraReports.Web.QueryBuilder.Native.Services.IQueryBuilderModelGenerator,DevExpress.XtraReports.Web.QueryBuilder.Native.Services.IQueryBuilderHtmlContentGenerator,DevExpress.XtraReports.Web.Native.ClientControls.Services.IJSContentGenerator`1)">
-            <summary>
-                <para>For internal use. Initializes a new instance of the ASPxQueryBuilder class with the specified settings.
-</para>
-            </summary>
-            <param name="webDocumentViewerModelGenerator">
-		 
-
-            </param>
-            <param name="queryBuilderHtmlContentGenerator">
-		 
-
-            </param>
-            <param name="jsContentGenerator">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.#ctor(System.IServiceProvider)">
-            <summary>
-                <para>Initializes a new instance of the ASPxQueryBuilder class with the specified service provider.
-</para>
-            </summary>
-            <param name="serviceProvider">
-		An object implementing the <see cref="T:System.IServiceProvider"/> interface.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ASPxQueryBuilder class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.ClientInstanceName">
-            <summary>
-                <para>Specifies the name of a client-side instance of the ASPxQueryBuilder.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.ClientSideEvents">
-            <summary>
-                <para>Gets an object that lists the client-side events specific to the ASPxQueryBuilder.
-</para>
-            </summary>
-            <value>A <see cref="QueryBuilderClientSideEvents"/> object, which allows assigning handlers to the client-side events available for the ASPxQueryBuilder.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraReports.Web.ASPxQueryBuilder.CustomJSProperties">
-            <summary>
-                <para>Enables you to supply any server data that can then be parsed on the client.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.Height">
-            <summary>
-                <para>Specifies the ASPxQueryBuilder height.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Web.UI.WebControls.Unit"/> structure, specifying the Web Document Viewer height.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.JSProperties">
-            <summary>
-                <para>Enables you to supply any server data that can then be parsed on the client.
-
-</para>
-            </summary>
-            <value>The collection of property names and their values.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.OpenConnection(DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase)">
-            <summary>
-                <para>Opens a connection to a database.
-</para>
-            </summary>
-            <param name="connectionParameters">
-		A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> object containing settings required to establish a data connection.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.OpenConnection(System.String)">
-            <summary>
-                <para>Opens a connection to a database.
-</para>
-            </summary>
-            <param name="connectionName">
-		The name of a connection string defined in the application's configuration file.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.OpenConnection(DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase,DevExpress.DataAccess.Sql.SelectQuery)">
-            <summary>
-                <para>Opens a connection to a database.
-</para>
-            </summary>
-            <param name="connectionParameters">
-		A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> object containing settings required to establish a data connection.
-
-            </param>
-            <param name="selectQuery">
-		A <see cref="T:DevExpress.DataAccess.Sql.SelectQuery"/> object.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.OpenConnection(System.String,DevExpress.DataAccess.Sql.SelectQuery)">
-            <summary>
-                <para>Opens a connection to a database.
-</para>
-            </summary>
-            <param name="connectionName">
-		The name of a connection string defined in the application's configuration file.
-
-            </param>
-            <param name="selectQuery">
-		A <see cref="T:DevExpress.DataAccess.Sql.SelectQuery"/> object.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.OpenConnection(DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase,DevExpress.DataAccess.Sql.SelectQuery,System.Int32)">
-            <summary>
-                <para>Opens a connection to a database.
-</para>
-            </summary>
-            <param name="connectionParameters">
-		A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> object, containing settings required to establish a data connection.
-
-            </param>
-            <param name="selectQuery">
-		A <see cref="T:DevExpress.DataAccess.Sql.SelectQuery"/> object.
-
-            </param>
-            <param name="commandTimeout">
-		An integer value, specifying the timeout to execute a query. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.ConnectionOptions.CommandTimeout"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.OpenConnection(System.String,DevExpress.DataAccess.Sql.SelectQuery,System.Int32)">
-            <summary>
-                <para>Opens a connection to a database.
-</para>
-            </summary>
-            <param name="connectionName">
-		The name of a connection string defined in the application's configuration file. 
-
-            </param>
-            <param name="selectQuery">
-		A <see cref="T:DevExpress.DataAccess.Sql.SelectQuery"/> object.
-
-            </param>
-            <param name="commandTimeout">
-		An integer value, specifying the timeout to execute a query. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.ConnectionOptions.CommandTimeout"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.RightToLeft">
-            <summary>
-                <para>Specifies whether or not a right-to-left layout is enabled in the Query Builder user interface.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value.
-</value>
-
-
-        </member>
-        <member name="E:DevExpress.XtraReports.Web.ASPxQueryBuilder.SaveQuery">
-            <summary>
-                <para>Occurs when a query is being saved.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.SettingsClientSideModel">
-            <summary>
-                <para>Provides access to the settings of the Query Builder's client-side model.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraReports.Web.QueryBuilder.QueryBuilderClientSideModelSettings"/> object.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.StaticInitialize">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.ValidateQueryByExecution">
-            <summary>
-                <para>For internal use.</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.Width">
-            <summary>
-                <para>Specifies the ASPxQueryBuilder width.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Web.UI.WebControls.Unit"/> structure, specifying the Web Document Viewer width.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraReports.Web.ReportViewer">
 
             <summary>
@@ -3267,50 +3048,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.Web.DocumentViewer.WebCredential">
-
-            <summary>
-                <para>Provides user credentials to login to a remote document source.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.WebCredential.#ctor(System.String,System.String)">
-            <summary>
-                <para>Initializes a new instance of the WebCredential class with the specified user name and password.
-</para>
-            </summary>
-            <param name="userName">
-		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.XtraReports.Web.DocumentViewer.WebCredential.UserName"/> property.
-
-            </param>
-            <param name="password">
-		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.XtraReports.Web.DocumentViewer.WebCredential.Password"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.WebCredential.Password">
-            <summary>
-                <para>Specifies the password for connecting to a remote document source using the Forms authentication type.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the password.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.WebCredential.UserName">
-            <summary>
-                <para>Specifies the user name for connecting to a remote document source using the Forms authentication type.
-</para>
-            </summary>
-            <value>A <see cref="T:System.String"/> value, specifying the user name.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraReports.Web.DocumentViewer.RequestParametersEventArgs">
 
             <summary>
@@ -3341,42 +3078,6 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerRemoteSourceSettings.RequestCredentials"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs.#ctor">
-            <summary>
-                <para>Initializes a new instance of the WebAuthenticatorLoginEventArgs class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs.Credential">
-            <summary>
-                <para>Specifies the user credentials to login to a remote document source.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraReports.Web.DocumentViewer.WebCredential"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs.Handled">
-            <summary>
-                <para>Specifies whether or not the corresponding event was handled.
-</para>
-            </summary>
-            <value><b>true</b> if the event was handled; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.XtraReports.Web.ASPxReportDesigner">
 
             <summary>
@@ -3395,36 +3096,29 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.ASPxReportDesigner.#ctor(System.IServiceProvider)">
             <summary>
-                <para>Initializes a new instance of the ASPxReportDesigner class with the specified service provider.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="serviceProvider">
-		An object implementing the <see cref="T:System.IServiceProvider"/> interface.
-
+		 
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.ASPxReportDesigner.#ctor(DevExpress.XtraReports.Web.ReportDesigner.Native.Services.IReportDesignerModelGenerator,DevExpress.XtraReports.Web.ReportDesigner.Native.Services.IReportDesignerHtmlContentGenerator,DevExpress.XtraReports.Web.Native.ClientControls.Services.IJSContentGenerator`1,System.Func`1)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="reportDesignerModelGenerator">
 		 
-
             </param>
             <param name="reportDesignerHtmlContentGenerator">
 		 
-
             </param>
             <param name="jsContentGenerator">
 		 
-
             </param>
             <param name="cleanerFactory">
 		 
-
             </param>
 
 
@@ -3747,9 +3441,7 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.ReportDesigner.DefaultReportDesignerContainer.RegisterDataSourceWizardDBSchemaProviderFactory``1">
             <summary>
-                <para>For internal use. Use the <see cref="M:DevExpress.XtraReports.Web.ReportDesigner.DefaultReportDesignerContainer.RegisterDataSourceWizardDBSchemaProviderExFactory[T]"/> method instead.
-
-</para>
+                <para>For internal use.</para>
             </summary>
 
 
@@ -4177,30 +3869,6 @@
             </summary>
             <value>A <see cref="Margins"/> object.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode">
-
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode.InterProcess">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode.InterThread">
-            <summary>
-                <para>For internal use.
-</para>
-            </summary>
 
 
         </member>
@@ -5287,24 +4955,20 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.QueryBuilder.Native.QueryBuilderBootstrapper.AppendRegistration(System.Action`1)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="action">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.QueryBuilder.Native.QueryBuilderBootstrapper.RegisterStandardServices(DevExpress.XtraReports.Web.Native.ClientControls.Services.IServiceContainerRegistrator)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="registrator">
 		 
-
             </param>
 
 
@@ -5328,24 +4992,20 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.Native.WebDocumentViewerBootstrapper.AppendRegistration(System.Action`1)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="action">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.Native.WebDocumentViewerBootstrapper.RegisterStandardServices(DevExpress.XtraReports.Web.Native.ClientControls.Services.IServiceContainerRegistrator)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="registrator">
 		 
-
             </param>
 
 
@@ -5369,12 +5029,10 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.ReportDesigner.Native.ReportDesignerBootstrapper.AppendRegistration(System.Action`1)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="action">
 		 
-
             </param>
 
 
@@ -5385,26 +5043,20 @@
             </summary>
             <param name="reportManagementServiceFactory">
 		 
-
             </param>
             <param name="storageCleanerFactory">
 		 
-
             </param>
             <param name="connectionProviderFactoryFactory">
 		 
-
             </param>
             <param name="sqlDataSourceWizardServiceFactory">
 		 
-
             </param>
             <param name="sqlDataSourceConnectionParametersPatcherFactory">
 		 
-
             </param>
-            <returns> 
-</returns>
+            <returns> </returns>
 
 
         </member>
@@ -5414,27 +5066,21 @@
             </summary>
             <param name="registrator">
 		 
-
             </param>
             <param name="reportManagementServiceFactory">
 		 
-
             </param>
             <param name="storageCleanerFactory">
 		 
-
             </param>
             <param name="connectionProviderFactoryFactory">
 		 
-
             </param>
             <param name="sqlDataSourceWizardServiceFactory">
 		 
-
             </param>
             <param name="sqlDataSourceConnectionParametersPatcherFactory">
 		 
-
             </param>
 
 
@@ -5550,12 +5196,109 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.Web.Localization.ASPxReportsLocalizer">
+
+            <summary>
+                <para>Represents an object providing a means to localize the <see cref="T:DevExpress.XtraReports.Web.ReportToolbar"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.Localization.ASPxReportsLocalizer.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ASPxReportsLocalizer class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.Localization.ASPxReportsLocalizer.CreateDefaultLocalizer">
+            <summary>
+                <para>Returns a Localizer object storing resources based on the thread's language and regional settings (culture).
+
+</para>
+            </summary>
+            <returns>An <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object, storing resources based on the thread's language and regional settings (culture).
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.Localization.ASPxReportsLocalizer.CreateResXLocalizer">
+            <summary>
+                <para>Returns a localizer object which provides resources based on the thread's language and regional settings (culture).
+</para>
+            </summary>
+            <returns>A <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object which provides resources based on the thread's culture.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.Localization.ASPxReportsLocalizer.GetString(DevExpress.XtraReports.Web.Localization.ASPxReportsStringId)">
+            <summary>
+                <para>Returns a localized string for the given string identifier.
+</para>
+            </summary>
+            <param name="id">
+		An <see cref="T:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId"/> enumeration value identifying the string to localize.
+
+
+            </param>
+            <returns>A <see cref="T:System.String"/> corresponding to the specified identifier.
+</returns>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.Web.ClientControls.ISecureDataConverter">
 
             <summary>
                 <para>If implemented, enables the Web Report Designer to use a custom algorithm for storing data source connection strings on the client.
 </para>
             </summary>
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Web.DocumentViewer.WebCredential">
+
+            <summary>
+                <para>Provides user credentials to login to a remote document source.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.WebCredential.#ctor(System.String,System.String)">
+            <summary>
+                <para>Initializes a new instance of the WebCredential class with the specified user name and password.
+</para>
+            </summary>
+            <param name="userName">
+		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.XtraReports.Web.DocumentViewer.WebCredential.UserName"/> property.
+
+            </param>
+            <param name="password">
+		A <see cref="T:System.String"/> value. This value is assigned to the <see cref="P:DevExpress.XtraReports.Web.DocumentViewer.WebCredential.Password"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.WebCredential.Password">
+            <summary>
+                <para>Specifies the password for connecting to a remote document source using the Forms authentication type.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, specifying the password.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.WebCredential.UserName">
+            <summary>
+                <para>Specifies the user name for connecting to a remote document source using the Forms authentication type.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value, specifying the user name.
+</value>
+
 
         </member>
         <member name="T:DevExpress.XtraReports.Web.ImagesEmbeddingMode">
@@ -6258,6 +6001,112 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents">
+
+            <summary>
+                <para>Provides additional client-side events to an <see cref="T:DevExpress.XtraReports.Web.ASPxWebDocumentViewer"/>.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.#ctor">
+            <summary>
+                <para>Initializes a new instance of the WebDocumentViewerClientSideEvents class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.CustomizeElements">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.CustomizeElements"/> event.
+</para>
+            </summary>
+            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.CustomizeMenuActions">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.CustomizeMenuActions"/> event.
+</para>
+            </summary>
+            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.CustomizeParameterEditors">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.CustomizeParameterEditors"/> event. 
+</para>
+            </summary>
+            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.CustomizeParameterLookUpSource">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.CustomizeParameterLookUpSource"/> event.
+</para>
+            </summary>
+            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.DocumentReady">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.DocumentReady"/> event.
+</para>
+            </summary>
+            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.EditingFieldChanged">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.EditingFieldChanged"/> event.
+</para>
+            </summary>
+            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.ParametersReset">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.ParametersReset"/> event. 
+</para>
+            </summary>
+            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.ParametersSubmitted">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.ParametersSubmitted"/> event. 
+</para>
+            </summary>
+            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.PreviewClick">
+            <summary>
+                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.PreviewClick"/> event.
+</para>
+            </summary>
+            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerRemoteSourceConfiguration">
 
             <summary>
@@ -6592,6 +6441,81 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings">
+
+            <summary>
+                <para>Provides base settings for client-side models of the <see cref="T:DevExpress.XtraReports.Web.ASPxReportDesigner"/>, <see cref="T:DevExpress.XtraReports.Web.ASPxWebDocumentViewer"/> and <see cref="T:DevExpress.XtraReports.Web.ASPxQueryBuilder"/> controls.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings.#ctor(DevExpress.Web.IPropertiesOwner)">
+            <summary>
+                <para>Initializes a new instance of the ClientControlClientSideModelSettings class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An object implementing the <see cref="T:DevExpress.Web.IPropertiesOwner"/> interface.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings.Assign(DevExpress.Web.PropertiesBase)">
+            <summary>
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.PropertiesBase"/> object to the current object.
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings.Changed(DevExpress.Web.PropertiesBase)">
+            <summary>
+                <para>Indicates the property that has changed its value.
+</para>
+            </summary>
+            <param name="properties">
+		A <see cref="T:DevExpress.Web.PropertiesBase"/> descendant.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings.IncludeCldrData">
+            <summary>
+                <para>Specifies whether or not to load <a href="https://github.com/globalizejs/globalize/blob/master/doc/cldr.md">CLDR</a> JSON data for the current locale to the client-side.
+</para>
+            </summary>
+            <value><b>true</b>, to include CLDR JSON data to a web page; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings.IncludeCldrSupplemental">
+            <summary>
+                <para>Specifies whether or not to load basic <a href="https://github.com/globalizejs/globalize/blob/master/doc/cldr.md">CLDR</a> supplemental data to the client-side.
+</para>
+            </summary>
+            <value><b>true</b>, to include CLDR supplemental data to a web page; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.ClientControls.ClientControlClientSideModelSettings.IncludeLocalization">
+            <summary>
+                <para>Specifies whether or not to load a localization script to the client-side.
+
+</para>
+            </summary>
+            <value><b>true</b>, to include a localization script to a web page; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerClientSideEvents">
 
             <summary>
@@ -6657,6 +6581,42 @@
             </param>
             <returns>An <see cref="T:DevExpress.XtraReports.UI.XtraReport"/> object.
 </returns>
+
+
+        </member>
+        <member name="T:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.XtraReports.Web.DocumentViewer.DocumentViewerRemoteSourceSettings.RequestCredentials"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs.#ctor">
+            <summary>
+                <para>Initializes a new instance of the WebAuthenticatorLoginEventArgs class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs.Credential">
+            <summary>
+                <para>Specifies the user credentials to login to a remote document source.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraReports.Web.DocumentViewer.WebCredential"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.DocumentViewer.WebAuthenticatorLoginEventArgs.Handled">
+            <summary>
+                <para>Specifies whether or not the corresponding event was handled.
+</para>
+            </summary>
+            <value><b>true</b> if the event was handled; otherwise, <b>false</b>.
+</value>
 
 
         </member>
@@ -6808,12 +6768,10 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.ASPxWebDocumentViewer.#ctor(System.IServiceProvider)">
             <summary>
-                <para>Initializes a new instance of the ASPxWebDocumentViewer class with the specified service provider.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="serviceProvider">
-		An object implementing the <see cref="T:System.IServiceProvider"/> interface.
-
+		 
             </param>
 
 
@@ -7056,112 +7014,6 @@
 </para>
             </summary>
             <value>A <see cref="T:System.Web.UI.WebControls.Unit"/> structure, specifying the Web Document Viewer width.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents">
-
-            <summary>
-                <para>Provides additional client-side events to an <see cref="T:DevExpress.XtraReports.Web.ASPxWebDocumentViewer"/>.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.#ctor">
-            <summary>
-                <para>Initializes a new instance of the WebDocumentViewerClientSideEvents class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.CustomizeElements">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.CustomizeElements"/> event.
-</para>
-            </summary>
-            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.CustomizeMenuActions">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.CustomizeMenuActions"/> event.
-</para>
-            </summary>
-            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.CustomizeParameterEditors">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.CustomizeParameterEditors"/> event. 
-</para>
-            </summary>
-            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.CustomizeParameterLookUpSource">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.CustomizeParameterLookUpSource"/> event.
-</para>
-            </summary>
-            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.DocumentReady">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.DocumentReady"/> event.
-</para>
-            </summary>
-            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.EditingFieldChanged">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.EditingFieldChanged"/> event.
-</para>
-            </summary>
-            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.ParametersReset">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.ParametersReset"/> event. 
-</para>
-            </summary>
-            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.ParametersSubmitted">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.ParametersSubmitted"/> event. 
-</para>
-            </summary>
-            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.XtraReports.Web.WebDocumentViewerClientSideEvents.PreviewClick">
-            <summary>
-                <para>Gets or sets the name of the JavaScript function or the entire code which will handle the <see cref="E:DevExpress.XtraReports.Web.Scripts.ASPxClientWebDocumentViewer.PreviewClick"/> event.
-</para>
-            </summary>
-            <value>A string, specifying either the name of a JavaScript function or the entire JavaScript function code used to handle the corresponding event. 
 </value>
 
 
@@ -8823,6 +8675,247 @@
 
 
         </member>
+        <member name="T:DevExpress.XtraReports.Web.ASPxQueryBuilder">
+
+            <summary>
+                <para>The Query Builder control.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.#ctor(DevExpress.XtraReports.Web.QueryBuilder.Native.Services.IQueryBuilderModelGenerator,DevExpress.XtraReports.Web.QueryBuilder.Native.Services.IQueryBuilderHtmlContentGenerator,DevExpress.XtraReports.Web.Native.ClientControls.Services.IJSContentGenerator`1)">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <param name="webDocumentViewerModelGenerator">
+		 
+            </param>
+            <param name="queryBuilderHtmlContentGenerator">
+		 
+            </param>
+            <param name="jsContentGenerator">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.#ctor(System.IServiceProvider)">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <param name="serviceProvider">
+		 
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ASPxQueryBuilder class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.ClientInstanceName">
+            <summary>
+                <para>Specifies the name of a client-side instance of the ASPxQueryBuilder.
+</para>
+            </summary>
+            <value>A <see cref="T:System.String"/> value.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.ClientSideEvents">
+            <summary>
+                <para>Gets an object that lists the client-side events specific to the ASPxQueryBuilder.
+</para>
+            </summary>
+            <value>A <see cref="QueryBuilderClientSideEvents"/> object, which allows assigning handlers to the client-side events available for the ASPxQueryBuilder.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraReports.Web.ASPxQueryBuilder.CustomJSProperties">
+            <summary>
+                <para>Enables you to supply any server data that can then be parsed on the client.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.Height">
+            <summary>
+                <para>Specifies the ASPxQueryBuilder height.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Web.UI.WebControls.Unit"/> structure, specifying the Web Document Viewer height.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.JSProperties">
+            <summary>
+                <para>Enables you to supply any server data that can then be parsed on the client.
+
+</para>
+            </summary>
+            <value>The collection of property names and their values.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.OpenConnection(DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase)">
+            <summary>
+                <para>Opens a connection to a database.
+</para>
+            </summary>
+            <param name="connectionParameters">
+		A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> object containing settings required to establish a data connection.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.OpenConnection(System.String)">
+            <summary>
+                <para>Opens a connection to a database.
+</para>
+            </summary>
+            <param name="connectionName">
+		The name of a connection string defined in the application's configuration file.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.OpenConnection(DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase,DevExpress.DataAccess.Sql.SelectQuery)">
+            <summary>
+                <para>Opens a connection to a database.
+</para>
+            </summary>
+            <param name="connectionParameters">
+		A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> object containing settings required to establish a data connection.
+
+            </param>
+            <param name="selectQuery">
+		A <see cref="T:DevExpress.DataAccess.Sql.SelectQuery"/> object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.OpenConnection(System.String,DevExpress.DataAccess.Sql.SelectQuery)">
+            <summary>
+                <para>Opens a connection to a database.
+</para>
+            </summary>
+            <param name="connectionName">
+		The name of a connection string defined in the application's configuration file.
+
+            </param>
+            <param name="selectQuery">
+		A <see cref="T:DevExpress.DataAccess.Sql.SelectQuery"/> object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.OpenConnection(DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase,DevExpress.DataAccess.Sql.SelectQuery,System.Int32)">
+            <summary>
+                <para>Opens a connection to a database.
+</para>
+            </summary>
+            <param name="connectionParameters">
+		A <see cref="T:DevExpress.DataAccess.ConnectionParameters.DataConnectionParametersBase"/> object, containing settings required to establish a data connection.
+
+            </param>
+            <param name="selectQuery">
+		A <see cref="T:DevExpress.DataAccess.Sql.SelectQuery"/> object.
+
+            </param>
+            <param name="commandTimeout">
+		An integer value, specifying the timeout to execute a query. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.ConnectionOptions.CommandTimeout"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.OpenConnection(System.String,DevExpress.DataAccess.Sql.SelectQuery,System.Int32)">
+            <summary>
+                <para>Opens a connection to a database.
+</para>
+            </summary>
+            <param name="connectionName">
+		The name of a connection string defined in the application's configuration file. 
+
+            </param>
+            <param name="selectQuery">
+		A <see cref="T:DevExpress.DataAccess.Sql.SelectQuery"/> object.
+
+            </param>
+            <param name="commandTimeout">
+		An integer value, specifying the timeout to execute a query. This value is assigned to the <see cref="P:DevExpress.DataAccess.Sql.ConnectionOptions.CommandTimeout"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.RightToLeft">
+            <summary>
+                <para>Specifies whether or not a right-to-left layout is enabled in the Query Builder user interface.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> value.
+</value>
+
+
+        </member>
+        <member name="E:DevExpress.XtraReports.Web.ASPxQueryBuilder.SaveQuery">
+            <summary>
+                <para>Occurs when a query is being saved.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.SettingsClientSideModel">
+            <summary>
+                <para>Provides access to the settings of the Query Builder's client-side model.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraReports.Web.QueryBuilder.QueryBuilderClientSideModelSettings"/> object.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.XtraReports.Web.ASPxQueryBuilder.StaticInitialize">
+            <summary>
+                <para>For internal use.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.ValidateQueryByExecution">
+            <summary>
+                <para>For internal use.</para>
+            </summary>
+            <value> </value>
+
+
+        </member>
+        <member name="P:DevExpress.XtraReports.Web.ASPxQueryBuilder.Width">
+            <summary>
+                <para>Specifies the ASPxQueryBuilder width.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Web.UI.WebControls.Unit"/> structure, specifying the Web Document Viewer width.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.XtraReports.Web.ReportDesigner.DataContracts.WizardDataConnection">
 
             <summary>
@@ -8959,72 +9052,59 @@
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.DefaultWebDocumentViewerContainer.UseFileDocumentStorage(System.String,DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="workingDirectory">
 		 
-
             </param>
             <param name="storageSynchronizationMode">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.DefaultWebDocumentViewerContainer.UseFileExportedDocumentStorage(System.String)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="workingDirectory">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.DefaultWebDocumentViewerContainer.UseFileExportedDocumentStorage(System.String,DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="workingDirectory">
 		 
-
             </param>
             <param name="storageSynchronizationMode">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.DefaultWebDocumentViewerContainer.UseFileReportStorage(System.String)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="workingDirectory">
 		 
-
             </param>
 
 
         </member>
         <member name="M:DevExpress.XtraReports.Web.WebDocumentViewer.DefaultWebDocumentViewerContainer.UseFileReportStorage(System.String,DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode)">
             <summary>
-                <para>For internal use.
-</para>
+                <para>For internal use.</para>
             </summary>
             <param name="workingDirectory">
 		 
-
             </param>
             <param name="storageSynchronizationMode">
 		 
-
             </param>
 
 
@@ -9171,56 +9251,27 @@
 
 
         </member>
-        <member name="T:DevExpress.XtraReports.Web.Localization.ASPxReportsLocalizer">
+        <member name="T:DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode">
 
             <summary>
-                <para>Represents an object providing a means to localize the <see cref="T:DevExpress.XtraReports.Web.ReportToolbar"/>.
+                <para>For internal use.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.XtraReports.Web.Localization.ASPxReportsLocalizer.#ctor">
+        <member name="F:DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode.InterProcess">
             <summary>
-                <para>Initializes a new instance of the ASPxReportsLocalizer class with the default settings.
+                <para>For internal use.
 </para>
             </summary>
 
 
         </member>
-        <member name="M:DevExpress.XtraReports.Web.Localization.ASPxReportsLocalizer.CreateDefaultLocalizer">
+        <member name="F:DevExpress.XtraReports.Web.WebDocumentViewer.StorageSynchronizationMode.InterThread">
             <summary>
-                <para>Returns a Localizer object storing resources based on the thread's language and regional settings (culture).
-
+                <para>For internal use.
 </para>
             </summary>
-            <returns>An <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object, storing resources based on the thread's language and regional settings (culture).
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.Localization.ASPxReportsLocalizer.CreateResXLocalizer">
-            <summary>
-                <para>Returns a localizer object which provides resources based on the thread's language and regional settings (culture).
-</para>
-            </summary>
-            <returns>A <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object which provides resources based on the thread's culture.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.XtraReports.Web.Localization.ASPxReportsLocalizer.GetString(DevExpress.XtraReports.Web.Localization.ASPxReportsStringId)">
-            <summary>
-                <para>Returns a localized string for the given string identifier.
-</para>
-            </summary>
-            <param name="id">
-		An <see cref="T:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId"/> enumeration value identifying the string to localize.
-
-
-            </param>
-            <returns>A <see cref="T:System.String"/> corresponding to the specified identifier.
-</returns>
 
 
         </member>
@@ -9751,23 +9802,39 @@
 
 
         </member>
-        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.FilterEditor_Operand_Type_Parameter">
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.FilterEditor_Operand_CreateNewParameter">
             <summary>
                 <para> </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.FilterEditor_Operand_Type_Parameter">
+            <summary>
+                <para><para>The caption available in the Filter Editor.</para>
+
+<para><b>Default value</b>: "Parameter"</para>
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.FilterEditor_Operand_Type_Property">
             <summary>
-                <para> </para>
+                <para><para>The caption available in the Filter Editor.</para>
+
+<para><b>Default value</b>: "Property"</para>
+</para>
             </summary>
 
 
         </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.FilterEditor_Operand_Type_Value">
             <summary>
-                <para> </para>
+                <para><para>The caption available in the Filter Editor.</para>
+
+<para><b>Default value</b>: "Value"</para>
+</para>
             </summary>
 
 
@@ -9944,7 +10011,10 @@
         </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FieldListActions_EditMasterDetailRelations">
             <summary>
-                <para> </para>
+                <para><para>The caption of an action available in the Field List.</para>
+
+<para><b>Default value</b>: "Edit Master-Detail Relations"</para>
+</para>
             </summary>
 
 
@@ -9961,7 +10031,10 @@
         </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FieldListActions_RemoveDataSource">
             <summary>
-                <para> </para>
+                <para><para>The caption of an action available in the Field List.</para>
+
+<para><b>Default value</b>: "Remove Data Source"</para>
+</para>
             </summary>
 
 
@@ -10012,6 +10085,13 @@
 
 <para><b>Default value</b>: "World"</para>
 </para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.ReportDesigner_FormatStringEditor_PreviewNotAvailable_Text">
+            <summary>
+                <para> </para>
             </summary>
 
 
@@ -11759,6 +11839,13 @@
 
 
         </member>
+        <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.WebDocumentViewer_DataRetrievalException_Message">
+            <summary>
+                <para> </para>
+            </summary>
+
+
+        </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.WebDocumentViewer_DocumentBuilding">
             <summary>
                 <para><para>The text displayed in the <see cref="T:DevExpress.XtraReports.Web.ASPxDocumentViewer"/>'s document building progress indicator.</para>
@@ -11863,8 +11950,7 @@
         </member>
         <member name="F:DevExpress.XtraReports.Web.Localization.ASPxReportsStringId.WebDocumentViewer_NoParameters">
             <summary>
-                <para><para>Obsolete. <b>Default value:</b> "The report does not contain any parameters."</para>
-</para>
+                <para>For internal use.</para>
             </summary>
 
 

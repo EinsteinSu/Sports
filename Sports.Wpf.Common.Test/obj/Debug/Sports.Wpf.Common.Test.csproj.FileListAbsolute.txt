@@ -4,8 +4,6 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Microsof
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Sports.Wpf.Common.Test.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Sports.Wpf.Common.Test.pdb
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\DevExpress.Mvvm.v17.1.dll
-C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
-C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Sports.Common.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Sports.Wpf.Common.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Newtonsoft.Json.dll
@@ -18,8 +16,6 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\DevExpre
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Sports.Common.pdb
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Sports.Wpf.Common.pdb
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\DevExpress.Mvvm.v17.1.xml
-C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
-C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Newtonsoft.Json.xml
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\DevExpress.Xpf.Controls.v17.1.xml
 C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\DevExpress.Xpf.Core.v17.1.xml
@@ -196,3 +192,5 @@ D:\Sports\Sports\Sports.Wpf.Common.Test\obj\Debug\Sports.Wpf.Common.Test.csprojR
 D:\Sports\Sports\Sports.Wpf.Common.Test\obj\Debug\Sports.Wpf.Common.Test.csproj.CoreCompileInputs.cache
 D:\Sports\Sports\Sports.Wpf.Common.Test\obj\Debug\Sports.Wpf.Common.Test.dll
 D:\Sports\Sports\Sports.Wpf.Common.Test\obj\Debug\Sports.Wpf.Common.Test.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common.Test\obj\Debug\Sports.Wpf.Common.Test.csprojFakesResolveAssemblyReference.cache

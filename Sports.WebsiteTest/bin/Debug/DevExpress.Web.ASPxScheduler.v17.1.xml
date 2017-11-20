@@ -299,46 +299,281 @@
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletingEventArgs">
+        <member name="T:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection">
 
             <summary>
-                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.AppointmentRowDeleting"/> event.
+                <para>Represents a collection of appointment statuses.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletingEventArgs.#ctor(System.Collections.Specialized.OrderedDictionary,System.Collections.Specialized.OrderedDictionary)">
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.#ctor">
             <summary>
-                <para>Initializes a new instance of the ASPxSchedulerDataDeletingEventArgs class with the specified settings.
+                <para>Initializes a new instance of the AppointmentStatusCollection class with default settings.
 </para>
             </summary>
-            <param name="keys">
-		An  <see cref="T:System.Collections.Specialized.OrderedDictionary"/> that contains a dictionary of key field name/value pairs for the record.
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.Add(DevExpress.XtraScheduler.AppointmentStatusType,System.String,System.String,System.Drawing.Color)">
+            <summary>
+                <para>Adds a new appointment status item with the specified settings to the collection.
+</para>
+            </summary>
+            <param name="type">
+		An <see cref="T:DevExpress.XtraScheduler.AppointmentStatusType"/> enumeration member which indicates the availability.
 
             </param>
-            <param name="values">
-		An  <see cref="T:System.Collections.Specialized.OrderedDictionary"/> that contains a dictionary of original field name/value pairs for the record.
+            <param name="displayName">
+		A string that is the name of the status used in editors.
 
             </param>
+            <param name="menuCaption">
+		A <see cref="T:System.String"/> value which represents the menu caption of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.MenuCaption"/> property.
+
+            </param>
+            <param name="color">
+		A <see cref="T:System.Drawing.Color"/> value that specifies the color of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.IAppointmentStatus.Color"/> property.
+
+            </param>
+            <returns>An integer value indicating the position at which the new element was inserted.
+</returns>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletingEventArgs.Keys">
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.Add(System.Object,DevExpress.XtraScheduler.AppointmentStatusType,System.String,System.String,System.Drawing.Color)">
             <summary>
-                <para>Provides access to the collection of unique IDs for the appointment, which is about to be deleted. 
+                <para>Adds a new appointment status item with the specified settings to the collection.
 </para>
             </summary>
-            <value>A <see cref="T:System.Collections.Specialized.OrderedDictionary"/> object, representing a collection of data field name/value pairs.
-</value>
+            <param name="id">
+		An object that is the unique status identifier.
+
+            </param>
+            <param name="type">
+		An <see cref="T:DevExpress.XtraScheduler.AppointmentStatusType"/> enumeration member which indicates availability.
+
+
+            </param>
+            <param name="displayName">
+		A string that is the name of the status used in editors.
+
+            </param>
+            <param name="menuCaption">
+		A <see cref="T:System.String"/> value which represents the menu caption of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.MenuCaption"/> property.
+
+            </param>
+            <param name="color">
+		A <see cref="T:System.Drawing.Color"/> value that specifies the color of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.IAppointmentStatus.Color"/> property.
+
+            </param>
+            <returns>An integer value indicating the position at which the new element was inserted.
+</returns>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletingEventArgs.Values">
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.Add(System.Drawing.Color,System.String)">
             <summary>
-                <para>Provides access to the collection of  values for the appointment's data fields.
+                <para>Adds a new appointment status item with the specified settings to the collection.
 </para>
             </summary>
-            <value>A <see cref="T:System.Collections.Specialized.OrderedDictionary"/> object, representing a collection of data field name/value pairs.
+            <param name="color">
+		A <see cref="T:System.Drawing.Color"/> value that specifies the color of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.IAppointmentStatus.Color"/> property.
+
+            </param>
+            <param name="displayName">
+		A string that is the name of the status used in editors.
+
+            </param>
+            <returns>An integer value indicating the position at which the new element was inserted.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.Add(System.Drawing.Color,System.String,System.String)">
+            <summary>
+                <para>Adds a new appointment status item with the specified settings to the collection.
+</para>
+            </summary>
+            <param name="color">
+		A <see cref="T:System.Drawing.Color"/> value that specifies the color of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.IAppointmentStatus.Color"/> property.
+
+            </param>
+            <param name="displayName">
+		A string that is the name of the status used in editors.
+
+            </param>
+            <param name="menuCaption">
+		A <see cref="T:System.String"/> value which represents the menu caption of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.MenuCaption"/> property.
+
+            </param>
+            <returns>An integer value indicating the position at which the new element was inserted.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.CreateNewStatus(System.Object,System.String)">
+            <summary>
+                <para>Creates a new <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object and adds it to the current collection.
+</para>
+            </summary>
+            <param name="id">
+		The unique user interface object identifier of the appointment status.
+
+            </param>
+            <param name="displayName">
+		A <see cref="T:System.String"/> value which represents the display name of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.DisplayName"/> property.
+
+            </param>
+            <returns>A newly created <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.CreateNewStatus(System.Object,System.String,System.String)">
+            <summary>
+                <para>Creates a new <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object and adds it to the current collection.
+</para>
+            </summary>
+            <param name="id">
+		The unique user interface object identifier of the appointment status.
+
+            </param>
+            <param name="displayName">
+		A <see cref="T:System.String"/> value which represents the display name of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.DisplayName"/> property.
+
+            </param>
+            <param name="menuCaption">
+		A <see cref="T:System.String"/> value which represents the menu caption of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.MenuCaption"/> property.
+
+            </param>
+            <returns>A newly created <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.CreateNewStatus(System.String)">
+            <summary>
+                <para>Creates a new <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object and adds it to the current collection.
+</para>
+            </summary>
+            <param name="displayName">
+		A <see cref="T:System.String"/> value which represents the display name of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.DisplayName"/> property.
+
+            </param>
+            <returns>A newly created <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.CreateNewStatus(System.String,System.String)">
+            <summary>
+                <para>Creates a new <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object and adds it to the current collection.
+</para>
+            </summary>
+            <param name="displayName">
+		A <see cref="T:System.String"/> value which represents the display name of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.DisplayName"/> property.
+
+            </param>
+            <param name="menuCaption">
+		A <see cref="T:System.String"/> value which represents the menu caption of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.MenuCaption"/> property.
+
+            </param>
+            <returns>A newly created <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.CreateNewStatus(System.Object,System.String,System.String,System.Drawing.Color)">
+            <summary>
+                <para>Creates a new <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object and adds it to the current collection.
+</para>
+            </summary>
+            <param name="id">
+		The unique user interface object identifier of the appointment status.
+
+            </param>
+            <param name="displayName">
+		A <see cref="T:System.String"/> value which represents the display name of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.DisplayName"/> property.
+
+            </param>
+            <param name="menuCaption">
+		A <see cref="T:System.String"/> value which represents the menu caption of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.MenuCaption"/> property.
+
+            </param>
+            <param name="color">
+		A <see cref="T:System.Drawing.Color"/> value that specifies the color of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.IAppointmentStatus.Color"/> property.
+
+            </param>
+            <returns>A newly cleated <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.Dispose">
+            <summary>
+                <para>Disposes of the AppointmentStatusCollection object.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.GetById(System.Object)">
+            <summary>
+                <para>Obtains a status object specified by its identifier.
+</para>
+            </summary>
+            <param name="id">
+		An object that is the identifier of the appointment status.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Web.ASPxScheduler.AppointmentStatus"/> object with the specified <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.Id"/> property value.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.GetByIndex(System.Int32)">
+            <summary>
+                <para>Gets the appointment status object at the specified index of the AppointmentStatusCollection collection.
+</para>
+            </summary>
+            <param name="index">
+		An integer that is the index of an object in the collection.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Web.ASPxScheduler.AppointmentStatus"/> object at the specified index.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.GetByType(DevExpress.XtraScheduler.AppointmentStatusType)">
+            <summary>
+                <para>Obtains an appointment status object specified by its type.
+</para>
+            </summary>
+            <param name="type">
+		An <see cref="T:DevExpress.XtraScheduler.AppointmentStatusType"/> enumeration value.
+
+            </param>
+            <returns>An <see cref="T:DevExpress.Web.ASPxScheduler.AppointmentStatus"/> object of the specified status type.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.Item(System.Int32)">
+            <summary>
+                <para>Gets an item of the collection by its index.
+</para>
+            </summary>
+            <param name="index">
+		An integer value specifying the zero-based index of the desired appointment status. 
+
+            </param>
+            <value>An <see cref="AppointmentStatus"/> object.
 </value>
 
 
@@ -889,30 +1124,6 @@
             </summary>
             <returns> 
 </returns>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventHandler">
-
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.AppointmentRowDeleted"/> event. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventHandler.Invoke(System.Object,DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.AppointmentRowDeleted"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> control which fires the event.
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventArgs"/> object that contains event data.
-
-            </param>
 
 
         </member>
@@ -1539,6 +1750,236 @@ cell.
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo">
+
+            <summary>
+                <para>Contains information used for appointment visualization.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.#ctor(DevExpress.XtraScheduler.Appointment)">
+            <summary>
+                <para>Initializes a new instance of the AppointmentViewInfo class.
+</para>
+            </summary>
+            <param name="appointment">
+		An <see cref="T:DevExpress.XtraScheduler.Appointment"/> instance that is the appointment being rendered.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.Appointment">
+            <summary>
+                <para>Provides access to an appointment for which the visual representation has been built.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraScheduler.Appointment"/> class instance.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.AppointmentInterval">
+            <summary>
+                <para>Gets the time interval which the current appointment occupies.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraScheduler.TimeInterval"/> object representing the appointment time interval.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.AppointmentStyle">
+            <summary>
+                <para>Gets the style settings used to paint the appointment.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.AppearanceStyleBase"/> object that contains the style settings used to paint the appointment.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.BackColor">
+            <summary>
+                <para>Gets or sets the appointment coloring.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Color"/> object that is the appointment fill color.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.HasBottomBorder">
+            <summary>
+                <para>Determines whether the bottom border is displayed for the appointment.
+</para>
+            </summary>
+            <value><b>true</b>, if the bottom border is displayed for an appointment; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.HasLeftBorder">
+            <summary>
+                <para>Determines whether the left border is displayed for the appointment.
+</para>
+            </summary>
+            <value><b>true</b>, if the left border is displayed for an appointment; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.HasRightBorder">
+            <summary>
+                <para>Determines whether the right border is displayed for the appointment.
+</para>
+            </summary>
+            <value><b>true</b> if the right border is displayed for an appointment; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.HasTopBorder">
+            <summary>
+                <para>Determines whether the top border is displayed for the appointment.
+</para>
+            </summary>
+            <value><b>true</b>, if the top border is displayed for an appointment; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.Interval">
+            <summary>
+                <para>Gets or sets the time interval of the time cells covered by the current appointment.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraScheduler.TimeInterval"/> object representing the time range of the time cells.
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.IsLongTime">
+            <summary>
+                <para>Indicates whether the appointment extends over multiple days.
+</para>
+            </summary>
+            <returns><b>true</b> if an appointment extends over several days; otherwise, <b>false</b>.
+</returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.Options">
+            <summary>
+                <para>Gets certain characteristics which determines how an appointment is displayed.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraScheduler.Drawing.AppointmentViewInfoOptions"/> object containing certain appointment view characteristics.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.Resource">
+            <summary>
+                <para>Gets or sets the resource of the displayed appointment.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraScheduler.Resource"/> object that is the appointment's resource.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.ShowBell">
+            <summary>
+                <para>Gets or sets whether to display a bell icon indicating an associated reminder.
+</para>
+            </summary>
+            <value><b>true</b> to display a bell icon; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.ShowEndTime">
+            <summary>
+                <para>Gets or sets whether to display a time indicating the end of the appointment.
+</para>
+            </summary>
+            <value><b>true</b> to display the time; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.ShowRecurrence">
+            <summary>
+                <para>Gets or sets whether to display a recurrence symbol.
+</para>
+            </summary>
+            <value><b>true</b> to display a symbol; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.ShowStartTime">
+            <summary>
+                <para>Gets or sets whether to display a time indicating the start of the appointment.
+</para>
+            </summary>
+            <value><b>true</b> to display the time; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.ShowTimeAsClock">
+            <summary>
+                <para>Gets or sets whether to display the time as a clock with arrows.
+</para>
+            </summary>
+            <value><b>true</b> to display the time as a clock symbol; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.Status">
+            <summary>
+                <para>Gets or sets the visual status of the appointment for display.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object that is the appointment status.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.StatusBackgroundColor">
+            <summary>
+                <para>Gets or sets the back color of the appointment's status bar.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Color"/> structure specifying the back color.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.StatusColor">
+            <summary>
+                <para>Gets or sets the color of the appointment's status bar.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Drawing.Color"/> structure specifying the status color.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.StatusDisplayType">
+            <summary>
+                <para>Gets or sets whether the border of an appointment should be colorized according to the status and appointment duration.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.XtraScheduler.AppointmentStatusDisplayType"/> enumeration specifying how the status is displayed.
+</value>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerOptionsToolTips">
 
             <summary>
@@ -2072,232 +2513,76 @@ cell.
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo">
+        <member name="T:DevExpress.Web.ASPxScheduler.FullWeekView">
 
             <summary>
-                <para>Contains information used for appointment visualization.
+                <para>A class for the Full Week View.
 </para>
             </summary>
 
         </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.#ctor(DevExpress.XtraScheduler.Appointment)">
+        <member name="M:DevExpress.Web.ASPxScheduler.FullWeekView.#ctor(DevExpress.Web.ASPxScheduler.ASPxScheduler)">
             <summary>
-                <para>Initializes a new instance of the AppointmentViewInfo class.
+                <para>Initializes a new instance of the FullWeekView class with the specified <b>ASPxScheduler</b> control.
 </para>
             </summary>
-            <param name="appointment">
-		An <see cref="T:DevExpress.XtraScheduler.Appointment"/> instance that is the appointment being rendered.
+            <param name="control">
+		An <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> object that specifies the <b>ASPxScheduler</b> control assigned to the view. This value is assigned to the <see cref="P:DevExpress.Web.ASPxScheduler.SchedulerViewBase.Control"/> property.
 
             </param>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.Appointment">
+        <member name="M:DevExpress.Web.ASPxScheduler.FullWeekView.Assign(DevExpress.Web.ASPxScheduler.SchedulerViewBase)">
             <summary>
-                <para>Provides access to an appointment for which the visual representation has been built.
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.ASPxScheduler.SchedulerViewBase"/> object to the current object.
 </para>
             </summary>
-            <value>An <see cref="T:DevExpress.XtraScheduler.Appointment"/> class instance.
+            <param name="source">
+		A <see cref="T:DevExpress.Web.ASPxScheduler.SchedulerViewBase"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.FullWeekView.Enabled">
+            <summary>
+                <para>Gets or sets if the view is enabled for the <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> control.
+
+</para>
+            </summary>
+            <value><b>true</b>, if the view is enabled; otherwise, <b>false</b>.
+
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.AppointmentInterval">
+        <member name="P:DevExpress.Web.ASPxScheduler.FullWeekView.FullWeekViewStyles">
             <summary>
-                <para>Gets the time interval which the current appointment occupies.
+                <para>This property is intended for serialization purposes only.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.XtraScheduler.TimeInterval"/> object representing the appointment time interval.
+            <value>A <see cref="T:DevExpress.Web.ASPxScheduler.FullWeekViewStyles"/> object, containing appearance settings for elements of the Week View.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.AppointmentStyle">
+        <member name="P:DevExpress.Web.ASPxScheduler.FullWeekView.Styles">
             <summary>
-                <para>Gets the style settings used to paint the appointment.
+                <para>Provides access to style settings that control the appearance of the Full Week View visual elements.
 </para>
             </summary>
-            <value>A <see cref="T:DevExpress.Web.AppearanceStyleBase"/> object that contains the style settings used to paint the appointment.
+            <value>A <see cref="T:DevExpress.Web.ASPxScheduler.FullWeekViewStyles"/> object, containing styles for displaying visual elements of the Full Week View.
 </value>
 
 
         </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.BackColor">
+        <member name="P:DevExpress.Web.ASPxScheduler.FullWeekView.Type">
             <summary>
-                <para>Gets or sets the appointment coloring.
+                <para>Gets the view's type. 
 </para>
             </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> object that is the appointment fill color.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.HasBottomBorder">
-            <summary>
-                <para>Determines whether the bottom border is displayed for the appointment.
-</para>
-            </summary>
-            <value><b>true</b>, if the bottom border is displayed for an appointment; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.HasLeftBorder">
-            <summary>
-                <para>Determines whether the left border is displayed for the appointment.
-</para>
-            </summary>
-            <value><b>true</b>, if the left border is displayed for an appointment; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.HasRightBorder">
-            <summary>
-                <para>Determines whether the right border is displayed for the appointment.
-</para>
-            </summary>
-            <value><b>true</b> if the right border is displayed for an appointment; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.HasTopBorder">
-            <summary>
-                <para>Determines whether the top border is displayed for the appointment.
-</para>
-            </summary>
-            <value><b>true</b>, if the top border is displayed for an appointment; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.Interval">
-            <summary>
-                <para>Gets or sets the time interval of the time cells covered by the current appointment.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraScheduler.TimeInterval"/> object representing the time range of the time cells.
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.IsLongTime">
-            <summary>
-                <para>Indicates whether the appointment extends over multiple days.
-</para>
-            </summary>
-            <returns><b>true</b> if an appointment extends over several days; otherwise, <b>false</b>.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.Options">
-            <summary>
-                <para>Gets certain characteristics which determines how an appointment is displayed.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraScheduler.Drawing.AppointmentViewInfoOptions"/> object containing certain appointment view characteristics.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.Resource">
-            <summary>
-                <para>Gets or sets the resource of the displayed appointment.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraScheduler.Resource"/> object that is the appointment's resource.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.ShowBell">
-            <summary>
-                <para>Gets or sets whether to display a bell icon indicating an associated reminder.
-</para>
-            </summary>
-            <value><b>true</b> to display a bell icon; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.ShowEndTime">
-            <summary>
-                <para>Gets or sets whether to display a time indicating the end of the appointment.
-</para>
-            </summary>
-            <value><b>true</b> to display the time; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.ShowRecurrence">
-            <summary>
-                <para>Gets or sets whether to display a recurrence symbol.
-</para>
-            </summary>
-            <value><b>true</b> to display a symbol; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.ShowStartTime">
-            <summary>
-                <para>Gets or sets whether to display a time indicating the start of the appointment.
-</para>
-            </summary>
-            <value><b>true</b> to display the time; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.ShowTimeAsClock">
-            <summary>
-                <para>Gets or sets whether to display the time as a clock with arrows.
-</para>
-            </summary>
-            <value><b>true</b> to display the time as a clock symbol; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.Status">
-            <summary>
-                <para>Gets or sets the visual status of the appointment for display.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object that is the appointment status.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.StatusBackgroundColor">
-            <summary>
-                <para>Gets or sets the back color of the appointment's status bar.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> structure specifying the back color.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.StatusColor">
-            <summary>
-                <para>Gets or sets the color of the appointment's status bar.
-</para>
-            </summary>
-            <value>A <see cref="T:System.Drawing.Color"/> structure specifying the status color.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.Drawing.AppointmentViewInfo.StatusDisplayType">
-            <summary>
-                <para>Gets or sets whether the border of an appointment should be colorized according to the status and appointment duration.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.XtraScheduler.AppointmentStatusDisplayType"/> enumeration specifying how the status is displayed.
+            <value>One of the <see cref="SchedulerViewType"/> enumeration values.
 </value>
 
 
@@ -2519,114 +2804,6 @@ cell.
             </summary>
             <value>An <see cref="T:DevExpress.Web.ASPxPopupControl"/> which is the container for the form.
 </value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles">
-
-            <summary>
-                <para>Contains settings that allow you to define the appearance of the Agenda View's date headers. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
-            <summary>
-                <para>Initializes a new instance of the AgendaVerticalDateHeaderStyles class with the specified owner.
-</para>
-            </summary>
-            <param name="owner">
-		An <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> object that is the owner of the created object.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.CopyFrom(DevExpress.Web.StylesBase)">
-            <summary>
-                <para>Duplicates the properties of the specified object into the current instance of the AgendaVerticalDateHeaderStyles class. 
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.StylesBase"/> object that represents the object from which the settings are copied.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.DateCell">
-            <summary>
-                <para>Gets the style settings defining the appearance of a date cell.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Web.ASPxScheduler.AgendaDateCellStyle"/> object that contains style settings defining the appearance of a date cell.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.DateCellStyleName">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.DayCell">
-            <summary>
-                <para>Gets the style settings defining the appearance of a day cell.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Web.ASPxScheduler.AgendaDateCellStyle"/> object that contains style settings defining the appearance of a day cell.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.DayCellStyleName">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.DayOfWeekCell">
-            <summary>
-                <para>Gets the style settings defining the appearance of a day of the week cell.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Web.ASPxScheduler.AgendaDateCellStyle"/> object that contains style settings defining the appearance of a day of the week cell.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.DayOfWeekCellStyleName">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.MonthOfYearCell">
-            <summary>
-                <para>Gets the style settings defining the appearance of a month of the year cell.
-</para>
-            </summary>
-            <value>An <see cref="T:DevExpress.Web.ASPxScheduler.AgendaDateCellStyle"/> object that contains style settings defining the appearance of a month of the year cell.
-</value>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.MonthOfYearCellStyleName">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <returns> </returns>
 
 
         </member>
@@ -3048,66 +3225,6 @@ cell.
 </para>
             </summary>
             <value>A <see cref="T:DevExpress.XtraScheduler.WeekDays"/> enumeration, specifying the days of the week.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.ASPxMonthViewAppointmentDisplayOptions">
-
-            <summary>
-                <para>Contains settings specific to displaying appointments in the Month View.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxMonthViewAppointmentDisplayOptions.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ASPxMonthViewAppointmentDisplayOptions class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxMonthViewAppointmentDisplayOptions.AppointmentGapWidth">
-            <summary>
-                <para>Specifies the width of the horizontal gap between appointments.
-
-</para>
-            </summary>
-            <value>An integer value specifying the width of the horizontal gap between appointments.
-
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxMonthViewAppointmentDisplayOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object to the current object.
-</para>
-            </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxMonthViewAppointmentDisplayOptions.FirstAppointmentTopIndent">
-            <summary>
-                <para>Gets or sets an appointment top indent in the Month (Multi-Week) View.
-</para>
-            </summary>
-            <value>An integer value that is the appointment top indent.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxMonthViewAppointmentDisplayOptions.LastAppointmentBottomIndent">
-            <summary>
-                <para>Gets or sets an appointment bottom indent in the Month (Multi-Week) View.
-</para>
-            </summary>
-            <value>An integer value that is the appointment bottom indent.
 </value>
 
 
@@ -4771,6 +4888,74 @@ Default value: "DialogForm"
             </param>
             <param name="e">
 		An <see cref="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletingEventArgs"/> object that contains event data.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletingEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.AppointmentRowDeleting"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletingEventArgs.#ctor(System.Collections.Specialized.OrderedDictionary,System.Collections.Specialized.OrderedDictionary)">
+            <summary>
+                <para>Initializes a new instance of the ASPxSchedulerDataDeletingEventArgs class with the specified settings.
+</para>
+            </summary>
+            <param name="keys">
+		An  <see cref="T:System.Collections.Specialized.OrderedDictionary"/> that contains a dictionary of key field name/value pairs for the record.
+
+            </param>
+            <param name="values">
+		An  <see cref="T:System.Collections.Specialized.OrderedDictionary"/> that contains a dictionary of original field name/value pairs for the record.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletingEventArgs.Keys">
+            <summary>
+                <para>Provides access to the collection of unique IDs for the appointment, which is about to be deleted. 
+</para>
+            </summary>
+            <value>A <see cref="T:System.Collections.Specialized.OrderedDictionary"/> object, representing a collection of data field name/value pairs.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletingEventArgs.Values">
+            <summary>
+                <para>Provides access to the collection of  values for the appointment's data fields.
+</para>
+            </summary>
+            <value>A <see cref="T:System.Collections.Specialized.OrderedDictionary"/> object, representing a collection of data field name/value pairs.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventHandler">
+
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.AppointmentRowDeleted"/> event. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventHandler.Invoke(System.Object,DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventArgs)">
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.AppointmentRowDeleted"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> control which fires the event.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerDataDeletedEventArgs"/> object that contains event data.
 
             </param>
 
@@ -10472,6 +10657,1017 @@ Default value: "DialogForm"
 
 
         </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerLocalizer">
+
+            <summary>
+                <para>An object providing a means to localize the <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/>'s user interface elements at runtime.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerLocalizer.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ASPxSchedulerLocalizer class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerLocalizer.CreateResXLocalizer">
+            <summary>
+                <para>Returns an object comprising resources based on the thread's language and regional settings (culture).
+</para>
+            </summary>
+            <returns>A <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object comprising resources based on the thread's culture.
+
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerLocalizer.GetString(DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerStringId)">
+            <summary>
+                <para>Returns a localized string for the specified string identifier.
+</para>
+            </summary>
+            <param name="id">
+		A <see cref="T:DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerStringId"/> enumeration value identifying the string to localize.
+
+            </param>
+            <returns>A <see cref="String"/> corresponding to the specified identifier.
+</returns>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs">
+
+            <summary>
+                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.CustomizeElementStyle"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.#ctor(DevExpress.Web.AppearanceStyleBase,DevExpress.Web.ASPxScheduler.WebElementType,DevExpress.XtraScheduler.Drawing.ITimeCell,System.Boolean)">
+            <summary>
+                <para>Initializes a new instance of the CustomizeElementStyleEventArgs class with the specified settings.
+</para>
+            </summary>
+            <param name="style">
+		An <see cref="T:DevExpress.Web.AppearanceStyleBase"/> class descendant which specifies a style of the visual element within the scheduler. This value is assigned to the <see cref="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.Style"/> property.
+
+            </param>
+            <param name="type">
+		A <see cref="T:DevExpress.Web.ASPxScheduler.WebElementType"/> enumeration value specifying the type of the visual element. This value is assigned to the <see cref="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.ElementType"/> property.
+
+            </param>
+            <param name="cell">
+		A <see cref="T:DevExpress.XtraScheduler.Drawing.ITimeCell"/> object containing information on a resource and time interval corresponding to the scheduler's visual element. This value is assigned to the <see cref="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.Cell"/> property.
+
+            </param>
+            <param name="isAlternate">
+		A <see cref="T:System.Boolean"/> value which indicates whether the event's visual element has a specific style. This value is assigned to the <see cref="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.IsAlternate"/> property.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.Cell">
+            <summary>
+                <para>Gets an object providing access to a resource and time interval corresponding to a visual element. 
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.XtraScheduler.Drawing.ITimeCell"/> object.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.ElementType">
+            <summary>
+                <para>Gets a type of the scheduler's visual element.
+</para>
+            </summary>
+            <value>A <see cref="T:DevExpress.Web.ASPxScheduler.WebElementType"/> enumeration member specifying the visual element type.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.IsAlternate">
+            <summary>
+                <para>Gets a value that indicates whether an element is highlighted within the scheduler control.
+</para>
+            </summary>
+            <value><b>true</b> if the visual element is highlighted; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.Style">
+            <summary>
+                <para>Get the style that defines the appearance of a visual element within the scheduler control. 
+
+</para>
+            </summary>
+            <value>A <see cref="T:System.Web.UI.WebControls.Style"/> object that contains style settings.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.AgendaAppointmentCellStyle">
+
+            <summary>
+                <para>Contains settings that allow you to define the appearance of layout cells displayed within the Agenda View's appointments.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AgendaAppointmentCellStyle.#ctor">
+            <summary>
+                <para>Initializes a new instance of the AgendaAppointmentCellStyle class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands">
+
+            <summary>
+                <para>Contains a set of the available shortcut commands.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.BackwardVisibleInterval">
+            <summary>
+                <para>Navigates to the previous visible interval.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.Copy">
+            <summary>
+                <para>Copies the selected appointment.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.Cut">
+            <summary>
+                <para>Cuts the selected appointment.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.DeleteShortcut">
+            <summary>
+                <para>Deletes the selected appointment.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.EditAppointment">
+            <summary>
+                <para>Starts editing the current appointment or creates a new one.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.ExpandSelectionDown">
+            <summary>
+                <para>Expands the current selection up.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.ExpandSelectionLeft">
+            <summary>
+                <para>Expand the current selection left.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.ExpandSelectionRight">
+            <summary>
+                <para>Move selection right or select the appointment to the right depending on the selection mode.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.ExpandSelectionUp">
+            <summary>
+                <para>Expand the current selection up.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.ForwardVisibleInterval">
+            <summary>
+                <para>Navigate to the previous visible interval.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.NavigateDown">
+            <summary>
+                <para>Move selection down or select the appointment below depending on the selection mode.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.NavigateLeft">
+            <summary>
+                <para>Move selection left or select the appointment to the left depending on the selection mode.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.NavigateRight">
+            <summary>
+                <para>Move selection right or select the appointment to the right depending on the selection mode.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.NavigateUp">
+            <summary>
+                <para>Move selection up or select the appointment above depending on the selection mode.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.Paste">
+            <summary>
+                <para>Paste an appointment into the current cell.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToAgendaView">
+            <summary>
+                <para>Switch to the Agenda View.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToDayView">
+            <summary>
+                <para>Switch to the Day View.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToFullWeekView">
+            <summary>
+                <para>Switch to the Full Week View.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToMonthView">
+            <summary>
+                <para>Switch to the Month View.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToTimelineView">
+            <summary>
+                <para>Switch to the Timeline View.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToWeekView">
+            <summary>
+                <para>Switch to the Week View.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToWorkWeekView">
+            <summary>
+                <para>Switch to the Work Week View.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.ToggleSelection">
+            <summary>
+                <para>Toggle between cell and appointment selection.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.SchedulerCustomShortcutCollection">
+
+            <summary>
+                <para>Represents a collection of custom keyboard shortcuts.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.SchedulerCustomShortcutCollection.#ctor(DevExpress.Web.ASPxScheduler.ASPxScheduler)">
+            <summary>
+                <para>Initializes a new instance of the SchedulerCustomShortcutCollection class with the specified owner.
+</para>
+            </summary>
+            <param name="editor">
+		An <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> object that is the owner of the created object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.SchedulerCustomShortcutCollection.Add(System.String,System.String)">
+            <summary>
+                <para>Adds a new keyboard shortcut with the specified settings to the collection.
+</para>
+            </summary>
+            <param name="commandName">
+		A string specifying the name of the command associated with the shortcut.
+
+            </param>
+            <param name="shortcut">
+		A string specifying the keyboard combination.
+
+            </param>
+            <returns>A <see cref="T:DevExpress.Web.ASPxScheduler.SchedulerShortcut"/> object that is the newly created item.
+</returns>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.SchedulerCustomShortcutCollection.Remove(System.String)">
+            <summary>
+                <para>Removes an item from the collection.
+</para>
+            </summary>
+            <param name="shortcut">
+		A string specifying the keyboard combination associated with the shortcut that should be removed from the collection.
+
+            </param>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.CellBodyStyle">
+
+            <summary>
+                <para>Contains settings that allow you to define the appearance of the cells in the Scheduler's <b>Timeline</b> view. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.CellBodyStyle.#ctor">
+            <summary>
+                <para>Initializes a new instance of the CellBodyStyle class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.CellBodyStyle.AssignToControl(System.Web.UI.WebControls.WebControl,DevExpress.Web.AttributesRange)">
+            <summary>
+                <para>For internal use only. 
+</para>
+            </summary>
+            <param name="control">
+		 
+
+            </param>
+            <param name="range">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.CellBodyStyle.Height">
+            <summary>
+                <para>Gets or sets the cell height.
+</para>
+            </summary>
+            <value>An <see cref="T:System.Web.UI.WebControls.Unit"/> structure specifying the cell height.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.SelectionBarStyle">
+
+            <summary>
+                <para>Contains settings that allow you to define the appearance of the selection bar in the Scheduler.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.SelectionBarStyle.#ctor">
+            <summary>
+                <para>Initializes a new instance of the SelectionBarStyle class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.SelectionBarStyle.AssignToControl(System.Web.UI.WebControls.WebControl,DevExpress.Web.AttributesRange)">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <param name="control">
+		 
+
+            </param>
+            <param name="range">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.SelectionBarStyle.Height">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle">
+
+            <summary>
+                <para>Contains settings that allow you to define the appearance of the bottom left corner of the Scheduler.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.#ctor">
+            <summary>
+                <para>Initializes a new instance of the BottomLeftCornerStyle class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.AssignToControl(System.Web.UI.WebControls.WebControl,DevExpress.Web.AttributesRange)">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <param name="control">
+		 
+
+            </param>
+            <param name="range">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.HorizontalAlign">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.HoverStyle">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.ImageSpacing">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.Spacing">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.VerticalAlign">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.Wrap">
+            <summary>
+                <para>This property is not in effect for the BottomLeftCornerStyle class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.HeaderStyle">
+
+            <summary>
+                <para>Contains settings that allow you to define the header appearance. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.HeaderStyle.#ctor">
+            <summary>
+                <para>Initializes a new instance of the HeaderStyle class with default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.HeaderStyle.AssignToControl(System.Web.UI.WebControls.WebControl,DevExpress.Web.AttributesRange)">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <param name="control">
+		 
+
+            </param>
+            <param name="range">
+		 
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.HeaderStyle.Height">
+            <summary>
+                <para>Gets or sets the header height.
+</para>
+            </summary>
+            <value>An <see cref="T:System.Web.UI.WebControls.Unit"/> structure specifying the header height.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.HeaderStyle.Wrap">
+            <summary>
+                <para>This property is not in effect for the HeaderStyle class.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.ASPxWeekViewAppointmentDisplayOptions">
+
+            <summary>
+                <para>Contains settings specific to displaying appointments in the Week View.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxWeekViewAppointmentDisplayOptions.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ASPxWeekViewAppointmentDisplayOptions class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxWeekViewAppointmentDisplayOptions.AppointmentGapWidth">
+            <summary>
+                <para>Specifies the width of the horizontal gap between appointments.
+
+</para>
+            </summary>
+            <value>An integer value specifying the width of the horizontal gap between appointments.
+
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxWeekViewAppointmentDisplayOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object to the current object.
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxWeekViewAppointmentDisplayOptions.FirstAppointmentTopIndent">
+            <summary>
+                <para>Gets or sets an appointment top indent in the Week View.
+</para>
+            </summary>
+            <value>An integer value that is the appointment top indent.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxWeekViewAppointmentDisplayOptions.LastAppointmentBottomIndent">
+            <summary>
+                <para>Gets or sets an appointment bottom indent in the Week View. 
+</para>
+            </summary>
+            <value>An integer value that is the appointment bottom indent.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.ASPxTimelineViewAppointmentDisplayOptions">
+
+            <summary>
+                <para>Contains settings specific to displaying appointments in the Timeline View.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxTimelineViewAppointmentDisplayOptions.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ASPxTimelineViewAppointmentDisplayOptions class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxTimelineViewAppointmentDisplayOptions.AppointmentGapWidth">
+            <summary>
+                <para>Specifies the width of the horizontal gap between appointments.
+
+</para>
+            </summary>
+            <value>An integer value specifying the width of the horizontal gap between appointments.
+
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxTimelineViewAppointmentDisplayOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object to the current object.
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxTimelineViewAppointmentDisplayOptions.FirstAppointmentTopIndent">
+            <summary>
+                <para>Gets or sets an appointment top indent in the Timeline View.
+</para>
+            </summary>
+            <value>An integer value that is the appointment top indent.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxTimelineViewAppointmentDisplayOptions.LastAppointmentBottomIndent">
+            <summary>
+                <para>Gets or sets an appointment bottom indent in the Timeline View. 
+</para>
+            </summary>
+            <value>An integer value that is the appointment bottom indent.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.ASPxMonthViewAppointmentDisplayOptions">
+
+            <summary>
+                <para>Contains settings specific to displaying appointments in the Month View.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxMonthViewAppointmentDisplayOptions.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ASPxMonthViewAppointmentDisplayOptions class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxMonthViewAppointmentDisplayOptions.AppointmentGapWidth">
+            <summary>
+                <para>Specifies the width of the horizontal gap between appointments.
+
+</para>
+            </summary>
+            <value>An integer value specifying the width of the horizontal gap between appointments.
+
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxMonthViewAppointmentDisplayOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object to the current object.
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxMonthViewAppointmentDisplayOptions.FirstAppointmentTopIndent">
+            <summary>
+                <para>Gets or sets an appointment top indent in the Month (Multi-Week) View.
+</para>
+            </summary>
+            <value>An integer value that is the appointment top indent.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxMonthViewAppointmentDisplayOptions.LastAppointmentBottomIndent">
+            <summary>
+                <para>Gets or sets an appointment bottom indent in the Month (Multi-Week) View.
+</para>
+            </summary>
+            <value>An integer value that is the appointment bottom indent.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.ASPxDayViewAppointmentDisplayOptions">
+
+            <summary>
+                <para>Contains settings specific to displaying appointments in the Day View and its descendants.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxDayViewAppointmentDisplayOptions.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ASPxDayViewAppointmentDisplayOptions class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxDayViewAppointmentDisplayOptions.AppointmentGapWidth">
+            <summary>
+                <para>Specifies the width of the horizontal gap between appointments.
+
+</para>
+            </summary>
+            <value>An integer value specifying the width of the horizontal gap between appointments.
+
+</value>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxDayViewAppointmentDisplayOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object to the current object.
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxDayViewAppointmentDisplayOptions.FirstAllDayAppointmentTopIndent">
+            <summary>
+                <para>Gets or sets the top indent for an appointment that lasts the entire day in the Day View. 
+
+</para>
+            </summary>
+            <value>An integer value that is the top indent.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxDayViewAppointmentDisplayOptions.LastAllDayAppointmentBottomIndent">
+            <summary>
+                <para>Gets or sets the bottom indent for an appointment that lasts the entire day in the Day View. 
+
+</para>
+            </summary>
+            <value>An integer value that is the bottom indent.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.AppointmentSelectionAppearanceMode">
+
+            <summary>
+                <para>Lists values that specify how appointment selection is visually indicated.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.AppointmentSelectionAppearanceMode.Auto">
+            <summary>
+                <para>The appointment selection appearance mode is determined by the applied visual theme.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.AppointmentSelectionAppearanceMode.BackgroundOpacity">
+            <summary>
+                <para>Appointment selection status is visually indicated by the appointment background's opacity.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.AppointmentSelectionAppearanceMode.BoundaryFrame">
+            <summary>
+                <para>Appointment selection status is visually indicated by a frame.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.ResourceColorFillArea">
+
+            <summary>
+                <para>Lists values that specify what parts of a grouped view are filled with resource colors.
+</para>
+            </summary>
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.ResourceColorFillArea.Both">
+            <summary>
+                <para>Both Time Cells and Resource Headers are filled with resource colors.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.ResourceColorFillArea.ResourceHeader">
+            <summary>
+                <para>Resource Headers are filled with resource colors.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.ResourceColorFillArea.TimeCells">
+            <summary>
+                <para>Time Cells are filled with resource colors.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerResourceHeaderOptions">
+
+            <summary>
+                <para>Contains appearance settings specific to Resource Headers.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxSchedulerResourceHeaderOptions.#ctor">
+            <summary>
+                <para>Initializes a new instance of the ASPxSchedulerResourceHeaderOptions class with the default settings.
+</para>
+            </summary>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.ASPxSchedulerResourceHeaderOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
+            <summary>
+                <para>Copies the settings from the specified <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object to the current object.
+</para>
+            </summary>
+            <param name="options">
+		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object whose settings are assigned to the current object.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxSchedulerResourceHeaderOptions.Height">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <value> 
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxSchedulerResourceHeaderOptions.ImageSizeMode">
+            <summary>
+                <para>Specifies how an image is sized within a Resource Header.
+</para>
+            </summary>
+            <value>One of <see cref="T:DevExpress.XtraScheduler.HeaderImageSizeMode"/> enumeration values.
+</value>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.ASPxSchedulerResourceHeaderOptions.ShowCaption">
+            <summary>
+                <para>Specifies whether or not to display Resource Header captions.
+</para>
+            </summary>
+            <value><b>true</b>, to display captions; otherwise, <b>false</b>.
+</value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventHandler">
+
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.CustomizeElementStyle"/> event.
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventHandler.Invoke(System.Object,DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs)">
+            <summary>
+                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.CustomizeElementStyle"/> event.
+</para>
+            </summary>
+            <param name="sender">
+		The event source. This parameter identifies the <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> which raised the event.
+
+            </param>
+            <param name="e">
+		A <see cref="T:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs"/> object which contains event data.
+
+            </param>
+
+
+        </member>
         <member name="T:DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerStringId">
 
             <summary>
@@ -11217,1310 +12413,6 @@ Default value: "DialogForm"
 
 
         </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerLocalizer">
-
-            <summary>
-                <para>An object providing a means to localize the <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/>'s user interface elements at runtime.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerLocalizer.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ASPxSchedulerLocalizer class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerLocalizer.CreateResXLocalizer">
-            <summary>
-                <para>Returns an object comprising resources based on the thread's language and regional settings (culture).
-</para>
-            </summary>
-            <returns>A <see cref="T:DevExpress.Utils.Localization.XtraLocalizer`1"/> object comprising resources based on the thread's culture.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerLocalizer.GetString(DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerStringId)">
-            <summary>
-                <para>Returns a localized string for the specified string identifier.
-</para>
-            </summary>
-            <param name="id">
-		A <see cref="T:DevExpress.Web.ASPxScheduler.Localization.ASPxSchedulerStringId"/> enumeration value identifying the string to localize.
-
-            </param>
-            <returns>A <see cref="String"/> corresponding to the specified identifier.
-</returns>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.AgendaAppointmentCellStyle">
-
-            <summary>
-                <para>Contains settings that allow you to define the appearance of layout cells displayed within the Agenda View's appointments.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AgendaAppointmentCellStyle.#ctor">
-            <summary>
-                <para>Initializes a new instance of the AgendaAppointmentCellStyle class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands">
-
-            <summary>
-                <para>Contains a set of the available shortcut commands.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.BackwardVisibleInterval">
-            <summary>
-                <para>Navigates to the previous visible interval.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.Copy">
-            <summary>
-                <para>Copies the selected appointment.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.Cut">
-            <summary>
-                <para>Cuts the selected appointment.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.DeleteShortcut">
-            <summary>
-                <para>Deletes the selected appointment.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.EditAppointment">
-            <summary>
-                <para>Starts editing the current appointment or creates a new one.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.ExpandSelectionDown">
-            <summary>
-                <para>Expands the current selection up.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.ExpandSelectionLeft">
-            <summary>
-                <para>Expand the current selection left.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.ExpandSelectionRight">
-            <summary>
-                <para>Move selection right or select the appointment to the right depending on the selection mode.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.ExpandSelectionUp">
-            <summary>
-                <para>Expand the current selection up.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.ForwardVisibleInterval">
-            <summary>
-                <para>Navigate to the previous visible interval.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.NavigateDown">
-            <summary>
-                <para>Move selection down or select the appointment below depending on the selection mode.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.NavigateLeft">
-            <summary>
-                <para>Move selection left or select the appointment to the left depending on the selection mode.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.NavigateRight">
-            <summary>
-                <para>Move selection right or select the appointment to the right depending on the selection mode.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.NavigateUp">
-            <summary>
-                <para>Move selection up or select the appointment above depending on the selection mode.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.Paste">
-            <summary>
-                <para>Paste an appointment into the current cell.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToAgendaView">
-            <summary>
-                <para>Switch to the Agenda View.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToDayView">
-            <summary>
-                <para>Switch to the Day View.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToFullWeekView">
-            <summary>
-                <para>Switch to the Full Week View.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToMonthView">
-            <summary>
-                <para>Switch to the Month View.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToTimelineView">
-            <summary>
-                <para>Switch to the Timeline View.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToWeekView">
-            <summary>
-                <para>Switch to the Week View.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.SwitchToWorkWeekView">
-            <summary>
-                <para>Switch to the Work Week View.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.SchedulerShortcutCommands.ToggleSelection">
-            <summary>
-                <para>Toggle between cell and appointment selection.
-</para>
-            </summary>
-            <returns> </returns>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.SchedulerCustomShortcutCollection">
-
-            <summary>
-                <para>Represents a collection of custom keyboard shortcuts.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.SchedulerCustomShortcutCollection.#ctor(DevExpress.Web.ASPxScheduler.ASPxScheduler)">
-            <summary>
-                <para>Initializes a new instance of the SchedulerCustomShortcutCollection class with the specified owner.
-</para>
-            </summary>
-            <param name="editor">
-		An <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> object that is the owner of the created object.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.SchedulerCustomShortcutCollection.Add(System.String,System.String)">
-            <summary>
-                <para>Adds a new keyboard shortcut with the specified settings to the collection.
-</para>
-            </summary>
-            <param name="commandName">
-		A string specifying the name of the command associated with the shortcut.
-
-            </param>
-            <param name="shortcut">
-		A string specifying the keyboard combination.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.Web.ASPxScheduler.SchedulerShortcut"/> object that is the newly created item.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.SchedulerCustomShortcutCollection.Remove(System.String)">
-            <summary>
-                <para>Removes an item from the collection.
-</para>
-            </summary>
-            <param name="shortcut">
-		A string specifying the keyboard combination associated with the shortcut that should be removed from the collection.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.CellBodyStyle">
-
-            <summary>
-                <para>Contains settings that allow you to define the appearance of the cells in the Scheduler's <b>Timeline</b> view. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.CellBodyStyle.#ctor">
-            <summary>
-                <para>Initializes a new instance of the CellBodyStyle class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.CellBodyStyle.AssignToControl(System.Web.UI.WebControls.WebControl,DevExpress.Web.AttributesRange)">
-            <summary>
-                <para>For internal use only. 
-</para>
-            </summary>
-            <param name="control">
-		 
-
-            </param>
-            <param name="range">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.CellBodyStyle.Height">
-            <summary>
-                <para>Gets or sets the cell height.
-</para>
-            </summary>
-            <value>An <see cref="T:System.Web.UI.WebControls.Unit"/> structure specifying the cell height.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.SelectionBarStyle">
-
-            <summary>
-                <para>Contains settings that allow you to define the appearance of the selection bar in the Scheduler.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.SelectionBarStyle.#ctor">
-            <summary>
-                <para>Initializes a new instance of the SelectionBarStyle class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.SelectionBarStyle.AssignToControl(System.Web.UI.WebControls.WebControl,DevExpress.Web.AttributesRange)">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <param name="control">
-		 
-
-            </param>
-            <param name="range">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.SelectionBarStyle.Height">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle">
-
-            <summary>
-                <para>Contains settings that allow you to define the appearance of the bottom left corner of the Scheduler.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.#ctor">
-            <summary>
-                <para>Initializes a new instance of the BottomLeftCornerStyle class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.AssignToControl(System.Web.UI.WebControls.WebControl,DevExpress.Web.AttributesRange)">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <param name="control">
-		 
-
-            </param>
-            <param name="range">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.HorizontalAlign">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.HoverStyle">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.ImageSpacing">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.Spacing">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.VerticalAlign">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.BottomLeftCornerStyle.Wrap">
-            <summary>
-                <para>This property is not in effect for the BottomLeftCornerStyle class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.FullWeekView">
-
-            <summary>
-                <para>A class for the Full Week View.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.FullWeekView.#ctor(DevExpress.Web.ASPxScheduler.ASPxScheduler)">
-            <summary>
-                <para>Initializes a new instance of the FullWeekView class with the specified <b>ASPxScheduler</b> control.
-</para>
-            </summary>
-            <param name="control">
-		An <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> object that specifies the <b>ASPxScheduler</b> control assigned to the view. This value is assigned to the <see cref="P:DevExpress.Web.ASPxScheduler.SchedulerViewBase.Control"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.FullWeekView.Assign(DevExpress.Web.ASPxScheduler.SchedulerViewBase)">
-            <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Web.ASPxScheduler.SchedulerViewBase"/> object to the current object.
-</para>
-            </summary>
-            <param name="source">
-		A <see cref="T:DevExpress.Web.ASPxScheduler.SchedulerViewBase"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.FullWeekView.Enabled">
-            <summary>
-                <para>Gets or sets if the view is enabled for the <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> control.
-
-</para>
-            </summary>
-            <value><b>true</b>, if the view is enabled; otherwise, <b>false</b>.
-
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.FullWeekView.FullWeekViewStyles">
-            <summary>
-                <para>This property is intended for serialization purposes only.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.ASPxScheduler.FullWeekViewStyles"/> object, containing appearance settings for elements of the Week View.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.FullWeekView.Styles">
-            <summary>
-                <para>Provides access to style settings that control the appearance of the Full Week View visual elements.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.ASPxScheduler.FullWeekViewStyles"/> object, containing styles for displaying visual elements of the Full Week View.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.FullWeekView.Type">
-            <summary>
-                <para>Gets the view's type. 
-</para>
-            </summary>
-            <value>One of the <see cref="SchedulerViewType"/> enumeration values.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.HeaderStyle">
-
-            <summary>
-                <para>Contains settings that allow you to define the header appearance. 
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.HeaderStyle.#ctor">
-            <summary>
-                <para>Initializes a new instance of the HeaderStyle class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.HeaderStyle.AssignToControl(System.Web.UI.WebControls.WebControl,DevExpress.Web.AttributesRange)">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <param name="control">
-		 
-
-            </param>
-            <param name="range">
-		 
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.HeaderStyle.Height">
-            <summary>
-                <para>Gets or sets the header height.
-</para>
-            </summary>
-            <value>An <see cref="T:System.Web.UI.WebControls.Unit"/> structure specifying the header height.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.HeaderStyle.Wrap">
-            <summary>
-                <para>This property is not in effect for the HeaderStyle class.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.ASPxWeekViewAppointmentDisplayOptions">
-
-            <summary>
-                <para>Contains settings specific to displaying appointments in the Week View.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxWeekViewAppointmentDisplayOptions.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ASPxWeekViewAppointmentDisplayOptions class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxWeekViewAppointmentDisplayOptions.AppointmentGapWidth">
-            <summary>
-                <para>Specifies the width of the horizontal gap between appointments.
-
-</para>
-            </summary>
-            <value>An integer value specifying the width of the horizontal gap between appointments.
-
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxWeekViewAppointmentDisplayOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object to the current object.
-</para>
-            </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxWeekViewAppointmentDisplayOptions.FirstAppointmentTopIndent">
-            <summary>
-                <para>Gets or sets an appointment top indent in the Week View.
-</para>
-            </summary>
-            <value>An integer value that is the appointment top indent.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxWeekViewAppointmentDisplayOptions.LastAppointmentBottomIndent">
-            <summary>
-                <para>Gets or sets an appointment bottom indent in the Week View. 
-</para>
-            </summary>
-            <value>An integer value that is the appointment bottom indent.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.ASPxTimelineViewAppointmentDisplayOptions">
-
-            <summary>
-                <para>Contains settings specific to displaying appointments in the Timeline View.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxTimelineViewAppointmentDisplayOptions.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ASPxTimelineViewAppointmentDisplayOptions class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxTimelineViewAppointmentDisplayOptions.AppointmentGapWidth">
-            <summary>
-                <para>Specifies the width of the horizontal gap between appointments.
-
-</para>
-            </summary>
-            <value>An integer value specifying the width of the horizontal gap between appointments.
-
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxTimelineViewAppointmentDisplayOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object to the current object.
-</para>
-            </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxTimelineViewAppointmentDisplayOptions.FirstAppointmentTopIndent">
-            <summary>
-                <para>Gets or sets an appointment top indent in the Timeline View.
-</para>
-            </summary>
-            <value>An integer value that is the appointment top indent.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxTimelineViewAppointmentDisplayOptions.LastAppointmentBottomIndent">
-            <summary>
-                <para>Gets or sets an appointment bottom indent in the Timeline View. 
-</para>
-            </summary>
-            <value>An integer value that is the appointment bottom indent.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.ASPxDayViewAppointmentDisplayOptions">
-
-            <summary>
-                <para>Contains settings specific to displaying appointments in the Day View and its descendants.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxDayViewAppointmentDisplayOptions.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ASPxDayViewAppointmentDisplayOptions class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxDayViewAppointmentDisplayOptions.AppointmentGapWidth">
-            <summary>
-                <para>Specifies the width of the horizontal gap between appointments.
-
-</para>
-            </summary>
-            <value>An integer value specifying the width of the horizontal gap between appointments.
-
-</value>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxDayViewAppointmentDisplayOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object to the current object.
-</para>
-            </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxDayViewAppointmentDisplayOptions.FirstAllDayAppointmentTopIndent">
-            <summary>
-                <para>Gets or sets the top indent for an appointment that lasts the entire day in the Day View. 
-
-</para>
-            </summary>
-            <value>An integer value that is the top indent.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxDayViewAppointmentDisplayOptions.LastAllDayAppointmentBottomIndent">
-            <summary>
-                <para>Gets or sets the bottom indent for an appointment that lasts the entire day in the Day View. 
-
-</para>
-            </summary>
-            <value>An integer value that is the bottom indent.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.AppointmentSelectionAppearanceMode">
-
-            <summary>
-                <para>Lists values that specify how appointment selection is visually indicated.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.AppointmentSelectionAppearanceMode.Auto">
-            <summary>
-                <para>The appointment selection appearance mode is determined by the applied visual theme.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.AppointmentSelectionAppearanceMode.BackgroundOpacity">
-            <summary>
-                <para>Appointment selection status is visually indicated by the appointment background's opacity.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.AppointmentSelectionAppearanceMode.BoundaryFrame">
-            <summary>
-                <para>Appointment selection status is visually indicated by a frame.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.ResourceColorFillArea">
-
-            <summary>
-                <para>Lists values that specify what parts of a grouped view are filled with resource colors.
-</para>
-            </summary>
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.ResourceColorFillArea.Both">
-            <summary>
-                <para>Both Time Cells and Resource Headers are filled with resource colors.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.ResourceColorFillArea.ResourceHeader">
-            <summary>
-                <para>Resource Headers are filled with resource colors.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="F:DevExpress.Web.ASPxScheduler.ResourceColorFillArea.TimeCells">
-            <summary>
-                <para>Time Cells are filled with resource colors.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerResourceHeaderOptions">
-
-            <summary>
-                <para>Contains appearance settings specific to Resource Headers.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxSchedulerResourceHeaderOptions.#ctor">
-            <summary>
-                <para>Initializes a new instance of the ASPxSchedulerResourceHeaderOptions class with the default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.ASPxSchedulerResourceHeaderOptions.Assign(DevExpress.Utils.Controls.BaseOptions)">
-            <summary>
-                <para>Copies the settings from the specified <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object to the current object.
-</para>
-            </summary>
-            <param name="options">
-		A <see cref="T:DevExpress.Utils.Controls.BaseOptions"/> object whose settings are assigned to the current object.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxSchedulerResourceHeaderOptions.Height">
-            <summary>
-                <para>For internal use only.
-</para>
-            </summary>
-            <value> 
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxSchedulerResourceHeaderOptions.ImageSizeMode">
-            <summary>
-                <para>Specifies how an image is sized within a Resource Header.
-</para>
-            </summary>
-            <value>One of <see cref="T:DevExpress.XtraScheduler.HeaderImageSizeMode"/> enumeration values.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.ASPxSchedulerResourceHeaderOptions.ShowCaption">
-            <summary>
-                <para>Specifies whether or not to display Resource Header captions.
-</para>
-            </summary>
-            <value><b>true</b>, to display captions; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection">
-
-            <summary>
-                <para>Represents a collection of appointment statuses.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.#ctor">
-            <summary>
-                <para>Initializes a new instance of the AppointmentStatusCollection class with default settings.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.Add(DevExpress.XtraScheduler.AppointmentStatusType,System.String,System.String,System.Drawing.Color)">
-            <summary>
-                <para>Adds a new appointment status item with the specified settings to the collection.
-</para>
-            </summary>
-            <param name="type">
-		An <see cref="T:DevExpress.XtraScheduler.AppointmentStatusType"/> enumeration member which indicates the availability.
-
-            </param>
-            <param name="displayName">
-		A string that is the name of the status used in editors.
-
-            </param>
-            <param name="menuCaption">
-		A <see cref="T:System.String"/> value which represents the menu caption of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.MenuCaption"/> property.
-
-            </param>
-            <param name="color">
-		A <see cref="T:System.Drawing.Color"/> value that specifies the color of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.IAppointmentStatus.Color"/> property.
-
-            </param>
-            <returns>An integer value indicating the position at which the new element was inserted.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.Add(System.Object,DevExpress.XtraScheduler.AppointmentStatusType,System.String,System.String,System.Drawing.Color)">
-            <summary>
-                <para>Adds a new appointment status item with the specified settings to the collection.
-</para>
-            </summary>
-            <param name="id">
-		An object that is the unique status identifier.
-
-            </param>
-            <param name="type">
-		An <see cref="T:DevExpress.XtraScheduler.AppointmentStatusType"/> enumeration member which indicates availability.
-
-
-            </param>
-            <param name="displayName">
-		A string that is the name of the status used in editors.
-
-            </param>
-            <param name="menuCaption">
-		A <see cref="T:System.String"/> value which represents the menu caption of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.MenuCaption"/> property.
-
-            </param>
-            <param name="color">
-		A <see cref="T:System.Drawing.Color"/> value that specifies the color of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.IAppointmentStatus.Color"/> property.
-
-            </param>
-            <returns>An integer value indicating the position at which the new element was inserted.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.Add(System.Drawing.Color,System.String)">
-            <summary>
-                <para>Adds a new appointment status item with the specified settings to the collection.
-</para>
-            </summary>
-            <param name="color">
-		A <see cref="T:System.Drawing.Color"/> value that specifies the color of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.IAppointmentStatus.Color"/> property.
-
-            </param>
-            <param name="displayName">
-		A string that is the name of the status used in editors.
-
-            </param>
-            <returns>An integer value indicating the position at which the new element was inserted.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.Add(System.Drawing.Color,System.String,System.String)">
-            <summary>
-                <para>Adds a new appointment status item with the specified settings to the collection.
-</para>
-            </summary>
-            <param name="color">
-		A <see cref="T:System.Drawing.Color"/> value that specifies the color of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.IAppointmentStatus.Color"/> property.
-
-            </param>
-            <param name="displayName">
-		A string that is the name of the status used in editors.
-
-            </param>
-            <param name="menuCaption">
-		A <see cref="T:System.String"/> value which represents the menu caption of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.MenuCaption"/> property.
-
-            </param>
-            <returns>An integer value indicating the position at which the new element was inserted.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.CreateNewStatus(System.Object,System.String)">
-            <summary>
-                <para>Creates a new <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object and adds it to the current collection.
-</para>
-            </summary>
-            <param name="id">
-		The unique user interface object identifier of the appointment status.
-
-            </param>
-            <param name="displayName">
-		A <see cref="T:System.String"/> value which represents the display name of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.DisplayName"/> property.
-
-            </param>
-            <returns>A newly created <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.CreateNewStatus(System.Object,System.String,System.String)">
-            <summary>
-                <para>Creates a new <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object and adds it to the current collection.
-</para>
-            </summary>
-            <param name="id">
-		The unique user interface object identifier of the appointment status.
-
-            </param>
-            <param name="displayName">
-		A <see cref="T:System.String"/> value which represents the display name of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.DisplayName"/> property.
-
-            </param>
-            <param name="menuCaption">
-		A <see cref="T:System.String"/> value which represents the menu caption of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.MenuCaption"/> property.
-
-            </param>
-            <returns>A newly created <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.CreateNewStatus(System.String)">
-            <summary>
-                <para>Creates a new <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object and adds it to the current collection.
-</para>
-            </summary>
-            <param name="displayName">
-		A <see cref="T:System.String"/> value which represents the display name of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.DisplayName"/> property.
-
-            </param>
-            <returns>A newly created <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.CreateNewStatus(System.String,System.String)">
-            <summary>
-                <para>Creates a new <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object and adds it to the current collection.
-</para>
-            </summary>
-            <param name="displayName">
-		A <see cref="T:System.String"/> value which represents the display name of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.DisplayName"/> property.
-
-            </param>
-            <param name="menuCaption">
-		A <see cref="T:System.String"/> value which represents the menu caption of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.MenuCaption"/> property.
-
-            </param>
-            <returns>A newly created <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object.
-
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.CreateNewStatus(System.Object,System.String,System.String,System.Drawing.Color)">
-            <summary>
-                <para>Creates a new <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object and adds it to the current collection.
-</para>
-            </summary>
-            <param name="id">
-		The unique user interface object identifier of the appointment status.
-
-            </param>
-            <param name="displayName">
-		A <see cref="T:System.String"/> value which represents the display name of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.DisplayName"/> property.
-
-            </param>
-            <param name="menuCaption">
-		A <see cref="T:System.String"/> value which represents the menu caption of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.MenuCaption"/> property.
-
-            </param>
-            <param name="color">
-		A <see cref="T:System.Drawing.Color"/> value that specifies the color of the appointment status. This value is assigned to the <see cref="P:DevExpress.XtraScheduler.IAppointmentStatus.Color"/> property.
-
-            </param>
-            <returns>A newly cleated <see cref="T:DevExpress.XtraScheduler.IAppointmentStatus"/> object.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.Dispose">
-            <summary>
-                <para>Disposes of the AppointmentStatusCollection object.
-</para>
-            </summary>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.GetById(System.Object)">
-            <summary>
-                <para>Obtains a status object specified by its identifier.
-</para>
-            </summary>
-            <param name="id">
-		An object that is the identifier of the appointment status.
-
-            </param>
-            <returns>An <see cref="T:DevExpress.Web.ASPxScheduler.AppointmentStatus"/> object with the specified <see cref="P:DevExpress.XtraScheduler.UserInterfaceObject.Id"/> property value.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.GetByIndex(System.Int32)">
-            <summary>
-                <para>Gets the appointment status object at the specified index of the AppointmentStatusCollection collection.
-</para>
-            </summary>
-            <param name="index">
-		An integer that is the index of an object in the collection.
-
-            </param>
-            <returns>A <see cref="T:DevExpress.Web.ASPxScheduler.AppointmentStatus"/> object at the specified index.
-</returns>
-
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.GetByType(DevExpress.XtraScheduler.AppointmentStatusType)">
-            <summary>
-                <para>Obtains an appointment status object specified by its type.
-</para>
-            </summary>
-            <param name="type">
-		An <see cref="T:DevExpress.XtraScheduler.AppointmentStatusType"/> enumeration value.
-
-            </param>
-            <returns>An <see cref="T:DevExpress.Web.ASPxScheduler.AppointmentStatus"/> object of the specified status type.
-</returns>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.AppointmentStatusCollection.Item(System.Int32)">
-            <summary>
-                <para>Gets an item of the collection by its index.
-</para>
-            </summary>
-            <param name="index">
-		An integer value specifying the zero-based index of the desired appointment status. 
-
-            </param>
-            <value>An <see cref="AppointmentStatus"/> object.
-</value>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventHandler">
-
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.CustomizeElementStyle"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventHandler.Invoke(System.Object,DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs)">
-            <summary>
-                <para>A method that will handle the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.CustomizeElementStyle"/> event.
-</para>
-            </summary>
-            <param name="sender">
-		The event source. This parameter identifies the <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> which raised the event.
-
-            </param>
-            <param name="e">
-		A <see cref="T:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs"/> object which contains event data.
-
-            </param>
-
-
-        </member>
-        <member name="T:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs">
-
-            <summary>
-                <para>Provides data for the <see cref="E:DevExpress.Web.ASPxScheduler.ASPxScheduler.CustomizeElementStyle"/> event.
-</para>
-            </summary>
-
-        </member>
-        <member name="M:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.#ctor(DevExpress.Web.AppearanceStyleBase,DevExpress.Web.ASPxScheduler.WebElementType,DevExpress.XtraScheduler.Drawing.ITimeCell,System.Boolean)">
-            <summary>
-                <para>Initializes a new instance of the CustomizeElementStyleEventArgs class with the specified settings.
-</para>
-            </summary>
-            <param name="style">
-		An <see cref="T:DevExpress.Web.AppearanceStyleBase"/> class descendant which specifies a style of the visual element within the scheduler. This value is assigned to the <see cref="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.Style"/> property.
-
-            </param>
-            <param name="type">
-		A <see cref="T:DevExpress.Web.ASPxScheduler.WebElementType"/> enumeration value specifying the type of the visual element. This value is assigned to the <see cref="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.ElementType"/> property.
-
-            </param>
-            <param name="cell">
-		A <see cref="T:DevExpress.XtraScheduler.Drawing.ITimeCell"/> object containing information on a resource and time interval corresponding to the scheduler's visual element. This value is assigned to the <see cref="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.Cell"/> property.
-
-            </param>
-            <param name="isAlternate">
-		A <see cref="T:System.Boolean"/> value which indicates whether the event's visual element has a specific style. This value is assigned to the <see cref="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.IsAlternate"/> property.
-
-            </param>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.Cell">
-            <summary>
-                <para>Gets an object providing access to a resource and time interval corresponding to a visual element. 
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.XtraScheduler.Drawing.ITimeCell"/> object.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.ElementType">
-            <summary>
-                <para>Gets a type of the scheduler's visual element.
-</para>
-            </summary>
-            <value>A <see cref="T:DevExpress.Web.ASPxScheduler.WebElementType"/> enumeration member specifying the visual element type.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.IsAlternate">
-            <summary>
-                <para>Gets a value that indicates whether an element is highlighted within the scheduler control.
-</para>
-            </summary>
-            <value><b>true</b> if the visual element is highlighted; otherwise, <b>false</b>.
-</value>
-
-
-        </member>
-        <member name="P:DevExpress.Web.ASPxScheduler.CustomizeElementStyleEventArgs.Style">
-            <summary>
-                <para>Get the style that defines the appearance of a visual element within the scheduler control. 
-
-</para>
-            </summary>
-            <value>A <see cref="T:System.Web.UI.WebControls.Style"/> object that contains style settings.
-</value>
-
-
-        </member>
         <member name="T:DevExpress.Web.ASPxScheduler.ASPxSchedulerOptionsCellAutoHeight">
 
             <summary>
@@ -12748,6 +12640,114 @@ Default value: "DialogForm"
             </summary>
             <value>An <see cref="T:System.Web.UI.WebControls.Unit"/> structure specifying the cell width.
 </value>
+
+
+        </member>
+        <member name="T:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles">
+
+            <summary>
+                <para>Contains settings that allow you to define the appearance of the Agenda View's date headers. 
+</para>
+            </summary>
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.#ctor(DevExpress.Web.Internal.ISkinOwner)">
+            <summary>
+                <para>Initializes a new instance of the AgendaVerticalDateHeaderStyles class with the specified owner.
+</para>
+            </summary>
+            <param name="owner">
+		An <see cref="T:DevExpress.Web.ASPxScheduler.ASPxScheduler"/> object that is the owner of the created object.
+
+            </param>
+
+
+        </member>
+        <member name="M:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.CopyFrom(DevExpress.Web.StylesBase)">
+            <summary>
+                <para>Duplicates the properties of the specified object into the current instance of the AgendaVerticalDateHeaderStyles class. 
+</para>
+            </summary>
+            <param name="source">
+		A <see cref="T:DevExpress.Web.StylesBase"/> object that represents the object from which the settings are copied.
+
+            </param>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.DateCell">
+            <summary>
+                <para>Gets the style settings defining the appearance of a date cell.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Web.ASPxScheduler.AgendaDateCellStyle"/> object that contains style settings defining the appearance of a date cell.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.DateCellStyleName">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.DayCell">
+            <summary>
+                <para>Gets the style settings defining the appearance of a day cell.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Web.ASPxScheduler.AgendaDateCellStyle"/> object that contains style settings defining the appearance of a day cell.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.DayCellStyleName">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.DayOfWeekCell">
+            <summary>
+                <para>Gets the style settings defining the appearance of a day of the week cell.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Web.ASPxScheduler.AgendaDateCellStyle"/> object that contains style settings defining the appearance of a day of the week cell.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.DayOfWeekCellStyleName">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <returns> </returns>
+
+
+        </member>
+        <member name="P:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.MonthOfYearCell">
+            <summary>
+                <para>Gets the style settings defining the appearance of a month of the year cell.
+</para>
+            </summary>
+            <value>An <see cref="T:DevExpress.Web.ASPxScheduler.AgendaDateCellStyle"/> object that contains style settings defining the appearance of a month of the year cell.
+</value>
+
+
+        </member>
+        <member name="F:DevExpress.Web.ASPxScheduler.AgendaVerticalDateHeaderStyles.MonthOfYearCellStyleName">
+            <summary>
+                <para>For internal use only.
+</para>
+            </summary>
+            <returns> </returns>
 
 
         </member>

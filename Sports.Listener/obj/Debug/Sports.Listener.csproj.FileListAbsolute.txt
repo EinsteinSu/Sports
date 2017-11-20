@@ -56,3 +56,11 @@ D:\Sports\Sports\Sports.Listener\obj\Debug\Sports.Listener.csprojResolveAssembly
 D:\Sports\Sports\Sports.Listener\obj\Debug\Sports.Listener.csproj.CoreCompileInputs.cache
 D:\Sports\Sports\Sports.Listener\obj\Debug\Sports.Listener.exe
 D:\Sports\Sports\Sports.Listener\obj\Debug\Sports.Listener.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\log4net.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\Sports.Common.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\DevExpress.Mvvm.v17.1.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\Newtonsoft.Json.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\log4net.xml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\Sports.Common.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\DevExpress.Mvvm.v17.1.xml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Listener\bin\Debug\Newtonsoft.Json.xml

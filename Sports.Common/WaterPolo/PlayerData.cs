@@ -36,5 +36,13 @@ namespace Sports.Common.WaterPolo
             get => _foulTime;
             set => SetProperty(ref _foulTime, value, "FoulTime");
         }
+
+        public void DecreaseFoulTime()
+        {
+            if (_foulTime > 0)
+            {
+                FoulTime--;
+            }
+        }
     }
 }

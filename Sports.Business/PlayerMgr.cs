@@ -6,6 +6,7 @@ namespace Sports.Business
 {
     public interface IPlayerMgr : ICrudMgr<Player>
     {
+        
     }
 
     public class PlayerMgr : CrudMgrBase<Player>, IPlayerMgr
@@ -32,5 +33,7 @@ namespace Sports.Business
         {
             Context.Players.Remove(item);
         }
+
+        
     }
 }

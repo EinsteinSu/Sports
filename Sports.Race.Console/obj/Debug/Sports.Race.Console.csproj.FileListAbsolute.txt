@@ -337,3 +337,5 @@ D:\Sports\Sports\Sports.Race.Console\obj\Debug\Sports.Race.Console.exe.licenses
 D:\Sports\Sports\Sports.Race.Console\obj\Debug\Sports.Race.Console.csproj.CoreCompileInputs.cache
 D:\Sports\Sports\Sports.Race.Console\obj\Debug\Sports.Race.Console.exe
 D:\Sports\Sports\Sports.Race.Console\obj\Debug\Sports.Race.Console.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Race.Console\bin\Debug\log4net.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Race.Console\bin\Debug\log4net.xml

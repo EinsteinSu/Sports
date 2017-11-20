@@ -85,3 +85,5 @@ D:\Sports\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.dll
 D:\Sports\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.pdb
 D:\Sports\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.reduce_a_table_scheduleteamplayer.resources
 D:\Sports\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.rolesecurities.resources
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.reduce_a_table_scheduleteamplayer.resources
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.rolesecurities.resources

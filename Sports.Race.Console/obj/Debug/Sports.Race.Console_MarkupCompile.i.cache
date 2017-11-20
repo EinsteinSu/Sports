@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Sports\Sports\Sports.Race.Console\obj\Debug\
+C:\Users\einst\Documents\GitHub\Sports\Sports.Race.Console\obj\Debug\
 Sports.Race.Console
 none
 false
 DEBUG;TRACE
-D:\Sports\Sports\Sports.Race.Console\App.xaml
+C:\Users\einst\Documents\GitHub\Sports\Sports.Race.Console\App.xaml
 51656729156
 
-18-281205211
-291493319899
+18-2050027205
+291039893919
 LoginWindow.xaml;MainWindow.xaml;View\GroupedItemsPage.xaml;View\ItemDetailPage.xaml;View\RaceMgmtView.xaml;
 
 True
