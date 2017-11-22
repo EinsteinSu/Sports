@@ -6,6 +6,7 @@ namespace Sports.Business
 {
     public interface IDisplayMgr : ICrudMgr<Display>
     {
+        Display GetDisplayByVenueId(int venueId);
     }
 
     public class DisplayMgr : CrudMgrBase<Display>, IDisplayMgr
@@ -30,6 +31,11 @@ namespace Sports.Business
         protected override void DeleteItem(Display item)
         {
             Context.Displays.Remove(item);
+        }
+
+        public Display GetDisplayByVenueId(int venueId)
+        {
+            return Context.Displays.FirstOrDefault(f => f.VenueId == venueId);
         }
     }
 }

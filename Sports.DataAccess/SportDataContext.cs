@@ -14,10 +14,10 @@ namespace Sports.DataAccess
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Schedule>()
-                .HasMany(p => p.Teams)
-                .WithOptional()
-                .WillCascadeOnDelete(true);
+            //modelBuilder.Entity<Schedule>()
+            //    .HasMany(p => p.Teams)
+            //    .WithOptional()
+            //    .WillCascadeOnDelete(true);
         }
 
         public IDbSet<Team> Teams { get; set; }

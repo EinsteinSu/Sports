@@ -24,10 +24,6 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAc
 C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.pdb
 C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.csprojResolveAssemblyReference.cache
-C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.firstversion.resources
-C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.csproj.GenerateResource.Cache
-C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.venue1.resources
-C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.scheduleteamplayer.resources
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\Sports.DataAccess.dll.config
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\Sports.DataAccess.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\Sports.DataAccess.pdb
@@ -47,7 +43,6 @@ C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAcc
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.test.resources
 C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\log4net.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\bin\Debug\log4net.xml
-C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.test.resources
 C:\Users\esu\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\esu\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.firstversion.resources
 C:\Users\esu\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.venue1.resources
@@ -85,5 +80,5 @@ D:\Sports\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.dll
 D:\Sports\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.pdb
 D:\Sports\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.reduce_a_table_scheduleteamplayer.resources
 D:\Sports\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.rolesecurities.resources
-C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.reduce_a_table_scheduleteamplayer.resources
-C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.rolesecurities.resources
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.Migrations.first.resources
+C:\Users\einst\Documents\GitHub\Sports\Sports.DataAccess\obj\Debug\Sports.DataAccess.csproj.GenerateResource.Cache

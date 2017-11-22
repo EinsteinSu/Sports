@@ -2,7 +2,7 @@
 
 namespace Sports.Wpf.Common.ViewModel.WaterPolo
 {
-    public class PlayerDisplayViewModel : PlayerData
+    public class PlayerDisplayViewModel1 : PlayerData
     {
         public const string Cycle = "●";
         public string Foul1 => Fouls > 0 ? Cycle : string.Empty;

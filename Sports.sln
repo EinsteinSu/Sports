@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26730.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sports.DataAccess", "Sports.DataAccess\Sports.DataAccess.csproj", "{36891BFA-8AB4-4EC1-B66D-418941FC0162}"
 EndProject
@@ -46,6 +46,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sports.SerialPort.Tester", "Sports.SerialPort.Tester\Sports.SerialPort.Tester.csproj", "{D6245172-234A-4B97-884B-69278451244F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sports.Background.Wpf", "Sports.Background.Wpf\Sports.Background.Wpf.csproj", "{07ED27DA-8831-4201-A2CF-46DA89DF5A7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supeng.Common", "..\SupengCommon\SupengCommon\Supeng.Common\Supeng.Common.csproj", "{500EE113-A546-487C-9446-733B46CAF6B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supeng.Wpf.Common", "..\SupengCommon\SupengCommon\Supeng.Wpf.Common\Supeng.Wpf.Common.csproj", "{CAF49A5D-5914-4303-93AD-3CF7C7222B10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SupengCommon", "SupengCommon", "{F72B37DB-ED90-4252-8D45-188D4437D173}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,6 +131,14 @@ Global
 		{07ED27DA-8831-4201-A2CF-46DA89DF5A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07ED27DA-8831-4201-A2CF-46DA89DF5A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07ED27DA-8831-4201-A2CF-46DA89DF5A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{500EE113-A546-487C-9446-733B46CAF6B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500EE113-A546-487C-9446-733B46CAF6B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500EE113-A546-487C-9446-733B46CAF6B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500EE113-A546-487C-9446-733B46CAF6B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAF49A5D-5914-4303-93AD-3CF7C7222B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAF49A5D-5914-4303-93AD-3CF7C7222B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAF49A5D-5914-4303-93AD-3CF7C7222B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAF49A5D-5914-4303-93AD-3CF7C7222B10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -148,6 +162,8 @@ Global
 		{A1F271EC-6E60-4149-A6A5-3E6EBC57286B} = {1ECFAA21-1675-4432-A7CF-4D5478E8A43C}
 		{D6245172-234A-4B97-884B-69278451244F} = {B8088C52-6A8B-4833-95D4-AAAA31F9AD72}
 		{07ED27DA-8831-4201-A2CF-46DA89DF5A7F} = {D35EC572-4AC1-4CD6-B69F-986ADB71FDB0}
+		{500EE113-A546-487C-9446-733B46CAF6B9} = {F72B37DB-ED90-4252-8D45-188D4437D173}
+		{CAF49A5D-5914-4303-93AD-3CF7C7222B10} = {F72B37DB-ED90-4252-8D45-188D4437D173}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CABC599-4628-49DE-ACC6-BC031BABB44D}

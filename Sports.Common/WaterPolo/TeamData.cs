@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using DevExpress.Mvvm;
+﻿using DevExpress.Mvvm;
 
 namespace Sports.Common.WaterPolo
 {
@@ -57,9 +55,7 @@ namespace Sports.Common.WaterPolo
         public void DecreaseFoulTimes()
         {
             foreach (var player in Players)
-            {
                 player.DecreaseFoulTime();
-            }
         }
     }
 }

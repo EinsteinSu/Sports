@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Sports.Wpf.Common.View.WaterPolo"
+             xmlns:sports="clr-namespace:Supeng.Wpf.Common.Views.Sports;assembly=Supeng.Wpf.Common"
              mc:Ignorable="d" 
              d:DesignHeight="100" d:DesignWidth="400">
     <Grid>
@@ -15,11 +16,11 @@
             <ColumnDefinition Width="5*"></ColumnDefinition>
             <ColumnDefinition  Width="12*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="{Binding Number}" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-        <TextBlock Text="{Binding Name}" Grid.Column="1" VerticalAlignment="Center"></TextBlock>
-        <TextBlock Text="{Binding Foul1}" HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Center"></TextBlock>
-        <TextBlock Text="{Binding Foul2}" HorizontalAlignment="Center" Grid.Column="3" VerticalAlignment="Center"></TextBlock>
-        <TextBlock Text="{Binding Foul3}" HorizontalAlignment="Center"  Grid.Column="4" Foreground="Red" VerticalAlignment="Center"></TextBlock>
-        <TextBlock Text="{Binding FoulTime}" HorizontalAlignment="Center" Grid.Column="5" VerticalAlignment="Center"></TextBlock>
+        <sports:FontControlableTextBlock DataContext="{Binding Number}" HorizontalAlignment="Center" VerticalAlignment="Center"></sports:FontControlableTextBlock>
+        <sports:FontControlableTextBlock DataContext="{Binding Name}" Grid.Column="1" VerticalAlignment="Center"></sports:FontControlableTextBlock>
+        <sports:FontControlableTextBlock DataContext="{Binding Foul1}" HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Center"></sports:FontControlableTextBlock>
+        <sports:FontControlableTextBlock DataContext="{Binding Foul2}" HorizontalAlignment="Center" Grid.Column="3" VerticalAlignment="Center"></sports:FontControlableTextBlock>
+        <sports:FontControlableTextBlock DataContext="{Binding Foul3}" HorizontalAlignment="Center"  Grid.Column="4" Foreground="Red" VerticalAlignment="Center"></sports:FontControlableTextBlock>
+        <sports:FontControlableTextBlock DataContext="{Binding FoulTime}" HorizontalAlignment="Center" Grid.Column="5" VerticalAlignment="Center"></sports:FontControlableTextBlock>
     </Grid>
 </UserControl>

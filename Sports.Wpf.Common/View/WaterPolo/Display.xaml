@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Sports.Wpf.Common.View.WaterPolo"
+             xmlns:sports="clr-namespace:Supeng.Wpf.Common.Views.Sports;assembly=Supeng.Wpf.Common"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="600">
     <Grid>
@@ -24,44 +25,44 @@
                 <ColumnDefinition Width="15*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Image Grid.Row="0" Grid.Column="0" Source="{Binding TeamA.Image}"></Image>
-            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding TeamA.TeamName,Mode =TwoWay}" VerticalAlignment="Center" TextAlignment="Center"></TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="2" Text="{Binding TotalTime}" VerticalAlignment="Center" TextAlignment="Center"></TextBlock>
-            <TextBlock Grid.Row="0" Grid.Column="3" Text="{Binding TeamB.TeamName}" VerticalAlignment="Center" TextAlignment="Center"></TextBlock>
+            <sports:FontControlableTextBlock Grid.Row="0" Grid.Column="1" DataContext="{Binding TeamA.TeamName,Mode =TwoWay}" VerticalAlignment="Center" TextAlignment="Center"></sports:FontControlableTextBlock>
+            <sports:FontControlableTextBlock Grid.Row="0" Grid.Column="2" DataContext="{Binding TotalTime}" VerticalAlignment="Center" TextAlignment="Center"></sports:FontControlableTextBlock>
+            <sports:FontControlableTextBlock Grid.Row="0" Grid.Column="3" DataContext="{Binding TeamB.TeamName}" VerticalAlignment="Center" TextAlignment="Center"></sports:FontControlableTextBlock>
             <Image Grid.Row="0" Grid.Column="4" Source="{Binding TeamB.Image}"></Image>
             <Grid Grid.Row="1" Grid.Column="0">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <TextBlock VerticalAlignment="Center" TextAlignment="Center">WHITE</TextBlock>
-                <TextBlock Grid.Row="1" Text="{Binding TeamA.PauseTime}" VerticalAlignment="Center" TextAlignment="Center"></TextBlock>
+                <sports:FontControlableTextBlock VerticalAlignment="Center" TextAlignment="Center">WHITE</sports:FontControlableTextBlock>
+                <sports:FontControlableTextBlock Grid.Row="1" DataContext="{Binding TeamA.PauseTime}" VerticalAlignment="Center" TextAlignment="Center"></sports:FontControlableTextBlock>
             </Grid>
-            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding TeamA.Score}" VerticalAlignment="Center" TextAlignment="Center"></TextBlock>
+            <sports:FontControlableTextBlock Grid.Row="1" Grid.Column="1" DataContext="{Binding TeamA.Score}" VerticalAlignment="Center" TextAlignment="Center"></sports:FontControlableTextBlock>
             <Grid Grid.Row="1" Grid.Column="2">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <TextBlock Text="{Binding CourtToString}" VerticalAlignment="Center" TextAlignment="Center"></TextBlock>
+                <sports:FontControlableTextBlock DataContext="{Binding CourtToString}" VerticalAlignment="Center" TextAlignment="Center"></sports:FontControlableTextBlock>
                 <Grid Grid.Row="1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="18*"></ColumnDefinition>
                         <ColumnDefinition Width="64*"></ColumnDefinition>
                         <ColumnDefinition Width="18*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="{Binding TeamA.TimeoutCount}" VerticalAlignment="Center" TextAlignment="Center"></TextBlock>
-                    <TextBlock Grid.Column="1" VerticalAlignment="Center" TextAlignment="Center">TIMEOUT</TextBlock>
-                    <TextBlock Grid.Column="2" Text="{Binding TeamB.TimeoutCount}" VerticalAlignment="Center" TextAlignment="Center"></TextBlock>
+                    <sports:FontControlableTextBlock DataContext="{Binding TeamA.TimeoutCount}" VerticalAlignment="Center" TextAlignment="Center"></sports:FontControlableTextBlock>
+                    <sports:FontControlableTextBlock Grid.Column="1" VerticalAlignment="Center" TextAlignment="Center">TIMEOUT</sports:FontControlableTextBlock>
+                    <sports:FontControlableTextBlock Grid.Column="2" DataContext="{Binding TeamB.TimeoutCount}" VerticalAlignment="Center" TextAlignment="Center"></sports:FontControlableTextBlock>
                 </Grid>
             </Grid>
-            <TextBlock Grid.Row="1" Grid.Column="3" Text="{Binding TeamB.Score}" VerticalAlignment="Center" TextAlignment="Center"></TextBlock>
+            <sports:FontControlableTextBlock Grid.Row="1" Grid.Column="3" DataContext="{Binding TeamB.Score}" VerticalAlignment="Center" TextAlignment="Center"></sports:FontControlableTextBlock>
             <Grid Grid.Row="1" Grid.Column="4">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <TextBlock VerticalAlignment="Center" TextAlignment="Center">BLUE</TextBlock>
-                <TextBlock Grid.Row="1" Text="{Binding TeamB.PauseTime}" VerticalAlignment="Center" TextAlignment="Center"></TextBlock>
+                <sports:FontControlableTextBlock VerticalAlignment="Center" TextAlignment="Center">BLUE</sports:FontControlableTextBlock>
+                <sports:FontControlableTextBlock Grid.Row="1" DataContext="{Binding TeamB.PauseTime}" VerticalAlignment="Center" TextAlignment="Center"></sports:FontControlableTextBlock>
             </Grid>
         </Grid>
         <Border Grid.Row="1" BorderBrush="White" BorderThickness="2">

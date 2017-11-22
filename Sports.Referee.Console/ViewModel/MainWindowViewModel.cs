@@ -4,7 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
 using DevExpress.Mvvm;
+using log4net;
 using Newtonsoft.Json;
 using Sports.Business;
 using Sports.Common;
@@ -15,6 +18,7 @@ using Sports.Timing.Interfaces;
 using Sports.Timing.WaterPolo;
 using Sports.Wpf.Common.ViewModel.WaterPolo;
 
+
 namespace Sports.Referee.Console.ViewModel
 {
     public class MainWindowViewModel : ViewModelBase
@@ -22,6 +26,8 @@ namespace Sports.Referee.Console.ViewModel
         private RaceViewModel _race;
         private TotalTimeController _totalTimeController;
         private ThirtySecondsTimeController _thirtySecondsTimeController;
+        private static readonly ILog Log = LogManager.GetLogger("Referee.MainWindowViewModel");
+
         public MainWindowViewModel()
         {
             var configFileName =
@@ -37,7 +43,72 @@ namespace Sports.Referee.Console.ViewModel
             var controller = new SocketController(512);
             controller.StartListening(new RefereeRequestProcess(r => Race = r), Venue.Port);
 
+            var display = new DisplayMgr().GetDisplayByVenueId(config.VenueId);
+            if (display != null)
+            {
+                Task.Factory.StartNew(() =>
+                {
+                    SendRaceData(display.IPAddress, display.Port);
+                });
+            }
+
+            Task.Factory.StartNew(SaveRaceData);
+
             InitializeSerialDevices();
+        }
+
+        ~MainWindowViewModel()
+        {
+            _quitSendRaceData = true;
+            _quitSaveRaceData = true;
+        }
+
+        #region methods
+        private bool _quitSendRaceData;
+
+        private void SendRaceData(string ipAddress, int port)
+        {
+            while (true)
+            {
+                if (_quitSendRaceData)
+                    break;
+                try
+                {
+                    SocketHelper.SendMessage(ipAddress, port, JsonConvert.SerializeObject(Race), 512);
+                }
+                catch (Exception e)
+                {
+                    Log.Error($"Could not send the race data to {ipAddress}({port})", e);
+                    //todo: alert ????
+                }
+
+                Thread.Sleep(500);
+            }
+        }
+
+
+        private bool _quitSaveRaceData;
+
+        private void SaveRaceData()
+        {
+            while (true)
+            {
+                if (_quitSaveRaceData)
+                    break;
+                try
+                {
+                    if (Race != null && Race.ScheduleId > 0)
+                    {
+                        new ScheduleMgr().SaveRaceData(Race.ScheduleId, JsonConvert.SerializeObject(Race));
+                    }
+                }
+                catch (Exception e)
+                {
+                    Log.Error($"Could not save race data ${e.Message}", e);
+                    throw;
+                }
+                Thread.Sleep(5000);
+            }
         }
 
         private void InitializeSerialDevices()
@@ -54,10 +125,11 @@ namespace Sports.Referee.Console.ViewModel
                     }
                     catch (Exception e)
                     {
-                        //todo: logging
+                        Log.Error($"Total time device got error {e.Message}", e);
                     }
                     _totalTimeController.DisplayData = data =>
                     {
+                        Log.Debug(data.ToString());
                         Race.TotalTime = data.Time;
                         //todo: check settings whether get this data
                         Race.TeamA.Score = data.ScoreA;
@@ -76,10 +148,11 @@ namespace Sports.Referee.Console.ViewModel
                     }
                     catch (Exception e)
                     {
-                        //todo: logging
+                        Log.Error($"30 Seconds device got error {e.Message}", e);
                     }
                     _thirtySecondsTimeController.DisplayData = data =>
                     {
+                        Log.Debug(Race.ToString());
                         Race.ThirtySeconds = data.Seconds;
                         if (!data.IsStopped)
                         {
@@ -90,7 +163,9 @@ namespace Sports.Referee.Console.ViewModel
                 }
             }
         }
+        #endregion
 
+        #region properties
         public string Title { get; set; }
 
         public Venue Venue { get; set; }
@@ -100,6 +175,7 @@ namespace Sports.Referee.Console.ViewModel
             get => _race;
             set => SetProperty(ref _race, value, "Race");
         }
+        #endregion
 
         private class RefereeRequestProcess : IRequestProcess
         {
@@ -110,44 +186,48 @@ namespace Sports.Referee.Console.ViewModel
                 _action = action;
             }
 
-            //todo should be test it
+            //todo should be test
             public void Process(TcpClient client, NetworkStream stream, byte[] bytesReceived)
             {
+                var response = new Command { Type = CommandType.Response, ValueType = typeof(ResponseType) };
                 try
                 {
                     var message = Encoding.Unicode.GetString(bytesReceived, 0, bytesReceived.Length);
                     var command = JsonConvert.DeserializeObject<Command>(message);
                     if (command != null && command.Type == CommandType.LoadRace)
                     {
-                        var id = int.Parse(command.Value);
+                        var scheduleId = int.Parse(command.Value);
                         var teamMgr = new TeamMgr();
                         var mgr = new ScheduleMgr();
-                        var s = mgr.GetItem(id);
+                        var s = mgr.GetItem(scheduleId);
                         var teamA = teamMgr.GetItem(s.TeamA);
                         var teamB = teamMgr.GetItem(s.TeamB);
                         var race = new RaceViewModel
                         {
+                            ScheduleId = scheduleId,
                             TotalTime = "8:00",
                             Court = 1,
-                            TeamA = new TeamControlViewModel { TeamName = teamA.ShortName, Players = GetScheduledPlayers(mgr, id, teamA.Id) },
-                            TeamB = new TeamControlViewModel { TeamName = teamB.ShortName, Players = GetScheduledPlayers(mgr, id, teamB.Id) }
+                            TeamA = new TeamControlViewModel { TeamName = teamA.ShortName, Players = GetScheduledPlayers(mgr, scheduleId, teamA.Id) },
+                            TeamB = new TeamControlViewModel { TeamName = teamB.ShortName, Players = GetScheduledPlayers(mgr, scheduleId, teamB.Id) }
                         };
 
                         _action?.Invoke(race);
+                        response.Value = ResponseType.Success.ToString();
                     }
                 }
                 catch (Exception e)
                 {
-                    System.Console.WriteLine("error " + e.Message);
+                    Log.Error($"Process socket data error {e.Message}", e);
+                    response.Value = ResponseType.Faild.ToString();
                 }
-                var bytesSent = Encoding.Unicode.GetBytes("I've got it");
+                var bytesSent = Encoding.Unicode.GetBytes(JsonConvert.SerializeObject(response));
                 stream.Write(bytesSent, 0, bytesSent.Length);
             }
 
             private PlayerData[] GetScheduledPlayers(IScheduleMgr mgr, int scheduleId, int teamId)
             {
-                var list = mgr.GetScheduledPlayers(scheduleId, teamId);
-                var players = new PlayerData[list.Count()];
+                var list = mgr.GetScheduledPlayers(scheduleId, teamId).ToList();
+                var players = new PlayerData[list.Count];
                 int i = 0;
                 foreach (var player in list)
                 {

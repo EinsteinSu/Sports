@@ -11,6 +11,8 @@ namespace Sports.Business
 {
     public interface IScheduleMgr : ICrudMgr<ScheduleViewModel>, IDisposable
     {
+        void SaveRaceData(int scheduleId, string raceData);
+
         SchedulePlayerEditViewModel GetPlayer(int scheduleId);
 
         void SaveScheduleTeamPlayer(int scheduleId, TeamType type, int[] players);
@@ -120,6 +122,24 @@ namespace Sports.Business
         public void Dispose()
         {
             Context?.Dispose();
+        }
+
+        public void SaveRaceData(int scheduleId, string raceData)
+        {
+            var schedule = GetItem(scheduleId);
+            if (schedule != null)
+            {
+                try
+                {
+                    schedule.RaceData = raceData;
+                    Context.Entry(schedule).Property(p => p.RaceData).IsModified = true;
+                    Context.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    throw new Exception($"Could not save race data {e.Message}");
+                }
+            }
         }
 
         public SchedulePlayerEditViewModel GetPlayer(int scheduleId)

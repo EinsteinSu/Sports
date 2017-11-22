@@ -16,6 +16,8 @@ namespace Sports.Common.WaterPolo
             _thirtySeconds = 30;
         }
 
+        public int ScheduleId { get; set; }
+
         public virtual string TotalTime
         {
             get => _totalTime;

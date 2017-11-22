@@ -68,7 +68,6 @@
     <Compile Include="ViewModel\WaterPolo\RaceControllViewModel.cs" />
     <Compile Include="ViewModel\WaterPolo\RaceDisplayViewModel.cs" />
     <Compile Include="ViewModel\WaterPolo\TeamControlViewModel.cs" />
-    <Compile Include="ViewModel\WaterPolo\TeamDisplayViewModel.cs" />
     <Compile Include="View\DisplayDataView.xaml.cs">
       <DependentUpon>DisplayDataView.xaml</DependentUpon>
     </Compile>
@@ -119,6 +118,14 @@
     <Content Include="View\DXSplashScreen\Logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\SupengCommon\SupengCommon\Supeng.Common\Supeng.Common.csproj">
+      <Project>{500ee113-a546-487c-9446-733b46caf6b9}</Project>
+      <Name>Supeng.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SupengCommon\SupengCommon\Supeng.Wpf.Common\Supeng.Wpf.Common.csproj">
+      <Project>{caf49a5d-5914-4303-93ad-3cf7c7222b10}</Project>
+      <Name>Supeng.Wpf.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sports.Common\Sports.Common.csproj">
       <Project>{f437219b-0600-462f-9b72-3846b7cb769b}</Project>
       <Name>Sports.Common</Name>

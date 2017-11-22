@@ -8,3 +8,7 @@
 2017-11-01 08:47:33,281 [3] INFO  SocketController - Listening ::1(5678)
 2017-11-02 12:31:42,977 [1] INFO  SocketController - Campacity is 512
 2017-11-02 12:31:43,033 [3] INFO  SocketController - Listening 127.0.0.1(5678)
+2017-11-21 19:35:41,055 [1] INFO  SocketController - Campacity is 512
+2017-11-21 19:35:41,070 [3] INFO  SocketController - Listening ::1(5678)
+2017-11-22 20:34:26,518 [1] INFO  SocketController - Campacity is 512
+2017-11-22 20:34:26,542 [3] INFO  SocketController - Listening ::1(5678)

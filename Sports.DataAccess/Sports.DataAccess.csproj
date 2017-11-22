@@ -55,29 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201710280255075_firstversion.cs" />
-    <Compile Include="Migrations\201710280255075_firstversion.Designer.cs">
-      <DependentUpon>201710280255075_firstversion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710280439346_venue-1.cs" />
-    <Compile Include="Migrations\201710280439346_venue-1.Designer.cs">
-      <DependentUpon>201710280439346_venue-1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710312125061_scheduleteamplayer.cs" />
-    <Compile Include="Migrations\201710312125061_scheduleteamplayer.Designer.cs">
-      <DependentUpon>201710312125061_scheduleteamplayer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711040618540_test.cs" />
-    <Compile Include="Migrations\201711040618540_test.Designer.cs">
-      <DependentUpon>201711040618540_test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711100622595_reduce_a_table_scheduleteamplayer.cs" />
-    <Compile Include="Migrations\201711100622595_reduce_a_table_scheduleteamplayer.Designer.cs">
-      <DependentUpon>201711100622595_reduce_a_table_scheduleteamplayer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201711130235353_role-securities.cs" />
-    <Compile Include="Migrations\201711130235353_role-securities.Designer.cs">
-      <DependentUpon>201711130235353_role-securities.cs</DependentUpon>
+    <Compile Include="Migrations\201711221248229_first.cs" />
+    <Compile Include="Migrations\201711221248229_first.Designer.cs">
+      <DependentUpon>201711221248229_first.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Central.cs" />
@@ -102,23 +82,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201710280255075_firstversion.resx">
-      <DependentUpon>201710280255075_firstversion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710280439346_venue-1.resx">
-      <DependentUpon>201710280439346_venue-1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710312125061_scheduleteamplayer.resx">
-      <DependentUpon>201710312125061_scheduleteamplayer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711040618540_test.resx">
-      <DependentUpon>201711040618540_test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711100622595_reduce_a_table_scheduleteamplayer.resx">
-      <DependentUpon>201711100622595_reduce_a_table_scheduleteamplayer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201711130235353_role-securities.resx">
-      <DependentUpon>201711130235353_role-securities.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201711221248229_first.resx">
+      <DependentUpon>201711221248229_first.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
