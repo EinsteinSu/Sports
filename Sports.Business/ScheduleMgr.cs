@@ -126,7 +126,7 @@ namespace Sports.Business
 
         public void SaveRaceData(int scheduleId, string raceData)
         {
-            var schedule = GetItem(scheduleId);
+            var schedule = Context.Schedules.FirstOrDefault(f => f.Id == scheduleId);
             if (schedule != null)
             {
                 try

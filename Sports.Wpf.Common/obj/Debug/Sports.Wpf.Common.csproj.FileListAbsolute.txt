@@ -229,3 +229,8 @@ D:\Sports\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common.g.resources
 D:\Sports\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common.csproj.CoreCompileInputs.cache
 D:\Sports\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common.dll
 D:\Sports\Sports\Sports.Wpf.Common\obj\Debug\Sports.Wpf.Common.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\Supeng.Common.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\Supeng.Wpf.Common.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\Supeng.Common.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\Supeng.Wpf.Common.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Wpf.Common\bin\Debug\Supeng.Wpf.Common.dll.config

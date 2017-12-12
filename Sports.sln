@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supeng.Wpf.Common", "..\Sup
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SupengCommon", "SupengCommon", "{F72B37DB-ED90-4252-8D45-188D4437D173}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sports.DataGenerator", "Sports.DataGenerator\Sports.DataGenerator.csproj", "{C1D48C1E-DDE2-49CE-AC1E-14243118EC4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -139,6 +141,10 @@ Global
 		{CAF49A5D-5914-4303-93AD-3CF7C7222B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAF49A5D-5914-4303-93AD-3CF7C7222B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAF49A5D-5914-4303-93AD-3CF7C7222B10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1D48C1E-DDE2-49CE-AC1E-14243118EC4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1D48C1E-DDE2-49CE-AC1E-14243118EC4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1D48C1E-DDE2-49CE-AC1E-14243118EC4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1D48C1E-DDE2-49CE-AC1E-14243118EC4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -164,6 +170,7 @@ Global
 		{07ED27DA-8831-4201-A2CF-46DA89DF5A7F} = {D35EC572-4AC1-4CD6-B69F-986ADB71FDB0}
 		{500EE113-A546-487C-9446-733B46CAF6B9} = {F72B37DB-ED90-4252-8D45-188D4437D173}
 		{CAF49A5D-5914-4303-93AD-3CF7C7222B10} = {F72B37DB-ED90-4252-8D45-188D4437D173}
+		{C1D48C1E-DDE2-49CE-AC1E-14243118EC4C} = {B8088C52-6A8B-4833-95D4-AAAA31F9AD72}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0CABC599-4628-49DE-ACC6-BC031BABB44D}

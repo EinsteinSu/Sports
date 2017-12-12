@@ -292,3 +292,8 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.Background.Wpf\obj\Debug\Sports.Ba
 C:\Users\einst\Documents\GitHub\Sports\Sports.Background.Wpf\obj\Debug\Sports.Background.Wpf.csproj.CoreCompileInputs.cache
 C:\Users\einst\Documents\GitHub\Sports\Sports.Background.Wpf\obj\Debug\Sports.Background.Wpf.exe
 C:\Users\einst\Documents\GitHub\Sports\Sports.Background.Wpf\obj\Debug\Sports.Background.Wpf.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Background.Wpf\bin\Debug\Supeng.Wpf.Common.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Background.Wpf\bin\Debug\Supeng.Common.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Background.Wpf\bin\Debug\Supeng.Wpf.Common.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Background.Wpf\bin\Debug\Supeng.Wpf.Common.dll.config
+C:\Users\einst\Documents\GitHub\Sports\Sports.Background.Wpf\bin\Debug\Supeng.Common.pdb

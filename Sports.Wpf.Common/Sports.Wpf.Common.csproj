@@ -67,6 +67,7 @@
     <Compile Include="ViewModel\WaterPolo\PlayerDisplayViewModel.cs" />
     <Compile Include="ViewModel\WaterPolo\RaceControllViewModel.cs" />
     <Compile Include="ViewModel\WaterPolo\RaceDisplayViewModel.cs" />
+    <Compile Include="ViewModel\WaterPolo\RawData.cs" />
     <Compile Include="ViewModel\WaterPolo\TeamControlViewModel.cs" />
     <Compile Include="View\DisplayDataView.xaml.cs">
       <DependentUpon>DisplayDataView.xaml</DependentUpon>

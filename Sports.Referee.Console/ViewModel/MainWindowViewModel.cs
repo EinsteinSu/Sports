@@ -74,7 +74,9 @@ namespace Sports.Referee.Console.ViewModel
                     break;
                 try
                 {
-                    SocketHelper.SendMessage(ipAddress, port, JsonConvert.SerializeObject(Race), 512);
+                    var raceRaw = new RaceRaw();
+                    raceRaw.FromRace(Race);
+                    SocketHelper.SendMessage(ipAddress, port, JsonConvert.SerializeObject(raceRaw), 512);
                 }
                 catch (Exception e)
                 {
@@ -99,7 +101,9 @@ namespace Sports.Referee.Console.ViewModel
                 {
                     if (Race != null && Race.ScheduleId > 0)
                     {
-                        new ScheduleMgr().SaveRaceData(Race.ScheduleId, JsonConvert.SerializeObject(Race));
+                        var raceRaw = new RaceRaw();
+                        raceRaw.FromRace(Race);
+                        new ScheduleMgr().SaveRaceData(Race.ScheduleId, JsonConvert.SerializeObject(raceRaw));
                     }
                 }
                 catch (Exception e)

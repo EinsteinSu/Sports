@@ -7,7 +7,6 @@ C:\Users\einst\Documents\GitHub\Sports\Sports.Common\bin\Debug\Newtonsoft.Json.d
 C:\Users\einst\Documents\GitHub\Sports\Sports.Common\bin\Debug\Newtonsoft.Json.xml
 C:\Users\einst\Documents\GitHub\Sports\Sports.Common\bin\Debug\DevExpress.Mvvm.v17.1.dll
 C:\Users\einst\Documents\GitHub\Sports\Sports.Common\bin\Debug\DevExpress.Mvvm.v17.1.xml
-C:\Users\einst\Documents\GitHub\Sports\Sports.Common\obj\Debug\Sports.Common.csprojResolveAssemblyReference.cache
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Common\obj\Debug\Sports.Common.csprojResolveAssemblyReference.cache
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Common\bin\Debug\Sports.Common.dll
 C:\Users\ssu2\Documents\GitHub\Sports\Sports.Common\bin\Debug\Sports.Common.pdb
@@ -36,3 +35,4 @@ D:\Sports\Sports\Sports.Common\obj\Debug\Sports.Common.csprojResolveAssemblyRefe
 D:\Sports\Sports\Sports.Common\obj\Debug\Sports.Common.csproj.CoreCompileInputs.cache
 D:\Sports\Sports\Sports.Common\obj\Debug\Sports.Common.dll
 D:\Sports\Sports\Sports.Common\obj\Debug\Sports.Common.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Common\obj\Debug\Sports.Common.csprojResolveAssemblyReference.cache

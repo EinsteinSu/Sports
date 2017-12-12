@@ -44,7 +44,7 @@ namespace Sports.Race.Console.ViewModel
                     Value = venue.Id.ToString(),
                     ValueType = typeof(int)
                 };
-                SocketHelper.SendMessage(venue.IPAddress, venue.Port, command.ToString(), 256);
+                SocketHelper.SendMessage(venue.IPAddress, venue.Port, command.ToString(), 512);
             }
         }
     }

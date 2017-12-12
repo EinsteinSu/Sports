@@ -5,6 +5,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Sports.Timing;
 using Sports.Timing.Interfaces;
 
@@ -26,17 +27,17 @@ namespace Sports.Listener
                     switch (cki.Key)
                     {
                         case ConsoleKey.S:
-                            //var data = new TestData();
-                            //data.Name = "Sue";
-                            //data.Orders = new List<string>();
-                            //for (int i = 0; i < 10; i++)
-                            //{
-                            //    data.Orders.Add($"Orders {i}");
-                            //}
-                            //SocketController.SendMessage("::1", 123, JsonConvert.SerializeObject(data));
+                            var data = new TestData();
+                            data.Name = "Sue";
+                            data.Orders = new List<string>();
+                            for (int i = 0; i < 10; i++)
+                            {
+                                data.Orders.Add($"Orders {i}");
+                            }
+                            SocketHelper.SendMessage("::1", 123, JsonConvert.SerializeObject(data),512);
                             break;
                         case ConsoleKey.O:
-                            //SocketController.SendMessage("::1", 123, "test");
+                            SocketHelper.SendMessage("::1", 123, "test",512);
                             break;
                         case ConsoleKey.Q:
                             controller.StopListening();
@@ -66,5 +67,12 @@ namespace Sports.Listener
                 stream.Write(bytesSent, 0, bytesSent.Length);
             }
         }
+    }
+
+    public class TestData
+    {
+        public string Name { get; set; }
+
+        public List<string> Orders { get; set; }
     }
 }

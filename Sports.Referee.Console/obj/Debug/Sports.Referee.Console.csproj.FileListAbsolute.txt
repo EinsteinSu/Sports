@@ -308,3 +308,8 @@ D:\Sports\Sports\Sports.Referee.Console\obj\Debug\Sports.Referee.Console.csproj.
 D:\Sports\Sports\Sports.Referee.Console\obj\Debug\Sports.Referee.Console.csproj.CoreCompileInputs.cache
 D:\Sports\Sports\Sports.Referee.Console\obj\Debug\Sports.Referee.Console.exe
 D:\Sports\Sports\Sports.Referee.Console\obj\Debug\Sports.Referee.Console.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Referee.Console\bin\Debug\Supeng.Wpf.Common.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Referee.Console\bin\Debug\Supeng.Common.dll
+C:\Users\einst\Documents\GitHub\Sports\Sports.Referee.Console\bin\Debug\Supeng.Wpf.Common.pdb
+C:\Users\einst\Documents\GitHub\Sports\Sports.Referee.Console\bin\Debug\Supeng.Wpf.Common.dll.config
+C:\Users\einst\Documents\GitHub\Sports\Sports.Referee.Console\bin\Debug\Supeng.Common.pdb
